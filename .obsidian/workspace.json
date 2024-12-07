@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/丧尸围城.md",
+                "file": "source/_posts/丧尸围城（下）.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "丧尸围城"
+              "title": "丧尸围城（下）"
+            }
+          },
+          {
+            "id": "f3681076df414ff7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "source/_posts/丧尸围城（上）.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "丧尸围城（上）"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,6 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "source/_posts/丧尸围城（上）.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +118,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "反向链接"
+              "title": "丧尸围城（上） 的反向链接列表"
             }
           },
           {
@@ -137,10 +153,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/丧尸围城.md"
+                "file": "source/_posts/丧尸围城（上）.md"
               },
               "icon": "lucide-list",
-              "title": "丧尸围城 的大纲"
+              "title": "丧尸围城（上） 的大纲"
             }
           },
           {
@@ -158,7 +174,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -171,32 +187,33 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3e32a766516aeb0c",
+  "active": "f3681076df414ff7",
   "lastOpenFiles": [
+    "source/_posts/丧尸围城（下）.md",
+    "source/_posts/丧尸围城（上）.md",
+    "source/img/beishang20241207171248793.png",
+    "public/img/beishang20241207172141728.png",
+    "public/img/beishang20241207172202833.png",
+    "public/img/beishang20241207172119495.png",
+    "public/img/beishang20241207172128286.png",
+    "public/img/beishang20241207173726393.png",
+    "public/img/beishang20241207173740792.png",
+    "public/img/beishang20241207173454031.png",
+    "public/img/beishang20241207173443991.png",
+    "public/img/beishang20241207173422864.png",
+    "public/2024/12/65ec626183cc.html",
+    "public/2024/12/1fe799e51a85.html",
+    "source/_obsidian/Post Template.md",
+    "public/2024/12/8b02d33e70c6.html",
+    "public/tags/demo/index.html",
+    "public/tags/demo",
+    "public/categories/项目/index.html",
+    "public/categories/项目",
+    "Virtual和abstract.md",
     "tags/工具/index.html",
     "tags/工具",
-    "img/beishang20241207113547501.png",
-    "img/beishang20241207112633087.png",
-    "img/beishang20241207112547502.png",
-    "img/beishang20241207104637882.png",
-    "img/beishang20241207095904010.png",
     "2024/12/ff01685836c7.html",
     "source/_posts/Hexo+Github+Obsidian这里是建站记录.md",
-    "source/_posts/丧尸围城.md",
-    "public/img/beishang20241207095904010.png",
-    "public/img/beishang20241207113547501.png",
-    "public/img/beishang20241207112547502.png",
-    "public/img/beishang20241207112633087.png",
-    "public/img/beishang20241207104637882.png",
-    "public/tags/工具/index.html",
-    "public/tags/工具",
-    "tags/3-hexo/index.html",
-    "tags/hexo/index.html",
-    "tags/3-hexo",
-    "tags/hexo",
-    "tags",
-    "img",
-    "source/_obsidian/Post Template.md",
     "source/_posts/未命名 1.md",
     "2024-12-06.md",
     "source/_posts/hello-world.md",
