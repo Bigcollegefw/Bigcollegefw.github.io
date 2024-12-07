@@ -1,0 +1,220 @@
+{
+  "main": {
+    "id": "7028b6faa9820ebd",
+    "type": "split",
+    "children": [
+      {
+        "id": "ff084c1ab8ff46dc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3e32a766516aeb0c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "source/_posts/丧尸围城.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "丧尸围城"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5bbe48a3bf0310ac",
+    "type": "split",
+    "children": [
+      {
+        "id": "29145a5b966b8129",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f76fa23c5dc956f5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "a5da9817c5acfdc2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "4548fe6873dec8b9",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "3d6c464a1f506d07",
+    "type": "split",
+    "children": [
+      {
+        "id": "f9cd076bbae9f569",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dd1745ec76a87d15",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "f0365f125a82eb0d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "c0445c9f399e1a0f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "4f2fafb191d40e64",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "source/_posts/丧尸围城.md"
+              },
+              "icon": "lucide-list",
+              "title": "丧尸围城 的大纲"
+            }
+          },
+          {
+            "id": "fbf7f07aee65e5ab",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "3e32a766516aeb0c",
+  "lastOpenFiles": [
+    "tags/工具/index.html",
+    "tags/工具",
+    "img/beishang20241207113547501.png",
+    "img/beishang20241207112633087.png",
+    "img/beishang20241207112547502.png",
+    "img/beishang20241207104637882.png",
+    "img/beishang20241207095904010.png",
+    "2024/12/ff01685836c7.html",
+    "source/_posts/Hexo+Github+Obsidian这里是建站记录.md",
+    "source/_posts/丧尸围城.md",
+    "public/img/beishang20241207095904010.png",
+    "public/img/beishang20241207113547501.png",
+    "public/img/beishang20241207112547502.png",
+    "public/img/beishang20241207112633087.png",
+    "public/img/beishang20241207104637882.png",
+    "public/tags/工具/index.html",
+    "public/tags/工具",
+    "tags/3-hexo/index.html",
+    "tags/hexo/index.html",
+    "tags/3-hexo",
+    "tags/hexo",
+    "tags",
+    "img",
+    "source/_obsidian/Post Template.md",
+    "source/_posts/未命名 1.md",
+    "2024-12-06.md",
+    "source/_posts/hello-world.md",
+    "source/about.md",
+    "未命名.md",
+    "source/_posts/这是我开始学习Java 的第一天。.md",
+    "source/_posts/数据库.md",
+    "source/_posts/Typora最常用的命令.md",
+    "source/_posts/sima.md",
+    "img.md",
+    "public/2024/12/e2d05d866c0b/第一天。.md",
+    "source/_posts/sssszzzz/数组.md",
+    "source/_posts/前端/我的第一篇博客.md",
+    "source/_posts/我的第一篇博客/我的第一篇博客.md",
+    "source/我的第一篇博客/我的第一篇博客.md",
+    "source/_posts/undefined/我的第一篇博客.md",
+    "public/2024/12/e2d05d866c0b/一篇博客.md",
+    "source/_posts/Text/post.md",
+    "2024-12-05.md"
+  ]
+}
