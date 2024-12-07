@@ -131,8 +131,8 @@ git remote add origin https://github.com/Bigcollegefw/blog.git
 使用这个的前提是在博客根目录下初始化了仓库有.git文件
 
 接着这个的使用步骤就是
-第一个是commit and sync，就是commit和push
-第二个是pull。
+第一个是pull。
+第二个是commit and sync，就是commit和push
 ![](../img/beishang20241207112633087.png)
 不想手动就自动
 ![](../img/beishang20241207112547502.png)
