@@ -142,9 +142,25 @@ git remote add origin https://github.com/Bigcollegefw/blog.git
 ```
 > .obsidian 文件本身是可以同步的，当前存储库的插件以及相关的配置都会下载在这个文件夹中，因此将其同步到 git 记录中也是非常有用的，假如你切换设备就不需要重新为当前的存储库重新配置 Obsidian 了。
 
+针对冲突文件
+![](../img/beishang20241208002131397.png)
+冲突后会在根目录中产生 `conflict-files` 开头的文件这个文件不用编辑，也不用删除。 点击进去然后找到冲突文件，解决冲突问题。 解决冲突的方式和 `Git` 相同。
+git生成的文件中提示你对于每个出现冲突标记的地方，查看`<<<<<<< HEAD`后面显示的本地仓库修改内
+容，以及`=======`后面、`>>>>>>> origin/main`之前显示的远程仓库修改内容
+```
+diff <<<<<<< HEAD 
+	File changes in local repository 
+=======
+	File changes in remote repository
+>>>>>>> origin/main 
+```
+比如这里我将换了两张图片，与原来对应位置图片同名
+但这里我就一张图片，现在我就保留本地的图片
+![](../img/beishang20241208001958088.png)
 
 参考：
 [关于我使用obsidian加hexo部署个人博客的过程 - SagiRastar's Blog](https://sagi-rastar.github.io/2023/11/10/%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/)
 [Hexo + Obsidian + Git 完美的博客部署与编辑方案 - 个人文章 - SegmentFault 思否](https://segmentfault.com/a/1190000042111566)
+[Obsidian 插件-Obsidian Git 介绍 - 知乎](https://zhuanlan.zhihu.com/p/627318953#:~:text=%E9%80%9A%E8%BF%87%20cmd%2Fctrl%2Bp%20%E6%90%9C%E7%B4%A2%20Obsidian%20Git%3A%20Open%20source%20control,%E7%84%B6%E5%90%8E%E7%82%B9%E5%87%BB%E5%AF%B9%E5%BA%94%E5%9B%BE%E6%A0%87%E5%B0%B1%E5%8F%AF%E4%BB%A5%E6%89%8B%E5%8A%A8%E5%A4%87%E4%BB%BD%E4%BA%86%E3%80%82%20%E5%86%B2%E7%AA%81%E5%90%8E%E4%BC%9A%E5%9C%A8%E6%A0%B9%E7%9B%AE%E5%BD%95%E4%B8%AD%E4%BA%A7%E7%94%9F%20conflict-files%20%E5%BC%80%E5%A4%B4%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%88%E8%BF%99%E4%B8%AA%E6%96%87%E4%BB%B6%E4%B8%8D%E7%94%A8%E7%BC%96%E8%BE%91%EF%BC%8C%E4%B9%9F%E4%B8%8D%E7%94%A8%E5%88%A0%E9%99%A4%EF%BC%89%E3%80%82%20%E7%82%B9%E5%87%BB%E8%BF%9B%E5%8E%BB%E7%84%B6%E5%90%8E%E6%89%BE%E5%88%B0%E5%86%B2%E7%AA%81%E6%96%87%E4%BB%B6%EF%BC%8C%E8%A7%A3%E5%86%B3%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E3%80%82%20%E8%A7%A3%E5%86%B3%E5%86%B2%E7%AA%81%E7%9A%84%E6%96%B9%E5%BC%8F%E5%92%8C%20Git%20%E7%9B%B8%E5%90%8C%E3%80%82)
 
 

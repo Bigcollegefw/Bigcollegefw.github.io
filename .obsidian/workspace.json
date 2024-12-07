@@ -13,24 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/丧尸围城（下）.md",
+                "file": "source/_posts/Hexo+Github+Obsidian这里是建站记录.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "丧尸围城（下）"
-            }
-          },
-          {
-            "id": "903d6af4f9079812",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "source/img/beishang20241207184136981.png"
-              },
-              "icon": "lucide-image",
-              "title": "beishang20241207184136981"
+              "title": "Hexo+Github+Obsidian这里是建站记录"
             }
           },
           {
@@ -46,9 +34,32 @@
               "icon": "lucide-file",
               "title": "丧尸围城（下）"
             }
+          },
+          {
+            "id": "f4eb23cc62d3a18a",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "img/weixin.jpg"
+              },
+              "icon": "lucide-image",
+              "title": "weixin"
+            }
+          },
+          {
+            "id": "aff158f3cbbf6639",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "img/alipay.jpg"
+              },
+              "icon": "lucide-image",
+              "title": "alipay"
+            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -165,10 +176,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/丧尸围城（下）.md"
+                "file": "source/_posts/Hexo+Github+Obsidian这里是建站记录.md"
               },
               "icon": "lucide-list",
-              "title": "丧尸围城（下） 的大纲"
+              "title": "Hexo+Github+Obsidian这里是建站记录 的大纲"
             }
           },
           {
@@ -182,7 +193,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -199,23 +210,25 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f3681076df414ff7",
+  "active": "3e32a766516aeb0c",
   "lastOpenFiles": [
-    "public/img/beishang20241207204850006.png",
-    "public/img/beishang20241207185359964.png",
-    "public/img/beishang20241207185149874.png",
-    "public/img/beishang20241207185549195.png",
-    "public/img/beishang20241207184818435.png",
-    "public/img/beishang20241207184634380.png",
-    "public/img/beishang20241207184549524.png",
-    "public/img/beishang20241207184517586.png",
-    "public/img/beishang20241207183653948.png",
-    "public/img/beishang20241207184255738.png",
-    "public/img/beishang20241207184006017.png",
-    "public/img/GameOverPanel.cs",
-    "source/_posts/Hexo+Github+Obsidian这里是建站记录.md",
+    "img/beishang20241208002131397.png",
+    "img/beishang20241208001958088.png",
+    "public/img/beishang20241208002131397.png",
+    "public/img/beishang20241208001958088.png",
+    "source/img/beishang20241208002131397.png",
+    "source/img/beishang20241208001958088.png",
+    "img/weixin.jpg",
+    "conflict-files-obsidian-git.md",
+    "source/img/beishang20241207184136981.png",
     "source/_posts/丧尸围城（下）.md",
+    "img/alipay.jpg",
     "source/_posts/丧尸围城（上）.md",
+    "source/_posts/Hexo+Github+Obsidian这里是建站记录.md",
+    "img/weixin.png",
+    "img/beishang20241207222536272.png",
+    "img/GameOverPanel.cs",
+    "public/img/GameOverPanel.cs",
     "source/img/GameOverPanel.cs",
     "tags/demo/index.html",
     "tags/demo",
@@ -224,7 +237,6 @@
     "2024/12/65ec626183cc.html",
     "2024/12/1fe799e51a85.html",
     "public/2024/12/65ec626183cc.html",
-    "public/2024/12/1fe799e51a85.html",
     "source/_obsidian/Post Template.md",
     "Virtual和abstract.md",
     "source/_posts/未命名 1.md",
