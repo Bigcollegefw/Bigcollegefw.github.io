@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>丧尸围城 (上) | Hexo</title>
+  <meta name="keywords" content=" demo ">
+  <meta name="description" content="丧尸围城 (上) | Hexo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="丧尸围城（下）">
+<meta property="og:url" content="http://example.com/2024/12/1fe799e51a85.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-12-07T09:44:05.321Z">
+<meta property="article:modified_time" content="2024-12-07T09:44:24.964Z">
+<meta property="article:author" content="beishangzhajitui">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>beishangzhajitui</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="github"
+               href="https://github.com/Bigcollegefw"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a title="csdn"
+               href="https://blog.csdn.net/?spm=1010.2135.3001.4477"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-csdn"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+            <a title="email"
+               href="mailto:2154838055@qq.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(3)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="工具">
+            
+            工具
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="项目">
+            
+            项目
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+        <a 
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="3">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+            <li><a target="_blank" href="https://space.bilibili.com/79983517">唐老师</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="search shortcut key i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="switch to outline view shortcut key w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="return"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="case sensitive"></i>
+            <i class="iconfont icon-tag" data-title="label"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">outline</div>
+            <i class="iconfont icon-list" data-title="switch to article list"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>工具</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>demo</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="All "
+           href="/2024/12/1fe799e51a85.html"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="丧尸围城（下）">丧尸围城（下）</span>
+            <span class="post-date" title="2024-12-07 17:44:05">2024/12/07</span>
+        </a>
+        
+        
+        <a  class="All 项目 "
+           href="/2024/12/65ec626183cc.html"
+           data-tag="demo"
+           data-author="" >
+            <span class="post-title" title="丧尸围城 (上)">丧尸围城 (上)</span>
+            <span class="post-date" title="2024-12-06 22:42:09">2024/12/06</span>
+        </a>
+        
+        
+        <a  class="All 工具 "
+           href="/2024/12/98a55959539d.html"
+           data-tag="工具"
+           data-author="" >
+            <span class="post-title" title="Hexo+Github+Obsidian这里是建站记录">Hexo+Github+Obsidian这里是建站记录</span>
+            <span class="post-date" title="2024-12-06 15:13:47">2024/12/06</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="Toggle full screen shortcut key s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-丧尸围城（上）" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">丧尸围城 (上)</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="项目">项目</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color5">demo</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2024-12-07 17:43:37'>2024-12-06 22:42</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%85%88%E6%8B%96%E5%85%A5%E5%9C%BA%E6%99%AF%E5%B9%B6%E4%B8%94%E5%88%B6%E4%BD%9C%E9%9D%A2%E6%9D%BF"><span class="toc-text">1.先拖入场景并且制作面板</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BasePanel"><span class="toc-text">BasePanel</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UIManager"><span class="toc-text">UIManager</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAMain%EF%BC%8C%E6%8C%82%E8%BD%BD%E4%B8%BB%E5%85%A5%E5%8F%A3Main%E8%84%9A%E6%9C%AC%E3%80%82"><span class="toc-text">2.创建一个Main，挂载主入口Main脚本。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%BC%96%E5%86%99%E8%83%8C%E6%99%AF%E9%9F%B3%E4%B9%90%E6%95%B0%E6%8D%AE%E8%84%9A%E6%9C%AC"><span class="toc-text">3.编写背景音乐数据脚本</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#MusicData"><span class="toc-text">MusicData</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E4%B8%93%E9%97%A8%E7%94%A8%E6%9D%A5%E7%AE%A1%E7%90%86%E6%95%B0%E6%8D%AE%E7%9A%84%E7%B1%BB"><span class="toc-text">4.添加一个专门用来管理数据的类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#GameDataMgr"><span class="toc-text">GameDataMgr</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E4%B8%93%E9%97%A8%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%84%9A%E6%9C%AC%E6%9D%A5%E6%8E%A7%E5%88%B6%E8%83%8C%E6%99%AF%E9%9F%B3%E4%B9%90%E7%9A%84%E5%BC%80%E5%85%B3%E5%92%8C%E5%A4%A7%E5%B0%8F"><span class="toc-text">5.专门创建一个脚本来控制背景音乐的开关和大小</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BKMusic"><span class="toc-text">BKMusic</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E7%BC%96%E5%86%99%E8%AE%BE%E7%BD%AE%E9%9D%A2%E6%9D%BF%E8%84%9A%E6%9C%AC%E9%80%BB%E8%BE%91"><span class="toc-text">6.编写设置面板脚本逻辑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SettingPanel"><span class="toc-text">SettingPanel</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E6%91%84%E5%83%8F%E6%9C%BA%E5%8A%A8%E7%94%BB"><span class="toc-text">7.摄像机动画</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E7%94%BB%E8%84%9A%E6%9C%ACCameraAnimator"><span class="toc-text">动画脚本CameraAnimator</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E6%8B%BC%E4%BA%BA%E7%89%A9%E9%80%89%E8%A7%92%E9%9D%A2%E6%9D%BF"><span class="toc-text">8.拼人物选角面板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E8%A7%92%E8%89%B2%E8%B5%84%E6%BA%90%E5%87%86%E5%A4%87"><span class="toc-text">9.角色资源准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%BA%E7%89%A9%E5%B0%84%E5%87%BB%E5%8A%A8%E7%94%BB"><span class="toc-text">人物射击动画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%BA%E7%89%A9%E8%B9%B2%E7%9D%80%E5%8A%A8%E7%94%BB"><span class="toc-text">人物蹲着动画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%81%9A%E5%85%B6%E4%BD%995%E4%B8%AA%E8%A7%92%E8%89%B2%E7%9A%84%E7%8A%B6%E6%80%81%E6%9C%BA"><span class="toc-text">做其余5个角色的状态机</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E9%85%8D%E7%BD%AE%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="toc-text">10.配置人物模型的数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E9%80%89%E8%A7%92%E9%9D%A2%E6%9D%BF%E9%80%BB%E8%BE%91"><span class="toc-text">11.选角面板逻辑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ChooseHeroPanel"><span class="toc-text">ChooseHeroPanel</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B7%A6%E5%8F%B3%E9%94%AE%E5%8F%98%E6%8D%A2%E8%A7%92%E8%89%B2%E7%9A%84%E9%80%BB%E8%BE%91"><span class="toc-text">左右键变换角色的逻辑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E9%94%81%E6%8C%89%E9%92%AE%E6%98%BE%E7%A4%BA%E5%92%8C%E9%9A%90%E8%97%8F%E5%92%8C%E5%BC%80%E5%A7%8B%E6%8C%89%E9%92%AE%E6%98%BE%E7%A4%BA%E5%92%8C%E9%9A%90%E8%97%8F"><span class="toc-text">解锁按钮显示和隐藏和开始按钮显示和隐藏</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E9%94%81%E6%8C%89%E9%92%AE%E7%9A%84%E8%B4%AD%E4%B9%B0%E9%80%BB%E8%BE%91"><span class="toc-text">解锁按钮的购买逻辑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%82%B9%E5%87%BB%E5%BC%80%E5%A7%8B%E5%92%8C%E8%BF%94%E5%9B%9E%E6%8C%89%E9%92%AE%E9%80%BB%E8%BE%91"><span class="toc-text">点击开始和返回按钮逻辑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%94%E5%9B%9E%E5%90%8E%E4%BA%BA%E7%89%A9%E6%B2%A1%E9%94%80%E6%AF%81bug"><span class="toc-text">返回后人物没销毁bug</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-%E6%8B%BC%E6%8F%90%E7%A4%BA%E7%95%8C%E9%9D%A2"><span class="toc-text">13.拼提示界面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-%E6%8F%90%E7%A4%BA%E9%9D%A2%E6%9D%BF%E9%80%BB%E8%BE%91%E5%92%8C%E4%BD%BF%E7%94%A8"><span class="toc-text">14.提示面板逻辑和使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-%E6%8B%BC%E5%9C%BA%E6%99%AF%E9%80%89%E6%8B%A9%E9%A1%B5%E9%9D%A2"><span class="toc-text">15.拼场景选择页面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-%E5%9C%BA%E6%99%AF%E9%80%89%E6%8B%A9%E9%9D%A2%E6%9D%BF%E7%9A%84%E6%95%B0%E6%8D%AE%E5%87%86%E5%A4%87"><span class="toc-text">16.场景选择面板的数据准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-%E5%9C%BA%E6%99%AF%E9%80%89%E6%8B%A9%E7%95%8C%E9%9D%A2%E9%80%BB%E8%BE%91"><span class="toc-text">17.场景选择界面逻辑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ChooseScenePanel"><span class="toc-text">ChooseScenePanel</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>大致记录下具体流程与详细知识点。估计之后的项目笔记也不会再记得这么详细了​。因为有点多就分了上下两篇。</p>
+<p>首先用2019版创建一个3D核心项目</p>
+<h2 id="1-先拖入场景并且制作面板"><a href="#1-先拖入场景并且制作面板" class="headerlink" title="1.先拖入场景并且制作面板"></a>1.先拖入场景并且制作面板</h2><p><img src="/../img/beishang20241207165715955.png">UIManager中，为了保证全局都能够找到一个Canvas,所以将canvas做成一个预设体1<br><img src="/../img/beishang20241207165731828.png"><br>找到人物资源，并且放入对应的动画，一个啃食一个在趴着</p>
+<h3 id="BasePanel"><a href="#BasePanel" class="headerlink" title="BasePanel"></a>BasePanel</h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"><span class="keyword">using</span> UnityEngine.Events;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title">BasePanel</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 专门用于控制面板透明度的组件</span></span><br><span class="line">    <span class="keyword">private</span> CanvasGroup canvasGroup;</span><br><span class="line">    <span class="comment">// 淡入淡出的速度</span></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">float</span> alphaSpeed = <span class="number">10</span>;</span><br><span class="line">    <span class="comment">// 当前是隐藏还是显示</span></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">bool</span> isShow = <span class="literal">false</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 当隐藏完毕后想要做的事情，委托。</span></span><br><span class="line">    <span class="keyword">private</span> UnityAction hideCallBack = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 保护类型的虚函数，是确保子类可以重写这个虚函数，用public是可以在外面执行的时候可以点出来</span></span><br><span class="line">    <span class="comment">// 但是这种生命周期函数是不需要手动调用，所以不用public而是用protected，在父类和子类之间可以使用就可以了。</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">Awake</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 获取面板上挂载的组件</span></span><br><span class="line">        canvasGroup = <span class="keyword">this</span>.GetComponent&lt;CanvasGroup&gt;();</span><br><span class="line">        <span class="keyword">if</span> (canvasGroup == <span class="literal">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            canvasGroup = <span class="keyword">this</span>.gameObject.AddComponent&lt;CanvasGroup&gt;();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Start is called before the first frame update</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        Init();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 注册控件事件的方法，所有的字面板都需要去注册一些控件事件</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 所以写成抽象方法，让子类必须去实现</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">Init</span>()</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 显示自己做的函数</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">ShowMe</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        canvasGroup.alpha = <span class="number">0</span>;</span><br><span class="line">        isShow = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 影藏自己的方法</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">HideMe</span>(<span class="params"> UnityAction callBack</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        canvasGroup.alpha = <span class="number">1</span>;</span><br><span class="line">        isShow = <span class="literal">false</span>; </span><br><span class="line">        </span><br><span class="line">        hideCallBack = callBack;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Update is called once per frame</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 实现淡入淡出的效果</span></span><br><span class="line">        <span class="keyword">if</span> (isShow &amp;&amp; canvasGroup.alpha != <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">             canvasGroup.alpha += alphaSpeed * Time.deltaTime;  </span><br><span class="line">             <span class="keyword">if</span>(canvasGroup.alpha &gt;= <span class="number">1</span>)</span><br><span class="line">                 canvasGroup.alpha = <span class="number">1</span>;         </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 淡出</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (!isShow &amp;&amp; canvasGroup.alpha != <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            canvasGroup.alpha -= alphaSpeed*Time.deltaTime;</span><br><span class="line">            <span class="keyword">if</span> (canvasGroup.alpha &lt;= <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                canvasGroup.alpha = <span class="number">0</span>;</span><br><span class="line">                <span class="comment">// 让面板透明度淡出完成后，再去执行的一些逻辑</span></span><br><span class="line">                <span class="comment">// 如果 hideCallBack 不为 null，那么就会执行它所封装的方法</span></span><br><span class="line">                hideCallBack?.Invoke(); </span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>每个继承BasePanel的面板都会有一个必须实现的方法Init();和几个可以改写的方法就是那些带 virtual的方法,不改写就默认父类的操作</p>
+<h3 id="UIManager"><a href="#UIManager" class="headerlink" title="UIManager"></a>UIManager</h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Collections;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">UIManager</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> UIManager instance = <span class="keyword">new</span> UIManager();</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> UIManager Instance =&gt; instance;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// BasePanel是米氏替换原则，基类替换。用于存储显示着的面板，每显示一个面板，就会存入这个字典。</span></span><br><span class="line">    <span class="comment">// 影藏面板的时候就会直接获取字典中的对应面版进行隐藏。</span></span><br><span class="line">    <span class="keyword">private</span> Dictionary&lt;<span class="built_in">string</span>, BasePanel&gt; panelDic = <span class="keyword">new</span> Dictionary&lt;<span class="built_in">string</span>, BasePanel&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 场景中的 Cancas对象,用于设置面板的父对象。</span></span><br><span class="line">    <span class="keyword">private</span> Transform canvasTrans;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 单例模式构造函数就会执行一次，所以用构造函数</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">UIManager</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 得到场景中的Canvas对象</span></span><br><span class="line">        GameObject canvas = GameObject.Instantiate(Resources.Load&lt;GameObject&gt;(<span class="string">&quot;UI/Canvas&quot;</span>));</span><br><span class="line">        canvasTrans = canvas.transform;</span><br><span class="line">        <span class="comment">// 通过场景时候不移除该对象，保证这个游戏过程中只有一个canvas对象。 </span></span><br><span class="line">        GameObject.DontDestroyOnLoad(canvas);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 显示面板</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> T <span class="title">ShowPanel</span>&lt;<span class="title">T</span>&gt;() <span class="keyword">where</span> T : BasePanel</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 保证泛型T的类型和面板预设体名字一样。</span></span><br><span class="line">        <span class="built_in">string</span> panelName = <span class="keyword">typeof</span>(T).Name;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (panelDic.ContainsKey(panelName))</span><br><span class="line">            <span class="keyword">return</span> panelDic[panelName] <span class="keyword">as</span> T;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 显示面板，创建实例，设置父对象。</span></span><br><span class="line">        GameObject panelObj = GameObject.Instantiate(Resources.Load&lt;GameObject&gt;(<span class="string">&quot;UI/&quot;</span> + panelName));</span><br><span class="line">        <span class="comment">// 把这个对象放到场景中Canvas下面</span></span><br><span class="line">        panelObj.transform.SetParent(canvasTrans, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获得这个泛型类面板的组件，存进字典。</span></span><br><span class="line">        T panel = panelObj.GetComponent&lt;T&gt;();</span><br><span class="line">        panelDic.Add(panelName, panel);</span><br><span class="line">        <span class="comment">// 通过BasePanel中方法显示。</span></span><br><span class="line">        panel.ShowMe();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> panel;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 隐藏面板</span></span><br><span class="line">    <span class="comment">// 需要考虑是直接淡入淡出还是直接删</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">HidePanel</span>&lt;<span class="title">T</span>&gt;(<span class="params"><span class="built_in">bool</span> isFade = <span class="literal">true</span></span>) <span class="keyword">where</span> T : BasePanel</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 根据泛型得到名字</span></span><br><span class="line">        <span class="built_in">string</span> panelName = <span class="keyword">typeof</span>(T).Name;</span><br><span class="line">        <span class="comment">// 判断当前显示的面板，有没有你想要隐藏的 。</span></span><br><span class="line">        <span class="keyword">if</span> (panelDic.ContainsKey(panelName))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (isFade)</span><br><span class="line">            &#123;</span><br><span class="line">                panelDic[panelName].HideMe(() =&gt;</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">// 删除对象</span></span><br><span class="line">                    GameObject.Destroy(panelDic[panelName].gameObject);</span><br><span class="line">                    <span class="comment">// 删除字典里面存储的面板脚本</span></span><br><span class="line">                    panelDic.Remove(panelName);</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 删除对象</span></span><br><span class="line">                GameObject.Destroy(panelDic[panelName].gameObject);</span><br><span class="line">                <span class="comment">// 删除字典里面存储的面板脚本</span></span><br><span class="line">                panelDic.Remove(panelName);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 得到面板</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> T <span class="title">GetPanel</span>&lt;<span class="title">T</span>&gt;() <span class="keyword">where</span> T : BasePanel</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">string</span> panelName = <span class="keyword">typeof</span>(T).Name;</span><br><span class="line">        <span class="keyword">if</span>(panelDic.ContainsKey(panelName))</span><br><span class="line">            <span class="keyword">return</span> panelDic[panelName] <span class="keyword">as</span> T;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>创建好面板后写开始面板逻辑，注意命名和Hierachy中一致<br><img src="/../img/beishang20241207170022521.png"><br>做好之后将这个脚本拖到BenginPanel下，然后将对应的按钮放到脚本组件下，再将BeginPanel做成一个预设体，然后就可以将这两个都删掉了。</p>
+<h2 id="2-创建一个Main，挂载主入口Main脚本。"><a href="#2-创建一个Main，挂载主入口Main脚本。" class="headerlink" title="2.创建一个Main，挂载主入口Main脚本。"></a>2.创建一个Main，挂载主入口Main脚本。</h2><p><img src="/../img/beishang20241207170107884.png">## 拼SettingPanel面板<br><img src="/../img/beishang20241207170130661.png"></p>
+<h2 id="3-编写背景音乐数据脚本"><a href="#3-编写背景音乐数据脚本" class="headerlink" title="3.编写背景音乐数据脚本"></a>3.编写背景音乐数据脚本</h2><h3 id="MusicData"><a href="#MusicData" class="headerlink" title="MusicData"></a>MusicData</h3><p>存储和读取音乐相关的数据<br><img src="/../img/beishang20241207170304251.png"></p>
+<h2 id="4-添加一个专门用来管理数据的类"><a href="#4-添加一个专门用来管理数据的类" class="headerlink" title="4.添加一个专门用来管理数据的类"></a>4.添加一个专门用来管理数据的类</h2><h3 id="GameDataMgr"><a href="#GameDataMgr" class="headerlink" title="GameDataMgr"></a>GameDataMgr</h3><p>提供了读取数据，斌且保存数据的方法给外部使用。<br><img src="/../img/beishang20241207170341399.png"><br><code>private GameDataMgr()</code>构造函数主要在首次访问<code>GameDataMgr</code>类的静态成员或者存在对其内部已初始化数据的依赖关系被首次触发时执行，以创建<code>GameDataMgr</code>类的实例并完成相关数据的初始化。这里关于的Json相关内容，不赘述。</p>
+<h2 id="5-专门创建一个脚本来控制背景音乐的开关和大小"><a href="#5-专门创建一个脚本来控制背景音乐的开关和大小" class="headerlink" title="5.专门创建一个脚本来控制背景音乐的开关和大小"></a>5.专门创建一个脚本来控制背景音乐的开关和大小</h2><p>这个脚本需要挂载到场景上，我们又希望无论在什么时候我们都能够去访问到它，所以我们写成单例模式<br><img src="/../img/beishang20241207170536691.png"></p>
+<h3 id="BKMusic"><a href="#BKMusic" class="headerlink" title="BKMusic"></a>BKMusic</h3><p>在场景中添加一个空物体来挂载这个脚本。<br><img src="/../img/beishang20241207170609002.png"><br>管理场景中的背景音乐，提供方法让外面来控制背景音乐的开关和大小。且是单例模式<br><img src="/../img/beishang20241207170617454.png"></p>
+<h2 id="6-编写设置面板脚本逻辑"><a href="#6-编写设置面板脚本逻辑" class="headerlink" title="6.编写设置面板脚本逻辑"></a>6.编写设置面板脚本逻辑</h2><p><img src="/../img/beishang20241207170631103.png"><br>将组件挂载到同名面板上，该拖的东西拖上去。</p>
+<h3 id="SettingPanel"><a href="#SettingPanel" class="headerlink" title="SettingPanel"></a>SettingPanel</h3><p>这里面与BKMusic结合来控制背景音乐的大小和开关，因为音效这个东西是在BKMusic的AudioSource组件上面挂着的。<br>与GameDataMgr结合来将设置的数据保存到本地，下次打开直接就是从本地拿出来。<br><img src="/../img/beishang20241207170822853.png"><br><img src="/../img/beishang20241207170842934.png"></p>
+<p>在BeginPanel’中点击显示会显示设置面板<br><img src="/../img/beishang20241207170928503.png"></p>
+<h2 id="7-摄像机动画"><a href="#7-摄像机动画" class="headerlink" title="7.摄像机动画"></a>7.摄像机动画</h2><p><img src="/../img/beishang20241207171011831.png"><br>选中摄像机<br><img src="/../img/beishang20241207171028672.png"><br>创建文件<br><img src="/../img/beishang20241207171045553.png">调整出来一种上下缓缓的浮动。<br><img src="/../img/beishang20241207171111775.png">接着新建一个左转的动作，右转的动作。<br><img src="/../img/beishang20241207171124816.png"><br>最后摄像机动画效果<br><img src="/../img/beishang20241207171144780.png"></p>
+<h3 id="动画脚本CameraAnimator"><a href="#动画脚本CameraAnimator" class="headerlink" title="动画脚本CameraAnimator"></a>动画脚本CameraAnimator</h3><p><img src="/../img/beishang20241207171203560.png"><br>为了知道什么时候动画播放完了，然后来控制选角面板和开始面板的出现。在动画中加事件。<br><img src="/../img/beishang20241207171248793.png"><br>游戏开始的时候点击开始实现左转的方法同时传进去一个函数，这个函数会在事件容器中存下来之后在PlayerOver中等动画播放完了之后再调用。<br><img src="/../img/beishang20241207171318664.png"><br>然后就是这段代码的使用，我们要在BeginPanel中使用<br><img src="/../img/beishang20241207171341096.png"></p>
+<h2 id="8-拼人物选角面板"><a href="#8-拼人物选角面板" class="headerlink" title="8.拼人物选角面板"></a>8.拼人物选角面板</h2><p><img src="/../img/beishang20241207171407924.png"><br>成果：<br><img src="/../img/beishang20241207171428321.png"></p>
+<h2 id="9-角色资源准备"><a href="#9-角色资源准备" class="headerlink" title="9.角色资源准备"></a>9.角色资源准备</h2><p><img src="/../img/beishang20241207171451122.png">将装好武器的人新做一个预制体。<br><img src="/../img/beishang20241207171506372.png">接着做人物的状态机<br><img src="/../img/beishang20241207171541991.png"><img src="/../img/beishang20241207171551460.png"></p>
+<h3 id="人物射击动画"><a href="#人物射击动画" class="headerlink" title="人物射击动画"></a>人物射击动画</h3><p>需要用到人物的遮罩<br>上面的设计动画和下半身移动需要分开做。<br>建立人物的遮罩Mask<br><img src="/../img/beishang20241207171625541.png"></p>
+<h3 id="人物蹲着动画"><a href="#人物蹲着动画" class="headerlink" title="人物蹲着动画"></a>人物蹲着动画</h3><p>做按住Ctrl键人物会蹲着走的动作。<br>到时候只需要代码设置这个层级的Weight权重就可以实现蹲着走了<br><img src="/../img/beishang20241207172043317.png"><br><img src="/../img/beishang20241207172054628.png"></p>
+<h3 id="做其余5个角色的状态机"><a href="#做其余5个角色的状态机" class="headerlink" title="做其余5个角色的状态机"></a>做其余5个角色的状态机</h3><p>用状态机的复用<br><img src="/../img/beishang20241207172119495.png"><br><img src="/../img/beishang20241207172128286.png">其余都是一样的。拖动。<br><img src="/../img/beishang20241207172141728.png"></p>
+<h2 id="10-配置人物模型的数据"><a href="#10-配置人物模型的数据" class="headerlink" title="10.配置人物模型的数据"></a>10.配置人物模型的数据</h2><p>采用Json相关数据表来配置相关新鲜文件夹来编辑。<br><img src="/../img/beishang20241207172202833.png">RoleInfo中<br><img src="/../img/beishang20241207172214139.png">转成json<br><img src="/../img/beishang20241207172226171.png">在StreamingAssets里面创建。<br><img src="/../img/beishang20241207172257846.png">这样角色数据表就准备好了。<br>接着需要有一个对应的数据结构类来装载这些数据。<br><img src="/../img/beishang20241207172311827.png"></p>
+<p>玩家运行时候记录当前已经解锁角色的数据。<br><img src="/../img/beishang20241207172342122.png"><br><img src="/../img/beishang20241207172353702.png">GameDataMgr中读取数据<br>一个是roleInfoList，一个是playerData<br><img src="/../img/beishang20241207172445492.png"><code>注意</code>这里我的读取角色数据下面写错了,是RoleInfo应与Unity中的Assets&#x2F;Scripts&#x2F;Data&#x2F;RoleInfo.cs一致,不是RoleInfoList</p>
+<h2 id="11-选角面板逻辑"><a href="#11-选角面板逻辑" class="headerlink" title="11.选角面板逻辑"></a>11.选角面板逻辑</h2><p>新建脚本继承BasePanel实现抽象方法，拖入控件实现控件逻辑。<br><img src="/../img/beishang20241207172610818.png"><br>确定角色动态出现的位置<br>新建一个空物体HeroPos<br><img src="/../img/beishang20241207172640764.png">在BeginPanel加一个显示,方便后面测试人物选择面板<br><img src="/../img/beishang20241207172658408.png"></p>
+<h3 id="ChooseHeroPanel"><a href="#ChooseHeroPanel" class="headerlink" title="ChooseHeroPanel"></a>ChooseHeroPanel</h3><p><img src="/../img/beishang20241207172734644.png"></p>
+<h4 id="左右键变换角色的逻辑"><a href="#左右键变换角色的逻辑" class="headerlink" title="左右键变换角色的逻辑"></a>左右键变换角色的逻辑</h4><p><img src="/../img/beishang20241207172833456.png"></p>
+<h4 id="解锁按钮显示和隐藏和开始按钮显示和隐藏"><a href="#解锁按钮显示和隐藏和开始按钮显示和隐藏" class="headerlink" title="解锁按钮显示和隐藏和开始按钮显示和隐藏"></a>解锁按钮显示和隐藏和开始按钮显示和隐藏</h4><p><img src="/../img/beishang20241207172925708.png"></p>
+<h4 id="解锁按钮的购买逻辑"><a href="#解锁按钮的购买逻辑" class="headerlink" title="解锁按钮的购买逻辑"></a>解锁按钮的购买逻辑</h4><p><img src="/../img/beishang20241207172946441.png"></p>
+<h4 id="点击开始和返回按钮逻辑"><a href="#点击开始和返回按钮逻辑" class="headerlink" title="点击开始和返回按钮逻辑"></a>点击开始和返回按钮逻辑</h4><p>首先得在GameDataMgr中记录下选好的人物.<br><img src="/../img/beishang20241207173007336.png">逻辑：<br><img src="/../img/beishang20241207173028494.png"></p>
+<h4 id="返回后人物没销毁bug"><a href="#返回后人物没销毁bug" class="headerlink" title="返回后人物没销毁bug"></a>返回后人物没销毁bug</h4><p>然后发现点击返回后再开始人物没有去销毁<br>修改方式可以重写BasePanel中的HideMe方法,因为再UIManager.Instance.HidePanel中就会用到BasePanel的HideMe方法.而HideMe方法就是可以重写的.<br><img src="/../img/beishang20241207173108682.png">至于这里为什么要base.HideMe(callback),我想应该是为了和父类的方法保持一致,因为隐藏的时候就是用HidePanel&lt;&gt;()并没有传入(bool isFade &#x3D; true) ,所以默认是true。<br><img src="/../img/beishang20241207173137155.png">而这个callback就是为了淡入淡出准备的事件:HideMe里面的事件(callBack)就是删除对象和字典里面的面板脚本,而HideMe里面除了设置事件的方法外还有能够控制淡入的条件设置。<br><img src="/../img/beishang20241207173149973.png"></p>
+<h2 id="13-拼提示界面"><a href="#13-拼提示界面" class="headerlink" title="13.拼提示界面"></a>13.拼提示界面</h2><p><img src="/../img/beishang20241207173206478.png"></p>
+<h2 id="14-提示面板逻辑和使用"><a href="#14-提示面板逻辑和使用" class="headerlink" title="14.提示面板逻辑和使用"></a>14.提示面板逻辑和使用</h2><p>因为继承了BasePanel所以可以使用UIManager来全局生成。<br><img src="/../img/beishang20241207173237264.png"></p>
+<p>使用的时候直接再ChooseHeroPanel中需要的地方直接使用且调用ChangeInfo方法。<br><img src="/../img/beishang20241207173304805.png"></p>
+<h2 id="15-拼场景选择页面"><a href="#15-拼场景选择页面" class="headerlink" title="15.拼场景选择页面"></a>15.拼场景选择页面</h2><p>和人物选择界面有相同点，直接拿人物选择界面来更改。<br><img src="/../img/beishang20241207173356425.png"></p>
+<h2 id="16-场景选择面板的数据准备"><a href="#16-场景选择面板的数据准备" class="headerlink" title="16.场景选择面板的数据准备"></a>16.场景选择面板的数据准备</h2><p>新建数据表<br><img src="/../img/beishang20241207173422864.png"><img src="/../img/beishang20241207173432684.png"><br><img src="/../img/beishang20241207173443991.png"><br><img src="/../img/beishang20241207173454031.png">准备数据类<br><img src="/../img/beishang20241207173505004.png"><br>在GameDataMgr中读取<br><img src="/../img/beishang20241207173520572.png"></p>
+<h2 id="17-场景选择界面逻辑"><a href="#17-场景选择界面逻辑" class="headerlink" title="17.场景选择界面逻辑"></a>17.场景选择界面逻辑</h2><p>首先在ChooseHeroPanel中将点击开始后进入场景选择界面的逻辑加上<br><img src="/../img/beishang20241207173547224.png">需要将图片的类型转换成Sprite类型<br><img src="/../img/beishang20241207173600484.png"></p>
+<h3 id="ChooseScenePanel"><a href="#ChooseScenePanel" class="headerlink" title="ChooseScenePanel"></a>ChooseScenePanel</h3><p>大致逻辑，和ChooseHeroPanel有异曲同工之妙<br><img src="/../img/beishang20241207173653497.png"><br><img src="/../img/beishang20241207173702932.png">这里的切换对应场景等做了游戏场景再补充。<br><img src="/../img/beishang20241207173726393.png"><br><img src="/../img/beishang20241207173740792.png"></p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 2154838055@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2024- beishangzhajitui
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
