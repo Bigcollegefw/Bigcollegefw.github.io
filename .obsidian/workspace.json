@@ -22,6 +22,18 @@
             }
           },
           {
+            "id": "903d6af4f9079812",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "source/img/beishang20241207184136981.png"
+              },
+              "icon": "lucide-image",
+              "title": "beishang20241207184136981"
+            }
+          },
+          {
             "id": "f3681076df414ff7",
             "type": "leaf",
             "state": {
@@ -36,7 +48,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -190,29 +202,29 @@
   "active": "f3681076df414ff7",
   "lastOpenFiles": [
     "source/_posts/丧尸围城（下）.md",
+    "source/img/beishang20241207184136981.png",
     "source/_posts/丧尸围城（上）.md",
-    "source/img/beishang20241207171248793.png",
-    "public/img/beishang20241207172141728.png",
-    "public/img/beishang20241207172202833.png",
-    "public/img/beishang20241207172119495.png",
-    "public/img/beishang20241207172128286.png",
-    "public/img/beishang20241207173726393.png",
-    "public/img/beishang20241207173740792.png",
-    "public/img/beishang20241207173454031.png",
-    "public/img/beishang20241207173443991.png",
-    "public/img/beishang20241207173422864.png",
+    "source/img/beishang20241207185826754.png",
+    "source/img/beishang20241207185718766.png",
+    "source/img/beishang20241207185657714.png",
+    "source/img/beishang20241207185640133.png",
+    "source/img/beishang20241207185617179.png",
+    "source/img/beishang20241207185549195.png",
+    "source/img/beishang20241207185530888.png",
+    "source/img/beishang20241207185521526.png",
+    "source/img/beishang20241207185504238.png",
+    "tags/demo/index.html",
+    "tags/demo",
+    "categories/项目/index.html",
+    "categories/项目",
+    "2024/12/65ec626183cc.html",
+    "2024/12/1fe799e51a85.html",
     "public/2024/12/65ec626183cc.html",
     "public/2024/12/1fe799e51a85.html",
     "source/_obsidian/Post Template.md",
     "public/2024/12/8b02d33e70c6.html",
     "public/tags/demo/index.html",
-    "public/tags/demo",
-    "public/categories/项目/index.html",
-    "public/categories/项目",
     "Virtual和abstract.md",
-    "tags/工具/index.html",
-    "tags/工具",
-    "2024/12/ff01685836c7.html",
     "source/_posts/Hexo+Github+Obsidian这里是建站记录.md",
     "source/_posts/未命名 1.md",
     "2024-12-06.md",
