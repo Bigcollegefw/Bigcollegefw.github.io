@@ -25,7 +25,8 @@ git init
 ```
 之后再进行仓库之间的推送与拉取
 
-安装Hexo
+## 安装Hexo
+在这之前要装Git和Node.js，这里就略了。
 安装过程中要设置终端中管理员模式，不然指不定报错
 ```
 npm install -g hexo-cli # 全局安装  
@@ -36,7 +37,7 @@ I:\HexoBlog\blog目录下
 hexo init
 ```
 
-安装 主题
+## 安装主题
 在根目录下右键 Git bash
 ```
 git clone https://github.com/yelog/hexo-theme-3-hexo.git themes/3-hexo
@@ -154,8 +155,8 @@ diff <<<<<<< HEAD
 	File changes in remote repository
 >>>>>>> origin/main 
 ```
-比如这里我将换了两张图片，与原来对应位置图片同名
-但这里我就一张图片，现在我就保留本地的图片
+比如这里我换了两张图片，替换掉原来的同名图片。
+但这里我就一张图片，不是文本，现在我就想保留本地的图片
 ![](../img/beishang20241208001958088.png)
 
 参考：
