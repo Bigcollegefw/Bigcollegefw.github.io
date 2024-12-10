@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/丧尸围城（下）.md",
+                "file": "source/_posts/制作3C.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "丧尸围城（下）"
+              "title": "制作3C"
             }
           },
           {
@@ -152,10 +152,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/丧尸围城（下）.md"
+                "file": "source/_posts/制作3C.md"
               },
               "icon": "lucide-list",
-              "title": "丧尸围城（下） 的大纲"
+              "title": "制作3C 的大纲"
             }
           },
           {
@@ -188,9 +188,11 @@
   },
   "active": "3e32a766516aeb0c",
   "lastOpenFiles": [
-    "source/img/beishang20241210192418443.png",
-    "source/_posts/丧尸围城（上）.md",
+    "source/img/beishang20241210221344178.png",
     "source/_posts/丧尸围城（下）.md",
+    "source/_posts/丧尸围城（上）.md",
+    "source/_posts/制作3C.md",
+    "source/img/beishang20241210192418443.png",
     "img/weixin.jpg",
     "img/alipay.jpg",
     "source/img/beishang20241210111844367.png",
@@ -200,7 +202,6 @@
     "img/beishang20241209225142521.png",
     "img/beishang20241209223854989.png",
     "img/beishang20241209223649168.png",
-    "img/beishang20241209215813052.png",
     "source/_posts/Hexo+Github+Obsidian这里是建站记录.md",
     "conflict-files-obsidian-git.md",
     "img/GameOverPanel.cs",
@@ -232,7 +233,6 @@
     "source/我的第一篇博客/我的第一篇博客.md",
     "source/_posts/undefined/我的第一篇博客.md",
     "public/2024/12/e2d05d866c0b/一篇博客.md",
-    "source/_posts/Text/post.md",
-    "2024-12-05.md"
+    "source/_posts/Text/post.md"
   ]
 }
