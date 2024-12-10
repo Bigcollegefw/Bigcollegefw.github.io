@@ -34,30 +34,6 @@
               "icon": "lucide-file",
               "title": "丧尸围城（下）"
             }
-          },
-          {
-            "id": "f4eb23cc62d3a18a",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "img/weixin.jpg"
-              },
-              "icon": "lucide-image",
-              "title": "weixin"
-            }
-          },
-          {
-            "id": "aff158f3cbbf6639",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "img/alipay.jpg"
-              },
-              "icon": "lucide-image",
-              "title": "alipay"
-            }
           }
         ]
       }
@@ -214,6 +190,8 @@
   "lastOpenFiles": [
     "source/_posts/丧尸围城（上）.md",
     "source/_posts/丧尸围城（下）.md",
+    "img/weixin.jpg",
+    "img/alipay.jpg",
     "source/img/beishang20241210111844367.png",
     "source/img/beishang20241210111825983.png",
     "source/img/beishang20241210110744784.png",
@@ -222,8 +200,6 @@
     "img/beishang20241209223854989.png",
     "img/beishang20241209223649168.png",
     "img/beishang20241209215813052.png",
-    "img/beishang20241209215752304.png",
-    "img/beishang20241209213635541.png",
     "source/_posts/Hexo+Github+Obsidian这里是建站记录.md",
     "conflict-files-obsidian-git.md",
     "img/GameOverPanel.cs",
