@@ -13,26 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/about.md",
+                "file": "source/_posts/CShap进阶/lambad表达式.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "about"
-            }
-          },
-          {
-            "id": "f3681076df414ff7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "source/_posts/丧尸围城（下）.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "丧尸围城（下）"
+              "title": "lambad表达式"
             }
           }
         ]
@@ -152,10 +138,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/about.md"
+                "file": "source/_posts/CShap进阶/lambad表达式.md"
               },
               "icon": "lucide-list",
-              "title": "about 的大纲"
+              "title": "lambad表达式 的大纲"
             }
           },
           {
@@ -188,13 +174,15 @@
   },
   "active": "3e32a766516aeb0c",
   "lastOpenFiles": [
-    "source/_posts/3C.md",
-    "source/_posts/丧尸围城（上）.md",
-    "source/_posts/丧尸围城（下）.md",
-    "source/_posts/Gird Layout Group.md",
-    "source/UGUI抽卡系统.md",
     "source/Hexo+Github+Obsidian这里是建站记录.md",
+    "source/_posts/CShap进阶/lambad表达式.md",
+    "source/_posts/CShap进阶",
+    "source/_posts/丧尸围城（下）.md",
+    "source/_posts/丧尸围城（上）.md",
+    "source/_posts/3C.md",
+    "source/_posts/Gird Layout Group.md",
     "source/about.md",
+    "source/UGUI抽卡系统.md",
     "source/img/beishang20241212153451361.png",
     "source/img/beishang20241212153436289.png",
     "source/img/beishang20241212135506413.png",
@@ -216,7 +204,6 @@
     "tags/demo",
     "categories/项目/index.html",
     "categories/项目",
-    "2024/12/65ec626183cc.html",
     "Virtual和abstract.md",
     "source/_posts/未命名 1.md",
     "2024-12-06.md",
