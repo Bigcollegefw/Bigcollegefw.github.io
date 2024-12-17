@@ -1,7 +1,8 @@
 ---
-title: 
+title: lambad表达式
 date:
   "{ date }": 
-categories: 
+categories:
+  - C#
 tags:
 ---
