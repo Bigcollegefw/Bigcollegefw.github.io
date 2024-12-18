@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "3d6c464a1f506d07",
@@ -175,15 +174,16 @@
   },
   "active": "3e32a766516aeb0c",
   "lastOpenFiles": [
-    "source/_posts/CShap进阶/ArrayList.md",
-    "source/_posts/CShap进阶/lambda表达式.md",
-    "source/_posts/CShap进阶/Stack.md",
-    "source/_posts/UGUI抽卡系统.md",
-    "source/_posts/Gird Layout Group.md",
-    "source/_posts/丧尸围城（下）.md",
-    "source/_posts/丧尸围城（上）.md",
     "source/_posts/第三人称控制器.md",
+    "source/_posts/丧尸围城（上）.md",
+    "source/_posts/丧尸围城（下）.md",
+    "source/_posts/Gird Layout Group.md",
+    "source/_posts/UGUI抽卡系统.md",
+    "source/about.md",
     "source/Hexo+Github+Obsidian这里是建站记录.md",
+    "source/_posts/CShap进阶/Stack.md",
+    "source/_posts/CShap进阶/lambda表达式.md",
+    "source/_posts/CShap进阶/ArrayList.md",
     "public/img/beishang20241211102412116.png",
     "public/2024/12/b6dca44d7932.html",
     "public/2024/12/a15eb1a14309.html",
@@ -192,7 +192,6 @@
     "public/Hexo+Github+Obsidian这里是建站记录.html",
     "2024-12-16.md",
     "source/_posts/CShap进阶",
-    "source/about.md",
     "source/img/beishang20241212153451361.png",
     "source/img/beishang20241212153436289.png",
     "source/img/beishang20241212135506413.png",
