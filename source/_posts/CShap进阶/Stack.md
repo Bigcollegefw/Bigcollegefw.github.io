@@ -1,6 +1,16 @@
+---
+title: Stack
+date:
+  "{ date }": 
+categories:
+  - C#
+  - C#进阶
+tags:
+---
+
 ## 1.Stack的本质
 栈是C#为我们封装好的类，本质也是object类型数组，封装了特殊的存储规则。
-栈是一种先进后出的数据结构Stack是栈存储容器，类比为一个装羽毛球的那个容器。
+栈是一种先进后出的数据结构，Stack是栈存储容器，类比为一个装羽毛球的那个容器。
 ## 2.申明
 在using System.Collections命名空间中。
 ```C#
@@ -39,7 +49,7 @@ if( stack.Contains(1.2f))
 ```
 - [ ] 改
 ```C#
-栈无法改变元素，只能压和弹
+栈无法改变元素，只能压和弹，下面是清空。
 stack.Clear();
 ```
 ## 4. 遍历
@@ -57,6 +67,84 @@ foreach(object item in stack){
 }
 ```
 
+3.将栈转换成object数组，再for遍历出来。遍历出来的顺序是从栈顶到栈底。
+```C#
+object[] array = stack.ToArray();
+for(int i = 0; i < array.Length; i++)
+{
+	Console.WriteLine(array[i]);
+}
+```
+
+4.循环弹栈
+弹完后什么都灭有了，相当于一个弹夹。
+```C#
+while( stack.Count > 0)
+{ 
+	object o = stack.Pop();
+	Console.WriteLine(o);
+}
+```
 ## 5.装箱拆箱
+同ArrayList, 进行值类型存储的时候就是在装箱，当将值类型对象取出来转换使用就存在拆箱。
 
+## 6.练习
+通过栈结构计算任意一个数的二进制数并打印出来
+```c#
+using System;
+using System.Collections.Generic;
 
+// 自己定义一个栈类，不用自己定义当然可以
+class Stack
+{
+    private List<int> items = new List<int>();
+
+    public void Push(int item)
+    {
+        items.Add(item);
+    }
+
+    public int Pop()
+    {
+        int lastIndex = items.Count - 1;
+        int item = items[lastIndex];
+        items.RemoveAt(lastIndex);
+        return item;
+    }
+
+    public bool IsEmpty()
+    {
+        return items.Count == 0;
+    } 
+}
+
+class Program
+{
+    static string DecimalToBinary(int decimalNumber)
+    {
+        Stack stack = new Stack();
+        //- 通过循环将十进制数不断除以 2，取余数并将余数压入栈中，直到十进制数变为 0。
+        while (decimalNumber > 0)
+        {
+            int remainder = decimalNumber % 2;
+            stack.Push(remainder);
+            decimalNumber /= 2;
+        }
+
+        string binaryNumber = "";
+        while (!stack.IsEmpty())
+        {
+            binaryNumber += stack.Pop().ToString();
+        }
+
+        return binaryNumber;
+    }
+
+    static void Main()
+    {
+        int number = 23;
+        string binary = DecimalToBinary(number);
+        Console.WriteLine(binary);
+    }
+}
+```
