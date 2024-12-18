@@ -9,6 +9,15 @@ List<string> list2 = new List<string>();
 List<bool> list3 = new List<bool>();
 ```
 ## 增删查改
+- [ ] 增
+
+d
+- [ ] 删
+
+- [ ] 查
+
+- [ ] 改
+
 
 
 
