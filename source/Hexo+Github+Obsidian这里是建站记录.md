@@ -1,5 +1,5 @@
 ---
-title: Hexo+Github+Obsidian这里是建站记录
+title: 这里是建站记录
 date: 2024-12-6 15:13:47
 categories:
   - 工具

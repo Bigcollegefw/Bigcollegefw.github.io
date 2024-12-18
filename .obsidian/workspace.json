@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/CShap进阶/lambad表达式.md",
+                "file": "source/_posts/CShap进阶/Stack.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "lambad表达式"
+              "title": "Stack"
             }
           }
         ]
@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "3d6c464a1f506d07",
@@ -138,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/CShap进阶/lambad表达式.md"
+                "file": "source/_posts/CShap进阶/Stack.md"
               },
               "icon": "lucide-list",
-              "title": "lambad表达式 的大纲"
+              "title": "Stack 的大纲"
             }
           },
           {
@@ -174,12 +175,15 @@
   },
   "active": "3e32a766516aeb0c",
   "lastOpenFiles": [
-    "source/_posts/Gird Layout Group.md",
+    "source/_posts/CShap进阶/ArrayList.md",
+    "source/_posts/CShap进阶/lambda表达式.md",
+    "source/_posts/CShap进阶/Stack.md",
     "source/_posts/UGUI抽卡系统.md",
+    "source/_posts/Gird Layout Group.md",
     "source/_posts/丧尸围城（下）.md",
     "source/_posts/丧尸围城（上）.md",
-    "source/_posts/3C.md",
-    "source/_posts/CShap进阶/lambad表达式.md",
+    "source/_posts/第三人称控制器.md",
+    "source/Hexo+Github+Obsidian这里是建站记录.md",
     "public/img/beishang20241211102412116.png",
     "public/2024/12/b6dca44d7932.html",
     "public/2024/12/a15eb1a14309.html",
@@ -187,7 +191,6 @@
     "public/2024/12/34ff232250de.html",
     "public/Hexo+Github+Obsidian这里是建站记录.html",
     "2024-12-16.md",
-    "source/Hexo+Github+Obsidian这里是建站记录.md",
     "source/_posts/CShap进阶",
     "source/about.md",
     "source/img/beishang20241212153451361.png",
@@ -217,7 +220,6 @@
     "img.md",
     "public/2024/12/e2d05d866c0b/第一天。.md",
     "source/_posts/sssszzzz/数组.md",
-    "source/_posts/前端/我的第一篇博客.md",
-    "source/_posts/我的第一篇博客/我的第一篇博客.md"
+    "source/_posts/前端/我的第一篇博客.md"
   ]
 }

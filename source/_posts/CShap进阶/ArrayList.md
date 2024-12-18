@@ -1,0 +1,102 @@
+---
+title: ArrayList
+date:
+  "{ date }": 
+categories:
+  - C#
+  - C#进阶
+tags:
+---
+
+
+## 1.ArrayList的本质
+是一个C#为我们封装好的一个类，本质是一个Object类型的数组，帮助我们实现了很多数组的增删查改。
+
+## 2.申明
+在using System.Collections命名空间中。
+```C#
+ArrayList array = new ArrayList();
+```
+
+## 3.增删查改
+
+- [ ] 增
+```C#
+// 单个加
+array.Add(1);
+array.Add("A");
+array.Add(new object());
+// 批量加,array2也是有若干个元素的数组列表。
+array.AddRange(array2);
+
+// 从中间插入,从index为1的位置插一个
+array.Insert(1,"123456");
+Console.WriteLine(array[1]);
+```
+- [ ] 删
+```C#
+// 从头到尾去遍历，找到一个一样的就会删掉。
+array.Remove(1);
+// 移除指定位置的元素
+array.RemoveAt(2);
+// 清空
+array.Clear();
+```
+- [ ] 查
+```C#
+Console.WriteLine(array[0]);
+// 查看元素是否存在，返回bool值
+if( array.Contains("123")){ 
+	Console.WriteLine("123exsit");
+}
+// 正向查找元素位置，找到返回元素索引，找不到返回-1；
+int index = array.IndexOf(true);
+Console.WriteLine(index);
+Console.WriteLine(array.IndexOf(false));
+// 反向查找，找到返回从头开始的索引数，找不到返回-1；
+Console.WriteLine(array.LastIndexOf(true));
+```
+- [ ] 改
+```C#
+arrayA[0] = "999";
+```
+
+## 4.遍历
+数组是Lenth，这里是Count得到长度，Capacity是容量，容量是为了开辟好内存空间后，不会总是超出容量从而新开辟一块内存空间，减少过多的垃圾的产生。
+```C#
+Console.WriteLine(array.Count);
+// 容量
+Console.WriteLine(array.Capacity);
+for(int i = 0;i < array.Count;i++)
+{ 
+	Console.WriteLine(array[i]);
+}
+```
+
+这里需要实现什么迭代器，才能用迭代器遍历。
+```C#
+// 迭代器遍历
+foreach(object item in array)
+{ 
+	Console.WriteLine(item);
+}
+```
+
+## 5.装箱拆箱
+装箱：栈上面的内存转移堆上面去
+拆箱：堆上面的内存转移到栈上面
+
+栈对应值类型
+堆对应引用类型
+
+Object是引用类型
+
+```C#
+int i = 1;
+array[0] = i;// 装箱
+
+i = (int)array[0]; // 拆箱
+```
+
+ 进行值类型存储的时候就是在装箱，当将值类型对象取出来转换使用就存在拆箱。
+ 所以ArrayList尽量少用，之后我们会有更好的数据容器。
