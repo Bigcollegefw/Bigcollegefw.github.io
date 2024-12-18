@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/CShap进阶/6.泛型约束.md",
+                "file": "source/_posts/CShap进阶/2.Stack.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "6.泛型约束"
+              "title": "2.Stack"
             }
           }
         ]
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "3d6c464a1f506d07",
@@ -139,10 +138,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/CShap进阶/6.泛型约束.md"
+                "file": "source/_posts/CShap进阶/2.Stack.md"
               },
               "icon": "lucide-list",
-              "title": "6.泛型约束 的大纲"
+              "title": "2.Stack 的大纲"
             }
           },
           {
@@ -173,30 +172,35 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3e32a766516aeb0c",
+  "active": "f76fa23c5dc956f5",
   "lastOpenFiles": [
-    "source/_posts/CShap进阶/1.ArrayList.md",
-    "source/_posts/CShap进阶/2.Stack.md",
+    "public/categories/工具/index.html",
     "source/_posts/CShap进阶/6.泛型约束.md",
+    "source/_posts/CShap进阶/List.md",
+    "source/_posts/第三人称控制器.md",
+    "source/_posts/丧尸围城（上）.md",
+    "source/_posts/丧尸围城（下）.md",
+    "source/_posts/Gird Layout Group.md",
+    "source/_posts/UGUI抽卡系统.md",
     "source/_posts/CShap进阶/lambda表达式.md",
     "source/_posts/CShap进阶/5.泛型.md",
-    "source/_posts/CShap进阶/List.md",
+    "source/_posts/CShap进阶/1.ArrayList.md",
+    "source/_posts/CShap进阶/2.Stack.md",
     "source/_posts/CShap进阶/3.Queue.md",
+    "public/2024/12/515fc9cb74fb.html",
+    "public/2024/12/94bc47baa022.html",
+    "public/2024/12/80d476b31e2e.html",
+    "public/2024/12/43785e42a40e.html",
+    "public/2024/12/808d8cee3906.html",
+    "public/page/2/index.html",
+    "public/page/2",
+    "public/page",
+    "public/2024/12/d4a678babebe.html",
+    "public/2024/12/e51a91354c60.html",
     "source/about.md",
     "source/Hexo+Github+Obsidian这里是建站记录.md",
-    "source/_posts/UGUI抽卡系统.md",
-    "source/_posts/Gird Layout Group.md",
-    "source/_posts/丧尸围城（下）.md",
-    "source/_posts/丧尸围城（上）.md",
-    "source/_posts/第三人称控制器.md",
     "public/img/beishang20241211102412116.png",
-    "public/2024/12/b6dca44d7932.html",
-    "public/2024/12/a15eb1a14309.html",
-    "public/2024/12/dceafda03a40.html",
-    "public/2024/12/34ff232250de.html",
-    "public/Hexo+Github+Obsidian这里是建站记录.html",
     "2024-12-16.md",
-    "source/_posts/CShap进阶",
     "source/img/beishang20241212153451361.png",
     "source/img/beishang20241212153436289.png",
     "source/img/beishang20241212135506413.png",
@@ -207,11 +211,7 @@
     "source/img/beishang20241212103106332.png",
     "source/img/beishang20241212102843819.png",
     "source/_obsidian/Post Template.md",
-    "2024/12/29cba0b690a9.html",
-    "public/2024/12/29cba0b690a9.html",
     "conflict-files-obsidian-git.md",
-    "img/GameOverPanel.cs",
-    "public/img/GameOverPanel.cs",
     "Virtual和abstract.md",
     "source/_posts/未命名 1.md",
     "2024-12-06.md",
@@ -219,7 +219,6 @@
     "未命名.md",
     "source/_posts/这是我开始学习Java 的第一天。.md",
     "source/_posts/数据库.md",
-    "source/_posts/Typora最常用的命令.md",
-    "source/_posts/sima.md"
+    "source/_posts/Typora最常用的命令.md"
   ]
 }

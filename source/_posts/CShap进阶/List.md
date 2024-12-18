@@ -1,3 +1,13 @@
+---
+title: List
+date:
+  "{ date }": 
+categories:
+  - C#
+  - C#进阶
+tags:
+---
+
 ## List本质
 List 是C#封装好的类，本质是一个可变类型的泛型数组
 List类帮助我们实现了许多方法。包括泛型数组的增删查改
