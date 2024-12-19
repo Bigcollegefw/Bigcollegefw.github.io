@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/CShap进阶/6.泛型约束.md",
+                "file": "source/_posts/CShap进阶/19.值类型和引用类型.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "6.泛型约束"
+              "title": "19.值类型和引用类型"
             }
           }
         ]
@@ -138,10 +138,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/CShap进阶/6.泛型约束.md"
+                "file": "source/_posts/CShap进阶/19.值类型和引用类型.md"
               },
               "icon": "lucide-list",
-              "title": "6.泛型约束 的大纲"
+              "title": "19.值类型和引用类型 的大纲"
             }
           },
           {
@@ -172,15 +172,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f76fa23c5dc956f5",
+  "active": "3e32a766516aeb0c",
   "lastOpenFiles": [
+    "source/_posts/CShap进阶/18.多线程.md",
+    "source/_posts/CShap进阶/19.值类型和引用类型.md",
     "source/_posts/CShap进阶/5.泛型.md",
+    "source/_posts/CShap进阶/6.泛型约束.md",
+    "source/_posts/CShap进阶/17.协变逆变.md",
+    "source/_posts/CShap进阶/List.md",
+    "2024-12-19.md",
+    "source/_posts/CShap进阶/lambda表达式.md",
+    "source/_posts/面试/L1.md",
     "source/_posts/CShap进阶/3.Queue.md",
     "source/_posts/CShap进阶/2.Stack.md",
     "source/_posts/CShap进阶/1.ArrayList.md",
-    "source/_posts/CShap进阶/6.泛型约束.md",
-    "source/_posts/CShap进阶/lambda表达式.md",
-    "source/_posts/CShap进阶/List.md",
+    "source/_posts/面试",
     "source/_posts/第三人称控制器.md",
     "source/_posts/丧尸围城（下）.md",
     "source/_posts/Gird Layout Group.md",
@@ -195,7 +201,6 @@
     "public/page/2/index.html",
     "public/page/2",
     "public/page",
-    "public/2024/12/d4a678babebe.html",
     "source/about.md",
     "source/Hexo+Github+Obsidian这里是建站记录.md",
     "public/img/beishang20241211102412116.png",
@@ -214,10 +219,6 @@
     "Virtual和abstract.md",
     "source/_posts/未命名 1.md",
     "2024-12-06.md",
-    "source/_posts/hello-world.md",
-    "未命名.md",
-    "source/_posts/这是我开始学习Java 的第一天。.md",
-    "source/_posts/数据库.md",
-    "source/_posts/Typora最常用的命令.md"
+    "source/_posts/hello-world.md"
   ]
 }
