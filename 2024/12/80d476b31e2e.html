@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Hexo</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="Hexo">
+  <title>2.Stack | Hexo</title>
+  <meta name="keywords" content=" CSharp ">
+  <meta name="description" content="2.Stack | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="前言虽然配置好了，整个过程属于是非常懵，思考了许久决定将建站历程记录下来，相信如果你是一个没建过网站的人，那你可能会想我一样先找找有没有关于的搭建的过程。不过很不幸，这篇博客更多是为了记录和提醒自己，如果你要是完全按照这个不一定搞得出来。可以借鉴的地方是关于让图片能够在博客的 文章中显示出来的内容，因为这一块我网上没有找到跟我一样的，是自己摸索的。 原理123hexo clean # 清除缓存文件">
 <meta property="og:type" content="website">
@@ -67,7 +67,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -535,18 +535,66 @@
 
     </div>
     <div class="hide-list">
-        <div class="semicircle" data-title="切换全屏 快捷键 s">
+        <div class="semicircle" data-title="Toggle full screen shortcut key s">
             <div class="brackets first"><</div>
             <div class="brackets">&gt;</div>
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-CShap进阶/2.Stack" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Blog"><span class="toc-text">Why Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E6%88%91"><span class="toc-text">关于我</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E7%9B%AE%E5%89%8D"><span class="toc-text">博客目前</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
+        <h1 class="article-title">2.Stack</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="C#">C#</a> > 
+            
+            <a  data-rel="C#&lt;---&gt;C#进阶">C#进阶</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">CSharp</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2024-12-19 07:57:47'>2024-12-18 12:07</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Stack%E7%9A%84%E6%9C%AC%E8%B4%A8"><span class="toc-text">1.Stack的本质</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%94%B3%E6%98%8E"><span class="toc-text">2.申明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%A2%9E%E5%8F%96%E6%9F%A5%E6%94%B9"><span class="toc-text">3.增取查改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E9%81%8D%E5%8E%86"><span class="toc-text">4. 遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E8%A3%85%E7%AE%B1%E6%8B%86%E7%AE%B1"><span class="toc-text">5.装箱拆箱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E7%BB%83%E4%B9%A0"><span class="toc-text">6.练习</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -559,29 +607,52 @@
     }
 </style>
 </div>
-            <h1 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog"></a>Why Blog</h1><h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p><strong>beishangzhajitui</strong> 是悲伤炸鸡腿的拼音。<br>本科在读，希望我的一些内容能帮到你，其余先不过多介绍了。</p>
-<p>目的虽有，却无路可循；我们称之为路的，无非是踌躇。</p>
-<h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。</p>
-<p>通过博客，我们可以记录自己的生活和成长的轨迹。它不像 Twitter 那样碎片化，也不像 Facebook 那样关系化，它是私人的空间。</p>
-<h2 id="博客目前"><a href="#博客目前" class="headerlink" title="博客目前"></a>博客目前</h2><p><strong>beishangzhajitui</strong> 是悲伤炸鸡腿的拼音。</p>
-<p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
-<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 生成，部署在 <a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a>主题 <a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a> 已经在github上开源</p>
-<p>有什么事情可以找我，大事帮不了，小事不一定帮:<br>qq:2154838055<br>邮箱:<a href="mailto:&#50;&#49;&#53;&#52;&#x38;&#x33;&#x38;&#x30;&#x35;&#53;&#x40;&#x71;&#x71;&#46;&#x63;&#111;&#x6d;">&#50;&#49;&#53;&#52;&#x38;&#x33;&#x38;&#x30;&#x35;&#53;&#x40;&#x71;&#x71;&#46;&#x63;&#111;&#x6d;</a></p>
-<p>主要功能：</p>
-<ul>
-<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
-<li>pad&#x2F;手机等移动端适配</li>
-<li>页面全局快捷键 <a target="_blank" rel="noopener" href='http://yelog.org/2017/03/24/3-hexo-shortcuts/'>3-hexo快捷键说明</a></li>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-Stack的本质"><a href="#1-Stack的本质" class="headerlink" title="1.Stack的本质"></a>1.Stack的本质</h2><p>栈是C#为我们封装好的类，本质也是object类型数组，封装了特殊的存储规则。<br>栈是一种先进后出的数据结构Stack是栈存储容器，类比为一个装羽毛球的那个容器。</p>
+<h2 id="2-申明"><a href="#2-申明" class="headerlink" title="2.申明"></a>2.申明</h2><p>在using System.Collections命名空间中。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Stack stack = <span class="keyword">new</span> Stack();</span><br></pre></td></tr></table></figure>
+<h2 id="3-增取查改"><a href="#3-增取查改" class="headerlink" title="3.增取查改"></a>3.增取查改</h2><ul>
+<li><input disabled="" type="checkbox"> 增<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 压栈</span></span><br><span class="line">stack.Push(<span class="number">1</span>);</span><br><span class="line">stack.Push(<span class="string">&quot;123&quot;</span>);</span><br><span class="line">stack.Push(<span class="literal">true</span>);</span><br><span class="line">stack.Push(<span class="number">1.2f</span>);</span><br><span class="line">stack.Push(<span class="keyword">new</span> Test());</span><br></pre></td></tr></table></figure></li>
+<li><input disabled="" type="checkbox"> 取<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 栈中不存在删除的概念</span></span><br><span class="line"><span class="comment">// 取 ：称为弹栈</span></span><br><span class="line"><span class="built_in">object</span> v = stack.Pop();</span><br><span class="line">Console.WriteLine(v);</span><br><span class="line"><span class="comment">// 取出来的是栈最后进入的元素，就是栈顶的元素</span></span><br><span class="line">v = stack.Pop();</span><br><span class="line">Console.WriteLine(v);</span><br></pre></td></tr></table></figure></li>
+<li><input disabled="" type="checkbox"> 查<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>栈无法查看指定位置的元素，只能查看栈顶的内容，类似诸葛亮的观星</span><br><span class="line">v = stack.Peek();</span><br><span class="line">Console.WriteLine(v);</span><br><span class="line"><span class="number">2.</span>查看元素是否存于栈中</span><br><span class="line"><span class="keyword">if</span>( stack.Contains(<span class="number">1.2f</span>))</span><br><span class="line">&#123;</span><br><span class="line">	Console.WriteLine(<span class="string">&quot;存在&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><input disabled="" type="checkbox"> 改<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">栈无法改变元素，只能压和弹，下面是清空。</span><br><span class="line">stack.Clear();</span><br></pre></td></tr></table></figure></li>
 </ul>
+<h2 id="4-遍历"><a href="#4-遍历" class="headerlink" title="4. 遍历"></a>4. 遍历</h2><p>1.长度</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Console.WriteLine(stack.Count);</span><br></pre></td></tr></table></figure>
 
-        </article>
-        
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+<p>2.foreach遍历<br>不能用for来遍历，栈里面没有索引器。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">遍历出来的顺序是从栈顶到栈底</span><br><span class="line"><span class="keyword">foreach</span>(<span class="built_in">object</span> item <span class="keyword">in</span> stack)&#123; </span><br><span class="line">	Console.WriteLine(item);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3.将栈转换成object数组，再for遍历出来。遍历出来的顺序是从栈顶到栈底。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">object</span>[] array = stack.ToArray();</span><br><span class="line"><span class="keyword">for</span>(<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; array.Length; i++)</span><br><span class="line">&#123;</span><br><span class="line">	Console.WriteLine(array[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>4.循环弹栈<br>弹完后什么都灭有了，相当于一个弹夹。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>( stack.Count &gt; <span class="number">0</span>)</span><br><span class="line">&#123; </span><br><span class="line">	<span class="built_in">object</span> o = stack.Pop();</span><br><span class="line">	Console.WriteLine(o);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="5-装箱拆箱"><a href="#5-装箱拆箱" class="headerlink" title="5.装箱拆箱"></a>5.装箱拆箱</h2><p>同ArrayList, 进行值类型存储的时候就是在装箱，当将值类型对象取出来转换使用就存在拆箱。</p>
+<h2 id="6-练习"><a href="#6-练习" class="headerlink" title="6.练习"></a>6.练习</h2><p>通过栈结构计算任意一个数的二进制数并打印出来</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 自己定义一个栈类，不用自己定义当然可以</span></span><br><span class="line"><span class="keyword">class</span> <span class="title">Stack</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">private</span> List&lt;<span class="built_in">int</span>&gt; items = <span class="keyword">new</span> List&lt;<span class="built_in">int</span>&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Push</span>(<span class="params"><span class="built_in">int</span> item</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        items.Add(item);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="built_in">int</span> <span class="title">Pop</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">int</span> lastIndex = items.Count - <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">int</span> item = items[lastIndex];</span><br><span class="line">        items.RemoveAt(lastIndex);</span><br><span class="line">        <span class="keyword">return</span> item;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="built_in">bool</span> <span class="title">IsEmpty</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> items.Count == <span class="number">0</span>;</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="built_in">string</span> <span class="title">DecimalToBinary</span>(<span class="params"><span class="built_in">int</span> decimalNumber</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        Stack stack = <span class="keyword">new</span> Stack();</span><br><span class="line">        <span class="comment">//过循环将十进制数不断除以 2，</span></span><br><span class="line">        <span class="comment">//取余数并将余数压入栈中，直到十进制数变为 0。</span></span><br><span class="line">        <span class="keyword">while</span> (decimalNumber &gt; <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">int</span> remainder = decimalNumber % <span class="number">2</span>;</span><br><span class="line">            stack.Push(remainder);</span><br><span class="line">            decimalNumber /= <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">string</span> binaryNumber = <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">while</span> (!stack.IsEmpty())</span><br><span class="line">        &#123;</span><br><span class="line">            binaryNumber += stack.Pop().ToString();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> binaryNumber;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">int</span> number = <span class="number">23</span>;</span><br><span class="line">        <span class="built_in">string</span> binary = DecimalToBinary(number);</span><br><span class="line">        Console.WriteLine(binary);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 2154838055@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -590,11 +661,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 <div class="hide_box" onclick="dashangToggle()"></div>
