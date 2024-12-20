@@ -6,35 +6,25 @@
   <meta name="keywords" content=" demo ">
   <meta name="description" content="第三人称控制器 | beishangzhajitui">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="前言虽然配置好了，整个过程属于是非常懵，思考了许久决定将建站历程记录下来，相信如果你是一个没建过网站的人，那你可能会想我一样先找找有没有关于的搭建的过程。不过很不幸，这篇博客更多是为了记录和提醒自己，如果你要是完全按照这个不一定搞得出来。可以借鉴的地方是关于让图片能够在博客的 文章中显示出来的内容，因为这一块我网上没有找到跟我一样的，是自己摸索的。 原理123hexo clean # 清除缓存文件">
-<meta property="og:type" content="website">
-<meta property="og:title" content="这里是建站记录">
-<meta property="og:url" content="http://example.com/Hexo+Github+Obsidian%E8%BF%99%E9%87%8C%E6%98%AF%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95.html">
+<meta name="description" content="&#x2F;&#x2F; 1. 观察者接口 public interface IObserver &#123;     void Update(int health); &#125;  &#x2F;&#x2F; 2. 主题类（这里模拟玩家对象，它的状态变化会通知观察者） public class PlayerSubject &#123;     private List&lt;IObserver&gt; observers &#x3D; new">
+<meta property="og:type" content="article">
+<meta property="og:title" content="观察者模式">
+<meta property="og:url" content="http://example.com/2024/12/6e69ad42e217.html">
 <meta property="og:site_name" content="beishangzhajitui">
-<meta property="og:description" content="前言虽然配置好了，整个过程属于是非常懵，思考了许久决定将建站历程记录下来，相信如果你是一个没建过网站的人，那你可能会想我一样先找找有没有关于的搭建的过程。不过很不幸，这篇博客更多是为了记录和提醒自己，如果你要是完全按照这个不一定搞得出来。可以借鉴的地方是关于让图片能够在博客的 文章中显示出来的内容，因为这一块我网上没有找到跟我一样的，是自己摸索的。 原理123hexo clean # 清除缓存文件">
+<meta property="og:description" content="&#x2F;&#x2F; 1. 观察者接口 public interface IObserver &#123;     void Update(int health); &#125;  &#x2F;&#x2F; 2. 主题类（这里模拟玩家对象，它的状态变化会通知观察者） public class PlayerSubject &#123;     private List&lt;IObserver&gt; observers &#x3D; new">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/beishang20241207113547501.png">
-<meta property="og:image" content="http://example.com/img/beishang20241206160308125.png">
-<meta property="og:image" content="http://example.com/img/beishang20241206160500289.png">
-<meta property="og:image" content="http://example.com/img/beishang20241207095904010.png">
-<meta property="og:image" content="http://example.com/img/beishang20241207104637882.png">
-<meta property="og:image" content="http://example.com/img/beishang20241207112633087.png">
-<meta property="og:image" content="http://example.com/img/beishang20241207112547502.png">
-<meta property="og:image" content="http://example.com/img/beishang20241208002131397.png">
-<meta property="og:image" content="http://example.com/img/beishang20241208001958088.png">
-<meta property="article:published_time" content="2024-12-06T07:13:47.000Z">
-<meta property="article:modified_time" content="2024-12-18T04:19:41.998Z">
+<meta property="article:published_time" content="2024-12-20T07:48:54.613Z">
+<meta property="article:modified_time" content="2024-12-20T10:07:36.609Z">
 <meta property="article:author" content="beishangzhajitui">
-<meta property="article:tag" content="工具">
+<meta property="article:tag" content="CSharp">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/img/beishang20241207113547501.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
 
 <link href="/css/style.css?v=1.1.0" rel="stylesheet">
 
-<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+<link href="/css/hl_theme/darcula.css?v=1.1.0" rel="stylesheet">
 
 <link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
 
@@ -164,10 +154,25 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(20)</small>
+                <small>(21)</small>
             
         </div>
     </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="工具">
+            
+            工具
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
     
         
             
@@ -278,7 +283,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="20">
+<input type="hidden" id="yelog_site_posts_number" value="21">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -420,7 +425,7 @@
         
         <a  class="全部文章 面试 "
            href="/2024/12/f9803a20b288.html"
-           data-tag="CSharp,工具"
+           data-tag="工具,CSharp"
            data-author="" >
             <span class="post-title" title="面试题1">面试题1</span>
             <span class="post-date" title="2024-12-19 18:32:27">2024/12/19</span>
@@ -525,6 +530,15 @@
             <span class="post-date" title="2024-12-06 22:42:09">2024/12/06</span>
         </a>
         
+        
+        <a  class="全部文章 工具 "
+           href="/2024/12/98a55959539d.html"
+           data-tag="工具"
+           data-author="" >
+            <span class="post-title" title="这里是建站记录">这里是建站记录</span>
+            <span class="post-date" title="2024-12-06 15:13:47">2024/12/06</span>
+        </a>
+        
         <div id="no-item-tips">
 
         </div>
@@ -617,15 +631,447 @@
 <h4 id="下蹲状态混合树"><a href="#下蹲状态混合树" class="headerlink" title="下蹲状态混合树"></a>下蹲状态混合树</h4><p><img src="/../img/beishang20241211222019097.png"></p>
 <p>PackageManager中找到InputSystem<br><img src="/../img/beishang20241211222247741.png"></p>
 <p>新建角色控制脚本    </p>
-<h4 id="ThirdPersonShooterController-cs"><a href="#ThirdPersonShooterController-cs" class="headerlink" title="ThirdPersonShooterController.cs"></a>ThirdPersonShooterController.cs</h4><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;  </span><br><span class="line"><span class="keyword">using</span> System.Collections;  </span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;  </span><br><span class="line"><span class="keyword">using</span> UnityEngine;  </span><br><span class="line"><span class="keyword">using</span> UnityEngine.InputSystem;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">ThirdPersonShooterController</span> : <span class="title">MonoBehaviour</span>  </span><br><span class="line">&#123;  </span><br><span class="line">    Transform playerTransform;  </span><br><span class="line">    Animator animator;  </span><br><span class="line">    Transform cameraTransform;  </span><br><span class="line">    CharacterController characterController;      </span><br><span class="line">      </span><br><span class="line"><span class="keyword">public</span> <span class="built_in">enum</span> PlayerPosture  </span><br><span class="line">    &#123;  </span><br><span class="line">        Crouch,  </span><br><span class="line">        Stand,  </span><br><span class="line">        Midair  </span><br><span class="line">    &#125;;  </span><br><span class="line">    <span class="keyword">public</span> PlayerPosture playerPosture = PlayerPosture.Stand;  </span><br><span class="line">  </span><br><span class="line">    <span class="built_in">float</span> crouchThreshold = <span class="number">0f</span>;  </span><br><span class="line">    <span class="built_in">float</span> standThreshold = <span class="number">1f</span>;  </span><br><span class="line">    <span class="built_in">float</span> midairThreshold = <span class="number">2f</span>;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">enum</span> LocomotionState  </span><br><span class="line">    &#123;  </span><br><span class="line">        Idle,  </span><br><span class="line">        Walk,  </span><br><span class="line">        Run  </span><br><span class="line">    &#125;;  </span><br><span class="line">    <span class="keyword">public</span> LocomotionState locomotionState = LocomotionState.Idle;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">enum</span> ArmState  </span><br><span class="line">    &#123;  </span><br><span class="line">        Normal,  </span><br><span class="line">        Aim  </span><br><span class="line">    &#125;;  </span><br><span class="line">    <span class="keyword">public</span> ArmState armState = ArmState.Normal;  </span><br><span class="line">  </span><br><span class="line">    <span class="built_in">float</span> crouchSpeed = <span class="number">1.5f</span>;  </span><br><span class="line">    <span class="built_in">float</span> walkSpeed = <span class="number">2.5f</span>;  </span><br><span class="line">    <span class="built_in">float</span> runSpeed = <span class="number">5.5f</span>;  </span><br><span class="line">  </span><br><span class="line">    Vector2 moveInput;  </span><br><span class="line">    <span class="built_in">bool</span> isRunning;  </span><br><span class="line">    <span class="built_in">bool</span> isCrouch;  </span><br><span class="line">    <span class="built_in">bool</span> isAiming;  </span><br><span class="line">    <span class="built_in">bool</span> isJumping;  </span><br><span class="line">    <span class="built_in">int</span> postureHash;  </span><br><span class="line">    <span class="built_in">int</span> moveSpeedHash;  </span><br><span class="line">    <span class="built_in">int</span> turnSpeedHash;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 玩家实际要移动的方向  </span></span><br><span class="line">    Vector3 playerMovement = Vector3.zero;  </span><br><span class="line">    <span class="comment">// Start is called before the first frame update  </span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span>  </span><br><span class="line">    &#123;        playerTransform = transform;  </span><br><span class="line">        animator = GetComponent&lt;Animator&gt;();  </span><br><span class="line">        cameraTransform = Camera.main.transform;  </span><br><span class="line">        characterController = GetComponent&lt;CharacterController&gt;();  </span><br><span class="line">        postureHash = Animator.StringToHash(<span class="string">&quot;玩家姿态&quot;</span>);  </span><br><span class="line">        moveSpeedHash = Animator.StringToHash(<span class="string">&quot;移动速度&quot;</span>);  </span><br><span class="line">        turnSpeedHash = Animator.StringToHash(<span class="string">&quot;转弯速度&quot;</span>);  </span><br><span class="line">        Cursor.lockState = CursorLockMode.Locked;  </span><br><span class="line">    &#125;  </span><br><span class="line"><span class="comment">// Update is called once per frame  </span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>()</span>  </span><br><span class="line">    &#123;        SwitchPlayerStates();  </span><br><span class="line">        CaculateInputDirection();  </span><br><span class="line">        SetupAnimator();  </span><br><span class="line">    &#125;    <span class="meta">#<span class="keyword">region</span> 输入相关  </span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">GetMoveInput</span>(<span class="params">InputAction.CallbackContext ctx</span>)</span>  </span><br><span class="line">    &#123;        moveInput = ctx.ReadValue&lt;Vector2&gt;();  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">GetRunInput</span>(<span class="params">InputAction.CallbackContext ctx</span>)</span>  </span><br><span class="line">    &#123;        isRunning = ctx.ReadValueAsButton();  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">GetCrouchInput</span>(<span class="params">InputAction.CallbackContext ctx</span>)</span>  </span><br><span class="line">    &#123;        isCrouch = ctx.ReadValueAsButton();  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">GetAimInput</span>(<span class="params">InputAction.CallbackContext ctx</span>)</span>  </span><br><span class="line">    &#123;        isAiming = ctx.ReadValueAsButton();  </span><br><span class="line">    &#125;    <span class="meta">#<span class="keyword">endregion</span>  </span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">SwitchPlayerStates</span>()</span>  </span><br><span class="line">    &#123;        <span class="keyword">if</span> (isCrouch)  </span><br><span class="line">        &#123;            playerPosture = PlayerPosture.Crouch;  </span><br><span class="line">        &#125;        <span class="keyword">else</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            playerPosture = PlayerPosture.Stand;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">if</span> (moveInput.magnitude == <span class="number">0</span>)  </span><br><span class="line">        &#123;            locomotionState = LocomotionState.Idle;  </span><br><span class="line">        &#125;        <span class="keyword">else</span> <span class="keyword">if</span> (!isRunning)  </span><br><span class="line">        &#123;            locomotionState = LocomotionState.Walk;  </span><br><span class="line">        &#125;        <span class="keyword">else</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            locomotionState = LocomotionState.Run;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">if</span> (isAiming)  </span><br><span class="line">        &#123;            armState = ArmState.Aim;  </span><br><span class="line">        &#125;        <span class="keyword">else</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            armState = ArmState.Normal;  </span><br><span class="line">        &#125;    &#125;    <span class="comment">// 将世界坐标系下的方向，转换成相机坐标系下的方向  </span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">CaculateInputDirection</span>()</span>  </span><br><span class="line">    &#123;        Vector3 camForwardProjection = <span class="keyword">new</span> Vector3(cameraTransform.forward.x, <span class="number">0</span>, cameraTransform.forward.z).normalized;  </span><br><span class="line">        playerMovement = camForwardProjection * moveInput.y + cameraTransform.right * moveInput.x;  </span><br><span class="line">        playerMovement = playerTransform.InverseTransformVector(playerMovement);  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">SetupAnimator</span>()</span>  </span><br><span class="line">    &#123;        <span class="keyword">if</span> (playerPosture == PlayerPosture.Stand)  </span><br><span class="line">        &#123;            animator.SetFloat(postureHash, standThreshold, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">            <span class="keyword">switch</span> (locomotionState)  </span><br><span class="line">            &#123;                <span class="keyword">case</span> LocomotionState.Idle:  </span><br><span class="line">                    animator.SetFloat(moveSpeedHash, <span class="number">0</span>, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">                <span class="keyword">case</span> LocomotionState.Walk:  </span><br><span class="line">                    animator.SetFloat(moveSpeedHash, playerMovement.magnitude * walkSpeed, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">                <span class="keyword">case</span> LocomotionState.Run:  </span><br><span class="line">                    animator.SetFloat(moveSpeedHash, playerMovement.magnitude * runSpeed, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">            &#125;        &#125;        <span class="keyword">else</span> <span class="keyword">if</span> (playerPosture == PlayerPosture.Crouch)  </span><br><span class="line">        &#123;            animator.SetFloat(postureHash, crouchThreshold, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">            <span class="keyword">switch</span> (locomotionState)  </span><br><span class="line">            &#123;                <span class="keyword">case</span> LocomotionState.Idle:  </span><br><span class="line">                    animator.SetFloat(moveSpeedHash, <span class="number">0</span>, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">                <span class="literal">default</span>:  </span><br><span class="line">                    animator.SetFloat(moveSpeedHash, playerMovement.magnitude * crouchSpeed, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">            &#125;        &#125;  </span><br><span class="line">        <span class="keyword">if</span> (armState == ArmState.Normal)  </span><br><span class="line">        &#123;            <span class="comment">// 当前移动方向和玩家transform正前方Forward之间的夹角，用弧度表示，和root motion的转向速度单位一致  </span></span><br><span class="line">            <span class="built_in">float</span> rad = Mathf.Atan2(playerMovement.x, playerMovement.z);  </span><br><span class="line">            animator.SetFloat(turnSpeedHash,rad,<span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">            <span class="comment">// 转速太慢，人为添加一个旋转  </span></span><br><span class="line">            playerTransform.Rotate(<span class="number">0</span>, rad *<span class="number">200</span> *Time.deltaTime, <span class="number">0f</span>);  </span><br><span class="line">        &#125;    &#125;  </span><br><span class="line">    <span class="comment">//  Animator 组件进行动画更新时，这个方法会被调用。  </span></span><br><span class="line">    <span class="comment">//  OnAnimatorMove方法为开发者提供了一个在动画更新过程中进行自定义操作的机会，使动画与游戏逻辑更加紧密地结合在一起  </span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnAnimatorMove</span>()</span>  </span><br><span class="line">    &#123;        characterController.Move(animator.deltaPosition);  </span><br><span class="line">    &#125;&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="ThirdPersonShooterController-cs"><a href="#ThirdPersonShooterController-cs" class="headerlink" title="ThirdPersonShooterController.cs"></a>ThirdPersonShooterController.cs</h4><pre><code class="C#">using System;  
+using System.Collections;  
+using System.Collections.Generic;  
+using UnityEngine;  
+using UnityEngine.InputSystem;  
+  
+public class ThirdPersonShooterController : MonoBehaviour  
+&#123;  
+    Transform playerTransform;  
+    Animator animator;  
+    Transform cameraTransform;  
+    CharacterController characterController;      
+      
+public enum PlayerPosture  
+    &#123;  
+        Crouch,  
+        Stand,  
+        Midair  
+    &#125;;  
+    public PlayerPosture playerPosture = PlayerPosture.Stand;  
+  
+    float crouchThreshold = 0f;  
+    float standThreshold = 1f;  
+    float midairThreshold = 2f;  
+  
+    public enum LocomotionState  
+    &#123;  
+        Idle,  
+        Walk,  
+        Run  
+    &#125;;  
+    public LocomotionState locomotionState = LocomotionState.Idle;  
+  
+    public enum ArmState  
+    &#123;  
+        Normal,  
+        Aim  
+    &#125;;  
+    public ArmState armState = ArmState.Normal;  
+  
+    float crouchSpeed = 1.5f;  
+    float walkSpeed = 2.5f;  
+    float runSpeed = 5.5f;  
+  
+    Vector2 moveInput;  
+    bool isRunning;  
+    bool isCrouch;  
+    bool isAiming;  
+    bool isJumping;  
+    int postureHash;  
+    int moveSpeedHash;  
+    int turnSpeedHash;  
+  
+    // 玩家实际要移动的方向  
+    Vector3 playerMovement = Vector3.zero;  
+    // Start is called before the first frame update  
+    void Start()  
+    &#123;        playerTransform = transform;  
+        animator = GetComponent&lt;Animator&gt;();  
+        cameraTransform = Camera.main.transform;  
+        characterController = GetComponent&lt;CharacterController&gt;();  
+        postureHash = Animator.StringToHash(&quot;玩家姿态&quot;);  
+        moveSpeedHash = Animator.StringToHash(&quot;移动速度&quot;);  
+        turnSpeedHash = Animator.StringToHash(&quot;转弯速度&quot;);  
+        Cursor.lockState = CursorLockMode.Locked;  
+    &#125;  
+// Update is called once per frame  
+    void Update()  
+    &#123;        SwitchPlayerStates();  
+        CaculateInputDirection();  
+        SetupAnimator();  
+    &#125;    #region 输入相关  
+    public void GetMoveInput(InputAction.CallbackContext ctx)  
+    &#123;        moveInput = ctx.ReadValue&lt;Vector2&gt;();  
+    &#125;  
+    public void GetRunInput(InputAction.CallbackContext ctx)  
+    &#123;        isRunning = ctx.ReadValueAsButton();  
+    &#125;  
+    public void GetCrouchInput(InputAction.CallbackContext ctx)  
+    &#123;        isCrouch = ctx.ReadValueAsButton();  
+    &#125;  
+    public void GetAimInput(InputAction.CallbackContext ctx)  
+    &#123;        isAiming = ctx.ReadValueAsButton();  
+    &#125;    #endregion  
+    void SwitchPlayerStates()  
+    &#123;        if (isCrouch)  
+        &#123;            playerPosture = PlayerPosture.Crouch;  
+        &#125;        else  
+        &#123;  
+            playerPosture = PlayerPosture.Stand;  
+        &#125;  
+        if (moveInput.magnitude == 0)  
+        &#123;            locomotionState = LocomotionState.Idle;  
+        &#125;        else if (!isRunning)  
+        &#123;            locomotionState = LocomotionState.Walk;  
+        &#125;        else  
+        &#123;  
+            locomotionState = LocomotionState.Run;  
+        &#125;  
+        if (isAiming)  
+        &#123;            armState = ArmState.Aim;  
+        &#125;        else  
+        &#123;  
+            armState = ArmState.Normal;  
+        &#125;    &#125;    // 将世界坐标系下的方向，转换成相机坐标系下的方向  
+    void CaculateInputDirection()  
+    &#123;        Vector3 camForwardProjection = new Vector3(cameraTransform.forward.x, 0, cameraTransform.forward.z).normalized;  
+        playerMovement = camForwardProjection * moveInput.y + cameraTransform.right * moveInput.x;  
+        playerMovement = playerTransform.InverseTransformVector(playerMovement);  
+    &#125;  
+    void SetupAnimator()  
+    &#123;        if (playerPosture == PlayerPosture.Stand)  
+        &#123;            animator.SetFloat(postureHash, standThreshold, 0.1f, Time.deltaTime);  
+            switch (locomotionState)  
+            &#123;                case LocomotionState.Idle:  
+                    animator.SetFloat(moveSpeedHash, 0, 0.1f, Time.deltaTime);  
+                    break;  
+                case LocomotionState.Walk:  
+                    animator.SetFloat(moveSpeedHash, playerMovement.magnitude * walkSpeed, 0.1f, Time.deltaTime);  
+                    break;  
+                case LocomotionState.Run:  
+                    animator.SetFloat(moveSpeedHash, playerMovement.magnitude * runSpeed, 0.1f, Time.deltaTime);  
+                    break;  
+            &#125;        &#125;        else if (playerPosture == PlayerPosture.Crouch)  
+        &#123;            animator.SetFloat(postureHash, crouchThreshold, 0.1f, Time.deltaTime);  
+            switch (locomotionState)  
+            &#123;                case LocomotionState.Idle:  
+                    animator.SetFloat(moveSpeedHash, 0, 0.1f, Time.deltaTime);  
+                    break;  
+                default:  
+                    animator.SetFloat(moveSpeedHash, playerMovement.magnitude * crouchSpeed, 0.1f, Time.deltaTime);  
+                    break;  
+            &#125;        &#125;  
+        if (armState == ArmState.Normal)  
+        &#123;            // 当前移动方向和玩家transform正前方Forward之间的夹角，用弧度表示，和root motion的转向速度单位一致  
+            float rad = Mathf.Atan2(playerMovement.x, playerMovement.z);  
+            animator.SetFloat(turnSpeedHash,rad,0.1f, Time.deltaTime);  
+            // 转速太慢，人为添加一个旋转  
+            playerTransform.Rotate(0, rad *200 *Time.deltaTime, 0f);  
+        &#125;    &#125;  
+    //  Animator 组件进行动画更新时，这个方法会被调用。  
+    //  OnAnimatorMove方法为开发者提供了一个在动画更新过程中进行自定义操作的机会，使动画与游戏逻辑更加紧密地结合在一起  
+    private void OnAnimatorMove()  
+    &#123;        characterController.Move(animator.deltaPosition);  
+    &#125;&#125;
+</code></pre>
 <p>这里是人物站立，行走，下蹲的做好时候的方法。<br>下面我们还需要去做人物的跳跃</p>
 <h4 id="人物的跳跃"><a href="#人物的跳跃" class="headerlink" title="人物的跳跃"></a>人物的跳跃</h4><p><img src="/../img/beishang20241212135506413.png"></p>
 <p>(待完善)</p>
 <p>给玩家添加跳跃的随机脚</p>
 <p><img src="/../img/beishang20241212153436289.png"><br><img src="/../img/beishang20241212153451361.png"></p>
 <p>跳跃完善后的代码</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;  </span><br><span class="line"><span class="keyword">using</span> System.Collections;  </span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;  </span><br><span class="line"><span class="keyword">using</span> UnityEngine;  </span><br><span class="line"><span class="keyword">using</span> UnityEngine.InputSystem;  </span><br><span class="line"><span class="keyword">using</span> Random = UnityEngine.Random;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">ThirdPersonShooterController</span> : <span class="title">MonoBehaviour</span>  </span><br><span class="line">&#123;  </span><br><span class="line">    Transform playerTransform;  </span><br><span class="line">    Animator animator;  </span><br><span class="line">    Transform cameraTransform;  </span><br><span class="line">    CharacterController characterController;      </span><br><span class="line">      </span><br><span class="line"><span class="keyword">public</span> <span class="built_in">enum</span> PlayerPosture  </span><br><span class="line">    &#123;  </span><br><span class="line">        Crouch,  </span><br><span class="line">        Stand,  </span><br><span class="line">        Jumping,  </span><br><span class="line">        Falling,  </span><br><span class="line">        <span class="comment">// 玩家刚落地还不能起跳的状态  </span></span><br><span class="line">        Landing  </span><br><span class="line">    &#125;;  </span><br><span class="line">    <span class="keyword">public</span> PlayerPosture playerPosture = PlayerPosture.Stand;  </span><br><span class="line">  </span><br><span class="line">    <span class="built_in">float</span> crouchThreshold = <span class="number">0f</span>;  </span><br><span class="line">    <span class="built_in">float</span> standThreshold = <span class="number">1f</span>;  </span><br><span class="line">    <span class="built_in">float</span> midairThreshold = <span class="number">2.1f</span>;  </span><br><span class="line">    <span class="built_in">float</span> landingThreshold = <span class="number">1f</span>;  </span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">enum</span> LocomotionState  </span><br><span class="line">    &#123;  </span><br><span class="line">        Idle,  </span><br><span class="line">        Walk,  </span><br><span class="line">        Run  </span><br><span class="line">    &#125;;  </span><br><span class="line">    <span class="keyword">public</span> LocomotionState locomotionState = LocomotionState.Idle;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">enum</span> ArmState  </span><br><span class="line">    &#123;  </span><br><span class="line">        Normal,  </span><br><span class="line">        Aim  </span><br><span class="line">    &#125;;  </span><br><span class="line">    <span class="keyword">public</span> ArmState armState = ArmState.Normal;  </span><br><span class="line">  </span><br><span class="line">    <span class="built_in">float</span> crouchSpeed = <span class="number">1.5f</span>;  </span><br><span class="line">    <span class="built_in">float</span> walkSpeed = <span class="number">2.5f</span>;  </span><br><span class="line">    <span class="built_in">float</span> runSpeed = <span class="number">5.5f</span>;  </span><br><span class="line">  </span><br><span class="line">    Vector2 moveInput;  </span><br><span class="line">    <span class="built_in">bool</span> isRunning;  </span><br><span class="line">    <span class="built_in">bool</span> isCrouch;  </span><br><span class="line">    <span class="built_in">bool</span> isAiming;  </span><br><span class="line">    <span class="built_in">bool</span> isJumping;  </span><br><span class="line">    <span class="built_in">int</span> postureHash;  </span><br><span class="line">    <span class="built_in">int</span> moveSpeedHash;  </span><br><span class="line">    <span class="built_in">int</span> turnSpeedHash;  </span><br><span class="line">    <span class="built_in">int</span> verticalVelHash;  </span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">int</span> feetTweenHash;  </span><br><span class="line">    <span class="comment">// 玩家实际要移动的方向  </span></span><br><span class="line">    Vector3 playerMovement = Vector3.zero;  </span><br><span class="line">    <span class="comment">// 重力  </span></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">float</span> gravity = <span class="number">-9.8f</span>;  </span><br><span class="line">    <span class="comment">// 垂直方向速度  </span></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">float</span> VerticalVelocity;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">//public float jumpVelocity = 5f;  </span></span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 最大起跳高度  </span></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">float</span> maxHeight = <span class="number">1.5f</span>;  </span><br><span class="line">    <span class="keyword">private</span> Vector3 lastVelOnGround;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">readonly</span> <span class="built_in">int</span> CACHE_SIZE = <span class="number">3</span>;  </span><br><span class="line">    Vector3[] velCache = <span class="keyword">new</span> Vector3[CACHE_SIZE];  </span><br><span class="line">    <span class="comment">// 缓存池中最老的那个向量的索引值  </span></span><br><span class="line">    <span class="built_in">int</span> currentChacheIndex = <span class="number">0</span>;    </span><br><span class="line">Vector3 averageVel = Vector3.zero;  </span><br><span class="line">    <span class="comment">// 左右脚滞空状态  </span></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">float</span> feetTween;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">//下落时候的速度是上升时候的多少倍  </span></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">float</span> fallMultiplier = <span class="number">1.5f</span>;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">bool</span> isGrounded;  </span><br><span class="line">    <span class="comment">// 为射线检测设置一个偏移量  </span></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">float</span> groundCheckOffset = <span class="number">0.5f</span>;  </span><br><span class="line">    <span class="comment">// 跳跃的cd设置  </span></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">float</span> jumpCD =<span class="number">0.15f</span>;  </span><br><span class="line">    <span class="comment">// 玩家是否处于CD当中  </span></span><br><span class="line">    <span class="built_in">bool</span> isLanding;  </span><br><span class="line">    <span class="comment">// 玩家是否可以跌落  </span></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">bool</span> couldFall;  </span><br><span class="line">    <span class="comment">// 跌落的最小高度，小于此高度不会跌落  </span></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">float</span> fallHeight = <span class="number">0.5f</span>;  </span><br><span class="line">    <span class="comment">// Start is called before the first frame update  </span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span>  </span><br><span class="line">    &#123;        playerTransform = transform;  </span><br><span class="line">        animator = GetComponent&lt;Animator&gt;();  </span><br><span class="line">        cameraTransform = Camera.main.transform;  </span><br><span class="line">        characterController = GetComponent&lt;CharacterController&gt;();  </span><br><span class="line">        postureHash = Animator.StringToHash(<span class="string">&quot;玩家姿态&quot;</span>);  </span><br><span class="line">        moveSpeedHash = Animator.StringToHash(<span class="string">&quot;移动速度&quot;</span>);  </span><br><span class="line">        turnSpeedHash = Animator.StringToHash(<span class="string">&quot;转弯速度&quot;</span>);  </span><br><span class="line">        verticalVelHash = Animator.StringToHash(<span class="string">&quot;垂直速度&quot;</span>);  </span><br><span class="line">        feetTweenHash = Animator.StringToHash(<span class="string">&quot;左右脚&quot;</span>);  </span><br><span class="line">        Cursor.lockState = CursorLockMode.Locked;  </span><br><span class="line">    &#125;  </span><br><span class="line"><span class="comment">// Update is called once per frame  </span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>()</span>  </span><br><span class="line">    &#123;        CheckGround();  </span><br><span class="line">        CaculateInputDirection();  </span><br><span class="line">        CaculateGravity();  </span><br><span class="line">        Jump();  </span><br><span class="line">        SwitchPlayerStates();  </span><br><span class="line">        SetupAnimator();  </span><br><span class="line">    &#125;    <span class="meta">#<span class="keyword">region</span> 输入相关  </span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">GetMoveInput</span>(<span class="params">InputAction.CallbackContext ctx</span>)</span>  </span><br><span class="line">    &#123;        moveInput = ctx.ReadValue&lt;Vector2&gt;();  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">GetRunInput</span>(<span class="params">InputAction.CallbackContext ctx</span>)</span>  </span><br><span class="line">    &#123;        isRunning = ctx.ReadValueAsButton();  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">GetCrouchInput</span>(<span class="params">InputAction.CallbackContext ctx</span>)</span>  </span><br><span class="line">    &#123;        isCrouch = ctx.ReadValueAsButton();  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">GetAimInput</span>(<span class="params">InputAction.CallbackContext ctx</span>)</span>  </span><br><span class="line">    &#123;        isAiming = ctx.ReadValueAsButton();  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">GetJumpInput</span>(<span class="params">InputAction.CallbackContext ctx</span>)</span>  </span><br><span class="line">    &#123;        isJumping = ctx.ReadValueAsButton();  </span><br><span class="line">    &#125;    <span class="meta">#<span class="keyword">endregion</span>  </span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">SwitchPlayerStates</span>()</span>  </span><br><span class="line">    &#123;        <span class="keyword">if</span> (!isGrounded)  </span><br><span class="line">        &#123;            <span class="keyword">if</span> (VerticalVelocity &gt; <span class="number">0</span>)  </span><br><span class="line">            &#123;                playerPosture = PlayerPosture.Jumping;  </span><br><span class="line">            &#125;            <span class="keyword">else</span> <span class="keyword">if</span> (playerPosture != PlayerPosture.Jumping)  </span><br><span class="line">            &#123;                <span class="keyword">if</span> (couldFall)  </span><br><span class="line">                &#123;                    playerPosture = PlayerPosture.Falling;  </span><br><span class="line">                &#125;            &#125;              </span><br><span class="line">        &#125;        <span class="keyword">else</span> <span class="keyword">if</span> (playerPosture == PlayerPosture.Jumping)  </span><br><span class="line">        &#123;  </span><br><span class="line">            StartCoroutine(CoolDownJump());  </span><br><span class="line">        &#125;        <span class="keyword">else</span> <span class="keyword">if</span> (isLanding)  </span><br><span class="line">        &#123;            playerPosture = PlayerPosture.Landing;  </span><br><span class="line">        &#125;        <span class="keyword">else</span> <span class="keyword">if</span> (isCrouch)  </span><br><span class="line">        &#123;            playerPosture = PlayerPosture.Crouch;  </span><br><span class="line">        &#125;        <span class="keyword">else</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            playerPosture = PlayerPosture.Stand;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">if</span> (moveInput.magnitude == <span class="number">0</span>)  </span><br><span class="line">        &#123;            locomotionState = LocomotionState.Idle;  </span><br><span class="line">        &#125;        <span class="keyword">else</span> <span class="keyword">if</span> (!isRunning)  </span><br><span class="line">        &#123;            locomotionState = LocomotionState.Walk;  </span><br><span class="line">        &#125;        <span class="keyword">else</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            locomotionState = LocomotionState.Run;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">if</span> (isAiming)  </span><br><span class="line">        &#123;            armState = ArmState.Aim;  </span><br><span class="line">        &#125;        <span class="keyword">else</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            armState = ArmState.Normal;  </span><br><span class="line">        &#125;    &#125;    <span class="comment">// 自己写一个射线检测地面的方法，避免边缘奇怪的bug  </span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">CheckGround</span>()</span>  </span><br><span class="line">    &#123;        <span class="keyword">if</span> (Physics.SphereCast(playerTransform.position + (Vector3.up * groundCheckOffset), characterController.radius, Vector3.down, <span class="keyword">out</span> RaycastHit hit, groundCheckOffset - characterController.radius + <span class="number">2</span> * characterController.skinWidth))  </span><br><span class="line">        &#123;            isGrounded = <span class="literal">true</span>;  </span><br><span class="line">        &#125;        <span class="keyword">else</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            isGrounded = <span class="literal">false</span>;  </span><br><span class="line">            couldFall = !Physics.Raycast(playerTransform.position, Vector3.down, fallHeight);  </span><br><span class="line">        &#125;    &#125;    <span class="comment">//   </span></span><br><span class="line"><span class="function">IEnumerator <span class="title">CoolDownJump</span>()</span>  </span><br><span class="line">    &#123;        landingThreshold = Mathf.Clamp(VerticalVelocity,<span class="number">-10</span>,<span class="number">0</span>);  </span><br><span class="line">        landingThreshold /= <span class="number">20f</span>;  </span><br><span class="line">        landingThreshold += <span class="number">1f</span>;  </span><br><span class="line">        isLanding = <span class="literal">true</span>;  </span><br><span class="line">        playerPosture = PlayerPosture.Landing;  </span><br><span class="line">        <span class="function"><span class="keyword">yield</span> <span class="keyword">return</span> <span class="keyword">new</span> <span class="title">WaitForSeconds</span>(<span class="params">jumpCD</span>)</span>;  </span><br><span class="line">       isLanding = <span class="literal">false</span>;  </span><br><span class="line">    &#125;    <span class="comment">// 重力对垂直方向速度影响的方法  </span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">CaculateGravity</span>()</span>  </span><br><span class="line">    &#123;        <span class="keyword">if</span> (playerPosture != PlayerPosture.Jumping &amp;&amp; playerPosture != PlayerPosture.Falling)  </span><br><span class="line">        &#123;            <span class="keyword">if</span> (!isGrounded)  </span><br><span class="line">            &#123;                VerticalVelocity += gravity * fallMultiplier * Time.deltaTime;  </span><br><span class="line">            &#125;            <span class="keyword">else</span>  </span><br><span class="line">            &#123;  </span><br><span class="line">                VerticalVelocity = gravity * Time.deltaTime;  </span><br><span class="line">            &#125;        &#125;        <span class="keyword">else</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            <span class="keyword">if</span> (VerticalVelocity &lt;= <span class="number">0</span> || !isJumping)  </span><br><span class="line">            &#123;                VerticalVelocity += gravity * fallMultiplier * Time.deltaTime;  </span><br><span class="line">            &#125;            <span class="keyword">else</span>  </span><br><span class="line">            &#123;  </span><br><span class="line">                VerticalVelocity += gravity * Time.deltaTime;  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;    &#125;    <span class="function"><span class="keyword">void</span> <span class="title">Jump</span>()</span>  </span><br><span class="line">    &#123;        <span class="keyword">if</span> (playerPosture == PlayerPosture.Stand &amp;&amp; isJumping)  </span><br><span class="line">        &#123;VerticalVelocity = Mathf.Sqrt(<span class="number">-2</span> * gravity * maxHeight);  </span><br><span class="line">            feetTween = Mathf.Repeat(animator.GetCurrentAnimatorStateInfo(<span class="number">0</span>).normalizedTime, <span class="number">1</span>);  </span><br><span class="line">            feetTween = Mathf.Repeat(animator.GetCurrentAnimatorStateInfo(<span class="number">0</span>).normalizedTime,<span class="number">1</span>);  </span><br><span class="line">            feetTween = feetTween &lt; <span class="number">0.5f</span> ? <span class="number">1</span> : <span class="number">-1</span>;  </span><br><span class="line">            <span class="keyword">if</span> (locomotionState == LocomotionState.Run)  </span><br><span class="line">            &#123;                feetTween *= <span class="number">3</span>;  </span><br><span class="line">            &#125;            <span class="keyword">else</span> <span class="keyword">if</span> (locomotionState == LocomotionState.Walk)  </span><br><span class="line">            &#123;                feetTween *= <span class="number">2</span>;  </span><br><span class="line">            &#125;            <span class="keyword">else</span>  </span><br><span class="line">            &#123;  </span><br><span class="line">                feetTween = Random.Range(<span class="number">0.5f</span>, <span class="number">1f</span>) * feetTween;  </span><br><span class="line">            &#125;        &#125;    &#125;    <span class="comment">// 将世界坐标系下的方向，转换成相机坐标系下的方向  </span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">CaculateInputDirection</span>()</span>  </span><br><span class="line">    &#123;        Vector3 camForwardProjection = <span class="keyword">new</span> Vector3(cameraTransform.forward.x, <span class="number">0</span>, cameraTransform.forward.z).normalized;  </span><br><span class="line">        playerMovement = camForwardProjection * moveInput.y + cameraTransform.right * moveInput.x;  </span><br><span class="line">        playerMovement = playerTransform.InverseTransformVector(playerMovement);  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">SetupAnimator</span>()</span>  </span><br><span class="line">    &#123;        <span class="keyword">if</span> (playerPosture == PlayerPosture.Stand)  </span><br><span class="line">        &#123;            animator.SetFloat(postureHash, standThreshold, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">            <span class="keyword">switch</span> (locomotionState)  </span><br><span class="line">            &#123;                <span class="keyword">case</span> LocomotionState.Idle:  </span><br><span class="line">                    animator.SetFloat(moveSpeedHash, <span class="number">0</span>, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">                <span class="keyword">case</span> LocomotionState.Walk:  </span><br><span class="line">                    animator.SetFloat(moveSpeedHash, playerMovement.magnitude * walkSpeed, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">                <span class="keyword">case</span> LocomotionState.Run:  </span><br><span class="line">                    animator.SetFloat(moveSpeedHash, playerMovement.magnitude * runSpeed, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">            &#125;        &#125;        <span class="keyword">else</span> <span class="keyword">if</span> (playerPosture == PlayerPosture.Crouch)  </span><br><span class="line">        &#123;            animator.SetFloat(postureHash, crouchThreshold, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">            <span class="keyword">switch</span> (locomotionState)  </span><br><span class="line">            &#123;                <span class="keyword">case</span> LocomotionState.Idle:  </span><br><span class="line">                    animator.SetFloat(moveSpeedHash, <span class="number">0</span>, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">                <span class="literal">default</span>:  </span><br><span class="line">                    animator.SetFloat(moveSpeedHash, playerMovement.magnitude * crouchSpeed, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">            &#125;        &#125;        <span class="keyword">else</span> <span class="keyword">if</span> (playerPosture == PlayerPosture.Jumping)  </span><br><span class="line">        &#123;            animator.SetFloat(postureHash, midairThreshold);  </span><br><span class="line">            animator.SetFloat(verticalVelHash, VerticalVelocity);  </span><br><span class="line">            animator.SetFloat(feetTweenHash, feetTween);  </span><br><span class="line">        &#125;        <span class="comment">// 避免处于cd时候不能移动  </span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (playerPosture == PlayerPosture.Landing)  </span><br><span class="line">        &#123;            animator.SetFloat(postureHash, landingThreshold, <span class="number">0.03f</span>, Time.deltaTime);  </span><br><span class="line">            <span class="keyword">switch</span> (locomotionState)  </span><br><span class="line">            &#123;                <span class="keyword">case</span> LocomotionState.Idle:  </span><br><span class="line">                    animator.SetFloat(moveSpeedHash, <span class="number">0</span>, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">                <span class="keyword">case</span> LocomotionState.Walk:  </span><br><span class="line">                    animator.SetFloat(moveSpeedHash, playerMovement.magnitude * walkSpeed, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">                <span class="keyword">case</span> LocomotionState.Run:  </span><br><span class="line">                    animator.SetFloat(moveSpeedHash, playerMovement.magnitude * runSpeed, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">            &#125;        &#125;        <span class="keyword">else</span> <span class="keyword">if</span> (playerPosture == PlayerPosture.Falling)  </span><br><span class="line">        &#123;            animator.SetFloat(postureHash, midairThreshold);  </span><br><span class="line">            animator.SetFloat(verticalVelHash, VerticalVelocity);  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">if</span> (armState == ArmState.Normal)  </span><br><span class="line">        &#123;            <span class="comment">// 当前移动方向和玩家transform正前方Forward之间的夹角，用弧度表示，和root motion的转向速度单位一致  </span></span><br><span class="line">            <span class="built_in">float</span> rad = Mathf.Atan2(playerMovement.x, playerMovement.z);  </span><br><span class="line">            animator.SetFloat(turnSpeedHash, rad, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">            <span class="comment">// 转速太慢，人为添加一个旋转  </span></span><br><span class="line">            playerTransform.Rotate(<span class="number">0</span>, rad * <span class="number">200</span> * Time.deltaTime, <span class="number">0f</span>);  </span><br><span class="line">        &#125;    &#125;  </span><br><span class="line">    <span class="comment">// 计算平均速度  </span></span><br><span class="line">    <span class="function">Vector3 <span class="title">AverageVel</span>(<span class="params">Vector3 newVel</span>)</span>  </span><br><span class="line">    &#123;        velCache[currentChacheIndex] = newVel;  </span><br><span class="line">        currentChacheIndex++;  </span><br><span class="line">        currentChacheIndex %= CACHE_SIZE;  </span><br><span class="line">        Vector3 average = Vector3.zero;  </span><br><span class="line">        <span class="keyword">foreach</span>(Vector3 vel <span class="keyword">in</span> velCache)  </span><br><span class="line">        &#123;            average += vel;  </span><br><span class="line">        &#125;        <span class="keyword">return</span> average / CACHE_SIZE;  </span><br><span class="line">    &#125;    <span class="comment">//  Animator 组件进行动画更新时，这个方法会被调用。  </span></span><br><span class="line">    <span class="comment">//  OnAnimatorMove方法为开发者提供了一个在动画更新过程中进行自定义操作的机会，使动画与游戏逻辑更加紧密地结合在一起  </span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnAnimatorMove</span>()</span>  </span><br><span class="line">    &#123;        <span class="keyword">if</span>(playerPosture != PlayerPosture.Jumping &amp;&amp; playerPosture != PlayerPosture.Falling)  </span><br><span class="line">        &#123;            Vector3 playerDeltaMovement = animator.deltaPosition;  </span><br><span class="line">            playerDeltaMovement.y = VerticalVelocity * Time.deltaTime;  </span><br><span class="line">            characterController.Move(playerDeltaMovement);  </span><br><span class="line">            averageVel = AverageVel(animator.velocity);  </span><br><span class="line">        &#125;        <span class="keyword">else</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            <span class="comment">// 沿用地面速度当作滞空速度，采用离地前几帧的平均速度  </span></span><br><span class="line">            averageVel.y = VerticalVelocity;  </span><br><span class="line">            Vector3 playerDeltaMovement = averageVel * Time.deltaTime;  </span><br><span class="line">            characterController.Move(playerDeltaMovement);  </span><br><span class="line">        &#125;    &#125;&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="C#">using System;  
+using System.Collections;  
+using System.Collections.Generic;  
+using UnityEngine;  
+using UnityEngine.InputSystem;  
+using Random = UnityEngine.Random;  
+  
+public class ThirdPersonShooterController : MonoBehaviour  
+&#123;  
+    Transform playerTransform;  
+    Animator animator;  
+    Transform cameraTransform;  
+    CharacterController characterController;      
+      
+public enum PlayerPosture  
+    &#123;  
+        Crouch,  
+        Stand,  
+        Jumping,  
+        Falling,  
+        // 玩家刚落地还不能起跳的状态  
+        Landing  
+    &#125;;  
+    public PlayerPosture playerPosture = PlayerPosture.Stand;  
+  
+    float crouchThreshold = 0f;  
+    float standThreshold = 1f;  
+    float midairThreshold = 2.1f;  
+    float landingThreshold = 1f;  
+    public enum LocomotionState  
+    &#123;  
+        Idle,  
+        Walk,  
+        Run  
+    &#125;;  
+    public LocomotionState locomotionState = LocomotionState.Idle;  
+  
+    public enum ArmState  
+    &#123;  
+        Normal,  
+        Aim  
+    &#125;;  
+    public ArmState armState = ArmState.Normal;  
+  
+    float crouchSpeed = 1.5f;  
+    float walkSpeed = 2.5f;  
+    float runSpeed = 5.5f;  
+  
+    Vector2 moveInput;  
+    bool isRunning;  
+    bool isCrouch;  
+    bool isAiming;  
+    bool isJumping;  
+    int postureHash;  
+    int moveSpeedHash;  
+    int turnSpeedHash;  
+    int verticalVelHash;  
+    private int feetTweenHash;  
+    // 玩家实际要移动的方向  
+    Vector3 playerMovement = Vector3.zero;  
+    // 重力  
+    public float gravity = -9.8f;  
+    // 垂直方向速度  
+    private float VerticalVelocity;  
+  
+    //public float jumpVelocity = 5f;  
+  
+    // 最大起跳高度  
+    public float maxHeight = 1.5f;  
+    private Vector3 lastVelOnGround;  
+  
+    private static readonly int CACHE_SIZE = 3;  
+    Vector3[] velCache = new Vector3[CACHE_SIZE];  
+    // 缓存池中最老的那个向量的索引值  
+    int currentChacheIndex = 0;    
+Vector3 averageVel = Vector3.zero;  
+    // 左右脚滞空状态  
+    private float feetTween;  
+  
+    //下落时候的速度是上升时候的多少倍  
+    private float fallMultiplier = 1.5f;  
+  
+    private bool isGrounded;  
+    // 为射线检测设置一个偏移量  
+    private float groundCheckOffset = 0.5f;  
+    // 跳跃的cd设置  
+    private float jumpCD =0.15f;  
+    // 玩家是否处于CD当中  
+    bool isLanding;  
+    // 玩家是否可以跌落  
+    private bool couldFall;  
+    // 跌落的最小高度，小于此高度不会跌落  
+    private float fallHeight = 0.5f;  
+    // Start is called before the first frame update  
+    void Start()  
+    &#123;        playerTransform = transform;  
+        animator = GetComponent&lt;Animator&gt;();  
+        cameraTransform = Camera.main.transform;  
+        characterController = GetComponent&lt;CharacterController&gt;();  
+        postureHash = Animator.StringToHash(&quot;玩家姿态&quot;);  
+        moveSpeedHash = Animator.StringToHash(&quot;移动速度&quot;);  
+        turnSpeedHash = Animator.StringToHash(&quot;转弯速度&quot;);  
+        verticalVelHash = Animator.StringToHash(&quot;垂直速度&quot;);  
+        feetTweenHash = Animator.StringToHash(&quot;左右脚&quot;);  
+        Cursor.lockState = CursorLockMode.Locked;  
+    &#125;  
+// Update is called once per frame  
+    void Update()  
+    &#123;        CheckGround();  
+        CaculateInputDirection();  
+        CaculateGravity();  
+        Jump();  
+        SwitchPlayerStates();  
+        SetupAnimator();  
+    &#125;    #region 输入相关  
+    public void GetMoveInput(InputAction.CallbackContext ctx)  
+    &#123;        moveInput = ctx.ReadValue&lt;Vector2&gt;();  
+    &#125;  
+    public void GetRunInput(InputAction.CallbackContext ctx)  
+    &#123;        isRunning = ctx.ReadValueAsButton();  
+    &#125;  
+    public void GetCrouchInput(InputAction.CallbackContext ctx)  
+    &#123;        isCrouch = ctx.ReadValueAsButton();  
+    &#125;  
+    public void GetAimInput(InputAction.CallbackContext ctx)  
+    &#123;        isAiming = ctx.ReadValueAsButton();  
+    &#125;  
+    public void GetJumpInput(InputAction.CallbackContext ctx)  
+    &#123;        isJumping = ctx.ReadValueAsButton();  
+    &#125;    #endregion  
+    void SwitchPlayerStates()  
+    &#123;        if (!isGrounded)  
+        &#123;            if (VerticalVelocity &gt; 0)  
+            &#123;                playerPosture = PlayerPosture.Jumping;  
+            &#125;            else if (playerPosture != PlayerPosture.Jumping)  
+            &#123;                if (couldFall)  
+                &#123;                    playerPosture = PlayerPosture.Falling;  
+                &#125;            &#125;              
+        &#125;        else if (playerPosture == PlayerPosture.Jumping)  
+        &#123;  
+            StartCoroutine(CoolDownJump());  
+        &#125;        else if (isLanding)  
+        &#123;            playerPosture = PlayerPosture.Landing;  
+        &#125;        else if (isCrouch)  
+        &#123;            playerPosture = PlayerPosture.Crouch;  
+        &#125;        else  
+        &#123;  
+            playerPosture = PlayerPosture.Stand;  
+        &#125;  
+        if (moveInput.magnitude == 0)  
+        &#123;            locomotionState = LocomotionState.Idle;  
+        &#125;        else if (!isRunning)  
+        &#123;            locomotionState = LocomotionState.Walk;  
+        &#125;        else  
+        &#123;  
+            locomotionState = LocomotionState.Run;  
+        &#125;  
+        if (isAiming)  
+        &#123;            armState = ArmState.Aim;  
+        &#125;        else  
+        &#123;  
+            armState = ArmState.Normal;  
+        &#125;    &#125;    // 自己写一个射线检测地面的方法，避免边缘奇怪的bug  
+    void CheckGround()  
+    &#123;        if (Physics.SphereCast(playerTransform.position + (Vector3.up * groundCheckOffset), characterController.radius, Vector3.down, out RaycastHit hit, groundCheckOffset - characterController.radius + 2 * characterController.skinWidth))  
+        &#123;            isGrounded = true;  
+        &#125;        else  
+        &#123;  
+            isGrounded = false;  
+            couldFall = !Physics.Raycast(playerTransform.position, Vector3.down, fallHeight);  
+        &#125;    &#125;    //   
+IEnumerator CoolDownJump()  
+    &#123;        landingThreshold = Mathf.Clamp(VerticalVelocity,-10,0);  
+        landingThreshold /= 20f;  
+        landingThreshold += 1f;  
+        isLanding = true;  
+        playerPosture = PlayerPosture.Landing;  
+        yield return new WaitForSeconds(jumpCD);  
+       isLanding = false;  
+    &#125;    // 重力对垂直方向速度影响的方法  
+    void CaculateGravity()  
+    &#123;        if (playerPosture != PlayerPosture.Jumping &amp;&amp; playerPosture != PlayerPosture.Falling)  
+        &#123;            if (!isGrounded)  
+            &#123;                VerticalVelocity += gravity * fallMultiplier * Time.deltaTime;  
+            &#125;            else  
+            &#123;  
+                VerticalVelocity = gravity * Time.deltaTime;  
+            &#125;        &#125;        else  
+        &#123;  
+            if (VerticalVelocity &lt;= 0 || !isJumping)  
+            &#123;                VerticalVelocity += gravity * fallMultiplier * Time.deltaTime;  
+            &#125;            else  
+            &#123;  
+                VerticalVelocity += gravity * Time.deltaTime;  
+            &#125;  
+        &#125;    &#125;    void Jump()  
+    &#123;        if (playerPosture == PlayerPosture.Stand &amp;&amp; isJumping)  
+        &#123;VerticalVelocity = Mathf.Sqrt(-2 * gravity * maxHeight);  
+            feetTween = Mathf.Repeat(animator.GetCurrentAnimatorStateInfo(0).normalizedTime, 1);  
+            feetTween = Mathf.Repeat(animator.GetCurrentAnimatorStateInfo(0).normalizedTime,1);  
+            feetTween = feetTween &lt; 0.5f ? 1 : -1;  
+            if (locomotionState == LocomotionState.Run)  
+            &#123;                feetTween *= 3;  
+            &#125;            else if (locomotionState == LocomotionState.Walk)  
+            &#123;                feetTween *= 2;  
+            &#125;            else  
+            &#123;  
+                feetTween = Random.Range(0.5f, 1f) * feetTween;  
+            &#125;        &#125;    &#125;    // 将世界坐标系下的方向，转换成相机坐标系下的方向  
+    void CaculateInputDirection()  
+    &#123;        Vector3 camForwardProjection = new Vector3(cameraTransform.forward.x, 0, cameraTransform.forward.z).normalized;  
+        playerMovement = camForwardProjection * moveInput.y + cameraTransform.right * moveInput.x;  
+        playerMovement = playerTransform.InverseTransformVector(playerMovement);  
+    &#125;  
+    void SetupAnimator()  
+    &#123;        if (playerPosture == PlayerPosture.Stand)  
+        &#123;            animator.SetFloat(postureHash, standThreshold, 0.1f, Time.deltaTime);  
+            switch (locomotionState)  
+            &#123;                case LocomotionState.Idle:  
+                    animator.SetFloat(moveSpeedHash, 0, 0.1f, Time.deltaTime);  
+                    break;  
+                case LocomotionState.Walk:  
+                    animator.SetFloat(moveSpeedHash, playerMovement.magnitude * walkSpeed, 0.1f, Time.deltaTime);  
+                    break;  
+                case LocomotionState.Run:  
+                    animator.SetFloat(moveSpeedHash, playerMovement.magnitude * runSpeed, 0.1f, Time.deltaTime);  
+                    break;  
+            &#125;        &#125;        else if (playerPosture == PlayerPosture.Crouch)  
+        &#123;            animator.SetFloat(postureHash, crouchThreshold, 0.1f, Time.deltaTime);  
+            switch (locomotionState)  
+            &#123;                case LocomotionState.Idle:  
+                    animator.SetFloat(moveSpeedHash, 0, 0.1f, Time.deltaTime);  
+                    break;  
+                default:  
+                    animator.SetFloat(moveSpeedHash, playerMovement.magnitude * crouchSpeed, 0.1f, Time.deltaTime);  
+                    break;  
+            &#125;        &#125;        else if (playerPosture == PlayerPosture.Jumping)  
+        &#123;            animator.SetFloat(postureHash, midairThreshold);  
+            animator.SetFloat(verticalVelHash, VerticalVelocity);  
+            animator.SetFloat(feetTweenHash, feetTween);  
+        &#125;        // 避免处于cd时候不能移动  
+        else if (playerPosture == PlayerPosture.Landing)  
+        &#123;            animator.SetFloat(postureHash, landingThreshold, 0.03f, Time.deltaTime);  
+            switch (locomotionState)  
+            &#123;                case LocomotionState.Idle:  
+                    animator.SetFloat(moveSpeedHash, 0, 0.1f, Time.deltaTime);  
+                    break;  
+                case LocomotionState.Walk:  
+                    animator.SetFloat(moveSpeedHash, playerMovement.magnitude * walkSpeed, 0.1f, Time.deltaTime);  
+                    break;  
+                case LocomotionState.Run:  
+                    animator.SetFloat(moveSpeedHash, playerMovement.magnitude * runSpeed, 0.1f, Time.deltaTime);  
+                    break;  
+            &#125;        &#125;        else if (playerPosture == PlayerPosture.Falling)  
+        &#123;            animator.SetFloat(postureHash, midairThreshold);  
+            animator.SetFloat(verticalVelHash, VerticalVelocity);  
+        &#125;  
+        if (armState == ArmState.Normal)  
+        &#123;            // 当前移动方向和玩家transform正前方Forward之间的夹角，用弧度表示，和root motion的转向速度单位一致  
+            float rad = Mathf.Atan2(playerMovement.x, playerMovement.z);  
+            animator.SetFloat(turnSpeedHash, rad, 0.1f, Time.deltaTime);  
+            // 转速太慢，人为添加一个旋转  
+            playerTransform.Rotate(0, rad * 200 * Time.deltaTime, 0f);  
+        &#125;    &#125;  
+    // 计算平均速度  
+    Vector3 AverageVel(Vector3 newVel)  
+    &#123;        velCache[currentChacheIndex] = newVel;  
+        currentChacheIndex++;  
+        currentChacheIndex %= CACHE_SIZE;  
+        Vector3 average = Vector3.zero;  
+        foreach(Vector3 vel in velCache)  
+        &#123;            average += vel;  
+        &#125;        return average / CACHE_SIZE;  
+    &#125;    //  Animator 组件进行动画更新时，这个方法会被调用。  
+    //  OnAnimatorMove方法为开发者提供了一个在动画更新过程中进行自定义操作的机会，使动画与游戏逻辑更加紧密地结合在一起  
+    private void OnAnimatorMove()  
+    &#123;        if(playerPosture != PlayerPosture.Jumping &amp;&amp; playerPosture != PlayerPosture.Falling)  
+        &#123;            Vector3 playerDeltaMovement = animator.deltaPosition;  
+            playerDeltaMovement.y = VerticalVelocity * Time.deltaTime;  
+            characterController.Move(playerDeltaMovement);  
+            averageVel = AverageVel(animator.velocity);  
+        &#125;        else  
+        &#123;  
+            // 沿用地面速度当作滞空速度，采用离地前几帧的平均速度  
+            averageVel.y = VerticalVelocity;  
+            Vector3 playerDeltaMovement = averageVel * Time.deltaTime;  
+            characterController.Move(playerDeltaMovement);  
+        &#125;    &#125;&#125;
+</code></pre>
 <h3 id="Camera（摄像机）"><a href="#Camera（摄像机）" class="headerlink" title="Camera（摄像机）"></a>Camera（摄像机）</h3><p>在PackageManager中安装Cinemachine<br>Hierarchy中右键新建一个FreeLook Camera：一个多相机的管理方案，同时提供了三个高度位置不同的Orbital Transposer相机<br><img src="/../img/beishang20241211224239350.png"><br>这些参数调整合适<br><img src="/../img/beishang20241212103720062.png"></p>
 <h3 id="Control（控制）"><a href="#Control（控制）" class="headerlink" title="Control（控制）"></a>Control（控制）</h3><p>newInputSystem<br>在项目视图里右键新建一个Action</p>
 <h4 id="配置Action"><a href="#配置Action" class="headerlink" title="配置Action"></a>配置Action</h4><p><img src="/../img/beishang20241212101159353.png"><br><img src="/../img/beishang20241212101406850.png"><br><img src="/../img/beishang20241212101555578.png"><br><img src="/../img/beishang20241212101832428.png"><br><img src="/../img/beishang20241212101851890.png"><br><img src="/../img/beishang20241212102237231.png"><img src="/../img/beishang20241212102556600.png"><br><img src="/../img/beishang20241212102600917.png"><br><img src="/../img/beishang20241212102843819.png"><br>最后一定要SaveAsset</p>

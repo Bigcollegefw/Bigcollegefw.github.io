@@ -6,35 +6,25 @@
   <meta name="keywords" content=" demo ">
   <meta name="description" content="丧尸围城 (上) | beishangzhajitui">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="前言虽然配置好了，整个过程属于是非常懵，思考了许久决定将建站历程记录下来，相信如果你是一个没建过网站的人，那你可能会想我一样先找找有没有关于的搭建的过程。不过很不幸，这篇博客更多是为了记录和提醒自己，如果你要是完全按照这个不一定搞得出来。可以借鉴的地方是关于让图片能够在博客的 文章中显示出来的内容，因为这一块我网上没有找到跟我一样的，是自己摸索的。 原理123hexo clean # 清除缓存文件">
-<meta property="og:type" content="website">
-<meta property="og:title" content="这里是建站记录">
-<meta property="og:url" content="http://example.com/Hexo+Github+Obsidian%E8%BF%99%E9%87%8C%E6%98%AF%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95.html">
+<meta name="description" content="&#x2F;&#x2F; 1. 观察者接口 public interface IObserver &#123;     void Update(int health); &#125;  &#x2F;&#x2F; 2. 主题类（这里模拟玩家对象，它的状态变化会通知观察者） public class PlayerSubject &#123;     private List&lt;IObserver&gt; observers &#x3D; new">
+<meta property="og:type" content="article">
+<meta property="og:title" content="观察者模式">
+<meta property="og:url" content="http://example.com/2024/12/6e69ad42e217.html">
 <meta property="og:site_name" content="beishangzhajitui">
-<meta property="og:description" content="前言虽然配置好了，整个过程属于是非常懵，思考了许久决定将建站历程记录下来，相信如果你是一个没建过网站的人，那你可能会想我一样先找找有没有关于的搭建的过程。不过很不幸，这篇博客更多是为了记录和提醒自己，如果你要是完全按照这个不一定搞得出来。可以借鉴的地方是关于让图片能够在博客的 文章中显示出来的内容，因为这一块我网上没有找到跟我一样的，是自己摸索的。 原理123hexo clean # 清除缓存文件">
+<meta property="og:description" content="&#x2F;&#x2F; 1. 观察者接口 public interface IObserver &#123;     void Update(int health); &#125;  &#x2F;&#x2F; 2. 主题类（这里模拟玩家对象，它的状态变化会通知观察者） public class PlayerSubject &#123;     private List&lt;IObserver&gt; observers &#x3D; new">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/beishang20241207113547501.png">
-<meta property="og:image" content="http://example.com/img/beishang20241206160308125.png">
-<meta property="og:image" content="http://example.com/img/beishang20241206160500289.png">
-<meta property="og:image" content="http://example.com/img/beishang20241207095904010.png">
-<meta property="og:image" content="http://example.com/img/beishang20241207104637882.png">
-<meta property="og:image" content="http://example.com/img/beishang20241207112633087.png">
-<meta property="og:image" content="http://example.com/img/beishang20241207112547502.png">
-<meta property="og:image" content="http://example.com/img/beishang20241208002131397.png">
-<meta property="og:image" content="http://example.com/img/beishang20241208001958088.png">
-<meta property="article:published_time" content="2024-12-06T07:13:47.000Z">
-<meta property="article:modified_time" content="2024-12-18T04:19:41.998Z">
+<meta property="article:published_time" content="2024-12-20T07:48:54.613Z">
+<meta property="article:modified_time" content="2024-12-20T10:07:36.609Z">
 <meta property="article:author" content="beishangzhajitui">
-<meta property="article:tag" content="工具">
+<meta property="article:tag" content="CSharp">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/img/beishang20241207113547501.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
 
 <link href="/css/style.css?v=1.1.0" rel="stylesheet">
 
-<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+<link href="/css/hl_theme/darcula.css?v=1.1.0" rel="stylesheet">
 
 <link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
 
@@ -164,10 +154,25 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(20)</small>
+                <small>(21)</small>
             
         </div>
     </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="工具">
+            
+            工具
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
     
         
             
@@ -278,7 +283,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="20">
+<input type="hidden" id="yelog_site_posts_number" value="21">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -420,7 +425,7 @@
         
         <a  class="全部文章 面试 "
            href="/2024/12/f9803a20b288.html"
-           data-tag="CSharp,工具"
+           data-tag="工具,CSharp"
            data-author="" >
             <span class="post-title" title="面试题1">面试题1</span>
             <span class="post-date" title="2024-12-19 18:32:27">2024/12/19</span>
@@ -525,6 +530,15 @@
             <span class="post-date" title="2024-12-06 22:42:09">2024/12/06</span>
         </a>
         
+        
+        <a  class="全部文章 工具 "
+           href="/2024/12/98a55959539d.html"
+           data-tag="工具"
+           data-author="" >
+            <span class="post-title" title="这里是建站记录">这里是建站记录</span>
+            <span class="post-date" title="2024-12-06 15:13:47">2024/12/06</span>
+        </a>
+        
         <div id="no-item-tips">
 
         </div>
@@ -611,10 +625,186 @@
         <p>大致记录下具体流程与详细知识点。估计之后的项目笔记也不会再记得这么详细了​。因为有点多就分了上下两篇。左上角有个按钮可以切换到大纲。</p>
 <p>首先用2019版创建一个3D核心项目，这个3D项目因该是内置渲染管线的项目。</p>
 <h2 id="1-先拖入场景并且制作面板"><a href="#1-先拖入场景并且制作面板" class="headerlink" title="1.先拖入场景并且制作面板"></a>1.先拖入场景并且制作面板</h2><p><img src="/../img/beishang20241207165715955.png">UIManager中，为了保证全局都能够找到一个Canvas,所以将canvas做成一个预设体1<br><img src="/../img/beishang20241207165731828.png"><br>找到人物资源，并且放入对应的动画，一个啃食一个在趴着</p>
-<h3 id="BasePanel"><a href="#BasePanel" class="headerlink" title="BasePanel"></a>BasePanel</h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"><span class="keyword">using</span> UnityEngine.Events;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title">BasePanel</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 专门用于控制面板透明度的组件</span></span><br><span class="line">    <span class="keyword">private</span> CanvasGroup canvasGroup;</span><br><span class="line">    <span class="comment">// 淡入淡出的速度</span></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">float</span> alphaSpeed = <span class="number">10</span>;</span><br><span class="line">    <span class="comment">// 当前是隐藏还是显示</span></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">bool</span> isShow = <span class="literal">false</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 当隐藏完毕后想要做的事情，委托。</span></span><br><span class="line">    <span class="keyword">private</span> UnityAction hideCallBack = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 保护类型的虚函数，是确保子类可以重写这个虚函数，用public是可以在外面执行的时候可以点出来</span></span><br><span class="line">    <span class="comment">// 但是这种生命周期函数是不需要手动调用，所以不用public而是用protected，在父类和子类之间可以使用就可以了。</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">Awake</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 获取面板上挂载的组件</span></span><br><span class="line">        canvasGroup = <span class="keyword">this</span>.GetComponent&lt;CanvasGroup&gt;();</span><br><span class="line">        <span class="keyword">if</span> (canvasGroup == <span class="literal">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            canvasGroup = <span class="keyword">this</span>.gameObject.AddComponent&lt;CanvasGroup&gt;();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Start is called before the first frame update</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        Init();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 注册控件事件的方法，所有的字面板都需要去注册一些控件事件</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 所以写成抽象方法，让子类必须去实现</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">Init</span>()</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 显示自己做的函数</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">ShowMe</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        canvasGroup.alpha = <span class="number">0</span>;</span><br><span class="line">        isShow = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 影藏自己的方法</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">HideMe</span>(<span class="params"> UnityAction callBack</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        canvasGroup.alpha = <span class="number">1</span>;</span><br><span class="line">        isShow = <span class="literal">false</span>; </span><br><span class="line">        </span><br><span class="line">        hideCallBack = callBack;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Update is called once per frame</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 实现淡入淡出的效果</span></span><br><span class="line">        <span class="keyword">if</span> (isShow &amp;&amp; canvasGroup.alpha != <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">             canvasGroup.alpha += alphaSpeed * Time.deltaTime;  </span><br><span class="line">             <span class="keyword">if</span>(canvasGroup.alpha &gt;= <span class="number">1</span>)</span><br><span class="line">                 canvasGroup.alpha = <span class="number">1</span>;         </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 淡出</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (!isShow &amp;&amp; canvasGroup.alpha != <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            canvasGroup.alpha -= alphaSpeed*Time.deltaTime;</span><br><span class="line">            <span class="keyword">if</span> (canvasGroup.alpha &lt;= <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                canvasGroup.alpha = <span class="number">0</span>;</span><br><span class="line">                <span class="comment">// 让面板透明度淡出完成后，再去执行的一些逻辑</span></span><br><span class="line">                <span class="comment">// 如果 hideCallBack 不为 null，那么就会执行它所封装的方法</span></span><br><span class="line">                hideCallBack?.Invoke(); </span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="BasePanel"><a href="#BasePanel" class="headerlink" title="BasePanel"></a>BasePanel</h3><pre><code class="C#">using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Events;
 
+public abstract class BasePanel : MonoBehaviour
+&#123;
+    
+    // 专门用于控制面板透明度的组件
+    private CanvasGroup canvasGroup;
+    // 淡入淡出的速度
+    private float alphaSpeed = 10;
+    // 当前是隐藏还是显示
+    public bool isShow = false;
+    
+    // 当隐藏完毕后想要做的事情，委托。
+    private UnityAction hideCallBack = null;
+
+    // 保护类型的虚函数，是确保子类可以重写这个虚函数，用public是可以在外面执行的时候可以点出来
+    // 但是这种生命周期函数是不需要手动调用，所以不用public而是用protected，在父类和子类之间可以使用就可以了。
+    protected virtual void Awake()
+    &#123;
+        // 获取面板上挂载的组件
+        canvasGroup = this.GetComponent&lt;CanvasGroup&gt;();
+        if (canvasGroup == null)
+        &#123;
+            canvasGroup = this.gameObject.AddComponent&lt;CanvasGroup&gt;();
+        &#125;
+    &#125;
+
+    // Start is called before the first frame update
+    protected virtual void Start()
+    &#123;
+        Init();
+    &#125;
+
+    
+    /// &lt;summary&gt;
+    /// 注册控件事件的方法，所有的字面板都需要去注册一些控件事件
+    /// 所以写成抽象方法，让子类必须去实现
+    /// &lt;/summary&gt;
+    public abstract void Init();
+
+    /// &lt;summary&gt;
+    /// 显示自己做的函数
+    /// &lt;/summary&gt;
+    public virtual void ShowMe()
+    &#123;
+        canvasGroup.alpha = 0;
+        isShow = true;
+    &#125;
+
+    /// &lt;summary&gt;
+    /// 影藏自己的方法
+    /// &lt;/summary&gt;
+    public virtual void HideMe( UnityAction callBack)
+    &#123;
+        canvasGroup.alpha = 1;
+        isShow = false; 
+        
+        hideCallBack = callBack;
+    &#125;
+    
+    // Update is called once per frame
+    void Update()
+    &#123;
+        // 实现淡入淡出的效果
+        if (isShow &amp;&amp; canvasGroup.alpha != 1)
+        &#123;
+             canvasGroup.alpha += alphaSpeed * Time.deltaTime;  
+             if(canvasGroup.alpha &gt;= 1)
+                 canvasGroup.alpha = 1;         
+        &#125;
+        // 淡出
+        else if (!isShow &amp;&amp; canvasGroup.alpha != 0)
+        &#123;
+            canvasGroup.alpha -= alphaSpeed*Time.deltaTime;
+            if (canvasGroup.alpha &lt;= 0)
+            &#123;
+                canvasGroup.alpha = 0;
+                // 让面板透明度淡出完成后，再去执行的一些逻辑
+                // 如果 hideCallBack 不为 null，那么就会执行它所封装的方法
+                hideCallBack?.Invoke(); 
+            &#125;
+
+        &#125;
+    &#125;
+&#125;
+</code></pre>
 <p>每个继承BasePanel的面板都会有一个必须实现的方法Init();和几个可以改写的方法就是那些带 virtual的方法,不改写就默认父类的操作</p>
-<h3 id="UIManager"><a href="#UIManager" class="headerlink" title="UIManager"></a>UIManager</h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Collections;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">UIManager</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> UIManager instance = <span class="keyword">new</span> UIManager();</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> UIManager Instance =&gt; instance;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// BasePanel是米氏替换原则，基类替换。用于存储显示着的面板，每显示一个面板，就会存入这个字典。</span></span><br><span class="line">    <span class="comment">// 影藏面板的时候就会直接获取字典中的对应面版进行隐藏。</span></span><br><span class="line">    <span class="keyword">private</span> Dictionary&lt;<span class="built_in">string</span>, BasePanel&gt; panelDic = <span class="keyword">new</span> Dictionary&lt;<span class="built_in">string</span>, BasePanel&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 场景中的 Cancas对象,用于设置面板的父对象。</span></span><br><span class="line">    <span class="keyword">private</span> Transform canvasTrans;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 单例模式构造函数就会执行一次，所以用构造函数</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">UIManager</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 得到场景中的Canvas对象</span></span><br><span class="line">        GameObject canvas = GameObject.Instantiate(Resources.Load&lt;GameObject&gt;(<span class="string">&quot;UI/Canvas&quot;</span>));</span><br><span class="line">        canvasTrans = canvas.transform;</span><br><span class="line">        <span class="comment">// 通过场景时候不移除该对象，保证这个游戏过程中只有一个canvas对象。 </span></span><br><span class="line">        GameObject.DontDestroyOnLoad(canvas);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 显示面板</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> T <span class="title">ShowPanel</span>&lt;<span class="title">T</span>&gt;() <span class="keyword">where</span> T : BasePanel</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 保证泛型T的类型和面板预设体名字一样。</span></span><br><span class="line">        <span class="built_in">string</span> panelName = <span class="keyword">typeof</span>(T).Name;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (panelDic.ContainsKey(panelName))</span><br><span class="line">            <span class="keyword">return</span> panelDic[panelName] <span class="keyword">as</span> T;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 显示面板，创建实例，设置父对象。</span></span><br><span class="line">        GameObject panelObj = GameObject.Instantiate(Resources.Load&lt;GameObject&gt;(<span class="string">&quot;UI/&quot;</span> + panelName));</span><br><span class="line">        <span class="comment">// 把这个对象放到场景中Canvas下面</span></span><br><span class="line">        panelObj.transform.SetParent(canvasTrans, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获得这个泛型类面板的组件，存进字典。</span></span><br><span class="line">        T panel = panelObj.GetComponent&lt;T&gt;();</span><br><span class="line">        panelDic.Add(panelName, panel);</span><br><span class="line">        <span class="comment">// 通过BasePanel中方法显示。</span></span><br><span class="line">        panel.ShowMe();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> panel;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 隐藏面板</span></span><br><span class="line">    <span class="comment">// 需要考虑是直接淡入淡出还是直接删</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">HidePanel</span>&lt;<span class="title">T</span>&gt;(<span class="params"><span class="built_in">bool</span> isFade = <span class="literal">true</span></span>) <span class="keyword">where</span> T : BasePanel</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 根据泛型得到名字</span></span><br><span class="line">        <span class="built_in">string</span> panelName = <span class="keyword">typeof</span>(T).Name;</span><br><span class="line">        <span class="comment">// 判断当前显示的面板，有没有你想要隐藏的 。</span></span><br><span class="line">        <span class="keyword">if</span> (panelDic.ContainsKey(panelName))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (isFade)</span><br><span class="line">            &#123;</span><br><span class="line">                panelDic[panelName].HideMe(() =&gt;</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">// 删除对象</span></span><br><span class="line">                    GameObject.Destroy(panelDic[panelName].gameObject);</span><br><span class="line">                    <span class="comment">// 删除字典里面存储的面板脚本</span></span><br><span class="line">                    panelDic.Remove(panelName);</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 删除对象</span></span><br><span class="line">                GameObject.Destroy(panelDic[panelName].gameObject);</span><br><span class="line">                <span class="comment">// 删除字典里面存储的面板脚本</span></span><br><span class="line">                panelDic.Remove(panelName);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 得到面板</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> T <span class="title">GetPanel</span>&lt;<span class="title">T</span>&gt;() <span class="keyword">where</span> T : BasePanel</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">string</span> panelName = <span class="keyword">typeof</span>(T).Name;</span><br><span class="line">        <span class="keyword">if</span>(panelDic.ContainsKey(panelName))</span><br><span class="line">            <span class="keyword">return</span> panelDic[panelName] <span class="keyword">as</span> T;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="UIManager"><a href="#UIManager" class="headerlink" title="UIManager"></a>UIManager</h3><pre><code class="C#">using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class UIManager
+&#123;
+    private static UIManager instance = new UIManager();
+    public static UIManager Instance =&gt; instance;
+
+    // BasePanel是米氏替换原则，基类替换。用于存储显示着的面板，每显示一个面板，就会存入这个字典。
+    // 影藏面板的时候就会直接获取字典中的对应面版进行隐藏。
+    private Dictionary&lt;string, BasePanel&gt; panelDic = new Dictionary&lt;string, BasePanel&gt;();
+
+    // 场景中的 Cancas对象,用于设置面板的父对象。
+    private Transform canvasTrans;
+
+    // 单例模式构造函数就会执行一次，所以用构造函数
+    private UIManager()
+    &#123;
+        // 得到场景中的Canvas对象
+        GameObject canvas = GameObject.Instantiate(Resources.Load&lt;GameObject&gt;(&quot;UI/Canvas&quot;));
+        canvasTrans = canvas.transform;
+        // 通过场景时候不移除该对象，保证这个游戏过程中只有一个canvas对象。 
+        GameObject.DontDestroyOnLoad(canvas);
+    &#125;
+
+    // 显示面板
+    public T ShowPanel&lt;T&gt;() where T : BasePanel
+    &#123;
+        // 保证泛型T的类型和面板预设体名字一样。
+        string panelName = typeof(T).Name;
+
+        if (panelDic.ContainsKey(panelName))
+            return panelDic[panelName] as T;
+
+        // 显示面板，创建实例，设置父对象。
+        GameObject panelObj = GameObject.Instantiate(Resources.Load&lt;GameObject&gt;(&quot;UI/&quot; + panelName));
+        // 把这个对象放到场景中Canvas下面
+        panelObj.transform.SetParent(canvasTrans, false);
+
+        // 获得这个泛型类面板的组件，存进字典。
+        T panel = panelObj.GetComponent&lt;T&gt;();
+        panelDic.Add(panelName, panel);
+        // 通过BasePanel中方法显示。
+        panel.ShowMe();
+
+        return panel;
+    &#125;
+
+    // 隐藏面板
+    // 需要考虑是直接淡入淡出还是直接删
+    public void HidePanel&lt;T&gt;(bool isFade = true) where T : BasePanel
+    &#123;
+        // 根据泛型得到名字
+        string panelName = typeof(T).Name;
+        // 判断当前显示的面板，有没有你想要隐藏的 。
+        if (panelDic.ContainsKey(panelName))
+        &#123;
+            if (isFade)
+            &#123;
+                panelDic[panelName].HideMe(() =&gt;
+                &#123;
+                    // 删除对象
+                    GameObject.Destroy(panelDic[panelName].gameObject);
+                    // 删除字典里面存储的面板脚本
+                    panelDic.Remove(panelName);
+                &#125;);
+            &#125;
+            else
+            &#123;
+                // 删除对象
+                GameObject.Destroy(panelDic[panelName].gameObject);
+                // 删除字典里面存储的面板脚本
+                panelDic.Remove(panelName);
+            &#125;
+        &#125;
+    &#125;
+
+    // 得到面板
+    public T GetPanel&lt;T&gt;() where T : BasePanel
+    &#123;
+        string panelName = typeof(T).Name;
+        if(panelDic.ContainsKey(panelName))
+            return panelDic[panelName] as T;
+
+        return null;
+    &#125;
+&#125;
+</code></pre>
 <p>创建好面板后写开始面板逻辑，注意命名和Hierachy中一致<br><img src="/../img/beishang20241207170022521.png"><br>做好之后将这个脚本拖到BenginPanel下，然后将对应的按钮放到脚本组件下，再将BeginPanel做成一个预设体，然后就可以将这两个都删掉了。</p>
 <h2 id="2-创建一个Main，挂载主入口Main脚本。"><a href="#2-创建一个Main，挂载主入口Main脚本。" class="headerlink" title="2.创建一个Main，挂载主入口Main脚本。"></a>2.创建一个Main，挂载主入口Main脚本。</h2><p><img src="/../img/beishang20241207170107884.png">## 拼SettingPanel面板<br><img src="/../img/beishang20241207170130661.png"></p>
 <h2 id="3-编写背景音乐数据脚本"><a href="#3-编写背景音乐数据脚本" class="headerlink" title="3.编写背景音乐数据脚本"></a>3.编写背景音乐数据脚本</h2><h3 id="MusicData"><a href="#MusicData" class="headerlink" title="MusicData"></a>MusicData</h3><p>存储和读取音乐相关的数据<br><img src="/../img/beishang20241207170304251.png"></p>

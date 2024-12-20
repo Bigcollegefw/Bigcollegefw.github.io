@@ -6,35 +6,25 @@
   <meta name="keywords" content=" CSharp ">
   <meta name="description" content="1.ArrayList | beishangzhajitui">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="前言虽然配置好了，整个过程属于是非常懵，思考了许久决定将建站历程记录下来，相信如果你是一个没建过网站的人，那你可能会想我一样先找找有没有关于的搭建的过程。不过很不幸，这篇博客更多是为了记录和提醒自己，如果你要是完全按照这个不一定搞得出来。可以借鉴的地方是关于让图片能够在博客的 文章中显示出来的内容，因为这一块我网上没有找到跟我一样的，是自己摸索的。 原理123hexo clean # 清除缓存文件">
-<meta property="og:type" content="website">
-<meta property="og:title" content="这里是建站记录">
-<meta property="og:url" content="http://example.com/Hexo+Github+Obsidian%E8%BF%99%E9%87%8C%E6%98%AF%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95.html">
+<meta name="description" content="&#x2F;&#x2F; 1. 观察者接口 public interface IObserver &#123;     void Update(int health); &#125;  &#x2F;&#x2F; 2. 主题类（这里模拟玩家对象，它的状态变化会通知观察者） public class PlayerSubject &#123;     private List&lt;IObserver&gt; observers &#x3D; new">
+<meta property="og:type" content="article">
+<meta property="og:title" content="观察者模式">
+<meta property="og:url" content="http://example.com/2024/12/6e69ad42e217.html">
 <meta property="og:site_name" content="beishangzhajitui">
-<meta property="og:description" content="前言虽然配置好了，整个过程属于是非常懵，思考了许久决定将建站历程记录下来，相信如果你是一个没建过网站的人，那你可能会想我一样先找找有没有关于的搭建的过程。不过很不幸，这篇博客更多是为了记录和提醒自己，如果你要是完全按照这个不一定搞得出来。可以借鉴的地方是关于让图片能够在博客的 文章中显示出来的内容，因为这一块我网上没有找到跟我一样的，是自己摸索的。 原理123hexo clean # 清除缓存文件">
+<meta property="og:description" content="&#x2F;&#x2F; 1. 观察者接口 public interface IObserver &#123;     void Update(int health); &#125;  &#x2F;&#x2F; 2. 主题类（这里模拟玩家对象，它的状态变化会通知观察者） public class PlayerSubject &#123;     private List&lt;IObserver&gt; observers &#x3D; new">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/beishang20241207113547501.png">
-<meta property="og:image" content="http://example.com/img/beishang20241206160308125.png">
-<meta property="og:image" content="http://example.com/img/beishang20241206160500289.png">
-<meta property="og:image" content="http://example.com/img/beishang20241207095904010.png">
-<meta property="og:image" content="http://example.com/img/beishang20241207104637882.png">
-<meta property="og:image" content="http://example.com/img/beishang20241207112633087.png">
-<meta property="og:image" content="http://example.com/img/beishang20241207112547502.png">
-<meta property="og:image" content="http://example.com/img/beishang20241208002131397.png">
-<meta property="og:image" content="http://example.com/img/beishang20241208001958088.png">
-<meta property="article:published_time" content="2024-12-06T07:13:47.000Z">
-<meta property="article:modified_time" content="2024-12-18T04:19:41.998Z">
+<meta property="article:published_time" content="2024-12-20T07:48:54.613Z">
+<meta property="article:modified_time" content="2024-12-20T10:07:36.609Z">
 <meta property="article:author" content="beishangzhajitui">
-<meta property="article:tag" content="工具">
+<meta property="article:tag" content="CSharp">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/img/beishang20241207113547501.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
 
 <link href="/css/style.css?v=1.1.0" rel="stylesheet">
 
-<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+<link href="/css/hl_theme/darcula.css?v=1.1.0" rel="stylesheet">
 
 <link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
 
@@ -164,10 +154,25 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(20)</small>
+                <small>(21)</small>
             
         </div>
     </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="工具">
+            
+            工具
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
     
         
             
@@ -278,7 +283,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="20">
+<input type="hidden" id="yelog_site_posts_number" value="21">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -420,7 +425,7 @@
         
         <a  class="全部文章 面试 "
            href="/2024/12/f9803a20b288.html"
-           data-tag="CSharp,工具"
+           data-tag="工具,CSharp"
            data-author="" >
             <span class="post-title" title="面试题1">面试题1</span>
             <span class="post-date" title="2024-12-19 18:32:27">2024/12/19</span>
@@ -525,6 +530,15 @@
             <span class="post-date" title="2024-12-06 22:42:09">2024/12/06</span>
         </a>
         
+        
+        <a  class="全部文章 工具 "
+           href="/2024/12/98a55959539d.html"
+           data-tag="工具"
+           data-author="" >
+            <span class="post-title" title="这里是建站记录">这里是建站记录</span>
+            <span class="post-date" title="2024-12-06 15:13:47">2024/12/06</span>
+        </a>
+        
         <div id="no-item-tips">
 
         </div>
@@ -612,25 +626,76 @@
       
         <h2 id="1-ArrayList的本质"><a href="#1-ArrayList的本质" class="headerlink" title="1.ArrayList的本质"></a>1.ArrayList的本质</h2><p>是一个C#为我们封装好的一个类，本质是一个Object类型的数组，帮助我们实现了很多数组的增删查改。</p>
 <h2 id="2-申明"><a href="#2-申明" class="headerlink" title="2.申明"></a>2.申明</h2><p>在using System.Collections命名空间中。</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ArrayList array = <span class="keyword">new</span> ArrayList();</span><br></pre></td></tr></table></figure>
-
+<pre><code class="C#">ArrayList array = new ArrayList();
+</code></pre>
 <h2 id="3-增删查改"><a href="#3-增删查改" class="headerlink" title="3.增删查改"></a>3.增删查改</h2><ul>
-<li><input disabled="" type="checkbox"> 增<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 单个加</span></span><br><span class="line">array.Add(<span class="number">1</span>);</span><br><span class="line">array.Add(<span class="string">&quot;A&quot;</span>);</span><br><span class="line">array.Add(<span class="keyword">new</span> <span class="built_in">object</span>());</span><br><span class="line"><span class="comment">// 批量加,array2也是有若干个元素的数组列表。</span></span><br><span class="line">array.AddRange(array2);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从中间插入,从index为1的位置插一个</span></span><br><span class="line">array.Insert(<span class="number">1</span>,<span class="string">&quot;123456&quot;</span>);</span><br><span class="line">Console.WriteLine(array[<span class="number">1</span>]);</span><br></pre></td></tr></table></figure></li>
-<li><input disabled="" type="checkbox"> 删<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 从头到尾去遍历，找到一个一样的就会删掉。</span></span><br><span class="line">array.Remove(<span class="number">1</span>);</span><br><span class="line"><span class="comment">// 移除指定位置的元素</span></span><br><span class="line">array.RemoveAt(<span class="number">2</span>);</span><br><span class="line"><span class="comment">// 清空</span></span><br><span class="line">array.Clear();</span><br></pre></td></tr></table></figure></li>
-<li><input disabled="" type="checkbox"> 查<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Console.WriteLine(array[<span class="number">0</span>]);</span><br><span class="line"><span class="comment">// 查看元素是否存在，返回bool值</span></span><br><span class="line"><span class="keyword">if</span>( array.Contains(<span class="string">&quot;123&quot;</span>))&#123; </span><br><span class="line">	Console.WriteLine(<span class="string">&quot;123exsit&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 正向查找元素位置，找到返回元素索引，找不到返回-1；</span></span><br><span class="line"><span class="built_in">int</span> index = array.IndexOf(<span class="literal">true</span>);</span><br><span class="line">Console.WriteLine(index);</span><br><span class="line">Console.WriteLine(array.IndexOf(<span class="literal">false</span>));</span><br><span class="line"><span class="comment">// 反向查找，找到返回从头开始的索引数，找不到返回-1；</span></span><br><span class="line">Console.WriteLine(array.LastIndexOf(<span class="literal">true</span>));</span><br></pre></td></tr></table></figure></li>
-<li><input disabled="" type="checkbox"> 改<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arrayA[<span class="number">0</span>] = <span class="string">&quot;999&quot;</span>;</span><br></pre></td></tr></table></figure></li>
+<li><input disabled="" type="checkbox"> 增</li>
 </ul>
+<pre><code class="C#">// 单个加
+array.Add(1);
+array.Add(&quot;A&quot;);
+array.Add(new object());
+// 批量加,array2也是有若干个元素的数组列表。
+array.AddRange(array2);
+
+// 从中间插入,从index为1的位置插一个
+array.Insert(1,&quot;123456&quot;);
+Console.WriteLine(array[1]);
+</code></pre>
+<ul>
+<li><input disabled="" type="checkbox"> 删</li>
+</ul>
+<pre><code class="C#">// 从头到尾去遍历，找到一个一样的就会删掉。
+array.Remove(1);
+// 移除指定位置的元素
+array.RemoveAt(2);
+// 清空
+array.Clear();
+</code></pre>
+<ul>
+<li><input disabled="" type="checkbox"> 查</li>
+</ul>
+<pre><code class="C#">Console.WriteLine(array[0]);
+// 查看元素是否存在，返回bool值
+if( array.Contains(&quot;123&quot;))&#123; 
+    Console.WriteLine(&quot;123exsit&quot;);
+&#125;
+// 正向查找元素位置，找到返回元素索引，找不到返回-1；
+int index = array.IndexOf(true);
+Console.WriteLine(index);
+Console.WriteLine(array.IndexOf(false));
+// 反向查找，找到返回从头开始的索引数，找不到返回-1；
+Console.WriteLine(array.LastIndexOf(true));
+</code></pre>
+<ul>
+<li><input disabled="" type="checkbox"> 改</li>
+</ul>
+<pre><code class="C#">arrayA[0] = &quot;999&quot;;
+</code></pre>
 <h2 id="4-遍历"><a href="#4-遍历" class="headerlink" title="4.遍历"></a>4.遍历</h2><p>数组是Lenth，这里是Count得到长度，Capacity是容量，容量是为了开辟好内存空间后，不会总是超出容量从而新开辟一块内存空间，减少过多的垃圾的产生。</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Console.WriteLine(array.Count);</span><br><span class="line"><span class="comment">// 容量</span></span><br><span class="line">Console.WriteLine(array.Capacity);</span><br><span class="line"><span class="keyword">for</span>(<span class="built_in">int</span> i = <span class="number">0</span>;i &lt; array.Count;i++)</span><br><span class="line">&#123; </span><br><span class="line">	Console.WriteLine(array[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="C#">Console.WriteLine(array.Count);
+// 容量
+Console.WriteLine(array.Capacity);
+for(int i = 0;i &lt; array.Count;i++)
+&#123; 
+    Console.WriteLine(array[i]);
+&#125;
+</code></pre>
 <p>这里需要实现什么迭代器，才能用迭代器遍历。</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 迭代器遍历</span></span><br><span class="line"><span class="keyword">foreach</span>(<span class="built_in">object</span> item <span class="keyword">in</span> array)</span><br><span class="line">&#123; </span><br><span class="line">	Console.WriteLine(item);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="C#">// 迭代器遍历
+foreach(object item in array)
+&#123; 
+    Console.WriteLine(item);
+&#125;
+</code></pre>
 <h2 id="5-装箱拆箱"><a href="#5-装箱拆箱" class="headerlink" title="5.装箱拆箱"></a>5.装箱拆箱</h2><p>装箱：栈上面的内存转移堆上面去<br>拆箱：堆上面的内存转移到栈上面</p>
 <p>栈对应值类型<br>堆对应引用类型</p>
 <p>Object是引用类型</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> i = <span class="number">1</span>;</span><br><span class="line">array[<span class="number">0</span>] = i;<span class="comment">// 装箱</span></span><br><span class="line"></span><br><span class="line">i = (<span class="built_in">int</span>)array[<span class="number">0</span>]; <span class="comment">// 拆箱</span></span><br></pre></td></tr></table></figure>
+<pre><code class="C#">int i = 1;
+array[0] = i;// 装箱
 
+i = (int)array[0]; // 拆箱
+</code></pre>
 <p> 进行值类型存储的时候就是在装箱，当将值类型对象取出来转换使用就存在拆箱。<br> 所以ArrayList尽量少用，之后我们会有更好的数据容器。</p>
 
       

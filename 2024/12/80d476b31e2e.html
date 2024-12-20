@@ -6,35 +6,25 @@
   <meta name="keywords" content=" CSharp ">
   <meta name="description" content="2.Stack | beishangzhajitui">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="前言虽然配置好了，整个过程属于是非常懵，思考了许久决定将建站历程记录下来，相信如果你是一个没建过网站的人，那你可能会想我一样先找找有没有关于的搭建的过程。不过很不幸，这篇博客更多是为了记录和提醒自己，如果你要是完全按照这个不一定搞得出来。可以借鉴的地方是关于让图片能够在博客的 文章中显示出来的内容，因为这一块我网上没有找到跟我一样的，是自己摸索的。 原理123hexo clean # 清除缓存文件">
-<meta property="og:type" content="website">
-<meta property="og:title" content="这里是建站记录">
-<meta property="og:url" content="http://example.com/Hexo+Github+Obsidian%E8%BF%99%E9%87%8C%E6%98%AF%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95.html">
+<meta name="description" content="&#x2F;&#x2F; 1. 观察者接口 public interface IObserver &#123;     void Update(int health); &#125;  &#x2F;&#x2F; 2. 主题类（这里模拟玩家对象，它的状态变化会通知观察者） public class PlayerSubject &#123;     private List&lt;IObserver&gt; observers &#x3D; new">
+<meta property="og:type" content="article">
+<meta property="og:title" content="观察者模式">
+<meta property="og:url" content="http://example.com/2024/12/6e69ad42e217.html">
 <meta property="og:site_name" content="beishangzhajitui">
-<meta property="og:description" content="前言虽然配置好了，整个过程属于是非常懵，思考了许久决定将建站历程记录下来，相信如果你是一个没建过网站的人，那你可能会想我一样先找找有没有关于的搭建的过程。不过很不幸，这篇博客更多是为了记录和提醒自己，如果你要是完全按照这个不一定搞得出来。可以借鉴的地方是关于让图片能够在博客的 文章中显示出来的内容，因为这一块我网上没有找到跟我一样的，是自己摸索的。 原理123hexo clean # 清除缓存文件">
+<meta property="og:description" content="&#x2F;&#x2F; 1. 观察者接口 public interface IObserver &#123;     void Update(int health); &#125;  &#x2F;&#x2F; 2. 主题类（这里模拟玩家对象，它的状态变化会通知观察者） public class PlayerSubject &#123;     private List&lt;IObserver&gt; observers &#x3D; new">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/beishang20241207113547501.png">
-<meta property="og:image" content="http://example.com/img/beishang20241206160308125.png">
-<meta property="og:image" content="http://example.com/img/beishang20241206160500289.png">
-<meta property="og:image" content="http://example.com/img/beishang20241207095904010.png">
-<meta property="og:image" content="http://example.com/img/beishang20241207104637882.png">
-<meta property="og:image" content="http://example.com/img/beishang20241207112633087.png">
-<meta property="og:image" content="http://example.com/img/beishang20241207112547502.png">
-<meta property="og:image" content="http://example.com/img/beishang20241208002131397.png">
-<meta property="og:image" content="http://example.com/img/beishang20241208001958088.png">
-<meta property="article:published_time" content="2024-12-06T07:13:47.000Z">
-<meta property="article:modified_time" content="2024-12-18T04:19:41.998Z">
+<meta property="article:published_time" content="2024-12-20T07:48:54.613Z">
+<meta property="article:modified_time" content="2024-12-20T10:07:36.609Z">
 <meta property="article:author" content="beishangzhajitui">
-<meta property="article:tag" content="工具">
+<meta property="article:tag" content="CSharp">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/img/beishang20241207113547501.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
 
 <link href="/css/style.css?v=1.1.0" rel="stylesheet">
 
-<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+<link href="/css/hl_theme/darcula.css?v=1.1.0" rel="stylesheet">
 
 <link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
 
@@ -164,10 +154,25 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(20)</small>
+                <small>(21)</small>
             
         </div>
     </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="工具">
+            
+            工具
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
     
         
             
@@ -278,7 +283,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="20">
+<input type="hidden" id="yelog_site_posts_number" value="21">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -420,7 +425,7 @@
         
         <a  class="全部文章 面试 "
            href="/2024/12/f9803a20b288.html"
-           data-tag="CSharp,工具"
+           data-tag="工具,CSharp"
            data-author="" >
             <span class="post-title" title="面试题1">面试题1</span>
             <span class="post-date" title="2024-12-19 18:32:27">2024/12/19</span>
@@ -525,6 +530,15 @@
             <span class="post-date" title="2024-12-06 22:42:09">2024/12/06</span>
         </a>
         
+        
+        <a  class="全部文章 工具 "
+           href="/2024/12/98a55959539d.html"
+           data-tag="工具"
+           data-author="" >
+            <span class="post-title" title="这里是建站记录">这里是建站记录</span>
+            <span class="post-date" title="2024-12-06 15:13:47">2024/12/06</span>
+        </a>
+        
         <div id="no-item-tips">
 
         </div>
@@ -612,27 +626,131 @@
       
         <h2 id="1-Stack的本质"><a href="#1-Stack的本质" class="headerlink" title="1.Stack的本质"></a>1.Stack的本质</h2><p>栈是C#为我们封装好的类，本质也是object类型数组，封装了特殊的存储规则。<br>栈是一种先进后出的数据结构Stack是栈存储容器，类比为一个装羽毛球的那个容器。</p>
 <h2 id="2-申明"><a href="#2-申明" class="headerlink" title="2.申明"></a>2.申明</h2><p>在using System.Collections命名空间中。</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Stack stack = <span class="keyword">new</span> Stack();</span><br></pre></td></tr></table></figure>
+<pre><code class="C#">Stack stack = new Stack();
+</code></pre>
 <h2 id="3-增取查改"><a href="#3-增取查改" class="headerlink" title="3.增取查改"></a>3.增取查改</h2><ul>
-<li><input disabled="" type="checkbox"> 增<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 压栈</span></span><br><span class="line">stack.Push(<span class="number">1</span>);</span><br><span class="line">stack.Push(<span class="string">&quot;123&quot;</span>);</span><br><span class="line">stack.Push(<span class="literal">true</span>);</span><br><span class="line">stack.Push(<span class="number">1.2f</span>);</span><br><span class="line">stack.Push(<span class="keyword">new</span> Test());</span><br></pre></td></tr></table></figure></li>
-<li><input disabled="" type="checkbox"> 取<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 栈中不存在删除的概念</span></span><br><span class="line"><span class="comment">// 取 ：称为弹栈</span></span><br><span class="line"><span class="built_in">object</span> v = stack.Pop();</span><br><span class="line">Console.WriteLine(v);</span><br><span class="line"><span class="comment">// 取出来的是栈最后进入的元素，就是栈顶的元素</span></span><br><span class="line">v = stack.Pop();</span><br><span class="line">Console.WriteLine(v);</span><br></pre></td></tr></table></figure></li>
-<li><input disabled="" type="checkbox"> 查<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>栈无法查看指定位置的元素，只能查看栈顶的内容，类似诸葛亮的观星</span><br><span class="line">v = stack.Peek();</span><br><span class="line">Console.WriteLine(v);</span><br><span class="line"><span class="number">2.</span>查看元素是否存于栈中</span><br><span class="line"><span class="keyword">if</span>( stack.Contains(<span class="number">1.2f</span>))</span><br><span class="line">&#123;</span><br><span class="line">	Console.WriteLine(<span class="string">&quot;存在&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><input disabled="" type="checkbox"> 改<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">栈无法改变元素，只能压和弹，下面是清空。</span><br><span class="line">stack.Clear();</span><br></pre></td></tr></table></figure></li>
+<li><input disabled="" type="checkbox"> 增</li>
 </ul>
+<pre><code class="C#">// 压栈
+stack.Push(1);
+stack.Push(&quot;123&quot;);
+stack.Push(true);
+stack.Push(1.2f);
+stack.Push(new Test());
+</code></pre>
+<ul>
+<li><input disabled="" type="checkbox"> 取</li>
+</ul>
+<pre><code class="C#">// 栈中不存在删除的概念
+// 取 ：称为弹栈
+object v = stack.Pop();
+Console.WriteLine(v);
+// 取出来的是栈最后进入的元素，就是栈顶的元素
+v = stack.Pop();
+Console.WriteLine(v);
+</code></pre>
+<ul>
+<li><input disabled="" type="checkbox"> 查</li>
+</ul>
+<pre><code class="C#">1.栈无法查看指定位置的元素，只能查看栈顶的内容，类似诸葛亮的观星
+v = stack.Peek();
+Console.WriteLine(v);
+2.查看元素是否存于栈中
+if( stack.Contains(1.2f))
+&#123;
+    Console.WriteLine(&quot;存在&quot;);
+&#125;
+</code></pre>
+<ul>
+<li><input disabled="" type="checkbox"> 改</li>
+</ul>
+<pre><code class="C#">栈无法改变元素，只能压和弹，下面是清空。
+stack.Clear();
+</code></pre>
 <h2 id="4-遍历"><a href="#4-遍历" class="headerlink" title="4. 遍历"></a>4. 遍历</h2><p>1.长度</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Console.WriteLine(stack.Count);</span><br></pre></td></tr></table></figure>
-
+<pre><code class="C#">Console.WriteLine(stack.Count);
+</code></pre>
 <p>2.foreach遍历<br>不能用for来遍历，栈里面没有索引器。</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">遍历出来的顺序是从栈顶到栈底</span><br><span class="line"><span class="keyword">foreach</span>(<span class="built_in">object</span> item <span class="keyword">in</span> stack)&#123; </span><br><span class="line">	Console.WriteLine(item);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="C#">遍历出来的顺序是从栈顶到栈底
+foreach(object item in stack)&#123; 
+    Console.WriteLine(item);
+&#125;
+</code></pre>
 <p>3.将栈转换成object数组，再for遍历出来。遍历出来的顺序是从栈顶到栈底。</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">object</span>[] array = stack.ToArray();</span><br><span class="line"><span class="keyword">for</span>(<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; array.Length; i++)</span><br><span class="line">&#123;</span><br><span class="line">	Console.WriteLine(array[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="C#">object[] array = stack.ToArray();
+for(int i = 0; i &lt; array.Length; i++)
+&#123;
+    Console.WriteLine(array[i]);
+&#125;
+</code></pre>
 <p>4.循环弹栈<br>弹完后什么都灭有了，相当于一个弹夹。</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>( stack.Count &gt; <span class="number">0</span>)</span><br><span class="line">&#123; </span><br><span class="line">	<span class="built_in">object</span> o = stack.Pop();</span><br><span class="line">	Console.WriteLine(o);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="C#">while( stack.Count &gt; 0)
+&#123; 
+    object o = stack.Pop();
+    Console.WriteLine(o);
+&#125;
+</code></pre>
 <h2 id="5-装箱拆箱"><a href="#5-装箱拆箱" class="headerlink" title="5.装箱拆箱"></a>5.装箱拆箱</h2><p>同ArrayList, 进行值类型存储的时候就是在装箱，当将值类型对象取出来转换使用就存在拆箱。</p>
 <h2 id="6-练习"><a href="#6-练习" class="headerlink" title="6.练习"></a>6.练习</h2><p>通过栈结构计算任意一个数的二进制数并打印出来</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 自己定义一个栈类，不用自己定义当然可以</span></span><br><span class="line"><span class="keyword">class</span> <span class="title">Stack</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">private</span> List&lt;<span class="built_in">int</span>&gt; items = <span class="keyword">new</span> List&lt;<span class="built_in">int</span>&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Push</span>(<span class="params"><span class="built_in">int</span> item</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        items.Add(item);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="built_in">int</span> <span class="title">Pop</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">int</span> lastIndex = items.Count - <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">int</span> item = items[lastIndex];</span><br><span class="line">        items.RemoveAt(lastIndex);</span><br><span class="line">        <span class="keyword">return</span> item;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="built_in">bool</span> <span class="title">IsEmpty</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> items.Count == <span class="number">0</span>;</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="built_in">string</span> <span class="title">DecimalToBinary</span>(<span class="params"><span class="built_in">int</span> decimalNumber</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        Stack stack = <span class="keyword">new</span> Stack();</span><br><span class="line">        <span class="comment">//过循环将十进制数不断除以 2，</span></span><br><span class="line">        <span class="comment">//取余数并将余数压入栈中，直到十进制数变为 0。</span></span><br><span class="line">        <span class="keyword">while</span> (decimalNumber &gt; <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">int</span> remainder = decimalNumber % <span class="number">2</span>;</span><br><span class="line">            stack.Push(remainder);</span><br><span class="line">            decimalNumber /= <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">string</span> binaryNumber = <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">while</span> (!stack.IsEmpty())</span><br><span class="line">        &#123;</span><br><span class="line">            binaryNumber += stack.Pop().ToString();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> binaryNumber;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">int</span> number = <span class="number">23</span>;</span><br><span class="line">        <span class="built_in">string</span> binary = DecimalToBinary(number);</span><br><span class="line">        Console.WriteLine(binary);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="c#">using System;
+using System.Collections.Generic;
+
+// 自己定义一个栈类，不用自己定义当然可以
+class Stack
+&#123;
+    private List&lt;int&gt; items = new List&lt;int&gt;();
+
+    public void Push(int item)
+    &#123;
+        items.Add(item);
+    &#125;
+
+    public int Pop()
+    &#123;
+        int lastIndex = items.Count - 1;
+        int item = items[lastIndex];
+        items.RemoveAt(lastIndex);
+        return item;
+    &#125;
+
+    public bool IsEmpty()
+    &#123;
+        return items.Count == 0;
+    &#125; 
+&#125;
+
+class Program
+&#123;
+    static string DecimalToBinary(int decimalNumber)
+    &#123;
+        Stack stack = new Stack();
+        //过循环将十进制数不断除以 2，
+        //取余数并将余数压入栈中，直到十进制数变为 0。
+        while (decimalNumber &gt; 0)
+        &#123;
+            int remainder = decimalNumber % 2;
+            stack.Push(remainder);
+            decimalNumber /= 2;
+        &#125;
+
+        string binaryNumber = &quot;&quot;;
+        while (!stack.IsEmpty())
+        &#123;
+            binaryNumber += stack.Pop().ToString();
+        &#125;
+
+        return binaryNumber;
+    &#125;
+
+    static void Main()
+    &#123;
+        int number = 23;
+        string binary = DecimalToBinary(number);
+        Console.WriteLine(binary);
+    &#125;
+&#125;
+</code></pre>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 2154838055@qq.com </span>
     </div>
