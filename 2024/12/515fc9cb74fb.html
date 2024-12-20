@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>第三人称控制器 | Hexo</title>
+  <meta name="keywords" content=" demo ">
+  <meta name="description" content="第三人称控制器 | Hexo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="前言虽然配置好了，整个过程属于是非常懵，思考了许久决定将建站历程记录下来，相信如果你是一个没建过网站的人，那你可能会想我一样先找找有没有关于的搭建的过程。不过很不幸，这篇博客更多是为了记录和提醒自己，如果你要是完全按照这个不一定搞得出来。可以借鉴的地方是关于让图片能够在博客的 文章中显示出来的内容，因为这一块我网上没有找到跟我一样的，是自己摸索的。 原理123hexo clean # 清除缓存文件">
+<meta property="og:type" content="website">
+<meta property="og:title" content="这里是建站记录">
+<meta property="og:url" content="http://example.com/Hexo+Github+Obsidian%E8%BF%99%E9%87%8C%E6%98%AF%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="前言虽然配置好了，整个过程属于是非常懵，思考了许久决定将建站历程记录下来，相信如果你是一个没建过网站的人，那你可能会想我一样先找找有没有关于的搭建的过程。不过很不幸，这篇博客更多是为了记录和提醒自己，如果你要是完全按照这个不一定搞得出来。可以借鉴的地方是关于让图片能够在博客的 文章中显示出来的内容，因为这一块我网上没有找到跟我一样的，是自己摸索的。 原理123hexo clean # 清除缓存文件">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/img/beishang20241207113547501.png">
+<meta property="og:image" content="http://example.com/img/beishang20241206160308125.png">
+<meta property="og:image" content="http://example.com/img/beishang20241206160500289.png">
+<meta property="og:image" content="http://example.com/img/beishang20241207095904010.png">
+<meta property="og:image" content="http://example.com/img/beishang20241207104637882.png">
+<meta property="og:image" content="http://example.com/img/beishang20241207112633087.png">
+<meta property="og:image" content="http://example.com/img/beishang20241207112547502.png">
+<meta property="og:image" content="http://example.com/img/beishang20241208002131397.png">
+<meta property="og:image" content="http://example.com/img/beishang20241208001958088.png">
+<meta property="article:published_time" content="2024-12-06T07:13:47.000Z">
+<meta property="article:modified_time" content="2024-12-18T04:19:41.998Z">
+<meta property="article:author" content="beishangzhajitui">
+<meta property="article:tag" content="工具">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/beishang20241207113547501.png">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>beishangzhajitui</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="github"
+               href="https://github.com/Bigcollegefw"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a title="csdn"
+               href="https://blog.csdn.net/?spm=1010.2135.3001.4477"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-csdn"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+            <a title="email"
+               href="mailto:2154838055@qq.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(20)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="面试">
+            
+            面试
+            <small>(2)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="项目">
+            
+            项目
+            <small>(4)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="C#">
+            <i class="fold iconfont icon-right"></i>
+            C#
+            <small>(13)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="C#&lt;---&gt;C#基础">
+            
+            C#基础
+            <small>(3)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="C#&lt;---&gt;C#进阶">
+            
+            C#进阶
+            <small>(10)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Unity基础框架">
+            
+            Unity基础框架
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+        <a 
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="20">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+            <li><a target="_blank" href="https://space.bilibili.com/79983517">唐老师</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="search shortcut key i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="switch to outline view shortcut key w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="return"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="case sensitive"></i>
+            <i class="iconfont icon-tag" data-title="label"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">outline</div>
+            <i class="iconfont icon-list" data-title="switch to article list"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>CSharp</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>demo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Unity</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="All Unity基础框架 "
+           href="/2024/12/6e69ad42e217.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="观察者模式">观察者模式</span>
+            <span class="post-date" title="2024-12-20 15:48:54">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="All C# C#基础 "
+           href="/2024/12/27de32642486.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="2.ref和out">2.ref和out</span>
+            <span class="post-date" title="2024-12-20 15:26:02">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="All C# C#基础 "
+           href="/2024/12/4d6082558c99.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="1.属性和字段">1.属性和字段</span>
+            <span class="post-date" title="2024-12-20 14:14:10">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="All 面试 "
+           href="/2024/12/8b8166fd4dbd.html"
+           data-tag="CSharp,Unity"
+           data-author="" >
+            <span class="post-title" title="面试题2">面试题2</span>
+            <span class="post-date" title="2024-12-20 14:00:57">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="All C# C#基础 "
+           href="/2024/12/9616e11707cd.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="27.冒泡排序">27.冒泡排序</span>
+            <span class="post-date" title="2024-12-20 12:26:00">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="All C# C#进阶 "
+           href="/2024/12/735c4de4a2e5.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="19.值类型和引用类型">19.值类型和引用类型</span>
+            <span class="post-date" title="2024-12-19 21:26:54">2024/12/19</span>
+        </a>
+        
+        
+        <a  class="All C# C#进阶 "
+           href="/2024/12/fabf7cba955f.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="18.多线程">18.多线程</span>
+            <span class="post-date" title="2024-12-19 20:01:46">2024/12/19</span>
+        </a>
+        
+        
+        <a  class="All C# C#进阶 "
+           href="/2024/12/e32e5c4c8fc8.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="17.协变逆变">17.协变逆变</span>
+            <span class="post-date" title="2024-12-19 18:58:25">2024/12/19</span>
+        </a>
+        
+        
+        <a  class="All 面试 "
+           href="/2024/12/f9803a20b288.html"
+           data-tag="CSharp,Unity"
+           data-author="" >
+            <span class="post-title" title="面试题1">面试题1</span>
+            <span class="post-date" title="2024-12-19 18:32:27">2024/12/19</span>
+        </a>
+        
+        
+        <a  class="All C# C#进阶 "
+           href="/2024/12/e51a91354c60.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="6.泛型约束">6.泛型约束</span>
+            <span class="post-date" title="2024-12-18 21:45:57">2024/12/18</span>
+        </a>
+        
+        
+        <a  class="All C# C#进阶 "
+           href="/2024/12/fe7307e1a8ce.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="5.泛型">5.泛型</span>
+            <span class="post-date" title="2024-12-18 19:18:11">2024/12/18</span>
+        </a>
+        
+        
+        <a  class="All C# C#进阶 "
+           href="/2024/12/a97cd1c3a094.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="16.List">16.List</span>
+            <span class="post-date" title="2024-12-18 16:26:19">2024/12/18</span>
+        </a>
+        
+        
+        <a  class="All C# C#进阶 "
+           href="/2024/12/808d8cee3906.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="3.Queue">3.Queue</span>
+            <span class="post-date" title="2024-12-18 15:37:16">2024/12/18</span>
+        </a>
+        
+        
+        <a  class="All C# C#进阶 "
+           href="/2024/12/80d476b31e2e.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="2.Stack">2.Stack</span>
+            <span class="post-date" title="2024-12-18 12:07:24">2024/12/18</span>
+        </a>
+        
+        
+        <a  class="All C# C#进阶 "
+           href="/2024/12/43785e42a40e.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="1.ArrayList">1.ArrayList</span>
+            <span class="post-date" title="2024-12-18 10:52:41">2024/12/18</span>
+        </a>
+        
+        
+        <a  class="All C# C#进阶 "
+           href="/2024/12/44252a5e3c02.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="15.lambad表达式">15.lambad表达式</span>
+            <span class="post-date" title="2024-12-16 14:40:43">2024/12/16</span>
+        </a>
+        
+        
+        <a  class="All 项目 "
+           href="/2024/12/a15eb1a14309.html"
+           data-tag="demo"
+           data-author="" >
+            <span class="post-title" title="UGUI抽卡系统">UGUI抽卡系统</span>
+            <span class="post-date" title="2024-12-11 10:03:07">2024/12/11</span>
+        </a>
+        
+        
+        <a  class="All 项目 "
+           href="/2024/12/515fc9cb74fb.html"
+           data-tag="demo"
+           data-author="" >
+            <span class="post-title" title="第三人称控制器">第三人称控制器</span>
+            <span class="post-date" title="2024-12-10 22:06:48">2024/12/10</span>
+        </a>
+        
+        
+        <a  class="All 项目 "
+           href="/2024/12/1fe799e51a85.html"
+           data-tag="demo"
+           data-author="" >
+            <span class="post-title" title="丧尸围城 (下)">丧尸围城 (下)</span>
+            <span class="post-date" title="2024-12-07 17:44:05">2024/12/07</span>
+        </a>
+        
+        
+        <a  class="All 项目 "
+           href="/2024/12/65ec626183cc.html"
+           data-tag="demo"
+           data-author="" >
+            <span class="post-title" title="丧尸围城 (上)">丧尸围城 (上)</span>
+            <span class="post-date" title="2024-12-06 22:42:09">2024/12/06</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="Toggle full screen shortcut key s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-第三人称控制器" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">第三人称控制器</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="项目">项目</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color5">demo</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2024-12-18 12:22:00'>2024-12-10 22:06</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%92%E8%89%B2%E5%87%86%E5%A4%87"><span class="toc-text">角色准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Character%EF%BC%88%E8%A7%92%E8%89%B2%EF%BC%89"><span class="toc-text">Character（角色）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AB%99%E7%AB%8B%E5%A7%BF%E6%80%81%E6%B7%B7%E5%90%88%E6%A0%91"><span class="toc-text">站立姿态混合树</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8B%E8%B9%B2%E7%8A%B6%E6%80%81%E6%B7%B7%E5%90%88%E6%A0%91"><span class="toc-text">下蹲状态混合树</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ThirdPersonShooterController-cs"><span class="toc-text">ThirdPersonShooterController.cs</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%BA%E7%89%A9%E7%9A%84%E8%B7%B3%E8%B7%83"><span class="toc-text">人物的跳跃</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Camera%EF%BC%88%E6%91%84%E5%83%8F%E6%9C%BA%EF%BC%89"><span class="toc-text">Camera（摄像机）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Control%EF%BC%88%E6%8E%A7%E5%88%B6%EF%BC%89"><span class="toc-text">Control（控制）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEAction"><span class="toc-text">配置Action</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%99%E8%A7%92%E8%89%B2%E6%B7%BB%E5%8A%A0PlayerInput"><span class="toc-text">给角色添加PlayerInput</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在 Unity 中，TPS 通常是指第三人称射击（Third - Person Shooter）游戏类型。<br>3C 通常指的是 Character（角色）、Camera（摄像机）、Control（控制）</p>
+<h3 id="角色准备"><a href="#角色准备" class="headerlink" title="角色准备"></a>角色准备</h3><p>在GitHub中找到这个包，导入Unity中就可以将vroid中的角色拖进去了。<br><img src="/../img/beishang20241210221344178.png"><br>首先删除角色身上的所有脚本<br><img src="/../img/beishang20241210230307580.png"><br>新拖入的角色有紫色的球<br><img src="/../img/beishang20241210225158222.png"><br>删除所有的物体上的VRMSPringBoneColliderGroup脚本<br><img src="/../img/beishang20241210225651894.png"><br>secondary是头发相关的控制，我们将它整个删掉。<br><img src="/../img/beishang20241210225826243.png"></p>
+<p>这里准备的动作资源是这个有点老。需要手动到Unity中跟换一下api，有备注，按备注改即可。资源商城中已经找不到了。<br><img src="/../img/beishang20241210230657233.png"><br><img src="/../img/beishang20241210231421189.png"></p>
+<h3 id="Character（角色）"><a href="#Character（角色）" class="headerlink" title="Character（角色）"></a>Character（角色）</h3><p>有限状态机</p>
+<p>制作Controller</p>
+<h4 id="站立姿态混合树"><a href="#站立姿态混合树" class="headerlink" title="站立姿态混合树"></a>站立姿态混合树</h4><p>（有多方向不同速度的运动就使用2dFreeFormDirectional）所以这里我们选Cartesian。<br><img src="/../img/beishang20241211215148342.png"><br><img src="/../img/beishang20241211221114474.png"></p>
+<h4 id="下蹲状态混合树"><a href="#下蹲状态混合树" class="headerlink" title="下蹲状态混合树"></a>下蹲状态混合树</h4><p><img src="/../img/beishang20241211222019097.png"></p>
+<p>PackageManager中找到InputSystem<br><img src="/../img/beishang20241211222247741.png"></p>
+<p>新建角色控制脚本    </p>
+<h4 id="ThirdPersonShooterController-cs"><a href="#ThirdPersonShooterController-cs" class="headerlink" title="ThirdPersonShooterController.cs"></a>ThirdPersonShooterController.cs</h4><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;  </span><br><span class="line"><span class="keyword">using</span> System.Collections;  </span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;  </span><br><span class="line"><span class="keyword">using</span> UnityEngine;  </span><br><span class="line"><span class="keyword">using</span> UnityEngine.InputSystem;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">ThirdPersonShooterController</span> : <span class="title">MonoBehaviour</span>  </span><br><span class="line">&#123;  </span><br><span class="line">    Transform playerTransform;  </span><br><span class="line">    Animator animator;  </span><br><span class="line">    Transform cameraTransform;  </span><br><span class="line">    CharacterController characterController;      </span><br><span class="line">      </span><br><span class="line"><span class="keyword">public</span> <span class="built_in">enum</span> PlayerPosture  </span><br><span class="line">    &#123;  </span><br><span class="line">        Crouch,  </span><br><span class="line">        Stand,  </span><br><span class="line">        Midair  </span><br><span class="line">    &#125;;  </span><br><span class="line">    <span class="keyword">public</span> PlayerPosture playerPosture = PlayerPosture.Stand;  </span><br><span class="line">  </span><br><span class="line">    <span class="built_in">float</span> crouchThreshold = <span class="number">0f</span>;  </span><br><span class="line">    <span class="built_in">float</span> standThreshold = <span class="number">1f</span>;  </span><br><span class="line">    <span class="built_in">float</span> midairThreshold = <span class="number">2f</span>;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">enum</span> LocomotionState  </span><br><span class="line">    &#123;  </span><br><span class="line">        Idle,  </span><br><span class="line">        Walk,  </span><br><span class="line">        Run  </span><br><span class="line">    &#125;;  </span><br><span class="line">    <span class="keyword">public</span> LocomotionState locomotionState = LocomotionState.Idle;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">enum</span> ArmState  </span><br><span class="line">    &#123;  </span><br><span class="line">        Normal,  </span><br><span class="line">        Aim  </span><br><span class="line">    &#125;;  </span><br><span class="line">    <span class="keyword">public</span> ArmState armState = ArmState.Normal;  </span><br><span class="line">  </span><br><span class="line">    <span class="built_in">float</span> crouchSpeed = <span class="number">1.5f</span>;  </span><br><span class="line">    <span class="built_in">float</span> walkSpeed = <span class="number">2.5f</span>;  </span><br><span class="line">    <span class="built_in">float</span> runSpeed = <span class="number">5.5f</span>;  </span><br><span class="line">  </span><br><span class="line">    Vector2 moveInput;  </span><br><span class="line">    <span class="built_in">bool</span> isRunning;  </span><br><span class="line">    <span class="built_in">bool</span> isCrouch;  </span><br><span class="line">    <span class="built_in">bool</span> isAiming;  </span><br><span class="line">    <span class="built_in">bool</span> isJumping;  </span><br><span class="line">    <span class="built_in">int</span> postureHash;  </span><br><span class="line">    <span class="built_in">int</span> moveSpeedHash;  </span><br><span class="line">    <span class="built_in">int</span> turnSpeedHash;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 玩家实际要移动的方向  </span></span><br><span class="line">    Vector3 playerMovement = Vector3.zero;  </span><br><span class="line">    <span class="comment">// Start is called before the first frame update  </span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span>  </span><br><span class="line">    &#123;        playerTransform = transform;  </span><br><span class="line">        animator = GetComponent&lt;Animator&gt;();  </span><br><span class="line">        cameraTransform = Camera.main.transform;  </span><br><span class="line">        characterController = GetComponent&lt;CharacterController&gt;();  </span><br><span class="line">        postureHash = Animator.StringToHash(<span class="string">&quot;玩家姿态&quot;</span>);  </span><br><span class="line">        moveSpeedHash = Animator.StringToHash(<span class="string">&quot;移动速度&quot;</span>);  </span><br><span class="line">        turnSpeedHash = Animator.StringToHash(<span class="string">&quot;转弯速度&quot;</span>);  </span><br><span class="line">        Cursor.lockState = CursorLockMode.Locked;  </span><br><span class="line">    &#125;  </span><br><span class="line"><span class="comment">// Update is called once per frame  </span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>()</span>  </span><br><span class="line">    &#123;        SwitchPlayerStates();  </span><br><span class="line">        CaculateInputDirection();  </span><br><span class="line">        SetupAnimator();  </span><br><span class="line">    &#125;    <span class="meta">#<span class="keyword">region</span> 输入相关  </span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">GetMoveInput</span>(<span class="params">InputAction.CallbackContext ctx</span>)</span>  </span><br><span class="line">    &#123;        moveInput = ctx.ReadValue&lt;Vector2&gt;();  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">GetRunInput</span>(<span class="params">InputAction.CallbackContext ctx</span>)</span>  </span><br><span class="line">    &#123;        isRunning = ctx.ReadValueAsButton();  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">GetCrouchInput</span>(<span class="params">InputAction.CallbackContext ctx</span>)</span>  </span><br><span class="line">    &#123;        isCrouch = ctx.ReadValueAsButton();  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">GetAimInput</span>(<span class="params">InputAction.CallbackContext ctx</span>)</span>  </span><br><span class="line">    &#123;        isAiming = ctx.ReadValueAsButton();  </span><br><span class="line">    &#125;    <span class="meta">#<span class="keyword">endregion</span>  </span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">SwitchPlayerStates</span>()</span>  </span><br><span class="line">    &#123;        <span class="keyword">if</span> (isCrouch)  </span><br><span class="line">        &#123;            playerPosture = PlayerPosture.Crouch;  </span><br><span class="line">        &#125;        <span class="keyword">else</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            playerPosture = PlayerPosture.Stand;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">if</span> (moveInput.magnitude == <span class="number">0</span>)  </span><br><span class="line">        &#123;            locomotionState = LocomotionState.Idle;  </span><br><span class="line">        &#125;        <span class="keyword">else</span> <span class="keyword">if</span> (!isRunning)  </span><br><span class="line">        &#123;            locomotionState = LocomotionState.Walk;  </span><br><span class="line">        &#125;        <span class="keyword">else</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            locomotionState = LocomotionState.Run;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">if</span> (isAiming)  </span><br><span class="line">        &#123;            armState = ArmState.Aim;  </span><br><span class="line">        &#125;        <span class="keyword">else</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            armState = ArmState.Normal;  </span><br><span class="line">        &#125;    &#125;    <span class="comment">// 将世界坐标系下的方向，转换成相机坐标系下的方向  </span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">CaculateInputDirection</span>()</span>  </span><br><span class="line">    &#123;        Vector3 camForwardProjection = <span class="keyword">new</span> Vector3(cameraTransform.forward.x, <span class="number">0</span>, cameraTransform.forward.z).normalized;  </span><br><span class="line">        playerMovement = camForwardProjection * moveInput.y + cameraTransform.right * moveInput.x;  </span><br><span class="line">        playerMovement = playerTransform.InverseTransformVector(playerMovement);  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">SetupAnimator</span>()</span>  </span><br><span class="line">    &#123;        <span class="keyword">if</span> (playerPosture == PlayerPosture.Stand)  </span><br><span class="line">        &#123;            animator.SetFloat(postureHash, standThreshold, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">            <span class="keyword">switch</span> (locomotionState)  </span><br><span class="line">            &#123;                <span class="keyword">case</span> LocomotionState.Idle:  </span><br><span class="line">                    animator.SetFloat(moveSpeedHash, <span class="number">0</span>, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">                <span class="keyword">case</span> LocomotionState.Walk:  </span><br><span class="line">                    animator.SetFloat(moveSpeedHash, playerMovement.magnitude * walkSpeed, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">                <span class="keyword">case</span> LocomotionState.Run:  </span><br><span class="line">                    animator.SetFloat(moveSpeedHash, playerMovement.magnitude * runSpeed, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">            &#125;        &#125;        <span class="keyword">else</span> <span class="keyword">if</span> (playerPosture == PlayerPosture.Crouch)  </span><br><span class="line">        &#123;            animator.SetFloat(postureHash, crouchThreshold, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">            <span class="keyword">switch</span> (locomotionState)  </span><br><span class="line">            &#123;                <span class="keyword">case</span> LocomotionState.Idle:  </span><br><span class="line">                    animator.SetFloat(moveSpeedHash, <span class="number">0</span>, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">                <span class="literal">default</span>:  </span><br><span class="line">                    animator.SetFloat(moveSpeedHash, playerMovement.magnitude * crouchSpeed, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">            &#125;        &#125;  </span><br><span class="line">        <span class="keyword">if</span> (armState == ArmState.Normal)  </span><br><span class="line">        &#123;            <span class="comment">// 当前移动方向和玩家transform正前方Forward之间的夹角，用弧度表示，和root motion的转向速度单位一致  </span></span><br><span class="line">            <span class="built_in">float</span> rad = Mathf.Atan2(playerMovement.x, playerMovement.z);  </span><br><span class="line">            animator.SetFloat(turnSpeedHash,rad,<span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">            <span class="comment">// 转速太慢，人为添加一个旋转  </span></span><br><span class="line">            playerTransform.Rotate(<span class="number">0</span>, rad *<span class="number">200</span> *Time.deltaTime, <span class="number">0f</span>);  </span><br><span class="line">        &#125;    &#125;  </span><br><span class="line">    <span class="comment">//  Animator 组件进行动画更新时，这个方法会被调用。  </span></span><br><span class="line">    <span class="comment">//  OnAnimatorMove方法为开发者提供了一个在动画更新过程中进行自定义操作的机会，使动画与游戏逻辑更加紧密地结合在一起  </span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnAnimatorMove</span>()</span>  </span><br><span class="line">    &#123;        characterController.Move(animator.deltaPosition);  </span><br><span class="line">    &#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>这里是人物站立，行走，下蹲的做好时候的方法。<br>下面我们还需要去做人物的跳跃</p>
+<h4 id="人物的跳跃"><a href="#人物的跳跃" class="headerlink" title="人物的跳跃"></a>人物的跳跃</h4><p><img src="/../img/beishang20241212135506413.png"></p>
+<p>(待完善)</p>
+<p>给玩家添加跳跃的随机脚</p>
+<p><img src="/../img/beishang20241212153436289.png"><br><img src="/../img/beishang20241212153451361.png"></p>
+<p>跳跃完善后的代码</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;  </span><br><span class="line"><span class="keyword">using</span> System.Collections;  </span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;  </span><br><span class="line"><span class="keyword">using</span> UnityEngine;  </span><br><span class="line"><span class="keyword">using</span> UnityEngine.InputSystem;  </span><br><span class="line"><span class="keyword">using</span> Random = UnityEngine.Random;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">ThirdPersonShooterController</span> : <span class="title">MonoBehaviour</span>  </span><br><span class="line">&#123;  </span><br><span class="line">    Transform playerTransform;  </span><br><span class="line">    Animator animator;  </span><br><span class="line">    Transform cameraTransform;  </span><br><span class="line">    CharacterController characterController;      </span><br><span class="line">      </span><br><span class="line"><span class="keyword">public</span> <span class="built_in">enum</span> PlayerPosture  </span><br><span class="line">    &#123;  </span><br><span class="line">        Crouch,  </span><br><span class="line">        Stand,  </span><br><span class="line">        Jumping,  </span><br><span class="line">        Falling,  </span><br><span class="line">        <span class="comment">// 玩家刚落地还不能起跳的状态  </span></span><br><span class="line">        Landing  </span><br><span class="line">    &#125;;  </span><br><span class="line">    <span class="keyword">public</span> PlayerPosture playerPosture = PlayerPosture.Stand;  </span><br><span class="line">  </span><br><span class="line">    <span class="built_in">float</span> crouchThreshold = <span class="number">0f</span>;  </span><br><span class="line">    <span class="built_in">float</span> standThreshold = <span class="number">1f</span>;  </span><br><span class="line">    <span class="built_in">float</span> midairThreshold = <span class="number">2.1f</span>;  </span><br><span class="line">    <span class="built_in">float</span> landingThreshold = <span class="number">1f</span>;  </span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">enum</span> LocomotionState  </span><br><span class="line">    &#123;  </span><br><span class="line">        Idle,  </span><br><span class="line">        Walk,  </span><br><span class="line">        Run  </span><br><span class="line">    &#125;;  </span><br><span class="line">    <span class="keyword">public</span> LocomotionState locomotionState = LocomotionState.Idle;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">enum</span> ArmState  </span><br><span class="line">    &#123;  </span><br><span class="line">        Normal,  </span><br><span class="line">        Aim  </span><br><span class="line">    &#125;;  </span><br><span class="line">    <span class="keyword">public</span> ArmState armState = ArmState.Normal;  </span><br><span class="line">  </span><br><span class="line">    <span class="built_in">float</span> crouchSpeed = <span class="number">1.5f</span>;  </span><br><span class="line">    <span class="built_in">float</span> walkSpeed = <span class="number">2.5f</span>;  </span><br><span class="line">    <span class="built_in">float</span> runSpeed = <span class="number">5.5f</span>;  </span><br><span class="line">  </span><br><span class="line">    Vector2 moveInput;  </span><br><span class="line">    <span class="built_in">bool</span> isRunning;  </span><br><span class="line">    <span class="built_in">bool</span> isCrouch;  </span><br><span class="line">    <span class="built_in">bool</span> isAiming;  </span><br><span class="line">    <span class="built_in">bool</span> isJumping;  </span><br><span class="line">    <span class="built_in">int</span> postureHash;  </span><br><span class="line">    <span class="built_in">int</span> moveSpeedHash;  </span><br><span class="line">    <span class="built_in">int</span> turnSpeedHash;  </span><br><span class="line">    <span class="built_in">int</span> verticalVelHash;  </span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">int</span> feetTweenHash;  </span><br><span class="line">    <span class="comment">// 玩家实际要移动的方向  </span></span><br><span class="line">    Vector3 playerMovement = Vector3.zero;  </span><br><span class="line">    <span class="comment">// 重力  </span></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">float</span> gravity = <span class="number">-9.8f</span>;  </span><br><span class="line">    <span class="comment">// 垂直方向速度  </span></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">float</span> VerticalVelocity;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">//public float jumpVelocity = 5f;  </span></span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 最大起跳高度  </span></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">float</span> maxHeight = <span class="number">1.5f</span>;  </span><br><span class="line">    <span class="keyword">private</span> Vector3 lastVelOnGround;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">readonly</span> <span class="built_in">int</span> CACHE_SIZE = <span class="number">3</span>;  </span><br><span class="line">    Vector3[] velCache = <span class="keyword">new</span> Vector3[CACHE_SIZE];  </span><br><span class="line">    <span class="comment">// 缓存池中最老的那个向量的索引值  </span></span><br><span class="line">    <span class="built_in">int</span> currentChacheIndex = <span class="number">0</span>;    </span><br><span class="line">Vector3 averageVel = Vector3.zero;  </span><br><span class="line">    <span class="comment">// 左右脚滞空状态  </span></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">float</span> feetTween;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">//下落时候的速度是上升时候的多少倍  </span></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">float</span> fallMultiplier = <span class="number">1.5f</span>;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">bool</span> isGrounded;  </span><br><span class="line">    <span class="comment">// 为射线检测设置一个偏移量  </span></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">float</span> groundCheckOffset = <span class="number">0.5f</span>;  </span><br><span class="line">    <span class="comment">// 跳跃的cd设置  </span></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">float</span> jumpCD =<span class="number">0.15f</span>;  </span><br><span class="line">    <span class="comment">// 玩家是否处于CD当中  </span></span><br><span class="line">    <span class="built_in">bool</span> isLanding;  </span><br><span class="line">    <span class="comment">// 玩家是否可以跌落  </span></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">bool</span> couldFall;  </span><br><span class="line">    <span class="comment">// 跌落的最小高度，小于此高度不会跌落  </span></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">float</span> fallHeight = <span class="number">0.5f</span>;  </span><br><span class="line">    <span class="comment">// Start is called before the first frame update  </span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span>  </span><br><span class="line">    &#123;        playerTransform = transform;  </span><br><span class="line">        animator = GetComponent&lt;Animator&gt;();  </span><br><span class="line">        cameraTransform = Camera.main.transform;  </span><br><span class="line">        characterController = GetComponent&lt;CharacterController&gt;();  </span><br><span class="line">        postureHash = Animator.StringToHash(<span class="string">&quot;玩家姿态&quot;</span>);  </span><br><span class="line">        moveSpeedHash = Animator.StringToHash(<span class="string">&quot;移动速度&quot;</span>);  </span><br><span class="line">        turnSpeedHash = Animator.StringToHash(<span class="string">&quot;转弯速度&quot;</span>);  </span><br><span class="line">        verticalVelHash = Animator.StringToHash(<span class="string">&quot;垂直速度&quot;</span>);  </span><br><span class="line">        feetTweenHash = Animator.StringToHash(<span class="string">&quot;左右脚&quot;</span>);  </span><br><span class="line">        Cursor.lockState = CursorLockMode.Locked;  </span><br><span class="line">    &#125;  </span><br><span class="line"><span class="comment">// Update is called once per frame  </span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>()</span>  </span><br><span class="line">    &#123;        CheckGround();  </span><br><span class="line">        CaculateInputDirection();  </span><br><span class="line">        CaculateGravity();  </span><br><span class="line">        Jump();  </span><br><span class="line">        SwitchPlayerStates();  </span><br><span class="line">        SetupAnimator();  </span><br><span class="line">    &#125;    <span class="meta">#<span class="keyword">region</span> 输入相关  </span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">GetMoveInput</span>(<span class="params">InputAction.CallbackContext ctx</span>)</span>  </span><br><span class="line">    &#123;        moveInput = ctx.ReadValue&lt;Vector2&gt;();  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">GetRunInput</span>(<span class="params">InputAction.CallbackContext ctx</span>)</span>  </span><br><span class="line">    &#123;        isRunning = ctx.ReadValueAsButton();  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">GetCrouchInput</span>(<span class="params">InputAction.CallbackContext ctx</span>)</span>  </span><br><span class="line">    &#123;        isCrouch = ctx.ReadValueAsButton();  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">GetAimInput</span>(<span class="params">InputAction.CallbackContext ctx</span>)</span>  </span><br><span class="line">    &#123;        isAiming = ctx.ReadValueAsButton();  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">GetJumpInput</span>(<span class="params">InputAction.CallbackContext ctx</span>)</span>  </span><br><span class="line">    &#123;        isJumping = ctx.ReadValueAsButton();  </span><br><span class="line">    &#125;    <span class="meta">#<span class="keyword">endregion</span>  </span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">SwitchPlayerStates</span>()</span>  </span><br><span class="line">    &#123;        <span class="keyword">if</span> (!isGrounded)  </span><br><span class="line">        &#123;            <span class="keyword">if</span> (VerticalVelocity &gt; <span class="number">0</span>)  </span><br><span class="line">            &#123;                playerPosture = PlayerPosture.Jumping;  </span><br><span class="line">            &#125;            <span class="keyword">else</span> <span class="keyword">if</span> (playerPosture != PlayerPosture.Jumping)  </span><br><span class="line">            &#123;                <span class="keyword">if</span> (couldFall)  </span><br><span class="line">                &#123;                    playerPosture = PlayerPosture.Falling;  </span><br><span class="line">                &#125;            &#125;              </span><br><span class="line">        &#125;        <span class="keyword">else</span> <span class="keyword">if</span> (playerPosture == PlayerPosture.Jumping)  </span><br><span class="line">        &#123;  </span><br><span class="line">            StartCoroutine(CoolDownJump());  </span><br><span class="line">        &#125;        <span class="keyword">else</span> <span class="keyword">if</span> (isLanding)  </span><br><span class="line">        &#123;            playerPosture = PlayerPosture.Landing;  </span><br><span class="line">        &#125;        <span class="keyword">else</span> <span class="keyword">if</span> (isCrouch)  </span><br><span class="line">        &#123;            playerPosture = PlayerPosture.Crouch;  </span><br><span class="line">        &#125;        <span class="keyword">else</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            playerPosture = PlayerPosture.Stand;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">if</span> (moveInput.magnitude == <span class="number">0</span>)  </span><br><span class="line">        &#123;            locomotionState = LocomotionState.Idle;  </span><br><span class="line">        &#125;        <span class="keyword">else</span> <span class="keyword">if</span> (!isRunning)  </span><br><span class="line">        &#123;            locomotionState = LocomotionState.Walk;  </span><br><span class="line">        &#125;        <span class="keyword">else</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            locomotionState = LocomotionState.Run;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">if</span> (isAiming)  </span><br><span class="line">        &#123;            armState = ArmState.Aim;  </span><br><span class="line">        &#125;        <span class="keyword">else</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            armState = ArmState.Normal;  </span><br><span class="line">        &#125;    &#125;    <span class="comment">// 自己写一个射线检测地面的方法，避免边缘奇怪的bug  </span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">CheckGround</span>()</span>  </span><br><span class="line">    &#123;        <span class="keyword">if</span> (Physics.SphereCast(playerTransform.position + (Vector3.up * groundCheckOffset), characterController.radius, Vector3.down, <span class="keyword">out</span> RaycastHit hit, groundCheckOffset - characterController.radius + <span class="number">2</span> * characterController.skinWidth))  </span><br><span class="line">        &#123;            isGrounded = <span class="literal">true</span>;  </span><br><span class="line">        &#125;        <span class="keyword">else</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            isGrounded = <span class="literal">false</span>;  </span><br><span class="line">            couldFall = !Physics.Raycast(playerTransform.position, Vector3.down, fallHeight);  </span><br><span class="line">        &#125;    &#125;    <span class="comment">//   </span></span><br><span class="line"><span class="function">IEnumerator <span class="title">CoolDownJump</span>()</span>  </span><br><span class="line">    &#123;        landingThreshold = Mathf.Clamp(VerticalVelocity,<span class="number">-10</span>,<span class="number">0</span>);  </span><br><span class="line">        landingThreshold /= <span class="number">20f</span>;  </span><br><span class="line">        landingThreshold += <span class="number">1f</span>;  </span><br><span class="line">        isLanding = <span class="literal">true</span>;  </span><br><span class="line">        playerPosture = PlayerPosture.Landing;  </span><br><span class="line">        <span class="function"><span class="keyword">yield</span> <span class="keyword">return</span> <span class="keyword">new</span> <span class="title">WaitForSeconds</span>(<span class="params">jumpCD</span>)</span>;  </span><br><span class="line">       isLanding = <span class="literal">false</span>;  </span><br><span class="line">    &#125;    <span class="comment">// 重力对垂直方向速度影响的方法  </span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">CaculateGravity</span>()</span>  </span><br><span class="line">    &#123;        <span class="keyword">if</span> (playerPosture != PlayerPosture.Jumping &amp;&amp; playerPosture != PlayerPosture.Falling)  </span><br><span class="line">        &#123;            <span class="keyword">if</span> (!isGrounded)  </span><br><span class="line">            &#123;                VerticalVelocity += gravity * fallMultiplier * Time.deltaTime;  </span><br><span class="line">            &#125;            <span class="keyword">else</span>  </span><br><span class="line">            &#123;  </span><br><span class="line">                VerticalVelocity = gravity * Time.deltaTime;  </span><br><span class="line">            &#125;        &#125;        <span class="keyword">else</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            <span class="keyword">if</span> (VerticalVelocity &lt;= <span class="number">0</span> || !isJumping)  </span><br><span class="line">            &#123;                VerticalVelocity += gravity * fallMultiplier * Time.deltaTime;  </span><br><span class="line">            &#125;            <span class="keyword">else</span>  </span><br><span class="line">            &#123;  </span><br><span class="line">                VerticalVelocity += gravity * Time.deltaTime;  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;    &#125;    <span class="function"><span class="keyword">void</span> <span class="title">Jump</span>()</span>  </span><br><span class="line">    &#123;        <span class="keyword">if</span> (playerPosture == PlayerPosture.Stand &amp;&amp; isJumping)  </span><br><span class="line">        &#123;VerticalVelocity = Mathf.Sqrt(<span class="number">-2</span> * gravity * maxHeight);  </span><br><span class="line">            feetTween = Mathf.Repeat(animator.GetCurrentAnimatorStateInfo(<span class="number">0</span>).normalizedTime, <span class="number">1</span>);  </span><br><span class="line">            feetTween = Mathf.Repeat(animator.GetCurrentAnimatorStateInfo(<span class="number">0</span>).normalizedTime,<span class="number">1</span>);  </span><br><span class="line">            feetTween = feetTween &lt; <span class="number">0.5f</span> ? <span class="number">1</span> : <span class="number">-1</span>;  </span><br><span class="line">            <span class="keyword">if</span> (locomotionState == LocomotionState.Run)  </span><br><span class="line">            &#123;                feetTween *= <span class="number">3</span>;  </span><br><span class="line">            &#125;            <span class="keyword">else</span> <span class="keyword">if</span> (locomotionState == LocomotionState.Walk)  </span><br><span class="line">            &#123;                feetTween *= <span class="number">2</span>;  </span><br><span class="line">            &#125;            <span class="keyword">else</span>  </span><br><span class="line">            &#123;  </span><br><span class="line">                feetTween = Random.Range(<span class="number">0.5f</span>, <span class="number">1f</span>) * feetTween;  </span><br><span class="line">            &#125;        &#125;    &#125;    <span class="comment">// 将世界坐标系下的方向，转换成相机坐标系下的方向  </span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">CaculateInputDirection</span>()</span>  </span><br><span class="line">    &#123;        Vector3 camForwardProjection = <span class="keyword">new</span> Vector3(cameraTransform.forward.x, <span class="number">0</span>, cameraTransform.forward.z).normalized;  </span><br><span class="line">        playerMovement = camForwardProjection * moveInput.y + cameraTransform.right * moveInput.x;  </span><br><span class="line">        playerMovement = playerTransform.InverseTransformVector(playerMovement);  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">SetupAnimator</span>()</span>  </span><br><span class="line">    &#123;        <span class="keyword">if</span> (playerPosture == PlayerPosture.Stand)  </span><br><span class="line">        &#123;            animator.SetFloat(postureHash, standThreshold, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">            <span class="keyword">switch</span> (locomotionState)  </span><br><span class="line">            &#123;                <span class="keyword">case</span> LocomotionState.Idle:  </span><br><span class="line">                    animator.SetFloat(moveSpeedHash, <span class="number">0</span>, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">                <span class="keyword">case</span> LocomotionState.Walk:  </span><br><span class="line">                    animator.SetFloat(moveSpeedHash, playerMovement.magnitude * walkSpeed, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">                <span class="keyword">case</span> LocomotionState.Run:  </span><br><span class="line">                    animator.SetFloat(moveSpeedHash, playerMovement.magnitude * runSpeed, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">            &#125;        &#125;        <span class="keyword">else</span> <span class="keyword">if</span> (playerPosture == PlayerPosture.Crouch)  </span><br><span class="line">        &#123;            animator.SetFloat(postureHash, crouchThreshold, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">            <span class="keyword">switch</span> (locomotionState)  </span><br><span class="line">            &#123;                <span class="keyword">case</span> LocomotionState.Idle:  </span><br><span class="line">                    animator.SetFloat(moveSpeedHash, <span class="number">0</span>, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">                <span class="literal">default</span>:  </span><br><span class="line">                    animator.SetFloat(moveSpeedHash, playerMovement.magnitude * crouchSpeed, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">            &#125;        &#125;        <span class="keyword">else</span> <span class="keyword">if</span> (playerPosture == PlayerPosture.Jumping)  </span><br><span class="line">        &#123;            animator.SetFloat(postureHash, midairThreshold);  </span><br><span class="line">            animator.SetFloat(verticalVelHash, VerticalVelocity);  </span><br><span class="line">            animator.SetFloat(feetTweenHash, feetTween);  </span><br><span class="line">        &#125;        <span class="comment">// 避免处于cd时候不能移动  </span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (playerPosture == PlayerPosture.Landing)  </span><br><span class="line">        &#123;            animator.SetFloat(postureHash, landingThreshold, <span class="number">0.03f</span>, Time.deltaTime);  </span><br><span class="line">            <span class="keyword">switch</span> (locomotionState)  </span><br><span class="line">            &#123;                <span class="keyword">case</span> LocomotionState.Idle:  </span><br><span class="line">                    animator.SetFloat(moveSpeedHash, <span class="number">0</span>, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">                <span class="keyword">case</span> LocomotionState.Walk:  </span><br><span class="line">                    animator.SetFloat(moveSpeedHash, playerMovement.magnitude * walkSpeed, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">                <span class="keyword">case</span> LocomotionState.Run:  </span><br><span class="line">                    animator.SetFloat(moveSpeedHash, playerMovement.magnitude * runSpeed, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">            &#125;        &#125;        <span class="keyword">else</span> <span class="keyword">if</span> (playerPosture == PlayerPosture.Falling)  </span><br><span class="line">        &#123;            animator.SetFloat(postureHash, midairThreshold);  </span><br><span class="line">            animator.SetFloat(verticalVelHash, VerticalVelocity);  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">if</span> (armState == ArmState.Normal)  </span><br><span class="line">        &#123;            <span class="comment">// 当前移动方向和玩家transform正前方Forward之间的夹角，用弧度表示，和root motion的转向速度单位一致  </span></span><br><span class="line">            <span class="built_in">float</span> rad = Mathf.Atan2(playerMovement.x, playerMovement.z);  </span><br><span class="line">            animator.SetFloat(turnSpeedHash, rad, <span class="number">0.1f</span>, Time.deltaTime);  </span><br><span class="line">            <span class="comment">// 转速太慢，人为添加一个旋转  </span></span><br><span class="line">            playerTransform.Rotate(<span class="number">0</span>, rad * <span class="number">200</span> * Time.deltaTime, <span class="number">0f</span>);  </span><br><span class="line">        &#125;    &#125;  </span><br><span class="line">    <span class="comment">// 计算平均速度  </span></span><br><span class="line">    <span class="function">Vector3 <span class="title">AverageVel</span>(<span class="params">Vector3 newVel</span>)</span>  </span><br><span class="line">    &#123;        velCache[currentChacheIndex] = newVel;  </span><br><span class="line">        currentChacheIndex++;  </span><br><span class="line">        currentChacheIndex %= CACHE_SIZE;  </span><br><span class="line">        Vector3 average = Vector3.zero;  </span><br><span class="line">        <span class="keyword">foreach</span>(Vector3 vel <span class="keyword">in</span> velCache)  </span><br><span class="line">        &#123;            average += vel;  </span><br><span class="line">        &#125;        <span class="keyword">return</span> average / CACHE_SIZE;  </span><br><span class="line">    &#125;    <span class="comment">//  Animator 组件进行动画更新时，这个方法会被调用。  </span></span><br><span class="line">    <span class="comment">//  OnAnimatorMove方法为开发者提供了一个在动画更新过程中进行自定义操作的机会，使动画与游戏逻辑更加紧密地结合在一起  </span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnAnimatorMove</span>()</span>  </span><br><span class="line">    &#123;        <span class="keyword">if</span>(playerPosture != PlayerPosture.Jumping &amp;&amp; playerPosture != PlayerPosture.Falling)  </span><br><span class="line">        &#123;            Vector3 playerDeltaMovement = animator.deltaPosition;  </span><br><span class="line">            playerDeltaMovement.y = VerticalVelocity * Time.deltaTime;  </span><br><span class="line">            characterController.Move(playerDeltaMovement);  </span><br><span class="line">            averageVel = AverageVel(animator.velocity);  </span><br><span class="line">        &#125;        <span class="keyword">else</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            <span class="comment">// 沿用地面速度当作滞空速度，采用离地前几帧的平均速度  </span></span><br><span class="line">            averageVel.y = VerticalVelocity;  </span><br><span class="line">            Vector3 playerDeltaMovement = averageVel * Time.deltaTime;  </span><br><span class="line">            characterController.Move(playerDeltaMovement);  </span><br><span class="line">        &#125;    &#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Camera（摄像机）"><a href="#Camera（摄像机）" class="headerlink" title="Camera（摄像机）"></a>Camera（摄像机）</h3><p>在PackageManager中安装Cinemachine<br>Hierarchy中右键新建一个FreeLook Camera：一个多相机的管理方案，同时提供了三个高度位置不同的Orbital Transposer相机<br><img src="/../img/beishang20241211224239350.png"><br>这些参数调整合适<br><img src="/../img/beishang20241212103720062.png"></p>
+<h3 id="Control（控制）"><a href="#Control（控制）" class="headerlink" title="Control（控制）"></a>Control（控制）</h3><p>newInputSystem<br>在项目视图里右键新建一个Action</p>
+<h4 id="配置Action"><a href="#配置Action" class="headerlink" title="配置Action"></a>配置Action</h4><p><img src="/../img/beishang20241212101159353.png"><br><img src="/../img/beishang20241212101406850.png"><br><img src="/../img/beishang20241212101555578.png"><br><img src="/../img/beishang20241212101832428.png"><br><img src="/../img/beishang20241212101851890.png"><br><img src="/../img/beishang20241212102237231.png"><img src="/../img/beishang20241212102556600.png"><br><img src="/../img/beishang20241212102600917.png"><br><img src="/../img/beishang20241212102843819.png"><br>最后一定要SaveAsset</p>
+<p>然后到FreeLook Camera相机下的脚本下跟换输入配置<br><img src="/../img/beishang20241212103106332.png"></p>
+<h4 id="给角色添加PlayerInput"><a href="#给角色添加PlayerInput" class="headerlink" title="给角色添加PlayerInput"></a>给角色添加PlayerInput</h4><p><img src="/../img/beishang20241212124344301.png"><br>在输入事件中放入我们写好的输入方法。<br><img src="/../img/beishang20241212124617790.png"></p>
+<p>给角色添加<img src="/../img/beishang20241212132644799.png"></p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 2154838055@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2024- beishangzhajitui
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
