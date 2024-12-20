@@ -6,35 +6,25 @@
   <meta name="keywords" content=" demo ">
   <meta name="description" content="丧尸围城 (下) | beishangzhajitui">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="前言虽然配置好了，整个过程属于是非常懵，思考了许久决定将建站历程记录下来，相信如果你是一个没建过网站的人，那你可能会想我一样先找找有没有关于的搭建的过程。不过很不幸，这篇博客更多是为了记录和提醒自己，如果你要是完全按照这个不一定搞得出来。可以借鉴的地方是关于让图片能够在博客的 文章中显示出来的内容，因为这一块我网上没有找到跟我一样的，是自己摸索的。 原理123hexo clean # 清除缓存文件">
-<meta property="og:type" content="website">
-<meta property="og:title" content="这里是建站记录">
-<meta property="og:url" content="http://example.com/Hexo+Github+Obsidian%E8%BF%99%E9%87%8C%E6%98%AF%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95.html">
+<meta name="description" content="&#x2F;&#x2F; 1. 观察者接口 public interface IObserver &#123;     void Update(int health); &#125;  &#x2F;&#x2F; 2. 主题类（这里模拟玩家对象，它的状态变化会通知观察者） public class PlayerSubject &#123;     private List&lt;IObserver&gt; observers &#x3D; new">
+<meta property="og:type" content="article">
+<meta property="og:title" content="观察者模式">
+<meta property="og:url" content="http://example.com/2024/12/6e69ad42e217.html">
 <meta property="og:site_name" content="beishangzhajitui">
-<meta property="og:description" content="前言虽然配置好了，整个过程属于是非常懵，思考了许久决定将建站历程记录下来，相信如果你是一个没建过网站的人，那你可能会想我一样先找找有没有关于的搭建的过程。不过很不幸，这篇博客更多是为了记录和提醒自己，如果你要是完全按照这个不一定搞得出来。可以借鉴的地方是关于让图片能够在博客的 文章中显示出来的内容，因为这一块我网上没有找到跟我一样的，是自己摸索的。 原理123hexo clean # 清除缓存文件">
+<meta property="og:description" content="&#x2F;&#x2F; 1. 观察者接口 public interface IObserver &#123;     void Update(int health); &#125;  &#x2F;&#x2F; 2. 主题类（这里模拟玩家对象，它的状态变化会通知观察者） public class PlayerSubject &#123;     private List&lt;IObserver&gt; observers &#x3D; new">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/beishang20241207113547501.png">
-<meta property="og:image" content="http://example.com/img/beishang20241206160308125.png">
-<meta property="og:image" content="http://example.com/img/beishang20241206160500289.png">
-<meta property="og:image" content="http://example.com/img/beishang20241207095904010.png">
-<meta property="og:image" content="http://example.com/img/beishang20241207104637882.png">
-<meta property="og:image" content="http://example.com/img/beishang20241207112633087.png">
-<meta property="og:image" content="http://example.com/img/beishang20241207112547502.png">
-<meta property="og:image" content="http://example.com/img/beishang20241208002131397.png">
-<meta property="og:image" content="http://example.com/img/beishang20241208001958088.png">
-<meta property="article:published_time" content="2024-12-06T07:13:47.000Z">
-<meta property="article:modified_time" content="2024-12-18T04:19:41.998Z">
+<meta property="article:published_time" content="2024-12-20T07:48:54.613Z">
+<meta property="article:modified_time" content="2024-12-20T10:07:36.609Z">
 <meta property="article:author" content="beishangzhajitui">
-<meta property="article:tag" content="工具">
+<meta property="article:tag" content="CSharp">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/img/beishang20241207113547501.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
 
 <link href="/css/style.css?v=1.1.0" rel="stylesheet">
 
-<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+<link href="/css/hl_theme/darcula.css?v=1.1.0" rel="stylesheet">
 
 <link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
 
@@ -164,10 +154,25 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(20)</small>
+                <small>(21)</small>
             
         </div>
     </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="工具">
+            
+            工具
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
     
         
             
@@ -278,7 +283,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="20">
+<input type="hidden" id="yelog_site_posts_number" value="21">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -420,7 +425,7 @@
         
         <a  class="全部文章 面试 "
            href="/2024/12/f9803a20b288.html"
-           data-tag="CSharp,工具"
+           data-tag="工具,CSharp"
            data-author="" >
             <span class="post-title" title="面试题1">面试题1</span>
             <span class="post-date" title="2024-12-19 18:32:27">2024/12/19</span>
@@ -525,6 +530,15 @@
             <span class="post-date" title="2024-12-06 22:42:09">2024/12/06</span>
         </a>
         
+        
+        <a  class="全部文章 工具 "
+           href="/2024/12/98a55959539d.html"
+           data-tag="工具"
+           data-author="" >
+            <span class="post-title" title="这里是建站记录">这里是建站记录</span>
+            <span class="post-date" title="2024-12-06 15:13:47">2024/12/06</span>
+        </a>
+        
         <div id="no-item-tips">
 
         </div>
@@ -626,12 +640,107 @@
 <h3 id="MonsterPoint"><a href="#MonsterPoint" class="headerlink" title="MonsterPoint"></a>MonsterPoint</h3><p><img src="/../img/beishang20241207185224764.png"><br><img src="/../img/beishang20241207185331330.png"><img src="/../img/beishang20241207185351194.png"><br><img src="/../img/beishang20241207185359964.png">最后将脚本拖到对应的特效出生点上面。</p>
 <h2 id="26-游戏关卡管理器"><a href="#26-游戏关卡管理器" class="headerlink" title="26.游戏关卡管理器"></a>26.游戏关卡管理器</h2><p>这个代码写的串了一堆</p>
 <h3 id="GameLevelMgr-cs"><a href="#GameLevelMgr-cs" class="headerlink" title="GameLevelMgr.cs"></a>GameLevelMgr.cs</h3><p>1.是切换到游戏场景时 我们需要动态的创建玩家，同时初始化页面<br>2.2.我们需要通过游戏管理器 来判断 游戏是否胜利</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Collections;  </span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;  </span><br><span class="line"><span class="keyword">using</span> UnityEngine;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">GameLevelMgr</span>  </span><br><span class="line">&#123;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> GameLevelMgr instance = <span class="keyword">new</span> GameLevelMgr();  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> GameLevelMgr Instance =&gt; instance;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">public</span> PlayerObject player;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 所有的出怪点  </span></span><br><span class="line">    <span class="keyword">private</span> List&lt;MonsterPoint&gt; points = <span class="keyword">new</span> List&lt;MonsterPoint&gt;();  </span><br><span class="line">    <span class="comment">// 记录当前 还有多少波怪物  </span></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">int</span> nowWaveNum = <span class="number">0</span>;  </span><br><span class="line">    <span class="comment">// 记录 一共有多少波怪物  </span></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">int</span> maxWaveNum = <span class="number">0</span>;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 记录当前场景上的怪物数量  </span></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">int</span> nowMonsterNum = <span class="number">0</span>;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">GameLevelMgr</span>()</span>  </span><br><span class="line">    &#123;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="comment">// 1.是切换到游戏场景时 我们需要动态的创建玩家  </span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">InitInfo</span>(<span class="params">SceneInfo info</span>)</span>  </span><br><span class="line">    &#123;        <span class="comment">// 显示游戏界面  </span></span><br><span class="line">        UIManager.Instance.ShowPanel&lt;GamePanel&gt;();  </span><br><span class="line">  </span><br><span class="line">        <span class="comment">// 玩家的创建  </span></span><br><span class="line">        <span class="comment">// 获取之前记录的当前选中的玩家数据  </span></span><br><span class="line">        RoleInfo roleInfo = GameDataMgr.Instance.nowSelRole;  </span><br><span class="line">        <span class="comment">// 首先获取到场景当中 玩家的出生位置  </span></span><br><span class="line">        Transform heroPos = GameObject.Find(<span class="string">&quot;HeroBornPos&quot;</span>).transform;  </span><br><span class="line">        <span class="comment">// 实例化玩家预设体 然后把它的位置角度 设置为 场景当中出生点一致  </span></span><br><span class="line">        GameObject heroObj = GameObject.Instantiate(Resources.Load&lt;GameObject&gt;(roleInfo.res), heroPos.position, heroPos.rotation);  </span><br><span class="line">        <span class="comment">// 对玩家对象进行初始化  </span></span><br><span class="line">        player = heroObj.GetComponent&lt;PlayerObject&gt;();  </span><br><span class="line">        <span class="comment">// 初始化玩家的基础属性,这里的Money是刚进入游戏玩家拥有的金币数量，配置在SceneInfo中即可  </span></span><br><span class="line">        player.InitPlayerInfo(roleInfo.atk, info.money);  </span><br><span class="line">        <span class="comment">// 让摄像机 看向动态创建出来的玩家  </span></span><br><span class="line">        Camera.main.GetComponent&lt;CameraMove&gt;().SetTarget(heroObj.transform);  </span><br><span class="line">  </span><br><span class="line">        <span class="comment">// 初始化 中央 保护区域的血量  </span></span><br><span class="line">        MainTowerObject.Instance.UpdateHp(info.towerHp, info.towerHp);  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="comment">// 2.我们需要通过游戏管理器 来判断 游戏是否胜利  </span></span><br><span class="line">    <span class="comment">// 要知道 场景中 是否还有怪物没有出 以及 场景中 是否有还没有死亡的怪物  </span></span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 用于记录出怪点的方法  </span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">AddMonsterPoint</span>(<span class="params">MonsterPoint point</span>)</span>  </span><br><span class="line">    &#123;        points.Add(point);  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span>  </span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 更新一共有多少波怪  </span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span>  </span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;num&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span>    public void UpdatgeMaxNum(int num)  </span></span><br><span class="line">    &#123;        maxWaveNum += num;  </span><br><span class="line">        nowWaveNum = maxWaveNum;  </span><br><span class="line">        <span class="comment">//更新界面  </span></span><br><span class="line">        UIManager.Instance.GetPanel&lt;GamePanel&gt;().UpdateWaveNum(nowWaveNum, maxWaveNum);  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span>  </span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 随游戏进行更新波数  </span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span>  </span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;num&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span>    public void ChangeNowWaveNum(int num)  </span></span><br><span class="line">    &#123;        nowWaveNum -= num;  </span><br><span class="line">        <span class="comment">// 更新界面  </span></span><br><span class="line">        UIManager.Instance.GetPanel&lt;GamePanel&gt;().UpdateWaveNum(nowWaveNum, maxWaveNum);  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span>  </span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 检测 是否胜利  </span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span>  </span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span>    public bool CheckOver()  </span></span><br><span class="line">    &#123;        <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; points.Count; i++)  </span><br><span class="line">        &#123;            <span class="comment">// 只要有一个出怪点 还没有出完怪  那么久证明还没有胜利  </span></span><br><span class="line">            <span class="keyword">if</span> (!points[i].CheckOver())  </span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">if</span> (nowMonsterNum &gt; <span class="number">0</span>)  </span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;  </span><br><span class="line">  </span><br><span class="line">        Debug.Log(<span class="string">&quot;游戏胜利&quot;</span>);  </span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span>  </span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 改变当前场景上怪物的数量  </span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span>  </span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;num&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span>    public void ChangeMonsterNum(int num)  </span></span><br><span class="line">    &#123;        nowMonsterNum += num;  </span><br><span class="line">    &#125;&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="C#">using System.Collections;  
+using System.Collections.Generic;  
+using UnityEngine;  
+  
+public class GameLevelMgr  
+&#123;  
+    private static GameLevelMgr instance = new GameLevelMgr();  
+    public static GameLevelMgr Instance =&gt; instance;  
+  
+    public PlayerObject player;  
+  
+    // 所有的出怪点  
+    private List&lt;MonsterPoint&gt; points = new List&lt;MonsterPoint&gt;();  
+    // 记录当前 还有多少波怪物  
+    private int nowWaveNum = 0;  
+    // 记录 一共有多少波怪物  
+    private int maxWaveNum = 0;  
+  
+    // 记录当前场景上的怪物数量  
+    private int nowMonsterNum = 0;  
+  
+    private GameLevelMgr()  
+    &#123;  
+    &#125;  
+    // 1.是切换到游戏场景时 我们需要动态的创建玩家  
+    public void InitInfo(SceneInfo info)  
+    &#123;        // 显示游戏界面  
+        UIManager.Instance.ShowPanel&lt;GamePanel&gt;();  
+  
+        // 玩家的创建  
+        // 获取之前记录的当前选中的玩家数据  
+        RoleInfo roleInfo = GameDataMgr.Instance.nowSelRole;  
+        // 首先获取到场景当中 玩家的出生位置  
+        Transform heroPos = GameObject.Find(&quot;HeroBornPos&quot;).transform;  
+        // 实例化玩家预设体 然后把它的位置角度 设置为 场景当中出生点一致  
+        GameObject heroObj = GameObject.Instantiate(Resources.Load&lt;GameObject&gt;(roleInfo.res), heroPos.position, heroPos.rotation);  
+        // 对玩家对象进行初始化  
+        player = heroObj.GetComponent&lt;PlayerObject&gt;();  
+        // 初始化玩家的基础属性,这里的Money是刚进入游戏玩家拥有的金币数量，配置在SceneInfo中即可  
+        player.InitPlayerInfo(roleInfo.atk, info.money);  
+        // 让摄像机 看向动态创建出来的玩家  
+        Camera.main.GetComponent&lt;CameraMove&gt;().SetTarget(heroObj.transform);  
+  
+        // 初始化 中央 保护区域的血量  
+        MainTowerObject.Instance.UpdateHp(info.towerHp, info.towerHp);  
+    &#125;  
+    // 2.我们需要通过游戏管理器 来判断 游戏是否胜利  
+    // 要知道 场景中 是否还有怪物没有出 以及 场景中 是否有还没有死亡的怪物  
+  
+    // 用于记录出怪点的方法  
+    public void AddMonsterPoint(MonsterPoint point)  
+    &#123;        points.Add(point);  
+    &#125;  
+    /// &lt;summary&gt;  
+    /// 更新一共有多少波怪  
+    /// &lt;/summary&gt;  
+    /// &lt;param name=&quot;num&quot;&gt;&lt;/param&gt;    public void UpdatgeMaxNum(int num)  
+    &#123;        maxWaveNum += num;  
+        nowWaveNum = maxWaveNum;  
+        //更新界面  
+        UIManager.Instance.GetPanel&lt;GamePanel&gt;().UpdateWaveNum(nowWaveNum, maxWaveNum);  
+    &#125;  
+    /// &lt;summary&gt;  
+    /// 随游戏进行更新波数  
+    /// &lt;/summary&gt;  
+    /// &lt;param name=&quot;num&quot;&gt;&lt;/param&gt;    public void ChangeNowWaveNum(int num)  
+    &#123;        nowWaveNum -= num;  
+        // 更新界面  
+        UIManager.Instance.GetPanel&lt;GamePanel&gt;().UpdateWaveNum(nowWaveNum, maxWaveNum);  
+    &#125;  
+    /// &lt;summary&gt;  
+    /// 检测 是否胜利  
+    /// &lt;/summary&gt;  
+    /// &lt;returns&gt;&lt;/returns&gt;    public bool CheckOver()  
+    &#123;        for (int i = 0; i &lt; points.Count; i++)  
+        &#123;            // 只要有一个出怪点 还没有出完怪  那么久证明还没有胜利  
+            if (!points[i].CheckOver())  
+                return false;  
+        &#125;  
+        if (nowMonsterNum &gt; 0)  
+            return false;  
+  
+        Debug.Log(&quot;游戏胜利&quot;);  
+        return true;  
+    &#125;  
+    /// &lt;summary&gt;  
+    /// 改变当前场景上怪物的数量  
+    /// &lt;/summary&gt;  
+    /// &lt;param name=&quot;num&quot;&gt;&lt;/param&gt;    public void ChangeMonsterNum(int num)  
+    &#123;        nowMonsterNum += num;  
+    &#125;&#125;
+</code></pre>
 <p>涉及到场景的切换首先需要进行下面的操作。<br><img src="/../img/beishang20241207185504238.png"></p>
 <h4 id="ChooseScenePanel"><a href="#ChooseScenePanel" class="headerlink" title="ChooseScenePanel"></a>ChooseScenePanel</h4><p>在ChooseScenePanel中先把切换场景的功能加上<br>但是这个同步加载关卡管理器的话容易报错，因为可能下个场景还没有完全加载结束就执行关卡初始化了，导致HeroBornPos找不到<br><img src="/../img/beishang20241207185521526.png">更改为：<br><img src="/../img/beishang20241207185530888.png"></p>
 <h4 id="GameScene"><a href="#GameScene" class="headerlink" title="GameScene"></a>GameScene</h4><p>在GameScene中添加玩家的出生位置<br><img src="/../img/beishang20241207185549195.png"><br>在SceneInfo中多配置一个开场拥有的钱和塔的血量</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">&#123;&quot;id&quot;:1,&quot;imgRes&quot;:&quot;SceneImg/GameScene1&quot;,&quot;name&quot;:&quot;疯狂树林&quot;,&quot;tips&quot;:&quot;辣辣&quot;,&quot;sceneName&quot;:&quot;GameScene1&quot;,&quot;money&quot;:200,&quot; towerHp&quot;:200&#125;,</span><br><span class="line">&#123;&quot;id&quot;:2,&quot;imgRes&quot;:&quot;SceneImg/GameScene2&quot;,&quot;name&quot;:&quot;礼拜教堂&quot;,&quot;tips&quot;:&quot;哈哈&quot;,&quot;sceneName&quot;:&quot;GameScene2&quot;,&quot;money&quot;:200,&quot; towerHp&quot;:200&#125;,</span><br><span class="line">&#123;&quot;id&quot;:3,&quot;imgRes&quot;:&quot;SceneImg/GameScene3&quot;,&quot;name&quot;:&quot;阴森墓地&quot;,&quot;tips&quot;:&quot;好好&quot;,&quot;sceneName&quot;:&quot;GameScene3&quot;,&quot;money&quot;:200,&quot; towerHp&quot;:200&#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<pre><code>[
+&#123;&quot;id&quot;:1,&quot;imgRes&quot;:&quot;SceneImg/GameScene1&quot;,&quot;name&quot;:&quot;疯狂树林&quot;,&quot;tips&quot;:&quot;辣辣&quot;,&quot;sceneName&quot;:&quot;GameScene1&quot;,&quot;money&quot;:200,&quot; towerHp&quot;:200&#125;,
+&#123;&quot;id&quot;:2,&quot;imgRes&quot;:&quot;SceneImg/GameScene2&quot;,&quot;name&quot;:&quot;礼拜教堂&quot;,&quot;tips&quot;:&quot;哈哈&quot;,&quot;sceneName&quot;:&quot;GameScene2&quot;,&quot;money&quot;:200,&quot; towerHp&quot;:200&#125;,
+&#123;&quot;id&quot;:3,&quot;imgRes&quot;:&quot;SceneImg/GameScene3&quot;,&quot;name&quot;:&quot;阴森墓地&quot;,&quot;tips&quot;:&quot;好好&quot;,&quot;sceneName&quot;:&quot;GameScene3&quot;,&quot;money&quot;:200,&quot; towerHp&quot;:200&#125;
+]
+</code></pre>
 <h4 id="ChooseHeroPanel"><a href="#ChooseHeroPanel" class="headerlink" title="ChooseHeroPanel"></a>ChooseHeroPanel</h4><p>在ChooseHeroPanel中设置开始页面不能操作角色<br><img src="/../img/beishang20241207185617179.png"></p>
 <h4 id="MonsterPoint-1"><a href="#MonsterPoint-1" class="headerlink" title="MonsterPoint"></a>MonsterPoint</h4><p>在MonsterPoint中<br>联合Game LevelMgr的方法管理出怪<br><img src="/../img/beishang20241207185640133.png">怪物生成了告诉关卡管理器数量加1<br><img src="/../img/beishang20241207185657714.png"></p>
 <h4 id="MonsterObjects"><a href="#MonsterObjects" class="headerlink" title="MonsterObjects"></a>MonsterObjects</h4><p>MonsterObjects中：死了告诉关卡管理器数量减1，顺便检查下游戏结束没。<br><img src="/../img/beishang20241207185718766.png"></p>
