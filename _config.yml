@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: beishangzhajitui
 subtitle: ''
-description: ''
+description: '博客网站'
 keywords:
 author: beishangzhajitui
-language: en
+language: zh-CN
 timezone: ''
 
 # URL
@@ -43,9 +43,10 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
-syntax_highlighter: highlight.js
+syntax_highlighter:  # empty
 highlight:
-  line_number: true
+  enable: false
+  line_number: false
   auto_detect: false
   tab_replace: ''
   wrap: true

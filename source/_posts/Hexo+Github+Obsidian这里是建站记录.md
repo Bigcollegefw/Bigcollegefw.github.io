@@ -158,6 +158,32 @@ diff <<<<<<< HEAD
 比如这里我换了两张图片，替换掉原来的同名图片。
 但这里我就一张图片，不是文本，现在我就想保留本地的图片
 ![](../img/beishang20241208001958088.png)
+## 设置代码高亮
+主题内置了主题高亮，hexo自带的配置文件中原来为：syntax_highlighter: highlight.js；禁用即可，同时关闭hexo根目录下`_config.yml`中的高亮设置：
+```yaml
+# _config.yml
+syntax_highlighter:  # empty  用于代码高亮的库或工具
+highlight:
+  enable: false
+```
+需要注意的是：要执行下hexo clean后新的配置文件才会生效。
+```
+highlight:
+  on: true
+  lineNum: true
+  theme: darcula
+```
+## 开启关于页面
+
+位置： `source/aoubt/index.md` ，根据需要进行编辑。
+在主题中开启显示：修改主题根目录 `_config.yml` 中的 `about` 的 `on` 为 `true`，如下所示
+```yaml
+menu:
+  about:  # '关于' 按钮
+    on: true # 是否显示
+    url: /about  # 跳转链接
+    type: 1 # 跳转类型 1：站内异步跳转 2：当前页面跳转 3：打开新的tab页
+```
 
 参考：
 [关于我使用obsidian加hexo部署个人博客的过程 - SagiRastar's Blog](https://sagi-rastar.github.io/2023/11/10/%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/)
