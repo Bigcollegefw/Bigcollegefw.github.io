@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/CShap进阶/List.md",
+                "file": "source/_posts/第三人称控制器.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "List"
+              "title": "第三人称控制器"
             }
           },
           {
@@ -168,10 +168,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/CShap进阶/List.md"
+                "file": "source/_posts/第三人称控制器.md"
               },
               "icon": "lucide-list",
-              "title": "List 的大纲"
+              "title": "第三人称控制器 的大纲"
             }
           },
           {
@@ -189,8 +189,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -205,50 +204,51 @@
   },
   "active": "f76fa23c5dc956f5",
   "lastOpenFiles": [
-    "source/_posts/CShap进阶/18.多线程.md",
-    "source/_posts/CShap进阶/19.值类型和引用类型.md",
-    "source/_posts/CShap进阶/List.md",
-    "source/_posts/CShap进阶/17.协变逆变.md",
-    "source/_posts/CShap进阶/6.泛型约束.md",
-    "source/_posts/CShap进阶/3.Queue.md",
-    "source/_posts/CSharp基础/27.冒泡排序.md",
-    "source/_posts/CSharp基础/2.ref和out.md",
-    "source/_posts/CSharp基础/1.属性和字段.md",
-    "source/_posts/Unity基础框架/观察者模式.md",
+    "public/2024/12/6e69ad42e217.html",
+    "public/tags/Unity/index.html",
+    "public/tags/Unity",
+    "public/tags/CSharp/page/2/index.html",
+    "public/tags/CSharp/page/2",
+    "public/tags/CSharp/page",
+    "public/categories/C/page/2/index.html",
+    "public/categories/C/page/2",
+    "public/categories/C/page",
+    "source/_posts/UGUI抽卡系统.md",
     "source/_posts/丧尸围城（下）.md",
     "source/_posts/丧尸围城（上）.md",
-    "source/_posts/UGUI抽卡系统.md",
-    "source/_posts/面试/L2.md",
-    "source/_posts/面试/L1.md",
+    "source/_posts/Unity基础框架/观察者模式.md",
+    "source/_posts/CSharp基础/2.ref和out.md",
+    "source/_posts/CSharp基础/27.冒泡排序.md",
+    "source/_posts/CSharp基础/1.属性和字段.md",
+    "source/_posts/CShap进阶/19.值类型和引用类型.md",
+    "source/_posts/CShap进阶/18.多线程.md",
+    "source/_posts/CShap进阶/17.协变逆变.md",
+    "source/_posts/CShap进阶/16.List.md",
+    "source/_posts/CShap进阶/15.lambda表达式.md",
+    "source/_posts/CShap进阶/6.泛型约束.md",
+    "source/_posts/CShap进阶/5.泛型.md",
+    "source/_posts/CShap进阶/3.Queue.md",
+    "source/_posts/CShap进阶/2.Stack.md",
+    "source/_posts/CShap进阶/1.ArrayList.md",
+    "source/_posts/面试/面试题1.md",
+    "source/_posts/面试/面试题2.md",
     "source/Hexo+Github+Obsidian这里是建站记录.md",
     "source/about.md",
-    "source/_posts/CShap进阶/1.ArrayList.md",
-    "public/img/beishang20241220113621739.png",
-    "public/img/beishang20241220113506456.png",
-    "public/img/beishang20241220114331077.png",
-    "public/img/beishang20241220120315831.png",
-    "public/categories/C/C-基础/index.html",
-    "public/categories/C/C-基础",
-    "source/_posts/CShap进阶/15.lambda表达式.md",
-    "source/_posts/CShap进阶/5.泛型.md",
-    "source/_posts/项目/第三人称控制器.md",
+    "db.json",
+    "public/img/beishang20241207184241362.png",
+    "public/img/beishang20241207184530309.png",
+    "public/img/beishang20241208002131397.png",
+    "public/img/beishang20241207184136981.png",
+    "public/img/beishang20241207165731828.png",
+    "public/img/beishang20241207185041122.png",
+    "public/img/beishang20241207184721397.png",
+    "public/img/beishang20241207172640764.png",
+    "public/img/beishang20241207185504238.png",
+    "public/js/titleTip.js",
+    "public/img/beishang20241207185351194.png",
+    "source/_obsidian/Post Template.md",
+    "source/_posts/第三人称控制器.md",
     "source/_posts/项目/Gird Layout Group.md",
-    "source/_posts/项目",
-    "source/_posts/Unity基础框架",
-    "source/_posts/CShap进阶/2.Stack.md",
-    "source/_posts/Unity入门",
-    "source/_posts/CSharp基础",
-    "source/img/beishang20241220120315831.png",
-    "source/img/beishang20241220114331077.png",
-    "source/img/beishang20241220113621739.png",
-    "source/img/beishang20241220113506456.png",
-    "2024-12-19.md",
-    "source/_posts/面试",
-    "public/categories/工具/index.html",
-    "public/2024/12/515fc9cb74fb.html",
-    "public/2024/12/94bc47baa022.html",
-    "public/img/beishang20241211102412116.png",
-    "2024-12-16.md",
-    "source/img/beishang20241212153451361.png"
+    "2024-12-19.md"
   ]
 }

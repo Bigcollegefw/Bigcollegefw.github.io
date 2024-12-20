@@ -1,3 +1,13 @@
+---
+title: about
+date:
+  "{ date }": 
+categories:
+  - 工具
+tags:
+  - 工具
+---
+
 ### 关于我
 
 hello,目前正在学习Uinty开发，
