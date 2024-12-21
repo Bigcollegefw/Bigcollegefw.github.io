@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/Unity基础框架/观察者模式.md",
+                "file": "source/_posts/CSharp/CSharp进阶/5.泛型.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "观察者模式"
+              "title": "5.泛型"
             }
           }
         ]
@@ -149,10 +149,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/Unity基础框架/观察者模式.md"
+                "file": "source/_posts/CSharp/CSharp进阶/5.泛型.md"
               },
               "icon": "lucide-list",
-              "title": "观察者模式 的大纲"
+              "title": "5.泛型 的大纲"
             }
           },
           {
@@ -187,51 +187,50 @@
   },
   "active": "a17f8b1a7941bc29",
   "lastOpenFiles": [
-    "source/_posts/面试/面试题4.md",
-    "source/_posts/面试/面试题6.md",
-    "source/_posts/面试/面试题5.md",
-    "source/_posts/面试/面试题2.md",
-    "source/_posts/面试/面试题1.md",
-    "source/_posts/面试/面试题3.md",
-    "source/_posts/CSharp/CSharp基础/2.ref和out.md",
-    "source/_posts/CSharp/CSharp核心/23.Object中的方法.md",
-    "source/_posts/CSharp/CSharp进阶/1.ArrayList.md",
+    "source/_posts/CSharp/CSharp进阶/19.值类型和引用类型.md",
+    "source/_posts/CSharp/CSharp进阶/18.多线程.md",
     "source/_posts/CSharp/CSharp进阶/2.Stack.md",
+    "source/_posts/CSharp/CSharp进阶/1.ArrayList.md",
     "source/_posts/CSharp/CSharp进阶/3.Queue.md",
     "source/_posts/CSharp/CSharp进阶/5.泛型.md",
     "source/_posts/CSharp/CSharp进阶/6.泛型约束.md",
     "source/_posts/CSharp/CSharp进阶/15.lambda表达式.md",
     "source/_posts/CSharp/CSharp进阶/16.List.md",
     "source/_posts/CSharp/CSharp进阶/17.协变逆变.md",
-    "source/_posts/CSharp/CSharp进阶/18.多线程.md",
-    "source/_posts/CSharp/CSharp进阶/19.值类型和引用类型.md",
-    "source/_posts/CSharp/CSharp基础/1.属性和字段.md",
-    "source/_posts/CSharp/CSharp基础/27.冒泡排序.md",
-    "source/img/beishang20241220203210807.png",
-    "source/img/beishang20241220203045487.png",
-    "source/_posts/CSharp/CSharp核心",
-    "source/_posts/Unity基础框架/观察者模式.md",
-    "page/3/index.html",
-    "page/3",
-    "categories/工具/index.html",
-    "categories/工具",
-    "archives/page/3/index.html",
-    "archives/page/3",
-    "archives/2024/page/3/index.html",
-    "archives/2024/page/3",
-    "archives/2024/12/page/3/index.html",
+    "source/_posts/面试/面试题1.md",
+    "img/beishang20241220203210807.png",
+    "img/beishang20241220203045487.png",
+    "2024/12/fa210d88e086.html",
+    "2024/12/dcef07134c34.html",
+    "2024/12/d100ea89a91f.html",
+    "2024/12/cf2b94dbc551.html",
+    "2024/12/bcdeadf4cdb9.html",
+    "2024/12/b8a29f3717aa.html",
+    "2024/12/b56e7458241b.html",
+    "2024/12/99e2778ef90a.html",
+    "2024/12/99d7e4858599.html",
+    "2024/12/8560e7368643.html",
+    "source/_posts/面试/面试题2.md",
+    "source/_posts/面试/面试题3.md",
+    "source/_posts/面试/面试题4.md",
     "source/_posts/第三人称控制器.md",
-    "source/_posts/UGUI抽卡系统.md",
     "source/_posts/丧尸围城（下）.md",
     "source/_posts/丧尸围城（上）.md",
     "source/_posts/Hexo+Github+Obsidian这里是建站记录.md",
+    "source/_posts/UGUI抽卡系统.md",
+    "source/_posts/面试/面试题6.md",
+    "source/_posts/面试/面试题5.md",
+    "source/_posts/Unity基础框架/观察者模式.md",
+    "source/_posts/CSharp/CSharp基础/2.ref和out.md",
+    "source/_posts/CSharp/CSharp核心/23.Object中的方法.md",
+    "source/_posts/CSharp/CSharp基础/1.属性和字段.md",
+    "source/img/beishang20241220203210807.png",
+    "source/img/beishang20241220203045487.png",
     "public/img/beishang20241207184241362.png",
     "public/img/beishang20241207184530309.png",
     "public/img/beishang20241208002131397.png",
     "public/img/beishang20241207184136981.png",
     "public/img/beishang20241207165731828.png",
-    "public/img/beishang20241207185041122.png",
-    "public/img/beishang20241207184721397.png",
-    "public/img/beishang20241207171541991.png"
+    "public/img/beishang20241207185041122.png"
   ]
 }

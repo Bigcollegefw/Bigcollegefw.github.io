@@ -145,9 +145,11 @@ git remote add origin https://github.com/Bigcollegefw/blog.git
 
 针对冲突文件
 ![](../img/beishang20241208002131397.png)
+
 冲突后会在根目录中产生 `conflict-files` 开头的文件这个文件不用编辑，也不用删除。 点击进去然后找到冲突文件，解决冲突问题。 解决冲突的方式和 `Git` 相同。
 git生成的文件中提示你对于每个出现冲突标记的地方，查看`<<<<<<< HEAD`后面显示的本地仓库修改内
 容，以及`=======`后面、`>>>>>>> origin/main`之前显示的远程仓库修改内容
+
 ```
 diff <<<<<<< HEAD 
 	File changes in local repository 
@@ -155,6 +157,7 @@ diff <<<<<<< HEAD
 	File changes in remote repository
 >>>>>>> origin/main 
 ```
+
 比如这里我换了两张图片，替换掉原来的同名图片。
 但这里我就一张图片，不是文本，现在我就想保留本地的图片
 ![](../img/beishang20241208001958088.png)
