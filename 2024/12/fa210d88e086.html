@@ -2,22 +2,23 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>17.协变逆变 | beishangzhajitui</title>
+  <title>6.泛型约束 | beishangzhajitui</title>
   <meta name="keywords" content=" CSharp ">
-  <meta name="description" content="17.协变逆变 | beishangzhajitui">
+  <meta name="description" content="6.泛型约束 | beishangzhajitui">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="&#x2F;&#x2F; 1. 观察者接口 public interface IObserver &#123;     void Update(int health); &#125;  &#x2F;&#x2F; 2. 主题类（这里模拟玩家对象，它的状态变化会通知观察者） public class PlayerSubject &#123;     private List&lt;IObserver&gt; observers &#x3D; new">
+<meta name="description" content="C# 1.C#中如何让自定义容器类能够使用for循环遍历？（通过 类对象[索引] 的形式遍历）实现索引器。 class MyList &#123;     private int[] _data;     public MyList()     &#123;         _data &#x3D; new int[10];         for (int i &#x3D; 0; i &lt; 10; i++)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="观察者模式">
-<meta property="og:url" content="http://example.com/2024/12/6e69ad42e217.html">
+<meta property="og:title" content="beishangzhajitui">
+<meta property="og:url" content="http://example.com/2024/12/d100ea89a91f.html">
 <meta property="og:site_name" content="beishangzhajitui">
-<meta property="og:description" content="&#x2F;&#x2F; 1. 观察者接口 public interface IObserver &#123;     void Update(int health); &#125;  &#x2F;&#x2F; 2. 主题类（这里模拟玩家对象，它的状态变化会通知观察者） public class PlayerSubject &#123;     private List&lt;IObserver&gt; observers &#x3D; new">
+<meta property="og:description" content="C# 1.C#中如何让自定义容器类能够使用for循环遍历？（通过 类对象[索引] 的形式遍历）实现索引器。 class MyList &#123;     private int[] _data;     public MyList()     &#123;         _data &#x3D; new int[10];         for (int i &#x3D; 0; i &lt; 10; i++)">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-12-20T07:48:54.613Z">
-<meta property="article:modified_time" content="2024-12-20T10:07:36.609Z">
+<meta property="og:image" content="https://scf1a0b4c9d9e6od-sb-qn.qiqiuyun.net/files/course/2024/10-20/102123378189290178.png">
+<meta property="article:published_time" content="2024-12-21T02:12:42.263Z">
+<meta property="article:modified_time" content="2024-12-21T02:15:11.201Z">
 <meta property="article:author" content="beishangzhajitui">
-<meta property="article:tag" content="CSharp">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://scf1a0b4c9d9e6od-sb-qn.qiqiuyun.net/files/course/2024/10-20/102123378189290178.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -154,7 +155,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(21)</small>
+                <small>(26)</small>
             
         </div>
     </li>
@@ -283,7 +284,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="21">
+<input type="hidden" id="yelog_site_posts_number" value="26">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -351,6 +352,51 @@
     <nav id="title-list-nav">
         
         
+        <a  class="全部文章 "
+           href="/2024/12/d100ea89a91f.html"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2024-12-21 10:12:42">2024/12/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2024/12/cf2b94dbc551.html"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2024-12-20 23:26:18">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2024/12/b8a29f3717aa.html"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2024-12-20 19:47:16">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2024/12/5b5f19dd3e86.html"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2024-12-20 19:34:10">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2024/12/4a27464db468.html"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2024-12-20 19:28:49">2024/12/20</span>
+        </a>
+        
+        
         <a  class="全部文章 Unity基础框架 "
            href="/2024/12/6e69ad42e217.html"
            data-tag="CSharp"
@@ -361,7 +407,7 @@
         
         
         <a  class="全部文章 C# C#基础 "
-           href="/2024/12/27de32642486.html"
+           href="/2024/12/2e5680225f17.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="2.ref和out">2.ref和out</span>
@@ -370,7 +416,7 @@
         
         
         <a  class="全部文章 C# C#基础 "
-           href="/2024/12/4d6082558c99.html"
+           href="/2024/12/8560e7368643.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="1.属性和字段">1.属性和字段</span>
@@ -388,7 +434,7 @@
         
         
         <a  class="全部文章 C# C#基础 "
-           href="/2024/12/9616e11707cd.html"
+           href="/2024/12/50804c53923a.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="27.冒泡排序">27.冒泡排序</span>
@@ -397,7 +443,7 @@
         
         
         <a  class="全部文章 C# C#进阶 "
-           href="/2024/12/735c4de4a2e5.html"
+           href="/2024/12/bcdeadf4cdb9.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="19.值类型和引用类型">19.值类型和引用类型</span>
@@ -406,7 +452,7 @@
         
         
         <a  class="全部文章 C# C#进阶 "
-           href="/2024/12/fabf7cba955f.html"
+           href="/2024/12/99d7e4858599.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="18.多线程">18.多线程</span>
@@ -415,7 +461,7 @@
         
         
         <a  class="全部文章 C# C#进阶 "
-           href="/2024/12/e32e5c4c8fc8.html"
+           href="/2024/12/dcef07134c34.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="17.协变逆变">17.协变逆变</span>
@@ -433,7 +479,7 @@
         
         
         <a  class="全部文章 C# C#进阶 "
-           href="/2024/12/e51a91354c60.html"
+           href="/2024/12/fa210d88e086.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="6.泛型约束">6.泛型约束</span>
@@ -442,7 +488,7 @@
         
         
         <a  class="全部文章 C# C#进阶 "
-           href="/2024/12/fe7307e1a8ce.html"
+           href="/2024/12/99e2778ef90a.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="5.泛型">5.泛型</span>
@@ -451,7 +497,7 @@
         
         
         <a  class="全部文章 C# C#进阶 "
-           href="/2024/12/a97cd1c3a094.html"
+           href="/2024/12/4bf40c28df14.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="16.List">16.List</span>
@@ -460,7 +506,7 @@
         
         
         <a  class="全部文章 C# C#进阶 "
-           href="/2024/12/808d8cee3906.html"
+           href="/2024/12/8476f87b34b1.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="3.Queue">3.Queue</span>
@@ -469,7 +515,7 @@
         
         
         <a  class="全部文章 C# C#进阶 "
-           href="/2024/12/80d476b31e2e.html"
+           href="/2024/12/b56e7458241b.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="2.Stack">2.Stack</span>
@@ -478,7 +524,7 @@
         
         
         <a  class="全部文章 C# C#进阶 "
-           href="/2024/12/43785e42a40e.html"
+           href="/2024/12/560e3eb9a136.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="1.ArrayList">1.ArrayList</span>
@@ -487,7 +533,7 @@
         
         
         <a  class="全部文章 C# C#进阶 "
-           href="/2024/12/44252a5e3c02.html"
+           href="/2024/12/81aa1916e87b.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="15.lambad表达式">15.lambad表达式</span>
@@ -557,9 +603,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-CShap进阶/17.协变逆变" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-CSharp/CSharp进阶/6.泛型约束" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">17.协变逆变</h1>
+        <h1 class="article-title">6.泛型约束</h1>
     
     <div class="article-meta">
         
@@ -586,7 +632,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-12-19 20:03:49'>2024-12-19 18:58</time>
+            发布时间 : <time class="date" title='最后更新: 2024-12-20 17:53:08'>2024-12-18 21:45</time>
         
     </div>
     <div class="article-meta">
@@ -608,7 +654,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%8F%E5%8F%98%E9%80%86%E5%8F%98%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">协变逆变是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8"><span class="toc-text">作用</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%B3%9B%E5%9E%8B%E7%BA%A6%E6%9D%9F"><span class="toc-text">什么是泛型约束</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%84%E6%B3%9B%E5%9E%8B%E7%BA%A6%E6%9D%9F%E8%AE%B2%E8%A7%A3"><span class="toc-text">各泛型约束讲解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%A6%E6%9D%9F%E7%9A%84%E7%BB%84%E5%90%88%E4%BD%BF%E7%94%A8"><span class="toc-text">约束的组合使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E4%B8%AA%E6%B3%9B%E5%9E%8B%E6%9C%89%E7%BA%A6%E6%9D%9F"><span class="toc-text">多个泛型有约束</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -624,54 +670,141 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="协变逆变是什么"><a href="#协变逆变是什么" class="headerlink" title="协变逆变是什么"></a>协变逆变是什么</h2><p>协变：和谐的变化<br>因为里氏替换原则，父类可以装子类,所以子类变成父类感觉上是和谐的</p>
-<p>逆变：逆常规id变化</p>
-<p>逆变和协变是用来修饰泛型的<br>协变：out<br>逆变：in        记忆：ni&#x3D;&gt;in<br>用于在泛型中修饰泛型字母的<br>只有泛型接口和泛型委托能使用。</p>
-<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>1.返回值 和 参数<br>用out修饰泛型只能作为返回值</p>
-<pre><code class="C#">delegate T TestOut&lt;out T&gt;
+        <h2 id="什么是泛型约束"><a href="#什么是泛型约束" class="headerlink" title="什么是泛型约束"></a>什么是泛型约束</h2><p>让泛型的类型有一定的限制<br>关键之：where；有六种：</p>
+<table>
+<thead>
+<tr>
+<th>限制类型</th>
+<th>写法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>值类型</td>
+<td>where 泛型字母： struct</td>
+</tr>
+<tr>
+<td>引用类型</td>
+<td>where 泛型字母： class<br></td>
+</tr>
+<tr>
+<td>存在无参公共构造函数</td>
+<td>where 泛型字母： new()<br></td>
+</tr>
+<tr>
+<td>某个类本身或者其派生类</td>
+<td>where 泛型字母： 类名<br></td>
+</tr>
+<tr>
+<td>某个接口的派生类型</td>
+<td>where 泛型字母： 接口名<br></td>
+</tr>
+<tr>
+<td>另一个泛型类型本身或者派生类型</td>
+<td>where 泛型字母： 另一个泛型字母<br></td>
+</tr>
+<tr>
+<td>where 泛型字母：（约束的类型）</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="各泛型约束讲解"><a href="#各泛型约束讲解" class="headerlink" title="各泛型约束讲解"></a>各泛型约束讲解</h2><ul>
+<li><input disabled="" type="checkbox"> 值类型约束</li>
+</ul>
+<pre><code class="C#">class Test1&lt;T&gt; where T:struct&#123; 
+    public T value;
 
-interface Test&lt;out T&gt;&#123; 
-    T TestFun();
+    public void TestFun&lt;K&gt;(K v) where K:struct&#123; 
+    
+    &#125;
 &#125;
-</code></pre>
-<p>用in修饰泛型只能作为参数</p>
-<pre><code class="c#">delegate void TestIn&lt;in T&gt;(T t);
-</code></pre>
-<p>2.结合里氏替换原则理解</p>
-<pre><code class="C#">class Father
-&#123;
-
-&#125;
-
-class Son : Father
-&#123;
-
-&#125;
-
-class Program&#123; 
-    static void Main(string[] args)&#123;
-        Console.WriteLine(&quot;协变逆变&quot;);
-        // 协变 父类总是能被子类替换
-        // 这里的TestOut就是上面申明的委托
-        TestOut&lt;Son&gt; os = () =&gt;&#123; 
-            return new Son();
-        &#125;
-        // delegate T TestOut&lt;out T&gt; 加了out就可以根据李氏替换原则来判断
-        // 返回值有无父子关系。就可以下面这么写
-        TestOut&lt;Father&gt; of = os;
-            Father f = of();//实际上返回的是Son类型，Father不能写成Son，但是这里已经是父类装子类了。
-        // 逆变 
-        TestIn&lt;Father&gt; iF = (value) =&gt; 
-        &#123;
-        
-        &#125;;
-
-        TestIn&lt;Son&gt; iS = iF;
-        iS(new Son()); // 实际上调用的是iF，父类的参数装载在了子类里面
+class Program 
+&#123; 
+    static void Main(string[] args)
+    &#123; 
+        // 常用的值类型都是结构体。
+        // 这里面必须填结构体，int就是一个结构体。
+        Test1&lt;int&gt; t1 = new Test1&lt;int&gt;();
+        t1.value = new int();
+        t1.TestFun&lt;float&gt;(1.3f);
     &#125;
 &#125;
 </code></pre>
+<ul>
+<li><input disabled="" type="checkbox"> 引用类型</li>
+</ul>
+<pre><code class="C#">class Test2&lt;T&gt; where T:class&#123; 
+    public T value;
 
+    public void TestFun&lt;K&gt;(K v) where K:class&#123; 
+    
+    &#125;
+&#125;
+
+class Program 
+&#123; 
+    static void Main(string[] args)
+    &#123; 
+        // 类就是引用类型,自定义或者系统自带。
+        // 这里面必须填引用类型。
+        Test1&lt;Random&gt; t2 = new Test1&lt;Random&gt;();
+        t2.value = new Random();
+        t2.TestFun&lt;Random&gt;(1.3f);
+    &#125;
+&#125;
+</code></pre>
+<ul>
+<li><input disabled="" type="checkbox"> 存在无参公共构造函数</li>
+</ul>
+<pre><code class="C#">class Test3&lt;T&gt; where T:new()&#123; 
+    public T value;
+    
+    public void TestFun&lt;K&gt;(K k) where K : new()
+    &#123; 
+    
+    &#125;
+&#125;
+
+class Test1&#123; 
+
+&#125;
+
+// 按理说是支持多个构造函数的，没办法只能先记住
+// 所以还是不能满足存在无参公共构造函数的条件
+class Test2&#123; 
+    public Test2(int a)&#123; 
+    
+    &#125;
+&#125;
+
+// 私有无参构造也不行。
+class Test3&#123; 
+    private Test3()&#123; 
+    
+    &#125;
+&#125;
+
+class Program 
+&#123; 
+    static void Main(string[] args)
+    &#123; 
+        Test3&lt;Test1&gt; t3 = new Test3&lt;Test1&gt;();
+        
+    &#125;
+&#125;
+
+</code></pre>
+<ul>
+<li><p><input disabled="" type="checkbox"> 
+某个类本身或者其派生类</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+某个接口的派生类型</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+另一个泛型类型本身或者派生类型</p>
+</li>
+</ul>
+<h2 id="约束的组合使用"><a href="#约束的组合使用" class="headerlink" title="约束的组合使用"></a>约束的组合使用</h2><h2 id="多个泛型有约束"><a href="#多个泛型有约束" class="headerlink" title="多个泛型有约束"></a>多个泛型有约束</h2>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 2154838055@qq.com </span>
     </div>
