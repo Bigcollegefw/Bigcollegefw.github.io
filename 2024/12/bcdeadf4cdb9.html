@@ -2,22 +2,23 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>5.泛型 | beishangzhajitui</title>
+  <title>19.值类型和引用类型 | beishangzhajitui</title>
   <meta name="keywords" content=" CSharp ">
-  <meta name="description" content="5.泛型 | beishangzhajitui">
+  <meta name="description" content="19.值类型和引用类型 | beishangzhajitui">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="&#x2F;&#x2F; 1. 观察者接口 public interface IObserver &#123;     void Update(int health); &#125;  &#x2F;&#x2F; 2. 主题类（这里模拟玩家对象，它的状态变化会通知观察者） public class PlayerSubject &#123;     private List&lt;IObserver&gt; observers &#x3D; new">
+<meta name="description" content="C# 1.C#中如何让自定义容器类能够使用for循环遍历？（通过 类对象[索引] 的形式遍历）实现索引器。 class MyList &#123;     private int[] _data;     public MyList()     &#123;         _data &#x3D; new int[10];         for (int i &#x3D; 0; i &lt; 10; i++)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="观察者模式">
-<meta property="og:url" content="http://example.com/2024/12/6e69ad42e217.html">
+<meta property="og:title" content="beishangzhajitui">
+<meta property="og:url" content="http://example.com/2024/12/d100ea89a91f.html">
 <meta property="og:site_name" content="beishangzhajitui">
-<meta property="og:description" content="&#x2F;&#x2F; 1. 观察者接口 public interface IObserver &#123;     void Update(int health); &#125;  &#x2F;&#x2F; 2. 主题类（这里模拟玩家对象，它的状态变化会通知观察者） public class PlayerSubject &#123;     private List&lt;IObserver&gt; observers &#x3D; new">
+<meta property="og:description" content="C# 1.C#中如何让自定义容器类能够使用for循环遍历？（通过 类对象[索引] 的形式遍历）实现索引器。 class MyList &#123;     private int[] _data;     public MyList()     &#123;         _data &#x3D; new int[10];         for (int i &#x3D; 0; i &lt; 10; i++)">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-12-20T07:48:54.613Z">
-<meta property="article:modified_time" content="2024-12-20T10:07:36.609Z">
+<meta property="og:image" content="https://scf1a0b4c9d9e6od-sb-qn.qiqiuyun.net/files/course/2024/10-20/102123378189290178.png">
+<meta property="article:published_time" content="2024-12-21T02:12:42.263Z">
+<meta property="article:modified_time" content="2024-12-21T02:15:11.201Z">
 <meta property="article:author" content="beishangzhajitui">
-<meta property="article:tag" content="CSharp">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://scf1a0b4c9d9e6od-sb-qn.qiqiuyun.net/files/course/2024/10-20/102123378189290178.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -154,7 +155,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(21)</small>
+                <small>(26)</small>
             
         </div>
     </li>
@@ -283,7 +284,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="21">
+<input type="hidden" id="yelog_site_posts_number" value="26">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -351,6 +352,51 @@
     <nav id="title-list-nav">
         
         
+        <a  class="全部文章 "
+           href="/2024/12/d100ea89a91f.html"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2024-12-21 10:12:42">2024/12/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2024/12/cf2b94dbc551.html"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2024-12-20 23:26:18">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2024/12/b8a29f3717aa.html"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2024-12-20 19:47:16">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2024/12/5b5f19dd3e86.html"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2024-12-20 19:34:10">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2024/12/4a27464db468.html"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2024-12-20 19:28:49">2024/12/20</span>
+        </a>
+        
+        
         <a  class="全部文章 Unity基础框架 "
            href="/2024/12/6e69ad42e217.html"
            data-tag="CSharp"
@@ -361,7 +407,7 @@
         
         
         <a  class="全部文章 C# C#基础 "
-           href="/2024/12/27de32642486.html"
+           href="/2024/12/2e5680225f17.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="2.ref和out">2.ref和out</span>
@@ -370,7 +416,7 @@
         
         
         <a  class="全部文章 C# C#基础 "
-           href="/2024/12/4d6082558c99.html"
+           href="/2024/12/8560e7368643.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="1.属性和字段">1.属性和字段</span>
@@ -388,7 +434,7 @@
         
         
         <a  class="全部文章 C# C#基础 "
-           href="/2024/12/9616e11707cd.html"
+           href="/2024/12/50804c53923a.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="27.冒泡排序">27.冒泡排序</span>
@@ -397,7 +443,7 @@
         
         
         <a  class="全部文章 C# C#进阶 "
-           href="/2024/12/735c4de4a2e5.html"
+           href="/2024/12/bcdeadf4cdb9.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="19.值类型和引用类型">19.值类型和引用类型</span>
@@ -406,7 +452,7 @@
         
         
         <a  class="全部文章 C# C#进阶 "
-           href="/2024/12/fabf7cba955f.html"
+           href="/2024/12/99d7e4858599.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="18.多线程">18.多线程</span>
@@ -415,7 +461,7 @@
         
         
         <a  class="全部文章 C# C#进阶 "
-           href="/2024/12/e32e5c4c8fc8.html"
+           href="/2024/12/dcef07134c34.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="17.协变逆变">17.协变逆变</span>
@@ -433,7 +479,7 @@
         
         
         <a  class="全部文章 C# C#进阶 "
-           href="/2024/12/e51a91354c60.html"
+           href="/2024/12/fa210d88e086.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="6.泛型约束">6.泛型约束</span>
@@ -442,7 +488,7 @@
         
         
         <a  class="全部文章 C# C#进阶 "
-           href="/2024/12/fe7307e1a8ce.html"
+           href="/2024/12/99e2778ef90a.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="5.泛型">5.泛型</span>
@@ -451,7 +497,7 @@
         
         
         <a  class="全部文章 C# C#进阶 "
-           href="/2024/12/a97cd1c3a094.html"
+           href="/2024/12/4bf40c28df14.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="16.List">16.List</span>
@@ -460,7 +506,7 @@
         
         
         <a  class="全部文章 C# C#进阶 "
-           href="/2024/12/808d8cee3906.html"
+           href="/2024/12/8476f87b34b1.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="3.Queue">3.Queue</span>
@@ -469,7 +515,7 @@
         
         
         <a  class="全部文章 C# C#进阶 "
-           href="/2024/12/80d476b31e2e.html"
+           href="/2024/12/b56e7458241b.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="2.Stack">2.Stack</span>
@@ -478,7 +524,7 @@
         
         
         <a  class="全部文章 C# C#进阶 "
-           href="/2024/12/43785e42a40e.html"
+           href="/2024/12/560e3eb9a136.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="1.ArrayList">1.ArrayList</span>
@@ -487,7 +533,7 @@
         
         
         <a  class="全部文章 C# C#进阶 "
-           href="/2024/12/44252a5e3c02.html"
+           href="/2024/12/81aa1916e87b.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="15.lambad表达式">15.lambad表达式</span>
@@ -557,9 +603,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-CShap进阶/5.泛型" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-CSharp/CSharp进阶/19.值类型和引用类型" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">5.泛型</h1>
+        <h1 class="article-title">19.值类型和引用类型</h1>
     
     <div class="article-meta">
         
@@ -586,7 +632,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-12-19 07:57:55'>2024-12-18 19:18</time>
+            发布时间 : <time class="date" title='最后更新: 2024-12-20 19:25:02'>2024-12-19 21:26</time>
         
     </div>
     <div class="article-meta">
@@ -608,7 +654,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">泛型是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E5%88%86%E7%B1%BB"><span class="toc-text">泛型分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3"><span class="toc-text">泛型类和接口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E6%96%B9%E6%B3%95"><span class="toc-text">泛型方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-text">泛型的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0"><span class="toc-text">练习</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%80%BC%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">值类型和引用类型的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8BString"><span class="toc-text">特殊引用类型String</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E6%8F%90%E5%9B%9E%E9%A1%BE"><span class="toc-text">前提回顾</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E6%98%AF%E5%80%BC%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B"><span class="toc-text">如何判断是值类型和引用类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E5%8F%A5%E5%9D%97"><span class="toc-text">语句块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-text">变量的生命周期</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -624,188 +670,54 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="泛型是什么"><a href="#泛型是什么" class="headerlink" title="泛型是什么"></a>泛型是什么</h2><p>泛型实现了类型参数化，达到代码重用的目的<br>泛型相当于类型占位符<br>定义类或方法时使用替代符代表变量类型<br>当真正使用类或方法时再具体指定类型</p>
-<h2 id="泛型分类"><a href="#泛型分类" class="headerlink" title="泛型分类"></a>泛型分类</h2><p>泛型类和泛型接口：基本语法</p>
-<pre><code>class 类名&lt;泛型占位字母&gt;
-interface 接口名&lt;泛型占位字母&gt;
-</code></pre>
-<p>泛型函数：基本语法</p>
-<pre><code>函数名&lt;泛型占位字母&gt;（参数列表）
-</code></pre>
-<p>泛型占位字母可以有多个，用逗号隔开</p>
-<h2 id="泛型类和接口"><a href="#泛型类和接口" class="headerlink" title="泛型类和接口"></a>泛型类和接口</h2><p>被申明和继承的时候&lt;&gt;里的内容都要被填写出来。</p>
-<pre><code class="C#">class TestClass&lt;T&gt;&#123;
-    public T value;
-&#125;
-
-class Program 
-&#123; 
-    static void Main(string[] args)
-    &#123; 
-        Console.WriteLine(&quot;泛型&quot;);
-        // 这里的T决定value的数据类型。
-        TestClass&lt;int&gt; t = new TestClass&lt;int&gt;();
-        t.value = 10;
-        Console.WriteLine(t.value);
-    &#125;
-&#125;
-
-interface TestInterface&lt;T&gt;
-&#123; 
-    // 这里的get和set方法是接口定义的属性。接口中的属性声明只包含访问器（`get`和`set`），而没有实现。实现类必须同时实现这两个访问器。
-    T value
-    &#123; 
-        get;
-        set;
-    &#125;
-&#125;
-
-class MyClass : TestInterface&lt;double&gt;
-&#123;
-    private double _value;
-    public double value
-    &#123;
-        get &#123; return _value; &#125;
-        set &#123; _value = value; &#125;
-    &#125;
-&#125;
-</code></pre>
-<h2 id="泛型方法"><a href="#泛型方法" class="headerlink" title="泛型方法"></a>泛型方法</h2><ul>
-<li><input disabled="" type="checkbox"> 普通类中的泛型方法</li>
+        <h2 id="值类型和引用类型的区别"><a href="#值类型和引用类型的区别" class="headerlink" title="值类型和引用类型的区别"></a>值类型和引用类型的区别</h2><ul>
+<li><input disabled="" type="checkbox"> 使用上的区别</li>
 </ul>
-<pre><code class="C#">class Test2&#123;
-    // 做参数的
-    public void TestFun&lt;T&gt;(T value)&#123; 
-        Console.WriteLine(value);
-    &#125;
+<pre><code class="C#">值类型
+int a = 10;
+引用类型
+int arr = new int[]&#123;1,2,2,4&#125;;
 
-    // 不做参数的
-    public void TestFun&lt;T&gt;()&#123; 
-        // 用泛型类型做一些逻辑处理
-        T t = deFault(T);
-    &#125;
+int b = a;
+int[] arr2 = arr;
 
-    // 作为返回值
-    public T TestFun&lt;T&gt;(string v)&#123; 
-        return default(T);
-    &#125;
-&#125;
+Console.WriteLine(&quot;a = &#123;0&#125;,b = &#123;1&#125;&quot;,a,b);
+Console.WriteLine(&quot;arr[0] = &#123;0&#125;,arr2[0] = &#123;1&#125;&quot;,arr[0],arr2[0]);
 
-class Program 
-&#123; 
-    static void Main(string[] args)
-    &#123; 
-        Console.WriteLine(&quot;泛型&quot;);
-        Test2 tt = new Test2();
-        // 这里的&lt;string&gt;可以省略，推荐加上
-        tt.TestFun&lt;string&gt;(&quot;123456&quot;)
-    &#125;
-&#125;
+b = 20;
+arr2[0] = 5;
+Console.WriteLine(&quot;修改后的b和arr2[0]之后&quot;);
+Console.WriteLine(&quot;a = &#123;0&#125;,b = &#123;1&#125;&quot;,a,b);// b变a不变
+Console.WriteLine(&quot;arr[0] = &#123;0&#125;,arr2[0] = &#123;1&#125;&quot;,arr[0],arr2[0]); //都变。
+
 </code></pre>
 <ul>
-<li><input disabled="" type="checkbox"> 泛型类中的泛型方法</li>
+<li><input disabled="" type="checkbox"> 为什么会有以上区别。<br>引用类型相互赋值会让两者指向同一个值，它变我也变。值类型则是将内容拷贝给对方。<br>值类型和引用类型存储在的内存区域是不同的。存储方式不同。</li>
 </ul>
-<pre><code class="C#">class Test2&lt;T&gt;&#123; 
-    public T value;
-
-    // 这便是泛型类中的泛型方法
-    public void TestFun&lt;K&gt;(K k)&#123; 
-        Console.WriteLine(k);	
-    &#125;
-
-    // 这里这个不叫泛型方法，因为T是类申明时候指定的，这里不能动态变化。
-    public void TestFun(T t)&#123; 
-    
-    &#125;
-&#125;
+<p>值类型存储在栈空间——是系统分配的内存空间，小而快<br>引用类型存储在堆空间，存在栈上的是指向堆空间的地址——手动申请和释放，大而快。<br><img src="/../../../img/beishang20241220113621739.png"></p>
+<pre><code class="C#">arr2 = new int[]&#123;99,3,2,1&#125;;
+// new就是开了新房间，和之前没关系了。
+Console.WriteLine(&quot;arr[0] = &#123;0&#125;,arr2[0] = &#123;1&#125;&quot;,arr[0],arr2[0]); 
 </code></pre>
-<h2 id="泛型的作用"><a href="#泛型的作用" class="headerlink" title="泛型的作用"></a>泛型的作用</h2><p>1.不同类型对象的相同逻辑处理可以选择泛型<br>2.使用泛型可以一定程度避免装箱拆箱</p>
-<p>eg:优化ArrayList</p>
-<pre><code class="C#">class ArrayList&lt;T&gt;
+<p><img src="/../../../img/beishang20241220114331077.png"></p>
+<h2 id="特殊引用类型String"><a href="#特殊引用类型String" class="headerlink" title="特殊引用类型String"></a>特殊引用类型String</h2><p>C#对String进行了一个特殊处理，具备值类型的特征，它变我不变。<br><img src="/../../../img/beishang20241220120315831.png"><br>所以频繁的使用string重新赋值会产生内存垃圾<br>优化方案：todo</p>
+<h2 id="前提回顾"><a href="#前提回顾" class="headerlink" title="前提回顾"></a>前提回顾</h2><p>值类型<br>无符号：byte,ushort,uint,ulong<br>有符号：sbyte,short,int,long<br>浮点数：float,double,decimal<br>特殊：char,bool<br>枚举：enum<br>结构体：struct</p>
+<p>引用类型<br>string<br>数组<br>class<br>interface<br>委托</p>
+<p>本质区别：<br>值类型的具体引用是在栈内存上<br>引用类型的具体内容是在堆内存上，在栈上面存的是地址，指向堆内存上的内容。</p>
+<h2 id="如何判断是值类型和引用类型"><a href="#如何判断是值类型和引用类型" class="headerlink" title="如何判断是值类型和引用类型"></a>如何判断是值类型和引用类型</h2><p>进到类的内部去看如果<br>是class就是引用<br>是struct就是值<br>还可以根据编译器的颜色，如vs中类是绿色</p>
+<h2 id="语句块"><a href="#语句块" class="headerlink" title="语句块"></a>语句块</h2><p>上层语句块：类，结构体<br>中层语句块：函数<br>底层语句块：条件分支 循环等</p>
+<p>逻辑代码写在函数，条件分支，循环等中底层语句块中</p>
+<p>我们的变量可以申明在：<br>上层语句块中：成员变量<br>中，底层语句块中：临时变量</p>
+<h2 id="变量的生命周期"><a href="#变量的生命周期" class="headerlink" title="变量的生命周期"></a>变量的生命周期</h2><p>语句块执行结束时<br>没有被记录的对象将被回收或变成垃圾<br>值类型：被系统自动回收<br>引用类型：栈上用于存地址的房间被系统自动回收，堆中具体内容变成垃圾，带系统GC</p>
+<pre><code class="C#">// 这里的b在语句块中，执行完之后就会在栈中被弹出
+// 所以Console.WriteLine(b);会报错
+// 所以语句块中的临时变量要经常进出栈，所以消耗大。
 &#123;
-    private T[] array;
-    //当前数组中元素的数量
-    private int count;
-    //初始容量`InitialCapacity`
-    private const int InitialCapacity = 4;
-
-    public ArrayList()
-    &#123;
-        array = new T[InitialCapacity];
-        count = 0;
-    &#125;
-
-    public void Add(T value)
-    &#123;
-        if (count == array.Length)
-        &#123;
-            // 数组已满，扩容
-            T[] newArray = new T[array.Length * 2];
-            Array.Copy(array, newArray, array.Length);
-            array = newArray;
-        &#125;
-        array[count] = value;
-        count++;
-    &#125;
-    public void Remove(T value)
-    &#123;
-        //找到要移除元素的索引
-        int index = Array.IndexOf(array, value);
-        if (index &gt;= 0)
-        &#123;
-            //索引之后的元素向前移动一位
-            for (int i = index; i &lt; count - 1; i++)
-            &#123;
-                array[i] = array[i + 1];
-            &#125;
-            count--;
-            //将原数组末尾的元素设置为默认值（`default(T)`）
-            //确保被移除元素所占用的内存位置不会持有无效或过时的数据。
-            array[count] = default(T);
-        &#125;
-    &#125;
+    int b = 1;
 &#125;
+Console.WriteLine(b);
 </code></pre>
-<h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h2><p>按照要求判断类型并返回类型名称和占用字节数</p>
-<pre><code class="C#">using System;
-
-class Program
-&#123;
-    static void Main()
-    &#123;
-        Console.WriteLine(GetTypeInfo&lt;int&gt;());
-        Console.WriteLine(GetTypeInfo&lt;char&gt;());
-        Console.WriteLine(GetTypeInfo&lt;float&gt;());
-        Console.WriteLine(GetTypeInfo&lt;string&gt;());
-        Console.WriteLine(GetTypeInfo&lt;decimal&gt;());
-    &#125;
-
-    static string GetTypeInfo&lt;T&gt;()
-    &#123;
-        Type type = typeof(T);
-        if (type == typeof(int))
-        &#123;
-            return &quot;整型，4字节&quot;;
-        &#125;
-        else if (type == typeof(char))
-        &#123;
-            return &quot;字符，2字节&quot;;
-        &#125;
-        else if (type == typeof(float))
-        &#123;
-            return &quot;单精度浮点数，4字节&quot;;
-        &#125;
-        else if (type == typeof(string))
-        &#123;
-            return &quot;字符串&quot;;
-        &#125;
-        else
-        &#123;
-            return &quot;其它类型&quot;;
-        &#125;
-    &#125;
-&#125;
-</code></pre>
+<p>想要不被回收或者不变垃圾，需要将其记录下来<br>使用更高层级记录或者使用静态全局变量（可以不是自己类里的）记录。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 2154838055@qq.com </span>

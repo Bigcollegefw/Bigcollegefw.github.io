@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>beishangzhajitui</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="beishangzhajitui">
+  <title>18.多线程 | beishangzhajitui</title>
+  <meta name="keywords" content=" CSharp ">
+  <meta name="description" content="18.多线程 | beishangzhajitui">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="C# 1.C#中如何让自定义容器类能够使用for循环遍历？（通过 类对象[索引] 的形式遍历）实现索引器。 class MyList &#123;     private int[] _data;     public MyList()     &#123;         _data &#x3D; new int[10];         for (int i &#x3D; 0; i &lt; 10; i++)">
 <meta property="og:type" content="article">
@@ -58,7 +58,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -601,12 +601,60 @@
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-CSharp/CSharp进阶/18.多线程" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Blog"><span class="toc-text">Why Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E6%88%91"><span class="toc-text">关于我</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E7%9B%AE%E5%89%8D"><span class="toc-text">博客目前</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
+        <h1 class="article-title">18.多线程</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="C#">C#</a> > 
+            
+            <a  data-rel="C#&lt;---&gt;C#进阶">C#进阶</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">CSharp</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2024-12-19 21:23:25'>2024-12-19 20:01</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%86%E8%A7%A3%E8%BF%9B%E7%A8%8B"><span class="toc-text">了解进程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E7%BA%BF%E7%A8%8B"><span class="toc-text">什么是线程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="toc-text">什么是多线程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E7%9B%B8%E5%85%B3"><span class="toc-text">语法相关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E4%B9%8B%E9%97%B4%E5%85%B1%E4%BA%AB%E6%95%B0%E6%8D%AE"><span class="toc-text">线程之间共享数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%AF%B9%E4%BA%8E%E6%88%91%E4%BB%AC%E7%9A%84%E6%84%8F%E4%B9%89"><span class="toc-text">多线程对于我们的意义</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -619,30 +667,136 @@
     }
 </style>
 </div>
-            <h1 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog"></a>Why Blog</h1><h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><!-- **beishangzhajitui** 是一段拼音。 -->
-<p>本科在读，正在学习Unity游戏开发，希望我的一些内容能帮到你，其余先不过多介绍了。</p>
-<p>打开这个博客加载完成后如果点什么都没有反应，不要着急刷新，多挂一会就好了。</p>
-<p>目的虽有，却无路可循；我们称之为路的，无非是踌躇。</p>
-<h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。</p>
-<p>通过博客，我们可以记录自己的生活和成长的轨迹。它不像 Twitter 那样碎片化，也不像 Facebook 那样关系化，它是私人的空间。</p>
-<h2 id="博客目前"><a href="#博客目前" class="headerlink" title="博客目前"></a>博客目前</h2><p><strong>beishangzhajitui</strong> 是*****的拼音。</p>
-<p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
-<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 生成，部署在 <a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a>主题 <a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a> 已经在github上开源</p>
-<p>有什么事情可以找我，大事帮不了，小事不一定帮，但肯定回复:<br>qq:2154838055<br>邮箱:<a href="mailto:&#x32;&#x31;&#x35;&#52;&#56;&#x33;&#x38;&#48;&#53;&#53;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#109;">&#x32;&#x31;&#x35;&#52;&#56;&#x33;&#x38;&#48;&#53;&#53;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#109;</a></p>
-<p>主要功能：</p>
-<ul>
-<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
-<li>页面全局快捷键 <a target="_blank" rel="noopener" href='http://yelog.org/2017/03/24/3-hexo-shortcuts/'>3-hexo快捷键说明</a></li>
-</ul>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="了解进程"><a href="#了解进程" class="headerlink" title="了解进程"></a>了解进程</h2><p>进程是计算机中的程序关于某数据集合上的一次运行活动。<br>是系统进行资源分配和调度的基本单位，是操作系统结构的基础</p>
+<p>打开一个应用程序后就是在操作系统上开启了一个进程<br>进程之间相互独立运行，互不干扰<br>进程之间也可以相互访问，操作。</p>
+<h2 id="什么是线程"><a href="#什么是线程" class="headerlink" title="什么是线程"></a>什么是线程</h2><p>操作系统能够进行运算调度的最小单位<br>它被包含在进程之中，是进程中实际运作单位<br>一条线程指的是进程中一个单一顺序的控制流，一个进程中可以并发多个线程<br>目前我们写的程序都是在主线程中。</p>
+<p>代码从上到下运行的一条“管道”</p>
+<h2 id="什么是多线程"><a href="#什么是多线程" class="headerlink" title="什么是多线程"></a>什么是多线程</h2><p>我们可以通过代码开启新的线程<br>可以同时运行代码的多条“管道”就是多线程</p>
+<h2 id="语法相关"><a href="#语法相关" class="headerlink" title="语法相关"></a>语法相关</h2><p>线程类 Thread 在using System.Threading；中<br>1.申明一个新的线程<br> 线程执行的代码，需要封装到一个委托的函数中。<br> 2.启动线程</p>
+<pre><code class="C#">class Program 
+&#123; 
+    static void Main(string[] args)
+    &#123; 
+        Thread t = new Thread(NewThreadLogic);
+        // 启动线程
+        t.Start();
+        // 设置为后台进程
+        t.IsBackGround = true;
+        
+    &#125;
+    static void NewThreadLogic()&#123; 
+        // 新开线程执行的代码逻辑在该语句块中
+        Console.WriteLine(&quot;多线程&quot;)；
+    &#125;
+&#125;
+</code></pre>
+<p>3.设置为后台进程<br>默认开启的线程为前台线程，设置后前台进程结束，整个程序 也就结束了。<br>如果不设置后台线程，可能会导致进程无法正常关闭。</p>
+<p>4.关闭释放一个线程<br>如果不是死循环，是能够结束的逻辑，那么不用刻意关闭<br>如果是死循环，想要中止<br>方法一：死循环中的bool标识</p>
+<pre><code class="C#">class Program 
+&#123;   static bool isRunning = true;
+    static void Main(string[] args)
+    &#123; 
+        Thread t = new Thread(NewThreadLogic);
+        // 启动线程
+        t.Start();
+        // 设置为后台进程
+        t.IsBackGround = true;
+        // 方法1
+        isRunnig = false;
+        // 方法2
+        try&#123;
+            t.Abort();
+            t = null;
+        &#125;
+    &#125;
+    static void NewThreadLogic()&#123; 
+        // 新开线程执行的代码逻辑在该语句块中
+        while(isRunning)
+        &#123;
+            Console.WriteLine(&quot;多线程&quot;);
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p>方法二：通过线程提供的方法(在.Net core版本中无法中止会报错。)</p>
+<p>5.线程的休眠<br>让线程休眠多少毫秒 1s &#x3D; 1000ms<br>在哪个线程里执行就会休眠哪个线程</p>
+<pre><code class="C#">class Program 
+&#123; 
+    static void Main(string[] args)
+    &#123; 
+        Thread t = new Thread(NewThreadLogic);
+        // 启动线程
+        t.Start();
+        // 设置为后台进程
+        t.IsBackGround = true;
+        Thread.Sleep(1000);
+        
+    &#125;
+    static void NewThreadLogic()&#123; 
+        // 新开线程执行的代码逻辑在该语句块中
+        Console.WriteLine(&quot;多线程&quot;)；
+        Thread.Sleep(1000);
+    &#125;
+&#125;
+</code></pre>
+<h2 id="线程之间共享数据"><a href="#线程之间共享数据" class="headerlink" title="线程之间共享数据"></a>线程之间共享数据</h2><p>多个线程使用的内存是共享的，都属于该应用程序（进程0）<br>多线程同时操作同一片内存区域时会出现问题<br>可以通过加锁的形式避免。</p>
+<p>lock(引用类型对象)，，锁会影响线程执行的效率。</p>
+<pre><code class="C#">class Program 
+&#123; 
+    static object obj = new object();
+    static void Main(string[] args)
+    &#123; 
+        Thread t = new Thread(NewThreadLogic);
+        // 启动线程
+        t.Start();
+        // 设置为后台进程
+        t.IsBackGround = true;
+        while (true)&#123;
+            // 等锁完了再执行lock里面的语句块。
+            lock(obj)&#123; 
+                Console.SetCursorPosition(0,0);
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write(&quot;*&quot;);
+            &#125;
+        &#125;
+    &#125;
+    static void NewThreadLogic()&#123; 
+        // 新开线程执行的代码逻辑在该语句块中
+        while (true)&#123;
+            lock(obj)&#123;
+                Console.SetCursorPosition(0,0);
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.Write(&quot;#&quot;);			
+            &#125;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<h2 id="多线程对于我们的意义"><a href="#多线程对于我们的意义" class="headerlink" title="多线程对于我们的意义"></a>多线程对于我们的意义</h2><p>专门来处理一些复杂耗时的逻辑<br>比如寻路，网络通信。</p>
 
-        </article>
-        
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 2154838055@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -651,11 +805,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 <div class="hide_box" onclick="dashangToggle()"></div>

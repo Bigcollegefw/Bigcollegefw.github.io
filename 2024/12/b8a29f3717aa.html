@@ -58,7 +58,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -601,12 +601,41 @@
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-CSharp/CSharp核心/23.Object中的方法" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Blog"><span class="toc-text">Why Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E6%88%91"><span class="toc-text">关于我</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E7%9B%AE%E5%89%8D"><span class="toc-text">博客目前</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
+    <div class="article-meta">
+        
+        
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2024-12-20 21:48:39'>2024-12-20 19:47</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%87%E7%89%A9%E4%B9%8B%E7%88%B6"><span class="toc-text">万物之父</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Object%E4%B8%AD%E7%9A%84%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95"><span class="toc-text">Object中的静态方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Object%E4%B8%AD%E7%9A%84%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95"><span class="toc-text">Object中的成员方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Object%E4%B8%AD%E7%9A%84%E8%99%9A%E6%96%B9%E6%B3%95"><span class="toc-text">Object中的虚方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0"><span class="toc-text">练习</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -619,30 +648,213 @@
     }
 </style>
 </div>
-            <h1 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog"></a>Why Blog</h1><h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><!-- **beishangzhajitui** 是一段拼音。 -->
-<p>本科在读，正在学习Unity游戏开发，希望我的一些内容能帮到你，其余先不过多介绍了。</p>
-<p>打开这个博客加载完成后如果点什么都没有反应，不要着急刷新，多挂一会就好了。</p>
-<p>目的虽有，却无路可循；我们称之为路的，无非是踌躇。</p>
-<h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。</p>
-<p>通过博客，我们可以记录自己的生活和成长的轨迹。它不像 Twitter 那样碎片化，也不像 Facebook 那样关系化，它是私人的空间。</p>
-<h2 id="博客目前"><a href="#博客目前" class="headerlink" title="博客目前"></a>博客目前</h2><p><strong>beishangzhajitui</strong> 是*****的拼音。</p>
-<p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
-<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 生成，部署在 <a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a>主题 <a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a> 已经在github上开源</p>
-<p>有什么事情可以找我，大事帮不了，小事不一定帮，但肯定回复:<br>qq:2154838055<br>邮箱:<a href="mailto:&#x32;&#x31;&#x35;&#52;&#56;&#x33;&#x38;&#48;&#53;&#53;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#109;">&#x32;&#x31;&#x35;&#52;&#56;&#x33;&#x38;&#48;&#53;&#53;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#109;</a></p>
-<p>主要功能：</p>
-<ul>
-<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
-<li>页面全局快捷键 <a target="_blank" rel="noopener" href='http://yelog.org/2017/03/24/3-hexo-shortcuts/'>3-hexo快捷键说明</a></li>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="万物之父"><a href="#万物之父" class="headerlink" title="万物之父"></a>万物之父</h2><p>万物之父Object是所有类型的基类，是一个引用类型，可以用里氏替换原则装载一切对象</p>
+<h2 id="Object中的静态方法"><a href="#Object中的静态方法" class="headerlink" title="Object中的静态方法"></a>Object中的静态方法</h2><ul>
+<li><p><input disabled="" type="checkbox"> 
+静态方法Equal<br> 用于判断两个对象是否相等，判断值类型是否相等，引用类型是判断他们的地址是否相等。</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+静态方法ReferenceEquals<br>用来比较引用类型对象，比较的是地址，不能比较值类型对象，始终返回false;</p>
+</li>
 </ul>
+<h2 id="Object中的成员方法"><a href="#Object中的成员方法" class="headerlink" title="Object中的成员方法"></a>Object中的成员方法</h2><ul>
+<li><input disabled="" type="checkbox"> 普通方法GetType<br>该方法在反射知识点中是非常重要的方法。<br>该方法的主要作用就是获取对象运行时的类型Type<br>结合反射相关知识可以做很多关于对象的操作</li>
+</ul>
+<pre><code class="C#">// 假设上面定义了一个Test的类。
+Test t = new Test();
+Type type = t.GetType();
+</code></pre>
+<ul>
+<li><input disabled="" type="checkbox"> 普通方法MemberwiseClone</li>
+</ul>
+<pre><code class="C#">class Test&#123; 
+    // `i`的值（`1`）是存储在堆中的对象内部的。
+    // 这里的int i不在栈上面存。会在托管堆
+    public int i = 1;
+    public Test2 t2 = new Test2();
+    // 在Object中是保护类型
+    public Test Clone()&#123;
+        return MemberwiseClone() as Test;
+    &#125;
+&#125;
+class Test2&#123;
+    public int i = 2;
+&#125;
 
-        </article>
+class Program&#123;
+    static void Main(string[] args)&#123; 
+        Console.WriteLine(&quot;万物之父中的方法&quot;);
         
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
+        Test t = new Test();
         
+        Test t2Clone = t.Clone();
         
+        Console.WriteLine(&quot;克隆对象后&quot;);
+        Console.WriteLine(t.i);
+        Console.WriteLine(t.t2.i);
+        Console.WriteLine(t2Clone.i);
+        Console.WriteLine(t2Clone.t2.i);
+    
+        t2Clone.i = 20;
+        t2Clone.t2.i = 21;
+        Console.WriteLine(&quot;改变克隆体信息后&quot;);
+        Console.WriteLine(t.i);
+        Console.WriteLine(t.t2.i);
+        Console.WriteLine(t2Clone.i);
+        Console.WriteLine(t2Clone.t2.i);
+    &#125;
+&#125;
+</code></pre>
+<p><img src="/../../../img/beishang20241220203210807.png"></p>
+<p>这里的 <code>Clone</code> 方法使用了 <code>MemberwiseClone</code> 进行浅拷贝，它会创建一个新的 <code>Test</code> 类对象，新对象中的i成员，会复制原对象对应的值，也就是 <code>t2Clone</code> 的 <code>i</code> 值初始为 <code>1</code>；而对于引用类型成员（此处的 <code>t2</code>），只是复制了引用，意味着 <code>t2Clone</code> 的 <code>t2</code> 成员和 <code>t</code> 的 <code>t2</code> 成员指向的是同一个 <code>Test2</code> 类对象实例。</p>
+<p><code>t2Clone.t2.i = 21;</code> 时，由于 <code>t2Clone</code> 的 <code>t2</code> 成员和 <code>t</code> 的 <code>t2</code> 成员指向同一个 <code>Test2</code> 类对象，所以对这个共享的 <code>Test2</code> 类对象中的 <code>i</code> 值进行修改后，通过 <code>t</code> 或者 <code>t2Clone</code> 去访问该 <code>Test2</code> 类对象的 <code>i</code> 值都会变为 <code>21</code>。</p>
+<p>该方法用于获取对象的浅拷贝对象，就是会返回一个新的对象，但是只拷贝了栈上面的内容，就会拷贝到指向堆的那个地址，堆上面的内容没变，还是能够通过地址访问到。</p>
+<p>值类型int 等等都是在要执行具体逻辑的那个类中比如static void Main(string[] args)才会存在栈上面，而在类中申明的值类型变量不会，而是在类被实例化出来的时候会存在堆上。</p>
+<h2 id="Object中的虚方法"><a href="#Object中的虚方法" class="headerlink" title="Object中的虚方法"></a>Object中的虚方法</h2><ul>
+<li><input disabled="" type="checkbox"> Equals方法</li>
+</ul>
+<pre><code class="C#">public override bool Equals(object obj)&#123; 
+    return base.Equals(obj)
+&#125;
+</code></pre>
+<ul>
+<li><input disabled="" type="checkbox"> GetHashCode方法</li>
+</ul>
+<pre><code class="C#">public override int GetHashCode()&#123; 
+    // 几乎不重写
+    return base.GetHashCode();
+&#125;
+</code></pre>
+<ul>
+<li><input disabled="" type="checkbox"> ToString()方法</li>
+</ul>
+<pre><code class="C#">public override string ToString()&#123;
+    return base.ToString();
+&#125;
+</code></pre>
+<h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h2><p>一个Monster类的引用对象A，Monster类有攻击力、防御力、血量、技能ID等属性。我想复制一个和A对象一模一样的B对象。并且改变了B的属性，A不会受到影响。请问如何实现？<br>思路：用浅拷贝或者深拷贝。</p>
+<pre><code class="C#">using System;
+
+class Monster
+&#123;
+    public int Attack &#123; get; set; &#125;
+    public int Defense &#123; get; set; &#125;
+    public int Health &#123; get; set; &#125;
+    public int SkillID &#123; get; set; &#125;
+
+    // 自定义克隆方法
+    public Monster Clone()
+    &#123;
+        // 使用MemberwiseClone进行浅拷贝
+        Monster clone = (Monster)this.MemberwiseClone();
+        // 如果有引用类型属性，需要在这里进行深拷贝处理
+        // 例如，如果有一个List&lt;int&gt;类型的属性，如下处理
+        // clone.ListProperty = new List&lt;int&gt;(this.ListProperty);
+        return clone;
+    &#125;
+&#125;
+
+class Program
+&#123;
+    static void Main()
+    &#123;
+        Monster A = new Monster
+        &#123;
+            Attack = 10,
+            Defense = 5,
+            Health = 100,
+            SkillID = 1
+        &#125;;
+
+        Monster B = A.Clone();
+        B.Attack = 20;
+
+        Console.WriteLine($&quot;A的攻击力: &#123;A.Attack&#125;&quot;);
+        Console.WriteLine($&quot;B的攻击力: &#123;B.Attack&#125;&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p>用深拷贝就实现ICloneable接口，（实现接口更加有范）</p>
+<pre><code class="C#">using System;
+
+// Monster类
+class Monster : ICloneable
+&#123;
+    public int Attack &#123; get; set; &#125;
+    public int Defense &#123; get; set; &#125;
+    public int Health &#123; get; set; &#125;
+    public int SkillID &#123; get; set; &#125;
+    public List&lt;int&gt; SkillDamageList &#123; get; set; &#125;
+
+    // 实现ICloneable接口的Clone方法
+    public object Clone()
+    &#123;
+        // 对Monster对象进行深拷贝
+        Monster clone = new Monster
+        &#123;
+            Attack = this.Attack,
+            Defense = this.Defense,
+            Health = this.Health,
+            SkillID = this.SkillID
+        &#125;;
+        // 处理List&lt;int&gt;类型的属性
+        if (this.SkillDamageList!= null)
+        &#123;
+            clone.SkillDamageList = new List&lt;int&gt;(this.SkillDamageList);
+        &#125;
+        return clone;
+    &#125;
+&#125;
+
+class Program
+&#123;
+    static void Main()
+    &#123;
+        // 创建Monster对象A
+        Monster A = new Monster
+        &#123;
+            Attack = 10,
+            Defense = 5,
+            Health = 100,
+            SkillID = 1
+        &#125;;
+
+        // 复制A得到B
+        Monster B = (Monster)A.Clone();
+
+        // 修改B的属性
+        B.Attack = 20;
+
+        // 输出A和B的属性
+        Console.WriteLine($&quot;A的攻击力: &#123;A.Attack&#125;&quot;);
+        Console.WriteLine($&quot;B的攻击力: &#123;B.Attack&#125;&quot;);
+    &#125;
+&#125;
+</code></pre>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 2154838055@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -651,11 +863,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 <div class="hide_box" onclick="dashangToggle()"></div>
