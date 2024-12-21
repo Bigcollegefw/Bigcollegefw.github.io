@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/面试/面试题5.md",
+                "file": "source/_posts/面试/面试题6.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "面试题5"
+              "title": "面试题6"
             }
           }
         ]
@@ -149,10 +149,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/面试/面试题5.md"
+                "file": "source/_posts/面试/面试题6.md"
               },
               "icon": "lucide-list",
-              "title": "面试题5 的大纲"
+              "title": "面试题6 的大纲"
             }
           },
           {
@@ -187,6 +187,12 @@
   },
   "active": "a17f8b1a7941bc29",
   "lastOpenFiles": [
+    "source/_posts/面试/面试题5.md",
+    "source/_posts/面试/面试题6.md",
+    "source/_posts/面试/面试题4.md",
+    "source/_posts/面试/面试题3.md",
+    "source/_posts/面试/面试题2.md",
+    "source/_posts/面试/面试题1.md",
     "source/_posts/CSharp/CSharp核心/23.Object中的方法.md",
     "source/_posts/CSharp/CSharp进阶/1.ArrayList.md",
     "source/_posts/CSharp/CSharp进阶/2.Stack.md",
@@ -201,11 +207,6 @@
     "source/_posts/CSharp/CSharp基础/1.属性和字段.md",
     "source/_posts/CSharp/CSharp基础/27.冒泡排序.md",
     "source/_posts/CSharp/CSharp基础/2.ref和out.md",
-    "source/_posts/面试/面试题5.md",
-    "source/_posts/面试/面试题4.md",
-    "source/_posts/面试/面试题3.md",
-    "source/_posts/面试/面试题2.md",
-    "source/_posts/面试/面试题1.md",
     "source/img/beishang20241220203210807.png",
     "source/img/beishang20241220203045487.png",
     "source/_posts/CSharp/CSharp核心",
@@ -231,7 +232,6 @@
     "public/img/beishang20241207165731828.png",
     "public/img/beishang20241207185041122.png",
     "public/img/beishang20241207184721397.png",
-    "public/img/beishang20241207171541991.png",
-    "source/about.md"
+    "public/img/beishang20241207171541991.png"
   ]
 }
