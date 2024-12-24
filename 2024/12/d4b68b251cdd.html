@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>beishangzhajitui</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="beishangzhajitui">
+  <title>7.静态成员 | beishangzhajitui</title>
+  <meta name="keywords" content=" CSharp ">
+  <meta name="description" content="7.静态成员 | beishangzhajitui">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="静态类概念：用static修饰的类 特点：只能包含静态成员，不能被实例化 作用：1.将常用的静态成员写在静态类中方便使用2.静态类不能被实例化，更能体现工具类的唯一性 static class TestStatic &#123;     &#x2F;&#x2F; 静态成员变量     public static int testIndex &#x3D; 0;     &#x2F;&#x2F; 静态成员方法     public static vo">
 <meta property="og:type" content="article">
@@ -57,7 +57,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -646,12 +646,60 @@
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-CSharp/CSharp核心/7.静态成员" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Blog"><span class="toc-text">Why Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E6%88%91"><span class="toc-text">关于我</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E7%9B%AE%E5%89%8D"><span class="toc-text">博客目前</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
+        <h1 class="article-title">7.静态成员</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="C#">C#</a> > 
+            
+            <a  data-rel="C#&lt;---&gt;C#核心">C#核心</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">CSharp</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2024-12-24 11:47:24'>2024-12-23 21:11</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E6%88%90%E5%91%98%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">静态成员的基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%9D%99%E6%80%81%E6%88%90%E5%91%98"><span class="toc-text">自定义静态成员</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E7%82%B9%E5%87%BA%E6%9D%A5%E4%BD%BF%E7%94%A8"><span class="toc-text">为什么可以直接点出来使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E5%87%BD%E6%95%B0%E4%B8%AD%E4%B8%8D%E8%83%BD%E4%BD%BF%E7%94%A8%E9%9D%9E%E9%9D%99%E6%80%81%E6%88%90%E5%91%98"><span class="toc-text">静态函数中不能使用非静态成员</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%9E%E9%9D%99%E6%80%81%E5%87%BD%E6%95%B0%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E9%9D%99%E6%80%81%E6%88%90%E5%91%98"><span class="toc-text">非静态函数可以使用静态成员</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E6%88%90%E5%91%98%E5%AF%B9%E4%BA%8E%E6%88%91%E4%BB%AC%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-text">静态成员对于我们的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F%E5%92%8C%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F"><span class="toc-text">常量和静态变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0"><span class="toc-text">练习</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -664,30 +712,112 @@
     }
 </style>
 </div>
-            <h1 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog"></a>Why Blog</h1><h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><!-- **beishangzhajitui** 是一段拼音。 -->
-<p>本科在读，正在学习Unity游戏开发，希望我的一些内容能帮到你，其余先不过多介绍了。</p>
-<p>打开这个博客加载完成后如果点什么都没有反应，不要着急刷新，多挂一会就好了。</p>
-<p>目的虽有，却无路可循；我们称之为路的，无非是踌躇。</p>
-<h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。</p>
-<p>通过博客，我们可以记录自己的生活和成长的轨迹。它不像 Twitter 那样碎片化，也不像 Facebook 那样关系化，它是私人的空间。</p>
-<h2 id="博客目前"><a href="#博客目前" class="headerlink" title="博客目前"></a>博客目前</h2><p><strong>beishangzhajitui</strong> 是*****的拼音。</p>
-<p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
-<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 生成，部署在 <a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a>主题 <a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a> 已经在github上开源</p>
-<p>有什么事情可以找我，大事帮不了，小事不一定帮，但肯定回复:<br>qq:2154838055<br>邮箱:<a href="mailto:&#x32;&#49;&#x35;&#52;&#56;&#51;&#56;&#x30;&#53;&#53;&#x40;&#113;&#x71;&#x2e;&#99;&#111;&#x6d;">&#x32;&#49;&#x35;&#52;&#56;&#51;&#56;&#x30;&#53;&#53;&#x40;&#113;&#x71;&#x2e;&#99;&#111;&#x6d;</a></p>
-<p>主要功能：</p>
-<ul>
-<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
-<li>页面全局快捷键 <a target="_blank" rel="noopener" href='http://yelog.org/2017/03/24/3-hexo-shortcuts/'>3-hexo快捷键说明</a></li>
-</ul>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="静态成员的基本概念"><a href="#静态成员的基本概念" class="headerlink" title="静态成员的基本概念"></a>静态成员的基本概念</h2><p>静态关键字 static<br>static修饰的成员变量，方法，属性等称为静态成员</p>
+<p>特点：直接用类名点出来使用</p>
+<h2 id="自定义静态成员"><a href="#自定义静态成员" class="headerlink" title="自定义静态成员"></a>自定义静态成员</h2><pre><code class="C#">class Test
+&#123;
+    // 静态成员变量
+    static public string b = &quot;这样写也行。&quot;;
+    public static float PI = 3.1415926f;
+    public float a = 1f;
+    // 静态成员方法
+    public static float CalcCircle(float r)
+    &#123;
+        return PI * r * r
+    &#125;
+&#125;
+</code></pre>
+<h2 id="为什么可以直接点出来使用"><a href="#为什么可以直接点出来使用" class="headerlink" title="为什么可以直接点出来使用"></a>为什么可以直接点出来使用</h2><p>程序中是不能无中生有的，我们要使用的对象，变量，函数都是要在内存中分配空间，实例化对象就是分配内存空间，在程序中产生一个抽象的对象</p>
+<p>对于不是静态成员的需要先实例化出来一个才能再点出来<br>Test t &#x3D; new Test();</p>
+<p>静态成员在程序开始运行时就会分配内存空间。所以我们就能直接使用。直到程序结束时内存空间才会被释放。与程序同生共死。</p>
+<p>静态成员一出生就有一个唯一的房子，是一个和堆栈并存的区，这让其具有唯一性，在任何地方使用都是这块内存的内容。</p>
+<p>在整个生命周期中基本上都是不会参与垃圾回收的，如果静态成员是引用类型的你手动置null，原来的就变成垃圾了。</p>
+<h2 id="静态函数中不能使用非静态成员"><a href="#静态函数中不能使用非静态成员" class="headerlink" title="静态函数中不能使用非静态成员"></a>静态函数中不能使用非静态成员</h2><p>成员变量只能将对象实例化出来后，才能点出来使用，不能无中生有，不能直接使用非静态成员，否则内存中没有属于是无中生有。</p>
+<pre><code class="C#">class Test
+&#123;
+    // 静态成员变量
+    public static float PI = 3.1415926f;
+    public float a = 1f;
+    // 静态成员方法
+    public static float CalcCircle(float r)
+    &#123;
+        // Console.WriteLine(a);这里会报错。
+        Test t = new Test();
+        Console.WriteLine(t.testInt);// 这样是可以的。
+        return PI * r * r
+    &#125;
+&#125;
+</code></pre>
+<h2 id="非静态函数可以使用静态成员"><a href="#非静态函数可以使用静态成员" class="headerlink" title="非静态函数可以使用静态成员"></a>非静态函数可以使用静态成员</h2><p>短生命周期当然可以使用长生命周期的内容。</p>
+<pre><code class="C#">class Test
+&#123;
+    // 静态成员变量
+    public static float PI = 3.1415926f;
+    public float a = 1f;
+    // 静态成员方法
+    public static float CalcCircle(float r)
+    &#123;
+    &#125;
+    public void TestFun()
+    &#123;
+        Console.WriteLine(PI);
+        Console.WriteLine(CalcCircle(2));
+    &#125;
+&#125;
+</code></pre>
+<h2 id="静态成员对于我们的作用"><a href="#静态成员对于我们的作用" class="headerlink" title="静态成员对于我们的作用"></a>静态成员对于我们的作用</h2><p>静态变量：<br>1.常用唯一变量的申明<br>2.方便别人获取的对象申明<br>静态方法：<br>常用的唯一的方法申明，比如相同规则的数学计算相关函数。</p>
+<h2 id="常量和静态变量"><a href="#常量和静态变量" class="headerlink" title="常量和静态变量"></a>常量和静态变量</h2><p>const(常量)可以理解为特殊的static(静态)<br>相同点：都可以通过类名点出来使用<br>不同点：</p>
+<ol>
+<li>const必须初始化，不能修改，static没有这个规则。</li>
+<li>const只能修饰变量，static可以修饰类，方法，字段，属性。</li>
+<li>const一定是写在访问修饰符后面的，static前后都可以。</li>
+</ol>
+<h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h2><p>需要使用静态成员相关知识实现一个类，该类在整个应用程序生命周期中只有一个对象存在，且不能在外部实例化，只能通过类名获取唯一对象。</p>
+<pre><code class="C#">public class Singleton
+&#123;
+    // 私有静态字段用于存储唯一实例
+    private static Singleton instance;
+    // 私有构造函数，防止外部实例化
+    private Singleton() &#123;&#125;
+    // 公共静态属性用于获取唯一实例
+    public static Singleton Instance
+    &#123;
+        get
+        &#123;
+            if (instance == null)
+            &#123;
+                instance = new Singleton();
+            &#125;
+            return instance;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p>实现了一个符合要求的单例模式类，通过<code>Singleton.Instance</code>可以在整个应用程序中获取到唯一的<code>Singleton</code>对象。</p>
 
-        </article>
-        
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 2154838055@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -696,11 +826,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 <div class="hide_box" onclick="dashangToggle()"></div>

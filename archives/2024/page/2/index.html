@@ -6,27 +6,25 @@
   <meta name="keywords" content="">
   <meta name="description" content="beishangzhajitui">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="C# 1.C#中如何让自定义容器类能够使用for循环遍历？（通过 类对象[索引] 的形式遍历）实现索引器。 class MyList &#123;     private int[] _data;     public MyList()     &#123;         _data &#x3D; new int[10];         for (int i &#x3D; 0; i &lt; 10; i++)">
+<meta name="description" content="静态类概念：用static修饰的类 特点：只能包含静态成员，不能被实例化 作用：1.将常用的静态成员写在静态类中方便使用2.静态类不能被实例化，更能体现工具类的唯一性 static class TestStatic &#123;     &#x2F;&#x2F; 静态成员变量     public static int testIndex &#x3D; 0;     &#x2F;&#x2F; 静态成员方法     public static vo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="面试题6">
-<meta property="og:url" content="http://example.com/2024/12/d100ea89a91f.html">
+<meta property="og:title" content="8.静态类和静态构造函数">
+<meta property="og:url" content="http://example.com/2024/12/f12af97e6482.html">
 <meta property="og:site_name" content="beishangzhajitui">
-<meta property="og:description" content="C# 1.C#中如何让自定义容器类能够使用for循环遍历？（通过 类对象[索引] 的形式遍历）实现索引器。 class MyList &#123;     private int[] _data;     public MyList()     &#123;         _data &#x3D; new int[10];         for (int i &#x3D; 0; i &lt; 10; i++)">
+<meta property="og:description" content="静态类概念：用static修饰的类 特点：只能包含静态成员，不能被实例化 作用：1.将常用的静态成员写在静态类中方便使用2.静态类不能被实例化，更能体现工具类的唯一性 static class TestStatic &#123;     &#x2F;&#x2F; 静态成员变量     public static int testIndex &#x3D; 0;     &#x2F;&#x2F; 静态成员方法     public static vo">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://scf1a0b4c9d9e6od-sb-qn.qiqiuyun.net/files/course/2024/10-20/102123378189290178.png">
-<meta property="article:published_time" content="2024-12-21T02:12:42.263Z">
-<meta property="article:modified_time" content="2024-12-21T06:18:06.616Z">
+<meta property="article:published_time" content="2024-12-24T03:48:15.308Z">
+<meta property="article:modified_time" content="2024-12-24T04:52:47.432Z">
 <meta property="article:author" content="beishangzhajitui">
-<meta property="article:tag" content="面试">
+<meta property="article:tag" content="CSharp">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://scf1a0b4c9d9e6od-sb-qn.qiqiuyun.net/files/course/2024/10-20/102123378189290178.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
 
 <link href="/css/style.css?v=1.1.0" rel="stylesheet">
 
-<link href="/css/hl_theme/darcula.css?v=1.1.0" rel="stylesheet">
+<link href="/css/hl_theme/github.css?v=1.1.0" rel="stylesheet">
 
 <link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
 
@@ -156,7 +154,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(25)</small>
+                <small>(29)</small>
             
         </div>
     </li>
@@ -213,7 +211,7 @@
         <div data-rel="C#">
             <i class="fold iconfont icon-right"></i>
             C#
-            <small>(14)</small>
+            <small>(18)</small>
         </div>
         
             <ul class="sub hide">
@@ -223,7 +221,7 @@
         <div data-rel="C#&lt;---&gt;C#核心">
             
             C#核心
-            <small>(1)</small>
+            <small>(4)</small>
         </div>
         
     </li>
@@ -245,7 +243,7 @@
         <div data-rel="C#&lt;---&gt;C#进阶">
             
             C#进阶
-            <small>(10)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -300,7 +298,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="25">
+<input type="hidden" id="yelog_site_posts_number" value="29">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -370,6 +368,42 @@
 
     
     <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 C# C#核心 "
+           href="/2024/12/f12af97e6482.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="8.静态类和静态构造函数">8.静态类和静态构造函数</span>
+            <span class="post-date" title="2024-12-24 11:48:15">2024/12/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#核心 "
+           href="/2024/12/d4b68b251cdd.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="7.静态成员">7.静态成员</span>
+            <span class="post-date" title="2024-12-23 21:11:20">2024/12/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2024/12/1794d5877418.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="20.反射">20.反射</span>
+            <span class="post-date" title="2024-12-22 22:23:00">2024/12/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#核心 "
+           href="/2024/12/c89d5384102b.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="19.预处理器指令">19.预处理器指令</span>
+            <span class="post-date" title="2024-12-22 21:32:05">2024/12/22</span>
+        </a>
         
         
         <a  class="全部文章 面试 "
@@ -454,10 +488,10 @@
         
         
         <a  class="全部文章 C# C#进阶 "
-           href="/2024/12/bcdeadf4cdb9.html"
+           href="/2024/12/d7192ae4c3b5.html"
            data-tag="CSharp"
            data-author="" >
-            <span class="post-title" title="19.值类型和引用类型">19.值类型和引用类型</span>
+            <span class="post-title" title="25.值类型和引用类型">25.值类型和引用类型</span>
             <span class="post-date" title="2024-12-19 21:26:54">2024/12/19</span>
         </a>
         
@@ -640,7 +674,7 @@
 <p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
 <p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
 <h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 生成，部署在 <a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a>主题 <a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a> 已经在github上开源</p>
-<p>有什么事情可以找我，大事帮不了，小事不一定帮，但肯定回复:<br>qq:2154838055<br>邮箱:<a href="mailto:&#50;&#49;&#x35;&#52;&#56;&#x33;&#56;&#48;&#x35;&#x35;&#x40;&#113;&#113;&#46;&#x63;&#x6f;&#109;">&#50;&#49;&#x35;&#52;&#56;&#x33;&#56;&#48;&#x35;&#x35;&#x40;&#113;&#113;&#46;&#x63;&#x6f;&#109;</a></p>
+<p>有什么事情可以找我，大事帮不了，小事不一定帮，但肯定回复:<br>qq:2154838055<br>邮箱:<a href="mailto:&#50;&#x31;&#53;&#x34;&#x38;&#x33;&#x38;&#48;&#x35;&#x35;&#64;&#x71;&#113;&#46;&#x63;&#111;&#109;">&#50;&#x31;&#53;&#x34;&#x38;&#x33;&#x38;&#48;&#x35;&#x35;&#64;&#x71;&#113;&#46;&#x63;&#111;&#109;</a></p>
 <p>主要功能：</p>
 <ul>
 <li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
