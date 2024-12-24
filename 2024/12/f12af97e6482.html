@@ -2,31 +2,29 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>19.值类型和引用类型 | beishangzhajitui</title>
+  <title>8.静态类和静态构造函数 | beishangzhajitui</title>
   <meta name="keywords" content=" CSharp ">
-  <meta name="description" content="19.值类型和引用类型 | beishangzhajitui">
+  <meta name="description" content="8.静态类和静态构造函数 | beishangzhajitui">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="C# 1.C#中如何让自定义容器类能够使用for循环遍历？（通过 类对象[索引] 的形式遍历）实现索引器。 class MyList &#123;     private int[] _data;     public MyList()     &#123;         _data &#x3D; new int[10];         for (int i &#x3D; 0; i &lt; 10; i++)">
+<meta name="description" content="静态类概念：用static修饰的类 特点：只能包含静态成员，不能被实例化 作用：1.将常用的静态成员写在静态类中方便使用2.静态类不能被实例化，更能体现工具类的唯一性 static class TestStatic &#123;     &#x2F;&#x2F; 静态成员变量     public static int testIndex &#x3D; 0;     &#x2F;&#x2F; 静态成员方法     public static vo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="面试题6">
-<meta property="og:url" content="http://example.com/2024/12/d100ea89a91f.html">
+<meta property="og:title" content="8.静态类和静态构造函数">
+<meta property="og:url" content="http://example.com/2024/12/f12af97e6482.html">
 <meta property="og:site_name" content="beishangzhajitui">
-<meta property="og:description" content="C# 1.C#中如何让自定义容器类能够使用for循环遍历？（通过 类对象[索引] 的形式遍历）实现索引器。 class MyList &#123;     private int[] _data;     public MyList()     &#123;         _data &#x3D; new int[10];         for (int i &#x3D; 0; i &lt; 10; i++)">
+<meta property="og:description" content="静态类概念：用static修饰的类 特点：只能包含静态成员，不能被实例化 作用：1.将常用的静态成员写在静态类中方便使用2.静态类不能被实例化，更能体现工具类的唯一性 static class TestStatic &#123;     &#x2F;&#x2F; 静态成员变量     public static int testIndex &#x3D; 0;     &#x2F;&#x2F; 静态成员方法     public static vo">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://scf1a0b4c9d9e6od-sb-qn.qiqiuyun.net/files/course/2024/10-20/102123378189290178.png">
-<meta property="article:published_time" content="2024-12-21T02:12:42.263Z">
-<meta property="article:modified_time" content="2024-12-21T06:18:06.616Z">
+<meta property="article:published_time" content="2024-12-24T03:48:15.308Z">
+<meta property="article:modified_time" content="2024-12-24T04:52:47.432Z">
 <meta property="article:author" content="beishangzhajitui">
-<meta property="article:tag" content="面试">
+<meta property="article:tag" content="CSharp">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://scf1a0b4c9d9e6od-sb-qn.qiqiuyun.net/files/course/2024/10-20/102123378189290178.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
 
 <link href="/css/style.css?v=1.1.0" rel="stylesheet">
 
-<link href="/css/hl_theme/darcula.css?v=1.1.0" rel="stylesheet">
+<link href="/css/hl_theme/github.css?v=1.1.0" rel="stylesheet">
 
 <link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
 
@@ -156,7 +154,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(25)</small>
+                <small>(29)</small>
             
         </div>
     </li>
@@ -213,7 +211,7 @@
         <div data-rel="C#">
             <i class="fold iconfont icon-right"></i>
             C#
-            <small>(14)</small>
+            <small>(18)</small>
         </div>
         
             <ul class="sub hide">
@@ -223,7 +221,7 @@
         <div data-rel="C#&lt;---&gt;C#核心">
             
             C#核心
-            <small>(1)</small>
+            <small>(4)</small>
         </div>
         
     </li>
@@ -245,7 +243,7 @@
         <div data-rel="C#&lt;---&gt;C#进阶">
             
             C#进阶
-            <small>(10)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -300,7 +298,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="25">
+<input type="hidden" id="yelog_site_posts_number" value="29">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -370,6 +368,42 @@
 
     
     <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 C# C#核心 "
+           href="/2024/12/f12af97e6482.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="8.静态类和静态构造函数">8.静态类和静态构造函数</span>
+            <span class="post-date" title="2024-12-24 11:48:15">2024/12/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#核心 "
+           href="/2024/12/d4b68b251cdd.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="7.静态成员">7.静态成员</span>
+            <span class="post-date" title="2024-12-23 21:11:20">2024/12/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2024/12/1794d5877418.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="20.反射">20.反射</span>
+            <span class="post-date" title="2024-12-22 22:23:00">2024/12/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#核心 "
+           href="/2024/12/c89d5384102b.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="19.预处理器指令">19.预处理器指令</span>
+            <span class="post-date" title="2024-12-22 21:32:05">2024/12/22</span>
+        </a>
         
         
         <a  class="全部文章 面试 "
@@ -454,10 +488,10 @@
         
         
         <a  class="全部文章 C# C#进阶 "
-           href="/2024/12/bcdeadf4cdb9.html"
+           href="/2024/12/d7192ae4c3b5.html"
            data-tag="CSharp"
            data-author="" >
-            <span class="post-title" title="19.值类型和引用类型">19.值类型和引用类型</span>
+            <span class="post-title" title="25.值类型和引用类型">25.值类型和引用类型</span>
             <span class="post-date" title="2024-12-19 21:26:54">2024/12/19</span>
         </a>
         
@@ -614,9 +648,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-CSharp/CSharp进阶/19.值类型和引用类型" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-CSharp/CSharp核心/8.静态类和静态构造函数" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">19.值类型和引用类型</h1>
+        <h1 class="article-title">8.静态类和静态构造函数</h1>
     
     <div class="article-meta">
         
@@ -628,7 +662,7 @@
             
             <a  data-rel="C#">C#</a> > 
             
-            <a  data-rel="C#&lt;---&gt;C#进阶">C#进阶</a>
+            <a  data-rel="C#&lt;---&gt;C#核心">C#核心</a>
             
         </span>
         
@@ -643,7 +677,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-12-20 19:25:02'>2024-12-19 21:26</time>
+            发布时间 : <time class="date" title='最后更新: 2024-12-24 12:52:47'>2024-12-24 11:48</time>
         
     </div>
     <div class="article-meta">
@@ -665,7 +699,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%80%BC%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">值类型和引用类型的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8BString"><span class="toc-text">特殊引用类型String</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E6%8F%90%E5%9B%9E%E9%A1%BE"><span class="toc-text">前提回顾</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E6%98%AF%E5%80%BC%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B"><span class="toc-text">如何判断是值类型和引用类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E5%8F%A5%E5%9D%97"><span class="toc-text">语句块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-text">变量的生命周期</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E7%B1%BB"><span class="toc-text">静态类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-text">静态构造函数</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -681,54 +715,70 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="值类型和引用类型的区别"><a href="#值类型和引用类型的区别" class="headerlink" title="值类型和引用类型的区别"></a>值类型和引用类型的区别</h2><ul>
-<li><input disabled="" type="checkbox"> 使用上的区别</li>
-</ul>
-<pre><code class="C#">值类型
-int a = 10;
-引用类型
-int arr = new int[]&#123;1,2,2,4&#125;;
-
-int b = a;
-int[] arr2 = arr;
-
-Console.WriteLine(&quot;a = &#123;0&#125;,b = &#123;1&#125;&quot;,a,b);
-Console.WriteLine(&quot;arr[0] = &#123;0&#125;,arr2[0] = &#123;1&#125;&quot;,arr[0],arr2[0]);
-
-b = 20;
-arr2[0] = 5;
-Console.WriteLine(&quot;修改后的b和arr2[0]之后&quot;);
-Console.WriteLine(&quot;a = &#123;0&#125;,b = &#123;1&#125;&quot;,a,b);// b变a不变
-Console.WriteLine(&quot;arr[0] = &#123;0&#125;,arr2[0] = &#123;1&#125;&quot;,arr[0],arr2[0]); //都变。
-
-</code></pre>
-<ul>
-<li><input disabled="" type="checkbox"> 为什么会有以上区别。<br>引用类型相互赋值会让两者指向同一个值，它变我也变。值类型则是将内容拷贝给对方。<br>值类型和引用类型存储在的内存区域是不同的。存储方式不同。</li>
-</ul>
-<p>值类型存储在栈空间——是系统分配的内存空间，小而快<br>引用类型存储在堆空间，存在栈上的是指向堆空间的地址——手动申请和释放，大而快。<br><img src="/../../../img/beishang20241220113621739.png"></p>
-<pre><code class="C#">arr2 = new int[]&#123;99,3,2,1&#125;;
-// new就是开了新房间，和之前没关系了。
-Console.WriteLine(&quot;arr[0] = &#123;0&#125;,arr2[0] = &#123;1&#125;&quot;,arr[0],arr2[0]); 
-</code></pre>
-<p><img src="/../../../img/beishang20241220114331077.png"></p>
-<h2 id="特殊引用类型String"><a href="#特殊引用类型String" class="headerlink" title="特殊引用类型String"></a>特殊引用类型String</h2><p>C#对String进行了一个特殊处理，具备值类型的特征，它变我不变。<br><img src="/../../../img/beishang20241220120315831.png"><br>所以频繁的使用string重新赋值会产生内存垃圾<br>优化方案：todo</p>
-<h2 id="前提回顾"><a href="#前提回顾" class="headerlink" title="前提回顾"></a>前提回顾</h2><p>值类型<br>无符号：byte,ushort,uint,ulong<br>有符号：sbyte,short,int,long<br>浮点数：float,double,decimal<br>特殊：char,bool<br>枚举：enum<br>结构体：struct</p>
-<p>引用类型<br>string<br>数组<br>class<br>interface<br>委托</p>
-<p>本质区别：<br>值类型的具体引用是在栈内存上<br>引用类型的具体内容是在堆内存上，在栈上面存的是地址，指向堆内存上的内容。</p>
-<h2 id="如何判断是值类型和引用类型"><a href="#如何判断是值类型和引用类型" class="headerlink" title="如何判断是值类型和引用类型"></a>如何判断是值类型和引用类型</h2><p>进到类的内部去看如果<br>是class就是引用<br>是struct就是值<br>还可以根据编译器的颜色，如vs中类是绿色</p>
-<h2 id="语句块"><a href="#语句块" class="headerlink" title="语句块"></a>语句块</h2><p>上层语句块：类，结构体<br>中层语句块：函数<br>底层语句块：条件分支 循环等</p>
-<p>逻辑代码写在函数，条件分支，循环等中底层语句块中</p>
-<p>我们的变量可以申明在：<br>上层语句块中：成员变量<br>中，底层语句块中：临时变量</p>
-<h2 id="变量的生命周期"><a href="#变量的生命周期" class="headerlink" title="变量的生命周期"></a>变量的生命周期</h2><p>语句块执行结束时<br>没有被记录的对象将被回收或变成垃圾<br>值类型：被系统自动回收<br>引用类型：栈上用于存地址的房间被系统自动回收，堆中具体内容变成垃圾，带系统GC</p>
-<pre><code class="C#">// 这里的b在语句块中，执行完之后就会在栈中被弹出
-// 所以Console.WriteLine(b);会报错
-// 所以语句块中的临时变量要经常进出栈，所以消耗大。
+        <h2 id="静态类"><a href="#静态类" class="headerlink" title="静态类"></a>静态类</h2><p>概念：用static修饰的类</p>
+<p>特点：<br>只能包含静态成员，不能被实例化</p>
+<p>作用：<br>1.将常用的静态成员写在静态类中方便使用<br>2.静态类不能被实例化，更能体现工具类的唯一性</p>
+<pre><code class="C#">static class TestStatic
 &#123;
-    int b = 1;
+    // 静态成员变量
+    public static int testIndex = 0;
+    // 静态成员方法
+    public static void TestFun()
+    &#123;
+    
+    &#125;
+    // 静态成员属性
+    public static int TestIndex
+    &#123;
+        get;
+        set;
+    &#125;
 &#125;
-Console.WriteLine(b);
 </code></pre>
-<p>想要不被回收或者不变垃圾，需要将其记录下来<br>使用更高层级记录或者使用静态全局变量（可以不是自己类里的）记录。</p>
+<h2 id="静态构造函数"><a href="#静态构造函数" class="headerlink" title="静态构造函数"></a>静态构造函数</h2><p>概念： 在构造函数前加上static修饰</p>
+<p>特点：</p>
+<ol>
+<li>静态类和普通类都可以有</li>
+<li>不能使用访问修饰符</li>
+<li>不能有参数</li>
+<li>只会自动调用一次</li>
+</ol>
+<p>作用：在静态构造函数中初始化静态变量。</p>
+<p>1.静态类中的静态构造函数。<br>作用：初始化静态成员</p>
+<pre><code class="C#">static class StaticClass
+&#123; 
+    public static int testInt = 100;
+    static StaticClass()
+    &#123;
+        testInt = 20;
+        Console.WriteLine(&quot;静态构造函数&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p>2.普通类中的静态构造函数。</p>
+<pre><code class="C#">class Test
+&#123;
+    public static int testInt = 200;
+    // 静态构造函数不算普通构造函数的重载
+    static Test()
+    &#123;
+        Console.WriteLine(&quot;静态构造&quot;);
+    &#125;
+    public Test()
+    &#123;
+        Console.WriteLine(&quot;普通构造&quot;);
+    &#125;
+&#125;
+class Program
+&#123;
+    static void Main()
+    &#123;
+        // 静态构造函数只在使用第一次这个类时自动调用一次
+        Test t = new Test()
+        Test t2 = new Test();
+    &#125;
+&#125;
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 2154838055@qq.com </span>

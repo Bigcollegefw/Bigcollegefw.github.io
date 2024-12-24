@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>23.Object中的方法 | beishangzhajitui</title>
+  <title>20.反射 | beishangzhajitui</title>
   <meta name="keywords" content=" CSharp ">
-  <meta name="description" content="23.Object中的方法 | beishangzhajitui">
+  <meta name="description" content="20.反射 | beishangzhajitui">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="静态类概念：用static修饰的类 特点：只能包含静态成员，不能被实例化 作用：1.将常用的静态成员写在静态类中方便使用2.静态类不能被实例化，更能体现工具类的唯一性 static class TestStatic &#123;     &#x2F;&#x2F; 静态成员变量     public static int testIndex &#x3D; 0;     &#x2F;&#x2F; 静态成员方法     public static vo">
 <meta property="og:type" content="article">
@@ -648,9 +648,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-CSharp/CSharp核心/23.Object中的方法" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-CSharp/CSharp进阶/20.反射" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">23.Object中的方法</h1>
+        <h1 class="article-title">20.反射</h1>
     
     <div class="article-meta">
         
@@ -662,7 +662,7 @@
             
             <a  data-rel="C#">C#</a> > 
             
-            <a  data-rel="C#&lt;---&gt;C#核心">C#核心</a>
+            <a  data-rel="C#&lt;---&gt;C#进阶">C#进阶</a>
             
         </span>
         
@@ -677,7 +677,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-12-21 14:16:12'>2024-12-20 19:47</time>
+            发布时间 : <time class="date" title='最后更新: 2024-12-23 21:16:00'>2024-12-22 22:23</time>
         
     </div>
     <div class="article-meta">
@@ -699,7 +699,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%87%E7%89%A9%E4%B9%8B%E7%88%B6"><span class="toc-text">万物之父</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Object%E4%B8%AD%E7%9A%84%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95"><span class="toc-text">Object中的静态方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Object%E4%B8%AD%E7%9A%84%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95"><span class="toc-text">Object中的成员方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Object%E4%B8%AD%E7%9A%84%E8%99%9A%E6%96%B9%E6%B3%95"><span class="toc-text">Object中的虚方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0"><span class="toc-text">练习</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E9%9B%86"><span class="toc-text">程序集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%83%E6%95%B0%E6%8D%AE"><span class="toc-text">元数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E5%B0%84%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-text">反射的概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E5%B0%84%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-text">反射的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E7%9B%B8%E5%85%B3"><span class="toc-text">语法相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E5%B0%84%E5%85%B3%E9%94%AE%E7%B1%BBType"><span class="toc-text">反射关键类Type</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -715,189 +715,271 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="万物之父"><a href="#万物之父" class="headerlink" title="万物之父"></a>万物之父</h2><p>万物之父Object是所有类型的基类，是一个引用类型，可以用里氏替换原则装载一切对象</p>
-<h2 id="Object中的静态方法"><a href="#Object中的静态方法" class="headerlink" title="Object中的静态方法"></a>Object中的静态方法</h2><ul>
-<li><p><input disabled="" type="checkbox"> 
-静态方法Equal<br> 用于判断两个对象是否相等，判断值类型是否相等，引用类型是判断他们的地址是否相等。</p>
-</li>
-<li><p><input disabled="" type="checkbox"> 
-静态方法ReferenceEquals<br>用来比较引用类型对象，比较的是地址，不能比较值类型对象，始终返回false;</p>
-</li>
-</ul>
-<h2 id="Object中的成员方法"><a href="#Object中的成员方法" class="headerlink" title="Object中的成员方法"></a>Object中的成员方法</h2><ul>
-<li><input disabled="" type="checkbox"> 普通方法GetType<br>该方法在反射知识点中是非常重要的方法。<br>该方法的主要作用就是获取对象运行时的类型Type<br>结合反射相关知识可以做很多关于对象的操作</li>
-</ul>
-<pre><code class="C#">// 假设上面定义了一个Test的类。
-Test t = new Test();
-Type type = t.GetType();
-</code></pre>
-<ul>
-<li><input disabled="" type="checkbox"> 普通方法MemberwiseClone</li>
-</ul>
-<pre><code class="C#">class Test&#123; 
-    // `i`的值（`1`）是存储在堆中的对象内部的。
-    // 这里的int i不在栈上面存。会在托管堆
-    public int i = 1;
-    public Test2 t2 = new Test2();
-    // 在Object中是保护类型
-    public Test Clone()&#123;
-        return MemberwiseClone() as Test;
-    &#125;
-&#125;
-class Test2&#123;
-    public int i = 2;
-&#125;
-
-class Program&#123;
-    static void Main(string[] args)&#123; 
-        Console.WriteLine(&quot;万物之父中的方法&quot;);
-        
-        Test t = new Test();
-        
-        Test t2Clone = t.Clone();
-        
-        Console.WriteLine(&quot;克隆对象后&quot;);
-        Console.WriteLine(t.i);
-        Console.WriteLine(t.t2.i);
-        Console.WriteLine(t2Clone.i);
-        Console.WriteLine(t2Clone.t2.i);
+        <h2 id="程序集"><a href="#程序集" class="headerlink" title="程序集"></a>程序集</h2><p>程序集是由编译器编译得到的，供进一步编译执行的那个中间产物<br>在Windows系统中，它一般表现为后缀.dll(库文件)或者是.exe(可执行文件)格式。</p>
+<p>通俗的说，程序集是我们写的一个代码集合，我们所写的代码会被编译器编译成一个程序集供别人使用。</p>
+<h2 id="元数据"><a href="#元数据" class="headerlink" title="元数据"></a>元数据</h2><p>元数据是用来描述数据的数据</p>
+<p>通俗的理解：程序中的类，类中的函数，变量等等信息就是程序的元数据<br>有关程序以及类型的数据被称为元数据，他们保存在程序集中。</p>
+<h2 id="反射的概念"><a href="#反射的概念" class="headerlink" title="反射的概念"></a>反射的概念</h2><p>程序在运行时，可以查看其他程序集或者自身的元数据。<br>一个运行的程序查看本身或者其他程序的元数据的行为就叫反射。</p>
+<p>也就是说:在程序运行时，通过反射可以得到其他程序集或者自己程序集代码的各种信息。类，函数，变量，对象等等，实例化它们，执行并且操作。</p>
+<h2 id="反射的作用"><a href="#反射的作用" class="headerlink" title="反射的作用"></a>反射的作用</h2><p>反射可以在程序编译后获得对象，所以它提高了程序的拓展性和灵活性</p>
+<ol>
+<li>程序运行时，得到所有元数据，包括元数据的特性</li>
+<li>程序运行时，实例化对象，操作对象</li>
+<li>程序运行时创建新对象，用这些对象执行任务。</li>
+</ol>
+<h2 id="语法相关"><a href="#语法相关" class="headerlink" title="语法相关"></a>语法相关</h2><pre><code class="C#">class Test
+&#123;
+    private int i = 1;
+    public int j = 0;
+    public string str = &quot;123&quot;
+    public Test()
+    &#123;
     
-        t2Clone.i = 20;
-        t2Clone.t2.i = 21;
-        Console.WriteLine(&quot;改变克隆体信息后&quot;);
-        Console.WriteLine(t.i);
-        Console.WriteLine(t.t2.i);
-        Console.WriteLine(t2Clone.i);
-        Console.WriteLine(t2Clone.t2.i);
     &#125;
-&#125;
-</code></pre>
-<p><img src="/../../../img/beishang20241220203210807.png"></p>
-<p>这里的 <code>Clone</code> 方法使用了 <code>MemberwiseClone</code> 进行浅拷贝，它会创建一个新的 <code>Test</code> 类对象，新对象中的i成员，会复制原对象对应的值，也就是 <code>t2Clone</code> 的 <code>i</code> 值初始为 <code>1</code>；而对于引用类型成员（此处的 <code>t2</code>），只是复制了引用，意味着 <code>t2Clone</code> 的 <code>t2</code> 成员和 <code>t</code> 的 <code>t2</code> 成员指向的是同一个 <code>Test2</code> 类对象实例。</p>
-<p><code>t2Clone.t2.i = 21;</code> 时，由于 <code>t2Clone</code> 的 <code>t2</code> 成员和 <code>t</code> 的 <code>t2</code> 成员指向同一个 <code>Test2</code> 类对象，所以对这个共享的 <code>Test2</code> 类对象中的 <code>i</code> 值进行修改后，通过 <code>t</code> 或者 <code>t2Clone</code> 去访问该 <code>Test2</code> 类对象的 <code>i</code> 值都会变为 <code>21</code>。</p>
-<p>该方法用于获取对象的浅拷贝对象，就是会返回一个新的对象，但是只拷贝了栈上面的内容，就会拷贝到指向堆的那个地址，堆上面的内容没变，还是能够通过地址访问到。</p>
-<p>值类型int 等等都是在要执行具体逻辑的那个类中比如static void Main(string[] args)才会存在栈上面，而在类中申明的值类型变量不会，而是在类被实例化出来的时候会存在堆上。</p>
-<h2 id="Object中的虚方法"><a href="#Object中的虚方法" class="headerlink" title="Object中的虚方法"></a>Object中的虚方法</h2><ul>
-<li><input disabled="" type="checkbox"> Equals方法</li>
-</ul>
-<pre><code class="C#">public override bool Equals(object obj)&#123; 
-    return base.Equals(obj)
-&#125;
-</code></pre>
-<ul>
-<li><input disabled="" type="checkbox"> GetHashCode方法</li>
-</ul>
-<pre><code class="C#">public override int GetHashCode()&#123; 
-    // 几乎不重写
-    return base.GetHashCode();
-&#125;
-</code></pre>
-<ul>
-<li><input disabled="" type="checkbox"> ToString()方法</li>
-</ul>
-<pre><code class="C#">public override string ToString()&#123;
-    return base.ToString();
-&#125;
-</code></pre>
-<h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h2><p>一个Monster类的引用对象A，Monster类有攻击力、防御力、血量、技能ID等属性。我想复制一个和A对象一模一样的B对象。并且改变了B的属性，A不会受到影响。请问如何实现？<br>思路：用浅拷贝或者深拷贝。</p>
-<pre><code class="C#">using System;
-
-class Monster
-&#123;
-    public int Attack &#123; get; set; &#125;
-    public int Defense &#123; get; set; &#125;
-    public int Health &#123; get; set; &#125;
-    public int SkillID &#123; get; set; &#125;
-
-    // 自定义克隆方法
-    public Monster Clone()
+    public Test(int i)
     &#123;
-        // 使用MemberwiseClone进行浅拷贝
-        Monster clone = (Monster)this.MemberwiseClone();
-        // 如果有引用类型属性，需要在这里进行深拷贝处理
-        // 例如，如果有一个List&lt;int&gt;类型的属性，如下处理
-        // clone.ListProperty = new List&lt;int&gt;(this.ListProperty);
-        return clone;
+        this.i = i;
+    &#125;
+    public Test(int i,string str):this(i)
+    &#123;
+        this.str = str;
+    &#125;
+    public void Speak()
+    &#123;
+        Console.WriteLine(i);
     &#125;
 &#125;
 
 class Program
-&#123;
-    static void Main()
+&#123; 
+    static void Main(string[] args)
     &#123;
-        Monster A = new Monster
+        Console.WriteLine(&quot;反射&quot;); 
+        #region Type
+        // Type(类的信息类)
+        // 它是反射功能的基础
+        // 是访问元数据的主要方式
+        // 使用Type的成员获取有关类型声明的信息
+        // 有关类型的成员（如构造函数，方法，字段，属性和类的事件）
+        
+        #region 获取Type
+        // 1.万物之父object中的GetType( )可以获取对象的Type
+        int a = 42;
+        Type type = a.GetType();
+        Console.WriteLine(type);
+        // 这里会打印出: System.Int32
+        // 2.通过typeof关键字传入类名，也可以得到对象的Type,一般同一个程序集使用
+        Type type2 = typeof(int);
+        Console.WriteLine(type2);
+        // 3.通过类的名字也可以获取类型，通常不同程序集之间使用
+        // 注意类名必须包含命名空间，不然找不到。
+        Type type3 = Type.GetType(&quot;System.Int32&quot;);
+        Console.WriteLine(type3);
+        // 这里三个type的栈不一样，指向的堆的内存都一样，说明每一个类型都是只有一个数据信息。
+        #endregion
+        
+        #region 得到类的程序集信息
+        // 可以通过Type得到类型所在程序集信息。
+        Console.WriteLine(type.Assembly);
+        Console.WriteLine(type2.Assembly);
+        Console.WriteLine(type3.Assembly);// 这三个是一样的。
+        #endregion
+        
+        #region 获取类中的所有公共成员
+        // 首先得到Type
+        Type t = typeof(Test);
+        // 然后得到所有公共成员
+        // 需要引用命名空间 using System.Reflection;
+        MemberInfo[] infos = t.GetMembers();
+        for (int i = 0; i &lt; infos.Length; i++)
         &#123;
-            Attack = 10,
-            Defense = 5,
-            Health = 100,
-            SkillID = 1
-        &#125;;
-
-        Monster B = A.Clone();
-        B.Attack = 20;
-
-        Console.WriteLine($&quot;A的攻击力: &#123;A.Attack&#125;&quot;);
-        Console.WriteLine($&quot;B的攻击力: &#123;B.Attack&#125;&quot;);
-    &#125;
-&#125;
-</code></pre>
-<p>用深拷贝就实现ICloneable接口，（实现接口更加有范）</p>
-<pre><code class="C#">using System;
-
-// Monster类
-class Monster : ICloneable
-&#123;
-    public int Attack &#123; get; set; &#125;
-    public int Defense &#123; get; set; &#125;
-    public int Health &#123; get; set; &#125;
-    public int SkillID &#123; get; set; &#125;
-    public List&lt;int&gt; SkillDamageList &#123; get; set; &#125;
-
-    // 实现ICloneable接口的Clone方法
-    public object Clone()
-    &#123;
-        // 对Monster对象进行深拷贝
-        Monster clone = new Monster
-        &#123;
-            Attack = this.Attack,
-            Defense = this.Defense,
-            Health = this.Health,
-            SkillID = this.SkillID
-        &#125;;
-        // 处理List&lt;int&gt;类型的属性
-        if (this.SkillDamageList!= null)
-        &#123;
-            clone.SkillDamageList = new List&lt;int&gt;(this.SkillDamageList);
+            Console.WriteLine(infos[i]);
         &#125;
-        return clone;
-    &#125;
-&#125;
-
-class Program
-&#123;
-    static void Main()
-    &#123;
-        // 创建Monster对象A
-        Monster A = new Monster
+        #endregion
+        
+        #region 获取类的公共构造函数并调用
+        // 1.获取所有构造函数
+        ConstructorInfo[] ctors = t.GetConstructors();
+        for(int i = 0; i &lt; ctors.Length; i++)
         &#123;
-            Attack = 10,
-            Defense = 5,
-            Health = 100,
-            SkillID = 1
-        &#125;;
-
-        // 复制A得到B
-        Monster B = (Monster)A.Clone();
-
-        // 修改B的属性
-        B.Attack = 20;
-
-        // 输出A和B的属性
-        Console.WriteLine($&quot;A的攻击力: &#123;A.Attack&#125;&quot;);
-        Console.WriteLine($&quot;B的攻击力: &#123;B.Attack&#125;&quot;);
+            Console.WriteLine(ctors[i]);
+        &#125;
+        // 2.获取其中一个构造函数并执行
+        // 得到构造函数传入Type数组，数组中内容按顺序是参数类型
+        // 执行构造函数传入object数组，表示按顺序传入的参数 
+        // 2.1得到无参构造,无参构造没有参数，就传入一个没有参数的数组，new一个长度为0的数组。
+        ConstructorInfo info = t.GetConstructor(new Type[0]);
+        // 执行无参构造,没有参数传null即可。info.Invoke(null)的返回类型是object
+        // as操作符用于在兼容的引用类型或可空值类型之间执行显式转换。如果转换成功，它将返回转换后的对象；如果转换失败，它将返回null
+        Test obj = info.Invoke(null) as Test;
+        Console.WriteLine(obj.j);
+        // 2.2得到有参构造,构造出来i = 2的一个对象。
+        ConstructorInfo info2 = t.GetConstructor(new Type[] &#123; typeof(int) &#125;);
+        obj = info2.Invoke(new object[] &#123; 2 &#125;) as Test;
+        ConstructorInfo info3 = t.GetConstructor(new Type[] &#123;
+         typeof(int),typeof(string) &#125;);
+        obj = info3.Invoke(new object[] &#123; 4,&quot;44444&quot; &#125;) as Test;
+        Console.WriteLine(obj.str);
+        #endregion
+        
+        #region 获取类的公共成员变量
+        // 1.得到所有的成员变量
+        FieldInfo[] fieldInfos = t.GetFields();
+        for(int i = 0; i&lt;fieldInfos.Length;i++)
+        &#123;
+            Console.WriteLine(fieldInfos[i]);
+        &#125;
+        // 2.得到指定名称的公共成员变量
+        FieldInfo infoJ = t.GetField(&quot;j&quot;);
+        Console.WriteLine(infoJ);
+        #endregion
+        // 3.通过反射获取和设置对象的值
+        Test test = new Test();
+        test.j = 99;
+        // 3.1通过反射 获取对象的某个变量的值
+        Console.WriteLine(infoJ.GetValue(test));
+        // 3.2通过反射 设置指定对象的某个变量的值
+        infoJ.SetValue(test,100);
+        Console.WriteLine(infoJ.GetValue(test));
+        #endregion
+        #region 获取类的公共成员方法
+        // 通过Type类中的 GetMethod方法 得到类中的方法
+        // MethodInfo是方法的反射信息
+        Type strType = typeof(string);
+        // 1.如果存在方法重载，用Type数组表示参数类型
+        MethodInfo[] methods = strType.GetMethods();
+        for(int i = 0;i &lt; methods.Length; i++)
+        &#123;
+            Console.WriteLine(method[i]);
+        &#125;
+        MethodInfo subStr = strType.GetMethod(&quot;Substring&quot;,new Type[]&#123; typeof(int),typeof(int) &#125;)
+        // 2.调用该方法
+        string str = &quot;Hello World!;
+        // 第一个参数相当于是哪个对象要执行这个成员方法。
+        subStr.Invoke(str,new object[]&#123;7,5&#125;);
+        Console.WriteLine(result);
+        // 注意：如果是静态方法Invoke中的第一个参数传null即可。
+        #endregion
+        #endregion
     &#125;
 &#125;
 </code></pre>
+<h3 id="反射关键类Type"><a href="#反射关键类Type" class="headerlink" title="反射关键类Type"></a>反射关键类Type</h3><ul>
+<li><input disabled="" type="checkbox"> 获取Type类<br>1.万物之父object中的GetType( )可以获取对象的Type</li>
+</ul>
+<pre><code class="C#">        int a = 42;
+        Type type = a.GetType();
+        Console.WriteLine(type);
+        // 这里会打印出: System.Int32
+</code></pre>
+<p>2.通过typeof关键字传入类名，也可以得到对象的Type,一般同一个程序集使用</p>
+<pre><code class="C#">        Type type2 = typeof(int);
+        Console.WriteLine(type2);
+</code></pre>
+<p>3.通过类的名字也可以获取类型，通常不同程序集之间使用</p>
+<pre><code class="C#">        // 注意类名必须包含命名空间，不然找不到。
+        Type type3 = Type.GetType(&quot;System.Int32&quot;);
+        Console.WriteLine(type3);
+        // 这里三个type的栈不一样，指向的堆的内存都一样，说明每一个类型都是只有一个数据信息。
+</code></pre>
+<ul>
+<li><input disabled="" type="checkbox"> 得到类的程序集信息<br>可以通过Type得到类型所在程序集信息。</li>
+</ul>
+<pre><code class="C#">        Console.WriteLine(type.Assembly);
+        Console.WriteLine(type2.Assembly);
+        Console.WriteLine(type3.Assembly);// 这三个是一样的。
+</code></pre>
+<ul>
+<li><input disabled="" type="checkbox"> 获取类中的所有公共成员</li>
+</ul>
+<pre><code class="C#">        // 首先得到Type
+        Type t = typeof(Test);
+        // 然后得到所有公共成员
+        // 需要引用命名空间 using System.Reflection;
+        MemberInfo[] infos = t.GetMembers();
+        for (int i = 0; i &lt; infos.Length; i++)
+        &#123;
+            Console.WriteLine(infos[i]);
+        &#125;
+</code></pre>
+<ul>
+<li><input disabled="" type="checkbox"> 获取类的公共构造函数并调用<br>1.获取所有构造函数</li>
+</ul>
+<pre><code class="C#">        ConstructorInfo[] ctors = t.GetConstructors();
+        for(int i = 0; i &lt; ctors.Length; i++)
+        &#123;
+            Console.WriteLine(ctors[i]);
+        &#125;
+</code></pre>
+<p>2.获取其中一个构造函数并执行<br>得到构造函数传入Type数组，数组中内容按顺序是参数类型<br>执行构造函数传入object数组，表示按顺序传入的参数 </p>
+<ul>
+<li>2.1得到无参构造,无参构造没有参数，就传入一个没有参数的数组，new一个长度为0的数组。</li>
+</ul>
+<pre><code class="C#">        ConstructorInfo info = t.GetConstructor(new Type[0]);
+</code></pre>
+<p>执行无参构造,没有参数传null即可。info.Invoke(null)的返回类型是object<br>as操作符用于在兼容的引用类型或可空值类型之间执行显式转换。如果转换成功，它将返回转换后的对象；如果转换失败，它将返回null</p>
+<pre><code class="C#">        Test obj = info.Invoke(null) as Test;
+        Console.WriteLine(obj.j);
+</code></pre>
+<ul>
+<li>2.2得到有参构造,构造出来i &#x3D; 2的一个对象。</li>
+</ul>
+<pre><code class="C#">        ConstructorInfo info2 = t.GetConstructor(new Type[] &#123; typeof(int) &#125;);
+        obj = info2.Invoke(new object[] &#123; 2 &#125;) as Test;
+        ConstructorInfo info3 = t.GetConstructor(new Type[] &#123;
+         typeof(int),typeof(string) &#125;);
+        obj = info3.Invoke(new object[] &#123; 4,&quot;44444&quot; &#125;) as Test;
+        Console.WriteLine(obj.str);
+</code></pre>
+<ul>
+<li><input disabled="" type="checkbox"> 获取类的公共成员变量</li>
+<li>1.得到所有的成员变量</li>
+</ul>
+<pre><code class="C#">        FieldInfo[] fieldInfos = t.GetFields();
+        for(int i = 0; i&lt;fieldInfos.Length;i++)
+        &#123;
+            Console.WriteLine(fieldInfos[i]);
+        &#125;
+</code></pre>
+<ul>
+<li>2.得到指定名称的公共成员变量</li>
+</ul>
+<pre><code class="C#">        FieldInfo infoJ = t.GetField(&quot;j&quot;);
+        Console.WriteLine(infoJ);
+        #endregion
+</code></pre>
+<ul>
+<li>3.通过反射获取和设置对象的值</li>
+</ul>
+<pre><code class="C#">        Test test = new Test();
+        test.j = 99;
+        // 3.1通过反射 获取对象的某个变量的值
+        Console.WriteLine(infoJ.GetValue(test));
+        // 3.2通过反射 设置指定对象的某个变量的值
+        infoJ.SetValue(test,100);
+        Console.WriteLine(infoJ.GetValue(test));
+</code></pre>
+<ul>
+<li><input disabled="" type="checkbox"> 获取类的公共成员方法<br>通过Type类中的 GetMethod方法 得到类中的方法<br>MethodInfo是方法的反射信息</li>
+</ul>
+<pre><code class="C#">        Type strType = typeof(string);
+        // 1.如果存在方法重载，用Type数组表示参数类型
+        MethodInfo[] methods = strType.GetMethods();
+        for(int i = 0;i &lt; methods.Length; i++)
+        &#123;
+            Console.WriteLine(method[i]);
+        &#125;
+        MethodInfo subStr = strType.GetMethod(&quot;Substring&quot;,new Type[]&#123; typeof(int),typeof(int) &#125;)
+        // 2.调用该方法
+        string str = &quot;Hello World!;
+        // 第一个参数相当于是哪个对象要执行这个成员方法。
+        subStr.Invoke(str,new object[]&#123;7,5&#125;);
+        Console.WriteLine(result);
+        // 注意：如果是静态方法Invoke中的第一个参数传null即可。
+</code></pre>
+<ul>
+<li><input disabled="" type="checkbox"> 其他<br>得枚举：GetEnumName;GetEnumNames<br>得事件：GetEvent;GetEvents<br>得接口：GetInterface;GetInterfaces<br>得属性：GetProperty;GetPropertys</li>
+</ul>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 2154838055@qq.com </span>
