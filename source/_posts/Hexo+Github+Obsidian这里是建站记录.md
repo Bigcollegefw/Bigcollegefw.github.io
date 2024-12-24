@@ -187,6 +187,8 @@ menu:
     url: /about  # 跳转链接
     type: 1 # 跳转类型 1：站内异步跳转 2：当前页面跳转 3：打开新的tab页
 ```
+## 关于有时候点击啥都没有反应的原因
+可能是网络原因，我用校园网的时候就会出现什么负责处理图标点击事件的 JavaScript 文件没有正确加载。换成流量就好了。
 
 参考：
 [关于我使用obsidian加hexo部署个人博客的过程 - SagiRastar's Blog](https://sagi-rastar.github.io/2023/11/10/%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/)
