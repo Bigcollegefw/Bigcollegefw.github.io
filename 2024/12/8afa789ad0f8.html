@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>6.函数 | beishangzhajitui</title>
+  <meta name="keywords" content=" lua , 热更新 ">
+  <meta name="description" content="6.函数 | beishangzhajitui">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="复杂数据类型table(表)所有的复杂类型都是table—数组，二维数组，字典，类，结构体等 数组任意类型都能放，类似C#中ArrayList a &#x3D; &#123;1,2,3,4,&quot;1231&quot;,true,nil&#125; -- lua中索引从1开始 print(a[1]) print(a[5]) -- #是通用的获取长度的关键字 -- 打印长度时候，从空之后开始会忽略 --">
+<meta property="og:type" content="article">
+<meta property="og:title" content="7.table表实现数组">
+<meta property="og:url" content="http://example.com/2024/12/f2770d5e0e7c.html">
+<meta property="og:site_name" content="beishangzhajitui">
+<meta property="og:description" content="复杂数据类型table(表)所有的复杂类型都是table—数组，二维数组，字典，类，结构体等 数组任意类型都能放，类似C#中ArrayList a &#x3D; &#123;1,2,3,4,&quot;1231&quot;,true,nil&#125; -- lua中索引从1开始 print(a[1]) print(a[5]) -- #是通用的获取长度的关键字 -- 打印长度时候，从空之后开始会忽略 --">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-12-27T14:19:57.892Z">
+<meta property="article:modified_time" content="2024-12-27T14:51:49.961Z">
+<meta property="article:author" content="beishangzhajitui">
+<meta property="article:tag" content="lua">
+<meta property="article:tag" content="热更新">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/github.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>beishangzhajitui</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="github"
+               href="https://github.com/Bigcollegefw"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a title="csdn"
+               href="https://blog.csdn.net/?spm=1010.2135.3001.4477"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-csdn"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+            <a title="email"
+               href="mailto:2154838055@qq.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(36)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="工具">
+            
+            工具
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="面试">
+            
+            面试
+            <small>(5)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="热更新">
+            <i class="fold iconfont icon-right"></i>
+            热更新
+            <small>(7)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="热更新&lt;---&gt;Lua">
+            
+            Lua
+            <small>(7)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="项目">
+            
+            项目
+            <small>(4)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="C#">
+            <i class="fold iconfont icon-right"></i>
+            C#
+            <small>(18)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="C#&lt;---&gt;C#核心">
+            
+            C#核心
+            <small>(4)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="C#&lt;---&gt;C#基础">
+            
+            C#基础
+            <small>(3)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="C#&lt;---&gt;C#进阶">
+            
+            C#进阶
+            <small>(11)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Unity基础框架">
+            
+            Unity基础框架
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+        <a 
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="36">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+            <li><a target="_blank" href="https://space.bilibili.com/79983517">唐老师</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>工具</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>面试</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>热更新</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>CSharp</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>demo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>lua</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2024/12/f2770d5e0e7c.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="7.table表实现数组">7.table表实现数组</span>
+            <span class="post-date" title="2024-12-27 22:19:57">2024/12/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2024/12/8afa789ad0f8.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="6.函数">6.函数</span>
+            <span class="post-date" title="2024-12-27 21:37:03">2024/12/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2024/12/1f77023222f9.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="5.循环语句">5.循环语句</span>
+            <span class="post-date" title="2024-12-27 21:24:27">2024/12/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2024/12/1ff2254052ea.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="4.条件分支语句">4.条件分支语句</span>
+            <span class="post-date" title="2024-12-27 18:41:51">2024/12/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2024/12/b275f31d2868.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="3.运算符">3.运算符</span>
+            <span class="post-date" title="2024-12-27 18:11:15">2024/12/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2024/12/d1dc66cafb2a.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="2.字符串操作">2.字符串操作</span>
+            <span class="post-date" title="2024-12-27 17:22:35">2024/12/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2024/12/83d53996ba75.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="1.变量">1.变量</span>
+            <span class="post-date" title="2024-12-27 16:47:40">2024/12/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#核心 "
+           href="/2024/12/f12af97e6482.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="8.静态类和静态构造函数">8.静态类和静态构造函数</span>
+            <span class="post-date" title="2024-12-24 11:48:15">2024/12/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#核心 "
+           href="/2024/12/d4b68b251cdd.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="7.静态成员">7.静态成员</span>
+            <span class="post-date" title="2024-12-23 21:11:20">2024/12/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2024/12/1794d5877418.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="20.反射">20.反射</span>
+            <span class="post-date" title="2024-12-22 22:23:00">2024/12/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#核心 "
+           href="/2024/12/c89d5384102b.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="19.预处理器指令">19.预处理器指令</span>
+            <span class="post-date" title="2024-12-22 21:32:05">2024/12/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 面试 "
+           href="/2024/12/d100ea89a91f.html"
+           data-tag="面试"
+           data-author="" >
+            <span class="post-title" title="面试题6">面试题6</span>
+            <span class="post-date" title="2024-12-21 10:12:42">2024/12/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 面试 "
+           href="/2024/12/cf2b94dbc551.html"
+           data-tag="面试"
+           data-author="" >
+            <span class="post-title" title="面试题5">面试题5</span>
+            <span class="post-date" title="2024-12-20 23:26:18">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#核心 "
+           href="/2024/12/b8a29f3717aa.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="23.Object中的方法">23.Object中的方法</span>
+            <span class="post-date" title="2024-12-20 19:47:16">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 面试 "
+           href="/2024/12/5b5f19dd3e86.html"
+           data-tag="面试"
+           data-author="" >
+            <span class="post-title" title="面试题4">面试题4</span>
+            <span class="post-date" title="2024-12-20 19:34:10">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 Unity基础框架 "
+           href="/2024/12/6e69ad42e217.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="观察者模式">观察者模式</span>
+            <span class="post-date" title="2024-12-20 15:48:54">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#基础 "
+           href="/2024/12/2e5680225f17.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="2.ref和out">2.ref和out</span>
+            <span class="post-date" title="2024-12-20 15:26:02">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#基础 "
+           href="/2024/12/8560e7368643.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="1.属性和字段">1.属性和字段</span>
+            <span class="post-date" title="2024-12-20 14:14:10">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 面试 "
+           href="/2024/12/8b8166fd4dbd.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="面试题2">面试题2</span>
+            <span class="post-date" title="2024-12-20 14:00:57">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#基础 "
+           href="/2024/12/50804c53923a.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="27.冒泡排序">27.冒泡排序</span>
+            <span class="post-date" title="2024-12-20 12:26:00">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2024/12/d7192ae4c3b5.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="25.值类型和引用类型">25.值类型和引用类型</span>
+            <span class="post-date" title="2024-12-19 21:26:54">2024/12/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2024/12/99d7e4858599.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="18.多线程">18.多线程</span>
+            <span class="post-date" title="2024-12-19 20:01:46">2024/12/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2024/12/dcef07134c34.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="17.协变逆变">17.协变逆变</span>
+            <span class="post-date" title="2024-12-19 18:58:25">2024/12/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 面试 "
+           href="/2024/12/f9803a20b288.html"
+           data-tag="工具,CSharp"
+           data-author="" >
+            <span class="post-title" title="面试题1">面试题1</span>
+            <span class="post-date" title="2024-12-19 18:32:27">2024/12/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2024/12/fa210d88e086.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="6.泛型约束">6.泛型约束</span>
+            <span class="post-date" title="2024-12-18 21:45:57">2024/12/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2024/12/99e2778ef90a.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="5.泛型">5.泛型</span>
+            <span class="post-date" title="2024-12-18 19:18:11">2024/12/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2024/12/4bf40c28df14.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="16.List">16.List</span>
+            <span class="post-date" title="2024-12-18 16:26:19">2024/12/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2024/12/8476f87b34b1.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="3.Queue">3.Queue</span>
+            <span class="post-date" title="2024-12-18 15:37:16">2024/12/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2024/12/b56e7458241b.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="2.Stack">2.Stack</span>
+            <span class="post-date" title="2024-12-18 12:07:24">2024/12/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2024/12/560e3eb9a136.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="1.ArrayList">1.ArrayList</span>
+            <span class="post-date" title="2024-12-18 10:52:41">2024/12/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2024/12/81aa1916e87b.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="15.lambad表达式">15.lambad表达式</span>
+            <span class="post-date" title="2024-12-16 14:40:43">2024/12/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 项目 "
+           href="/2024/12/a15eb1a14309.html"
+           data-tag="demo"
+           data-author="" >
+            <span class="post-title" title="UGUI抽卡系统">UGUI抽卡系统</span>
+            <span class="post-date" title="2024-12-11 10:03:07">2024/12/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 项目 "
+           href="/2024/12/515fc9cb74fb.html"
+           data-tag="demo"
+           data-author="" >
+            <span class="post-title" title="第三人称控制器">第三人称控制器</span>
+            <span class="post-date" title="2024-12-10 22:06:48">2024/12/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 项目 "
+           href="/2024/12/1fe799e51a85.html"
+           data-tag="demo"
+           data-author="" >
+            <span class="post-title" title="丧尸围城 (下)">丧尸围城 (下)</span>
+            <span class="post-date" title="2024-12-07 17:44:05">2024/12/07</span>
+        </a>
+        
+        
+        <a  class="全部文章 项目 "
+           href="/2024/12/65ec626183cc.html"
+           data-tag="demo"
+           data-author="" >
+            <span class="post-title" title="丧尸围城 (上)">丧尸围城 (上)</span>
+            <span class="post-date" title="2024-12-06 22:42:09">2024/12/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 "
+           href="/2024/12/98a55959539d.html"
+           data-tag="工具"
+           data-author="" >
+            <span class="post-title" title="这里是建站记录">这里是建站记录</span>
+            <span class="post-date" title="2024-12-06 15:13:47">2024/12/06</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-热更新/Lua/6.函数" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">6.函数</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="热更新">热更新</a> > 
+            
+            <a  data-rel="热更新&lt;---&gt;Lua">Lua</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color4">lua</a>
+            
+            <a class="color4">热更新</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2024-12-27 22:24:49'>2024-12-27 21:37</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-text">基本语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E5%8F%82%E6%95%B0%E6%97%A0%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-text">无参数无返回值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E5%8F%82%E6%95%B0"><span class="toc-text">有参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-text">有返回值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="toc-text">函数的类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E9%87%8D%E8%BD%BD"><span class="toc-text">函数的重载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%95%BF%E5%8F%82%E6%95%B0"><span class="toc-text">变长参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%B5%8C%E5%A5%97"><span class="toc-text">函数嵌套</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lua%E4%B8%AD%E9%97%AD%E5%8C%85%E7%9A%84%E4%BD%93%E7%8E%B0"><span class="toc-text">lua中闭包的体现</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><p>function 函数名()<br>end</p>
+<p>a &#x3D; function()<br>end</p>
+<h3 id="无参数无返回值"><a href="#无参数无返回值" class="headerlink" title="无参数无返回值"></a>无参数无返回值</h3><pre><code class="Lua">function F1()
+    print(&quot;F1函数&quot;)
+end
+--函数声明后才能使用
+F1()
+</code></pre>
+<p>有点类似C#中的委托和事件，函数也是一种类型</p>
+<pre><code class="lua">F2 = function()
+    print(&quot;F2函数&quot;)
+end
+F2()
+</code></pre>
+<h3 id="有参数"><a href="#有参数" class="headerlink" title="有参数"></a>有参数</h3><pre><code class="lua">function F3(a)
+    print(a)
+end
+F3(1)
+F3(&quot;123&quot;)
+F3(true)-- true不支持拼接操作。
+-- 如果传入的参数和函数参数个数不匹配，不会报错只会补空或丢弃
+F3()
+F3(1,2,3)
+</code></pre>
+<p><img src="/../../../img/beishang20241227214953309.png"></p>
+<h3 id="有返回值"><a href="#有返回值" class="headerlink" title="有返回值"></a>有返回值</h3><pre><code class="lua">function F4(a)
+    return a,&quot;123&quot;,true
+end
+-- 多返回值时，在前面申明多个变量来接取即可
+-- 如果变量不够，不影响值接取对应位置的返回值
+-- 如果变量多，会直接赋nil
+temp, temp2,temp3 = F4(&quot;1&quot;)
+</code></pre>
+<h3 id="函数的类型"><a href="#函数的类型" class="headerlink" title="函数的类型"></a>函数的类型</h3><pre><code class="lua">F5 = function()
+    print(&quot;123&quot;)
+end
+print(type(F5))
+</code></pre>
+<p>返回一个function</p>
+<h3 id="函数的重载"><a href="#函数的重载" class="headerlink" title="函数的重载"></a>函数的重载</h3><p>函数名相同,参数类型不同,或者参数个数不同<br>lua中不支持重载，默认调用最后一个声明的函数</p>
+<pre><code class="lua">function F6()
+    print(&quot;不支持啊&quot;)
+end
+function F6(str)
+    print(str)
+end
+F6()
+</code></pre>
+<h3 id="变长参数"><a href="#变长参数" class="headerlink" title="变长参数"></a>变长参数</h3><p>变长参数（Variadic Arguments）是一种允许函数接收不定数量参数的机制</p>
+<pre><code class="lua">function F7(...)
+    -- 变长参数使用，先用一个表存起来
+    arg = &#123;...&#125;
+    for i = 1,#arg do
+        print(arg[i])
+    end
+end
+F7(1,&quot;123&quot;,true,4,5,6)
+</code></pre>
+<h3 id="函数嵌套"><a href="#函数嵌套" class="headerlink" title="函数嵌套"></a>函数嵌套</h3><pre><code class="lua">function F8()
+    F9 = function()
+        print(123)
+    end
+    return F9
+end
+
+f9 = F8()
+f9()
+</code></pre>
+<p>高级点写法</p>
+<pre><code class="lua">function F8()
+    return function() -- 这里不能取名字
+        print(123);
+    end
+end
+</code></pre>
+<h3 id="lua中闭包的体现"><a href="#lua中闭包的体现" class="headerlink" title="lua中闭包的体现"></a>lua中闭包的体现</h3><pre><code class="lua">-- 临时变量x的生命周期改变到返回的函数里面去了
+function F9(x)
+    -- 若在这申明的参数进里面的函数也会闭包	
+    -- 改变了传入参数的生命周期
+    return function(y) -- 这里不能取名字
+        return x + y
+    end
+end
+f10 = F9(10)
+print(f10(5))
+</code></pre>
+<p>打印出15</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 2154838055@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2024- beishangzhajitui
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
