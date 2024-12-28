@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/热更新/Lua/4.条件分支语句.md",
+                "file": "source/_posts/热更新/Lua/7.table表实现数组.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4.条件分支语句"
+              "title": "7.table表实现数组"
             }
           }
         ]
@@ -88,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "3d6c464a1f506d07",
@@ -150,10 +149,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/热更新/Lua/4.条件分支语句.md"
+                "file": "source/_posts/热更新/Lua/7.table表实现数组.md"
               },
               "icon": "lucide-list",
-              "title": "4.条件分支语句 的大纲"
+              "title": "7.table表实现数组 的大纲"
             }
           },
           {
@@ -171,7 +170,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -187,10 +187,15 @@
   },
   "active": "a17f8b1a7941bc29",
   "lastOpenFiles": [
-    "source/_posts/热更新/Lua/3.运算符.md",
+    "source/_posts/热更新/Lua/6.函数.md",
+    "source/_posts/热更新/Lua/5.循环语句.md",
     "source/_posts/热更新/Lua/4.条件分支语句.md",
+    "source/_posts/热更新/Lua/3.运算符.md",
     "source/_posts/热更新/Lua/1.变量.md",
     "source/_posts/热更新/Lua/2.字符串操作.md",
+    "source/_posts/热更新/Lua/7.table表实现数组.md",
+    "source/_posts/热更新/Lua/迭代器遍历.md",
+    "source/img/beishang20241227214953309.png",
     "source/img/beishang20241227183042237.png",
     "source/img/beishang20241227180927686.png",
     "source/img/beishang20241227165335545.png",
@@ -223,15 +228,10 @@
     "public/img/beishang20241207184241362.png",
     "public/img/beishang20241207183358351.png",
     "public/img/beishang20241207173653497.png",
-    "public/img/beishang20241207173547224.png",
     "public/tags/面试/index.html",
     "source/_posts/丧尸围城（下）.md",
     "source/_posts/CSharp/CSharp基础/2.ref和out.md",
     "source/_posts/CSharp/CSharp基础/27.冒泡排序.md",
-    "source/_posts/CSharp/CSharp基础/1.属性和字段.md",
-    "source/_posts/CSharp/CSharp进阶/1.ArrayList.md",
-    "source/_posts/CSharp/CSharp进阶/5.泛型.md",
-    "source/_posts/面试/面试题6.md",
-    "source/_posts/面试/面试题5.md"
+    "source/_posts/CSharp/CSharp基础/1.属性和字段.md"
   ]
 }
