@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/面试/11.21.md",
+                "file": "source/_posts/游戏引擎/Unity/Unity入门/Scene和Hierarchy窗口.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "11.21"
+              "title": "Scene和Hierarchy窗口"
             }
           }
         ]
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "3d6c464a1f506d07",
@@ -187,12 +188,17 @@
   },
   "active": "a17f8b1a7941bc29",
   "lastOpenFiles": [
-    "source/_posts/面试/面试题1.md",
-    "source/_posts/面试/面试题2.md",
-    "source/_posts/面试/面试题4.md",
-    "source/_posts/面试/面试题6.md",
+    "source/img/beishang20241230142239373.png",
     "source/_posts/面试/面试题5.md",
+    "source/_posts/游戏引擎/Unity/Unity入门/Scene和Hierarchy窗口.md",
+    "source/_posts/游戏引擎/Unity/Unity入门",
+    "source/_posts/游戏引擎/Unity",
+    "source/_posts/游戏引擎",
+    "source/_posts/面试/面试题6.md",
+    "source/_posts/面试/面试题4.md",
+    "source/_posts/面试/面试题1.md",
     "source/_posts/面试/11.21.md",
+    "source/_posts/面试/面试题2.md",
     "source/_posts/Unity基础框架/观察者模式.md",
     "source/_posts/热更新/Lua/7.table表实现数组.md",
     "tags/热更新/index.html",
@@ -202,9 +208,6 @@
     "page/4/index.html",
     "page/4",
     "categories/热更新/Lua/index.html",
-    "categories/热更新/index.html",
-    "categories/热更新/Lua",
-    "categories/热更新",
     "source/_posts/热更新/Lua/6.函数.md",
     "source/_posts/热更新/Lua/5.循环语句.md",
     "source/_posts/热更新/Lua/4.条件分支语句.md",
@@ -225,8 +228,6 @@
     "source/_posts/CSharp/CSharp进阶/15.lambda表达式.md",
     "source/_posts/CSharp/CSharp进阶/16.List.md",
     "source/_posts/CSharp/CSharp进阶/17.协变逆变.md",
-    "source/_posts/CSharp/CSharp进阶/25.值类型和引用类型.md",
-    "source/_posts/Hexo+Github+Obsidian这里是建站记录.md",
     "public/img/beishang20241207184530309.png",
     "public/img/beishang20241208002131397.png",
     "public/img/beishang20241207184136981.png",
