@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/游戏引擎/Unity/Unity入门/1.Scene和Hierarchy窗口.md",
+                "file": "source/_posts/面试/11.21.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.Scene和Hierarchy窗口"
+              "title": "11.21"
             }
           }
         ]
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "3d6c464a1f506d07",
@@ -187,16 +188,16 @@
   },
   "active": "a17f8b1a7941bc29",
   "lastOpenFiles": [
+    "source/_posts/面试/面试题1.md",
+    "source/_posts/游戏引擎/Unity/Unity入门/1.Scene和Hierarchy窗口.md",
     "source/img/beishang20241230171300342.png",
     "source/_posts/面试/面试题5.md",
-    "source/_posts/游戏引擎/Unity/Unity入门/1.Scene和Hierarchy窗口.md",
     "source/img/beishang20241230142239373.png",
     "source/_posts/游戏引擎/Unity/Unity入门",
     "source/_posts/游戏引擎/Unity",
     "source/_posts/游戏引擎",
     "source/_posts/面试/面试题6.md",
     "source/_posts/面试/面试题4.md",
-    "source/_posts/面试/面试题1.md",
     "source/_posts/面试/11.21.md",
     "source/_posts/面试/面试题2.md",
     "source/_posts/Unity基础框架/观察者模式.md",
@@ -231,7 +232,6 @@
     "public/img/beishang20241207184530309.png",
     "public/img/beishang20241208002131397.png",
     "public/img/beishang20241207184136981.png",
-    "public/img/beishang20241207184241362.png",
-    "public/img/beishang20241207183358351.png"
+    "public/img/beishang20241207184241362.png"
   ]
 }
