@@ -162,7 +162,29 @@ public class Player_StandAndFireState : PlayerStateBase
     /// <summary>
     /// 该状态下的根运动处理方法，在根运动发生时被调用，用于处理角色位置移动等相关逻辑
     /// </summary>
-    /// <param name="deltaPosition">根运动产生的位置变化量</param>
+    /// <param name="deltaPositi  private void UpdateAnimationBlend()
+    {
+        switch (playerController.CurrentState)
+        {
+            case PlayerState.StandAndFire:
+                // 如果当前还是站立射击状态，不做融合相关处理（可根据实际需求添加待机动作融合等情况）
+                break;
+            case PlayerState.WalkAndFire:
+                if (timeSinceLastTransition < standToWalkTransitionTime)
+                {
+                    // 计算从站立射击到行走射击的动画融合权重，基于时间占比
+                    standToWalkBlendWeight = timeSinceLastTransition / standToWalkTransitionTime;
+                    playerController.ModelBase.Animator.SetFloat("StandWalkFireBlend", standToWalkBlendWeight);
+                }
+                else if (timeSinceLastTransition >= standToWalkTransitionTime)
+                {
+                    playerController.ModelBase.Animator.SetFloat("StandWalkFireBlend", 1f);
+                }
+                break;
+            // 可以添加更多针对其他状态转换的动画融合权重计算及设置逻辑
+        }
+    }
+on">根运动产生的位置变化量</param>
     /// <param name="deltaRotation">根运动产生的旋转变化量</param>
     private void OnRootMotion(Vector3 deltaPosition, Quaternion deltaRotation)
     {
