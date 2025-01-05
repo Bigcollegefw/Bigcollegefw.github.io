@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/游戏引擎/Unity/Unity入门/URP项目.md",
+                "file": "source/_posts/Unity基础框架/UI框架/MianPanelManager.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "URP项目"
+              "title": "MianPanelManager"
             }
           }
         ]
@@ -187,11 +187,14 @@
   },
   "active": "3010a8815aa772c7",
   "lastOpenFiles": [
+    "source/_posts/游戏引擎/Unity/Unity入门/URP Camera使用及动态设置.md",
+    "source/_posts/Unity基础框架/UI框架/MianPanelManager.md",
+    "source/_posts/Unity基础框架/UI框架",
+    "source/img/beishang20250105211111051.png",
+    "source/_posts/游戏引擎/Stand and Fire.md",
+    "source/_posts/游戏引擎/失败的动画系统.md",
     "source/img/beishang20250105200009637.png",
     "source/_posts/Hexo+Github+Obsidian这里是建站记录.md",
-    "source/_posts/游戏引擎/Unity/Unity入门/URP项目.md",
-    "source/_posts/游戏引擎/草稿.md",
-    "source/_posts/游戏引擎/Stand and Fire.md",
     "source/_posts/CSharp/CSharp进阶/6.泛型约束.md",
     "source/_posts/CSharp/CSharp基础/2.ref和out.md",
     "source/_posts/面试/11.21.md",
@@ -214,7 +217,6 @@
     "tags/lua",
     "page/4/index.html",
     "page/4",
-    "categories/热更新/Lua/index.html",
     "source/_posts/热更新/Lua/6.函数.md",
     "source/_posts/热更新/Lua/5.循环语句.md",
     "source/_posts/热更新/Lua/4.条件分支语句.md",
@@ -230,8 +232,6 @@
     "source/_posts/CSharp/CSharp进阶/20.反射.md",
     "source/_posts/CSharp/CSharp进阶/18.多线程.md",
     "public/img/beishang20241207184530309.png",
-    "public/img/beishang20241208002131397.png",
-    "public/img/beishang20241207184136981.png",
-    "public/img/beishang20241207184241362.png"
+    "public/img/beishang20241208002131397.png"
   ]
 }
