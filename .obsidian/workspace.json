@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/项目/微信小游戏/zgdsg/SingletonBase.md",
+                "file": "source/_posts/项目/微信小游戏/zgdsg/框架/Core/CommUserData.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SingletonBase"
+              "title": "CommUserData"
             }
           }
         ]
@@ -83,12 +83,11 @@
               "title": "File Tree"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 299.5
   },
   "right": {
     "id": "3d6c464a1f506d07",
@@ -187,26 +186,32 @@
   },
   "active": "3010a8815aa772c7",
   "lastOpenFiles": [
-    "source/_posts/项目/微信小游戏/zgdsg/开发框架.md",
-    "source/_posts/项目/微信小游戏/zgdsg/SingletonBase.md",
-    "source/_posts/项目/微信小游戏/zgdsg/CenterContainerManager.md",
-    "source/_posts/项目/微信小游戏/zgdsg/item类.md",
-    "source/_posts/项目/微信小游戏/zgdsg/主页面GamePanel.md",
+    "source/_posts/项目/微信小游戏/zgdsg/框架/Base/SingletonBase.md",
+    "source/_posts/项目/微信小游戏/zgdsg/框架/Core/CommUserData.md",
+    "source/_posts/项目/微信小游戏/zgdsg/框架/UI/item类.md",
+    "source/_posts/项目/微信小游戏/zgdsg/框架/Scene",
+    "source/_posts/项目/微信小游戏/zgdsg/框架/Managers",
+    "source/_posts/项目/微信小游戏/zgdsg/框架/Core/Variable",
+    "source/_posts/项目/微信小游戏/zgdsg/框架/Core/Component",
+    "source/_posts/项目/微信小游戏/zgdsg/框架/Core",
+    "source/_posts/项目/微信小游戏/zgdsg/框架/UI",
+    "source/_posts/项目/微信小游戏/zgdsg/框架/UI/CenterContainerManager.md",
+    "source/_posts/项目/微信小游戏/zgdsg/框架/UI/主页面GamePanel.md",
+    "source/_posts/项目/微信小游戏/zgdsg/框架/大纲.md",
+    "source/_posts/项目/微信小游戏/zgdsg/框架",
+    "source/_posts/项目/微信小游戏/zgdsg/框架/Base",
+    "source/_posts/项目/微信小游戏/完全胜利/实现九宫格地图动态加载.md",
     "source/img/beishang20250107220154530.png",
     "source/img/beishang20250107220130014.png",
     "source/_posts/项目/AI/2.md",
     "source/_posts/项目/AI/1.md",
     "source/_posts/项目/AI",
-    "source/_posts/项目/微信小游戏/完全胜利/实现九宫格地图动态加载.md",
     "source/_posts/项目/微信小游戏/zgdsg",
     "source/_posts/项目/微信小游戏/微信小游戏.md",
     "source/img/beishang20250107083319229.png",
     "source/img/beishang20250107083203791.png",
     "source/_posts/CSharp/CSharp进阶/1.ArrayList.md",
-    "source/_posts/项目/微信小游戏/完全胜利",
     "source/_posts/项目/微信小游戏/未命名.md",
-    "source/_posts/项目/微信小游戏",
-    "source/_posts/项目",
     "source/_posts/CSharp/CSharp进阶/16.List.md",
     "source/_posts/Unity基础框架/UI框架/MianPanelManager.md",
     "source/_posts/游戏引擎/Unity/Unity入门/URP Camera使用及动态设置.md",
@@ -214,7 +219,6 @@
     "source/_posts/UGUI抽卡系统.md",
     "source/_posts/丧尸围城（下）.md",
     "source/_posts/游戏引擎/Unity/Unity入门/1.Scene和Hierarchy窗口.md",
-    "source/_posts/Unity基础框架/UI框架",
     "source/img/beishang20250105211111051.png",
     "source/_posts/游戏引擎/Stand and Fire.md",
     "source/_posts/游戏引擎/失败的动画系统.md",
@@ -226,11 +230,6 @@
     "source/img/beishang20241230171300342.png",
     "source/_posts/面试/面试题5.md",
     "source/img/beishang20241230142239373.png",
-    "source/_posts/游戏引擎/Unity/Unity入门",
-    "source/_posts/游戏引擎/Unity",
-    "source/_posts/游戏引擎",
-    "source/_posts/面试/面试题6.md",
-    "tags/热更新/index.html",
     "source/img/beishang20241227214953309.png",
     "source/img/beishang20241227183042237.png"
   ]
