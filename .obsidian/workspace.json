@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/项目/微信小游戏/完全胜利/实现九宫格地图动态加载.md",
+                "file": "source/_posts/项目/微信小游戏/zgdsg/列表管理.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "实现九宫格地图动态加载"
+              "title": "列表管理"
             }
           }
         ]
@@ -187,10 +187,14 @@
   },
   "active": "3010a8815aa772c7",
   "lastOpenFiles": [
+    "source/_posts/项目/微信小游戏/zgdsg/item类.md",
+    "source/_posts/项目/微信小游戏/zgdsg/列表管理.md",
+    "source/_posts/项目/微信小游戏/完全胜利/实现九宫格地图动态加载.md",
+    "source/_posts/项目/微信小游戏/zgdsg",
+    "source/_posts/项目/微信小游戏/微信小游戏.md",
     "source/img/beishang20250107083319229.png",
     "source/img/beishang20250107083203791.png",
     "source/_posts/CSharp/CSharp进阶/1.ArrayList.md",
-    "source/_posts/项目/微信小游戏/完全胜利/实现九宫格地图动态加载.md",
     "source/_posts/项目/微信小游戏/完全胜利",
     "source/_posts/项目/微信小游戏/未命名.md",
     "source/_posts/项目/微信小游戏",
@@ -224,14 +228,10 @@
     "source/_posts/热更新/Lua/7.table表实现数组.md",
     "tags/热更新/index.html",
     "tags/热更新",
-    "tags/lua/index.html",
     "source/_posts/热更新/Lua/6.函数.md",
-    "source/_posts/热更新/Lua/5.循环语句.md",
-    "source/_posts/热更新/Lua/4.条件分支语句.md",
     "source/img/beishang20241227214953309.png",
     "source/img/beishang20241227183042237.png",
     "source/img/beishang20241227180927686.png",
-    "source/img/beishang20241227165335545.png",
-    "public/img/beishang20241207184530309.png"
+    "source/img/beishang20241227165335545.png"
   ]
 }
