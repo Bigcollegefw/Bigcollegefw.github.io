@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/项目/AI/2.md",
+                "file": "source/_posts/项目/微信小游戏/zgdsg/SingletonBase.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2"
+              "title": "SingletonBase"
             }
           }
         ]
@@ -187,11 +187,16 @@
   },
   "active": "3010a8815aa772c7",
   "lastOpenFiles": [
-    "source/_posts/项目/AI/1.md",
-    "source/_posts/项目/AI/2.md",
-    "source/_posts/项目/微信小游戏/zgdsg/列表管理.md",
-    "source/_posts/项目/AI",
+    "source/_posts/项目/微信小游戏/zgdsg/开发框架.md",
+    "source/_posts/项目/微信小游戏/zgdsg/SingletonBase.md",
+    "source/_posts/项目/微信小游戏/zgdsg/CenterContainerManager.md",
     "source/_posts/项目/微信小游戏/zgdsg/item类.md",
+    "source/_posts/项目/微信小游戏/zgdsg/主页面GamePanel.md",
+    "source/img/beishang20250107220154530.png",
+    "source/img/beishang20250107220130014.png",
+    "source/_posts/项目/AI/2.md",
+    "source/_posts/项目/AI/1.md",
+    "source/_posts/项目/AI",
     "source/_posts/项目/微信小游戏/完全胜利/实现九宫格地图动态加载.md",
     "source/_posts/项目/微信小游戏/zgdsg",
     "source/_posts/项目/微信小游戏/微信小游戏.md",
@@ -225,13 +230,8 @@
     "source/_posts/游戏引擎/Unity",
     "source/_posts/游戏引擎",
     "source/_posts/面试/面试题6.md",
-    "source/_posts/面试/面试题4.md",
-    "source/_posts/面试/面试题2.md",
-    "source/_posts/Unity基础框架/观察者模式.md",
     "tags/热更新/index.html",
     "source/img/beishang20241227214953309.png",
-    "source/img/beishang20241227183042237.png",
-    "source/img/beishang20241227180927686.png",
-    "source/img/beishang20241227165335545.png"
+    "source/img/beishang20241227183042237.png"
   ]
 }
