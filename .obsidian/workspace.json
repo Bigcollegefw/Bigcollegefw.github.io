@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/项目/微信小游戏/zgdsg/框架/Core/CommUserData.md",
+                "file": "source/_posts/Hexo+Github+Obsidian这里是建站记录.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CommUserData"
+              "title": "Hexo+Github+Obsidian这里是建站记录"
             }
           }
         ]
@@ -187,8 +187,14 @@
   },
   "active": "3010a8815aa772c7",
   "lastOpenFiles": [
-    "source/_posts/项目/微信小游戏/zgdsg/框架/Base/SingletonBase.md",
+    "source/_posts/UGUI抽卡系统.md",
+    "source/_posts/Hexo+Github+Obsidian这里是建站记录.md",
+    "source/_posts/Unity基础框架/UI框架/MianPanelManager.md",
+    "source/_posts/丧尸围城（下）.md",
+    "source/_posts/丧尸围城（上）.md",
+    "source/_posts/项目/AI/3.md",
     "source/_posts/项目/微信小游戏/zgdsg/框架/Core/CommUserData.md",
+    "source/_posts/项目/微信小游戏/zgdsg/框架/Base/SingletonBase.md",
     "source/_posts/项目/微信小游戏/zgdsg/框架/UI/item类.md",
     "source/_posts/项目/微信小游戏/zgdsg/框架/Scene",
     "source/_posts/项目/微信小游戏/zgdsg/框架/Managers",
@@ -214,11 +220,7 @@
     "source/_posts/CSharp/CSharp进阶/1.ArrayList.md",
     "source/_posts/项目/微信小游戏/未命名.md",
     "source/_posts/CSharp/CSharp进阶/16.List.md",
-    "source/_posts/Unity基础框架/UI框架/MianPanelManager.md",
     "source/_posts/游戏引擎/Unity/Unity入门/URP Camera使用及动态设置.md",
-    "source/_posts/Hexo+Github+Obsidian这里是建站记录.md",
-    "source/_posts/UGUI抽卡系统.md",
-    "source/_posts/丧尸围城（下）.md",
     "source/_posts/游戏引擎/Unity/Unity入门/1.Scene和Hierarchy窗口.md",
     "source/img/beishang20250105211111051.png",
     "source/_posts/游戏引擎/Stand and Fire.md",
@@ -227,9 +229,7 @@
     "source/_posts/CSharp/CSharp进阶/6.泛型约束.md",
     "source/_posts/CSharp/CSharp基础/2.ref和out.md",
     "source/_posts/面试/11.21.md",
-    "source/_posts/面试/面试题1.md",
     "source/img/beishang20241230171300342.png",
-    "source/_posts/面试/面试题5.md",
     "source/img/beishang20241230142239373.png",
     "source/img/beishang20241227214953309.png",
     "source/img/beishang20241227183042237.png"
