@@ -33,54 +33,6 @@ public class GamePanel : MonoBehaviour
     [Header("金币数")]
     [SerializeField]
     private Text GoldValue;
-    //[Header("情缘页面")]
-    //[SerializeField]
-    //private Transform LovePanel;
-    //[Header("阵法页面")]
-    //[SerializeField]
-    //private Transform ArrayPanel;
-
-    [Header("情缘按钮")]
-    [SerializeField]
-    private Button m_StartLoveBattle;
-    [Header("阵法按钮")]
-    [SerializeField]
-    private Button m_StartArrayBattle;
-    [Header("攻城按钮")]
-    [SerializeField]
-    private Button m_StartCityBattle;
-    [Header("法宝按钮")]
-    [SerializeField]
-    private Button m_StartMagicWeaponBattle;
-    [Header("演武按钮")]
-    [SerializeField]
-    private Button m_StartWuShuBattle;
-
-
-    //[Header("战斗失败页面")]
-    //[SerializeField]
-    //private Transform m_OverPanel;
-
-    //[Header("情缘界面")]
-    //[SerializeField]
-    //private GameObject LovePanel;
-    //[Header("阵法界面")]
-    //[SerializeField]
-    //private GameObject ArrayPanel;
-    //[Header("攻城界面")]
-    //[SerializeField]
-    //private GameObject CityPanel;
-    //[Header("法宝界面")]
-    //[SerializeField]
-    //private GameObject MagicWeaponPanel;
-    //[Header("演武界面")]
-    //[SerializeField]
-    //private GameObject WuShuPanel;
-    //[Header("初始化的界面")]
-    //[SerializeField]
-    //private GameObject InitPanel;
-    //private Dictionary<string, Image> BtnImage = new Dictionary<string, Image>();
-    // 当前显示的界面
     private GameObject CurrActivePanel;
     [Header("初始页面")]
     [SerializeField]
@@ -89,9 +41,7 @@ public class GamePanel : MonoBehaviour
     private void Awake()
     {
         TransInit();
-
     }
-
 
     // 找到面板物品，初步设置按钮对应效果
     void TransInit()

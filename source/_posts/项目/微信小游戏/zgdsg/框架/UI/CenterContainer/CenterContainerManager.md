@@ -9,14 +9,14 @@ using UnityEngine.UI;
 
 public class CenterContainerManager : MonoBehaviour
 {
-    // X2下每升一级所需金钱的初始值，外部设定
-    public List<long> TestListx1= new List<long>(8);
+    // X下每升一级所需金钱的初始值，外部设定
+    public List<long> TestListx1= new List<long>();
     // 每个武器的初始等级，外部设定
     public List<long> WeapolevelList = new List<long>();
 
     public List<long> LevelTestList = new List<long>();
 
-    public List<long> TestListx1Original = new List<long>(); // 原始状态，即 x1 状态的金钱数值
+    //public List<long> TestListx1Original = new List<long>(); // 原始状态，即 x1 状态的金钱数值
     public List<long> TestListx50 = new List<long>();       // x50 状态下的金钱数值
     public List<long> TestListx100 = new List<long>();      // x100 状态下的金钱数值
 
@@ -24,6 +24,10 @@ public class CenterContainerManager : MonoBehaviour
     [Header("总金钱数量")]
     [SerializeField]
     private Text MoneyTex;
+
+    [Header("总金钱数量")]
+    [SerializeField]
+    private long Money;
 
     [Header("需要绑定事件的按钮")]
     [SerializeField]
@@ -55,38 +59,29 @@ public class CenterContainerManager : MonoBehaviour
 
     private void Awake()
     {
-        InitTalentPanelCallBack();
+        InitEquipPanelCallBack();
+        MoneyTex.text = FormatNumber(Money).ToString();
         // GameEntry.Event.CommonEvent.AddEventListener(SysEventId.LoadDataTableComplete, InitTalentPanelCallBack);
         //gameObject.SetActive(false);
     } 
 
-    // 实现动态加载
-    private void InitTalentPanelCallBack()
+    // 实现动态加载，并且初始化一些按钮
+    private void InitEquipPanelCallBack()
     {
-
-        // 初始化TestListx1，使得每个装备武器初始等级升级金币数呈现5n-4的规律；
-        // 假设每个装备的初始等级为1，我们需要为每个等级计算升级所需的金币数
-        for (int i = 0; i < TestListx1.Capacity; i++)
-        {
-            // 计算每个等级的升级金币数，公式为 5n - 4，其中 n 是等级
-            long cost = 5 * (i + 10) - 4; // i+1 因为等级从1开始，而不是0
-            TestListx1.Add(cost);
-        }
-
-
-
+        // 可能的获取数据的方式
         //TalentList = GameEntry.DataTable.DataTableManager.TalentDataDBModel.GetList();
 
         for (int i = 0; i < TestListx1.Count; i++)
         {
-            LevelTestList.Add(1L);                 // 初始化升鸡级的状态
-            TestListx1Original.Add(TestListx1[i]); // 初始化原始状态列表
+            LevelTestList.Add(1L);                 // 初始化升几级的状态
+            //TestListx1Original.Add(TestListx1[i]); // 初始化原始状态列表
             TestListx50.Add(TestListx1[i]);        // 初始化 x50 状态列表
             TestListx100.Add(TestListx1[i]);       // 初始化 x100 状态列表
 
+            // 实时计算更新每个列表
             UpdateStateList(i);
 
-            // 初始化
+            // 动态加载
             GameObject Go = Instantiate(m_Items);
             // 设置初始比例
             Go.transform.localScale = Vector3.one;
@@ -124,19 +119,85 @@ public class CenterContainerManager : MonoBehaviour
         }
     }
 
+    // 更新玩家金币数的方法
+    private void PlayerMoney(List<long> TestListx1, List<long> TestListx50, List<long> TestListx100,int index)
+    {
+        string doubleNun = btnArr[0].GetComponentInChildren<Text>().text;
+        switch (doubleNun)
+        {
+            case "x1":
+                Money -= TestListx1[index];
+                break;
+            case "x50":
+                Money -= TestListx50[index];
+                break;
+            case "x100":
+                Money -= TestListx100[index];
+                break;
+        }
+
+        MoneyTex.text = FormatNumber(Money).ToString();
+    }
+
+    // 判断金钱数量是否够的方法
+    private bool EnoughMoney(List<long> TestListx1, List<long> TestListx50, List<long> TestListx100, int index)
+    {
+        string doubleNun = btnArr[0].GetComponentInChildren<Text>().text;
+        switch (doubleNun)
+        {
+            case "x1":
+                if (Money < TestListx1[index])
+                {
+                    print("钱不够");
+                    return false;
+                }
+                break;
+            case "x50":
+                if (Money < TestListx50[index])
+                {
+                    print("钱不够");
+                    return false;
+                }
+                break;
+            case "x100":
+                if (Money < TestListx100[index])
+                {
+                    print("钱不够");
+                    return false;
+                }
+                break;
+        }
+        return true;
+    }
+
+
+
+
     // 这里写的被action方法装下来执行，action就是升级的按钮
     private void SetLock(int num,int index)
     {
+        if (!EnoughMoney(TestListx1, TestListx50, TestListx100, index))
+        {
+            return; // 如果钱不够，直接结束SetLock方法执行，不再执行后续逻辑
+        }
+
         int nextIndex = index + 1;
         int nextNextIndex = index + 2;
 
+        WeapolevelList[index] = WeapolevelList[index] + LevelTestList[index];
+
+        // 这里需要乘以每次升级的次数。自己迭代50或100次先
+        // 升一级下一级的所需金钱数量随不断升级呈现2n-1
+        for(int i = 0; i < LevelTestList[index];i++)
+        {
+            TestListx1[index] = TestListx1[index] + WeapolevelList[index] * 2 - 1;
+        }
+
+        PlayerMoney(TestListx1, TestListx50, TestListx100,index);
 
 
-        // 升一级下一级的所需金钱数量增加15%
-        TestListx1[index] = TestListx1[index] * 110 / 100;
 
-        
-        // 实时计算更新每个列表
+        // 点击一次实时计算更新对应索引的列表值
         UpdateStateList(index);
 
         // 更新显示
@@ -145,7 +206,6 @@ public class CenterContainerManager : MonoBehaviour
         {
             case "x1":
                 Content.GetChild(index).GetChild(1).GetChild(1).GetComponent<Text>().text = FormatNumber(TestListx1[index]).ToString();
-                print("你块显示啊");
                 break;
             case "x50":
                 Content.GetChild(index).GetChild(1).GetChild(1).GetComponent<Text>().text = FormatNumber(TestListx50[index]).ToString();
@@ -159,7 +219,7 @@ public class CenterContainerManager : MonoBehaviour
         // 对于第一个元素
         if (index == 0)
         {
-            print(num);
+            print("点击次数："+ num);
             if (num == 3)
             {
                 Content.GetChild(1).GetChild(5).GetComponent<Image>().enabled = false;
@@ -184,10 +244,10 @@ public class CenterContainerManager : MonoBehaviour
                         nextNextItem.gameObject.SetActive(true);
                     }
                 }
-                print(num);   
+                print("点击次数：" + num);   
             }  
         }
-        WeapolevelList[index]= WeapolevelList[index] + LevelTestList[index];
+
         Content.GetChild(index).GetChild(3).GetComponent<Text>().text = "九环禅杖" + "Lv." + (WeapolevelList[index]).ToString();
     }
     
@@ -210,6 +270,8 @@ public class CenterContainerManager : MonoBehaviour
     // 双倍花费按钮
     private void BtnClick(GameObject go)
     {
+        //UpdateStateList(index);
+
         // 将点击的按钮的名字go.name变成枚举类型
         BtnType type = (BtnType)Enum.Parse(typeof(BtnType), go.name);
         switch (type)
@@ -229,6 +291,7 @@ public class CenterContainerManager : MonoBehaviour
         }
     }
 
+    // 跟新按切换按倍数钮钮上的显示内容
     private void UpdateUIForState(string state)
     {
         for (int i = 0; i < TestListx1.Count; i++)
@@ -237,7 +300,7 @@ public class CenterContainerManager : MonoBehaviour
             switch (state)
             {
                 case "x1":
-                    money = TestListx1Original[i];
+                    money = TestListx1[i];
                     LevelTestList[i] = 1;
                     break;
                 case "x50":
@@ -249,7 +312,7 @@ public class CenterContainerManager : MonoBehaviour
                     LevelTestList[i] = 100;
                     break;
                 default:
-                    money = TestListx1Original[i];
+                    money = TestListx1[i];
                     LevelTestList[i] = 1;
                     break;
             }
@@ -270,26 +333,10 @@ public class CenterContainerManager : MonoBehaviour
         }
     }
 
-    // 计算到每个对应的容器中
-    //private void UpdateStateList(string state, int index)
-    //{
-    //    switch (state)
-    //    {
-    //        case "x1":
-    //            TestListx1Original[index] = TestListx1[index];
-    //            break;
-    //        case "x50":
-    //            TestListx50[index] = CalculateTotalForLevel(TestListx1[index], 50);
-    //            break;
-    //        case "x100":
-    //            TestListx100[index] = CalculateTotalForLevel(TestListx1[index], 100);
-    //            break;
-    //    }
-    //}
 
+    //同步列表的值
     private void UpdateStateList(int index)
     {
-                TestListx1Original[index] = TestListx1[index];
                 TestListx50[index] = CalculateTotalForLevel(TestListx1[index], 50);
                 TestListx100[index] = CalculateTotalForLevel(TestListx1[index], 100);
         
@@ -302,7 +349,7 @@ public class CenterContainerManager : MonoBehaviour
         long currentMoney = baseMoney;
         for (int j = 0; j < levels; j++)
         {
-            currentMoney = (long)(currentMoney * 1.1);
+            currentMoney = (long)(currentMoney + 2);
             totalMoney += currentMoney;
         }
         return totalMoney;
@@ -351,15 +398,13 @@ public class CenterContainerManager : MonoBehaviour
         if ( unit == "京" || unit == "兆" || unit == "亿" || unit == "万")
         {
             //  Math.Round 来决定是否需要保留一位小数
-            return Math.Round(num, 1) + unit;
+            return Math.Round(num, 2) + unit;
         }
         else
         {
             return number.ToString();
         }
     }
-
-
 }
 ```
 
