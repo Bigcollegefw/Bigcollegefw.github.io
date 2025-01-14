@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/游戏引擎/Unity/Unity入门/Vector3和Transform.md",
+                "file": "source/_posts/CSharp/CSharp基础/枚举.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Vector3和Transform"
+              "title": "枚举"
             }
           }
         ]
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 299.5
+    "width": 299.5,
+    "collapsed": true
   },
   "right": {
     "id": "3d6c464a1f506d07",
@@ -187,10 +188,11 @@
   },
   "active": "3010a8815aa772c7",
   "lastOpenFiles": [
+    "source/_posts/游戏引擎/Unity/Unity入门/Vector3和Transform.md",
+    "source/_posts/CSharp/CSharp基础/枚举.md",
     "source/img/beishang20250113201720528.png",
     "source/img/beishang20250113201631549.png",
     "source/_posts/游戏引擎/Unity/Unity入门/URP Camera使用及动态设置.md",
-    "source/_posts/游戏引擎/Unity/Unity入门/Vector3和Transform.md",
     "source/_posts/游戏引擎/Unity/Unity入门/1.Scene和Hierarchy窗口.md",
     "source/_posts/项目/微信小游戏/zgdsg/框架/大纲.md",
     "source/_posts/项目/微信小游戏/zgdsg/框架/UI/GamePanel.md",
@@ -231,7 +233,6 @@
     "source/img/beishang20250107083319229.png",
     "source/img/beishang20250107083203791.png",
     "source/img/beishang20250105211111051.png",
-    "source/img/beishang20250105200009637.png",
-    "source/img/beishang20241230171300342.png"
+    "source/img/beishang20250105200009637.png"
   ]
 }
