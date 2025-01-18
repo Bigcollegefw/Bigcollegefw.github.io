@@ -83,8 +83,7 @@
               "title": "File Tree"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -185,7 +184,7 @@
       "file-tree-alternative:File Tree Alternative Plugin": false
     }
   },
-  "active": "3010a8815aa772c7",
+  "active": "f76fa23c5dc956f5",
   "lastOpenFiles": [
     "source/_posts/CSharp/CSharp进阶/事件和委托.md",
     "source/_posts/CSharp/CSharp进阶/优化代码.md",
