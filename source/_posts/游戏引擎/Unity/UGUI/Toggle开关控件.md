@@ -51,3 +51,189 @@ private
 
 ```
 会把当前监听到的值传进来就是v
+
+
+### 使用PlayerPrefs制作一个音量控制器
+
+GameBGMToggleButton()和BGMToggleButton()需要绑定到下面，这个都是静态方法。
+![](../../../../img/beishang20250120213333639.png)
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class AudioController : MonoBehaviour
+{
+    public Toggle SetBGMToggle;
+    public Toggle GameBGMToggle;
+    public Image background; 
+    public Slider BGMSlider;
+
+    [SerializeField]
+    [Header("背景音乐")]
+    AudioSource BgmAudio;
+
+    [SerializeField]
+    [Header("音效")]
+    AudioSource SfxAudio;
+
+    public AudioClip bgm;
+    public AudioClip click;
+    public AudioClip attack;
+    public AudioClip autoAttack;
+
+    private static AudioController _instance;
+
+    public static AudioController Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<AudioController>();
+                if (_instance == null)
+                {
+                    GameObject audioControllerObject = new GameObject("AudioController");
+                    _instance = audioControllerObject.AddComponent<AudioController>();
+                }
+            }
+            return _instance;
+        }
+    }
+
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
+    private void Start()
+    {
+        // 初始化背景音乐
+        BgmAudio.clip = bgm;
+        BgmAudio.Play();
+
+        BGMManager();
+        BGMValueManager();
+        GameBGMManager();
+    }
+
+    private void Update()
+    {
+    }
+
+    public void PlaySfx(AudioClip clip)
+    {
+        SfxAudio.PlayOneShot(clip);
+    }
+
+    // 玩家UI中开关音乐触发该方法
+    public void BGMToggleButton()
+    {
+
+        if (SetBGMToggle.isOn)
+        {
+            // Open BGM and Sfx
+            PlayerPrefs.SetInt("BGM", 1);// 1 means open
+            Debug.Log(PlayerPrefs.GetInt("BGM"));
+        }
+        else
+        {
+            // Close BGM and Sfx
+            PlayerPrefs.SetInt("BGM", 0);// 0 means close
+            Debug.Log(PlayerPrefs.GetInt("BGM"));
+        }
+        GameBGMManager();
+        BGMManager();
+    }
+    // 玩家UI中开关音乐触发该方法
+    public void GameBGMToggleButton()
+    {
+
+        if (GameBGMToggle.isOn)
+        {
+            // Open BGM and Sfx
+            PlayerPrefs.SetInt("BGM", 1);// 1 means open
+            Debug.Log(PlayerPrefs.GetInt("BGM"));
+        }
+        else
+        {
+            // Close BGM and Sfx
+            PlayerPrefs.SetInt("BGM", 0);// 0 means close
+            Debug.Log(PlayerPrefs.GetInt("BGM"));
+        }
+        // 设置
+        GameBGMManager();
+        BGMManager();
+    }
+
+
+    // 玩家拖动音乐条触发该方法
+    public void BGMSliderButton(float v)
+    {
+        // Open BGM and Sfx
+        PlayerPrefs.SetFloat("BGMValue", v);// 1 means open
+        Debug.Log(PlayerPrefs.GetFloat("BGMValue"));
+        BGMValueManager();
+    }
+
+    // 控制音量大小
+    private void BGMValueManager()
+    {
+        float v = PlayerPrefs.GetFloat("BGMValue",1);
+
+        BGMSlider.value = v;
+        BgmAudio.volume = v;
+        SfxAudio.volume = v;
+    }
+
+
+    // 读取本地数据设置状态
+    private void BGMManager()
+    {
+        if (PlayerPrefs.GetInt("BGM") == 1)
+        {
+            SetBGMToggle.isOn = true;
+
+            SfxAudio.enabled = true;
+        }
+
+        else if (PlayerPrefs.GetInt("BGM") == 0)
+        {
+            SetBGMToggle.isOn = false;
+
+            SfxAudio.enabled = false;
+
+        }
+
+    }
+    // 读取本地数据设置状态
+    private void GameBGMManager()
+    {
+        if (PlayerPrefs.GetInt("BGM") == 1)
+        {
+            GameBGMToggle.isOn = true;
+            // 设置背景透明
+            background.color = new Color(background.color.r, background.color.g, background.color.b, 0f);
+            SfxAudio.enabled = true;
+        }
+
+        else if (PlayerPrefs.GetInt("BGM") == 0)
+        {
+            GameBGMToggle.isOn = false;
+            // 设置背景显示
+            background.color = new Color(background.color.r, background.color.g, background.color.b, 1f);
+            SfxAudio.enabled = false;
+        }
+    }
+}
+
+```
