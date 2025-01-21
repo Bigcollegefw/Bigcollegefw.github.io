@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/CSharp/U3DOL悠游/13.协程.md",
+                "file": "source/_posts/游戏引擎/计时器动画.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "13.协程"
+              "title": "计时器动画"
             }
           }
         ]
@@ -187,9 +187,12 @@
   },
   "active": "3010a8815aa772c7",
   "lastOpenFiles": [
+    "source/_posts/游戏引擎/Stand and Fire.md",
+    "source/_posts/游戏引擎/失败的动画系统.md",
+    "source/_posts/游戏引擎/计时器动画.md",
+    "source/_posts/CSharp/U3DOL悠游/13.协程.md",
     "source/img/beishang20250120235024808.png",
     "source/_posts/CSharp/U3DOL悠游/12.单例.md",
-    "source/_posts/CSharp/U3DOL悠游/13.协程.md",
     "source/img/beishang20250120230931623.png",
     "source/img/beishang20250120230856052.png",
     "source/img/beishang20250120230034737.png",
@@ -217,15 +220,12 @@
     "source/_posts/CSharp/CSharp基础/枚举.md",
     "source/_posts/CSharp/CSharp进阶/16.List.md",
     "source/_posts/Unity基础框架/观察者模式.md",
-    "source/img/beishang20250115140855219.png",
     "source/_posts/游戏引擎/Unity/Unity入门/Vector3和Transform.md",
     "source/_posts/游戏引擎/Unity/Unity入门/URP Camera使用及动态设置.md",
     "source/_posts/游戏引擎/Unity/Unity入门/1.Scene和Hierarchy窗口.md",
     "source/_posts/项目/微信小游戏/zgdsg/框架/大纲.md",
     "source/_posts/项目/微信小游戏/zgdsg/框架/UI/GamePanel.md",
     "source/_posts/项目/微信小游戏/zgdsg/框架/UI/IncreasePanel.md",
-    "source/_posts/项目/微信小游戏/zgdsg/框架/UI/Zhuge.md",
-    "source/_posts/项目/微信小游戏/zgdsg/框架/UI/CenterContainer/Items.md",
     "source/_posts/项目/微信小游戏/zgdsg/框架/UI/LoveContainer",
     "source/_posts/项目/微信小游戏/zgdsg/框架/UI/CenterContainer",
     "source/_posts/游戏引擎/Unity/UGUI",
