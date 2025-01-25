@@ -1,3 +1,14 @@
+---
+title: GraphicRaycater
+date:
+  "{ date }": 
+categories:
+  - 游戏引擎
+  - Unity
+  - UGUI
+tags:
+  - Unity
+---
 图形射线投射器组件
 UGUI的元素能被我们点击不是使用碰撞器，而是通过图形的大小检测射线的交互
 现在我新建一个Image发现下面并没有

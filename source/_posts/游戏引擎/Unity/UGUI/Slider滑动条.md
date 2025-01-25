@@ -1,3 +1,14 @@
+---
+title: Slider滑动条
+date:
+  "{ date }": 
+categories:
+  - 游戏引擎
+  - Unity
+  - UGUI
+tags:
+---
+
 ### 是什么
 
 默认由四组对象组成

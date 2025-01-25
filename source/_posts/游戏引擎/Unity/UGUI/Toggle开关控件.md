@@ -1,3 +1,14 @@
+---
+title: Toggle开关控件
+date:
+  "{ date }": 
+categories:
+  - 游戏引擎
+  - Unity
+  - UGUI
+tags:
+  - Unity
+---
 ### 是什么
 UGUI中处理玩家单选框多选框相关交互的关键组件
 
