@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/数据存储/PlayerPrefs/基本方法.md",
+                "file": "source/_posts/面试/面试题5.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "基本方法"
+              "title": "面试题5"
             }
           }
         ]
@@ -88,7 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 301.5
   },
   "right": {
     "id": "3d6c464a1f506d07",
@@ -185,8 +185,21 @@
       "file-tree-alternative:File Tree Alternative Plugin": false
     }
   },
-  "active": "8339d8a327f0fafa",
+  "active": "a96c6a0d9a2cdba6",
   "lastOpenFiles": [
+    "source/_posts/面试/面试题4.md",
+    "source/_posts/面试/面试题2.md",
+    "source/_posts/面试/面试题1.md",
+    "source/_posts/面试/11.21.md",
+    "source/_posts/游戏引擎/Unity/Unity基础框架/观察者模式.md",
+    "source/_posts/游戏引擎/Unity/Unity入门到核心/Vector3和Transform.md",
+    "source/_posts/游戏引擎/Unity/Unity入门到核心/URP Camera使用及动态设置.md",
+    "source/_posts/游戏引擎/Unity/Unity入门到核心/1.Scene和Hierarchy窗口.md",
+    "source/_posts/游戏引擎/Unity/UGUI/Slider滑动条.md",
+    "source/_posts/游戏引擎/Unity/UGUI/Toggle开关控件.md",
+    "source/_posts/游戏引擎/Unity/UGUI/GraphicRaycater.md",
+    "source/_posts/游戏引擎/Unity/UGUI/事件监听.md",
+    "source/_posts/数据存储/PlayerPrefs/基本方法.md",
     "tags/数据存储/index.html",
     "tags/数据存储",
     "tags/Unity/page/2/index.html",
@@ -197,7 +210,6 @@
     "page/6/index.html",
     "page/6",
     "page/5/index.html",
-    "page/5",
     "img/beishang20250120235024808.png",
     "img/beishang20250120230931623.png",
     "img/beishang20250120230856052.png",
@@ -221,18 +233,6 @@
     "source/_posts/CSharp/CSharp基础/枚举.md",
     "source/_posts/CSharp/CSharp基础/27.冒泡排序.md",
     "source/_posts/CSharp/CSharp基础/2.ref和out.md",
-    "source/_posts/CSharp/CSharp基础/1.属性和字段.md",
-    "source/_posts/CSharp/CSharp核心/23.Object中的方法.md",
-    "source/_posts/CSharp/CSharp核心/8.静态类和静态构造函数.md",
-    "source/_posts/CSharp/CSharp核心/7.静态成员.md",
-    "source/_posts/游戏引擎/Unity/Unity入门到核心/1.Scene和Hierarchy窗口.md",
-    "source/_posts/游戏引擎/Unity/Unity入门到核心/URP Camera使用及动态设置.md",
-    "source/_posts/游戏引擎/Unity/Unity入门到核心/Vector3和Transform.md",
-    "未命名.canvas",
-    "source/_posts/游戏引擎/Unity/Unity基础框架/观察者模式.md",
-    "source/_posts/游戏引擎/Unity/Unity基础框架/UI框架/MianPanelManager.md",
-    "source/_posts/游戏引擎/Unity/UGUI/Toggle开关控件.md",
-    "source/_posts/游戏引擎/Unity/UGUI/Slider滑动条.md",
-    "source/_posts/游戏引擎/Unity/UGUI/GraphicRaycater.md"
+    "未命名.canvas"
   ]
 }

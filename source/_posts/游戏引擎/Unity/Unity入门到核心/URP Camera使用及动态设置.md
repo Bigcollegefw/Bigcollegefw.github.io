@@ -3,6 +3,7 @@ title: URP Camera使用及动态设置
 date:
   "{ date }": 
 categories:
+  - 游戏引擎
   - Unity
   - Unity入门到精通
 tags:
