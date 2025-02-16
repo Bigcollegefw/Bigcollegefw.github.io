@@ -83,8 +83,7 @@
               "title": "File Tree"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -182,11 +181,28 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "obsidian-git:Open Git source control": false,
-      "file-tree-alternative:File Tree Alternative Plugin": false
+      "file-tree-alternative:File Tree Alternative Plugin": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
   "active": "a96c6a0d9a2cdba6",
   "lastOpenFiles": [
+    "source/_posts/Excalidraw/Drawing 2025-02-16 09.46.58.excalidraw.md",
+    "source/_posts/面试/面试题5.md",
+    "public/tags/excalidraw/index.html",
+    "public/tags/excalidraw",
+    "public/2025/02/5291a6a657e4.html",
+    "public/categories/游戏引擎/page/2/index.html",
+    "public/categories/游戏引擎/page/2",
+    "public/categories/游戏引擎/page",
+    "public/categories/游戏引擎/Unity/Unity基础框架/index.html",
+    "public/categories/游戏引擎/Unity/Unity基础框架",
+    "public/categories/游戏引擎/Unity/Unity入门到精通/index.html",
+    "public/categories/游戏引擎/Unity/Unity入门到精通",
+    "Excalidraw/Drawing 2025-02-16 09.46.37.excalidraw.md",
+    "Excalidraw/Drawing 2025-02-16 09.46.12.excalidraw.md",
+    "source/_posts/网络开发基础/未命名.md",
+    "未命名.canvas",
     "source/_posts/面试/面试题4.md",
     "source/_posts/面试/面试题2.md",
     "source/_posts/面试/面试题1.md",
@@ -200,16 +216,6 @@
     "source/_posts/游戏引擎/Unity/UGUI/GraphicRaycater.md",
     "source/_posts/游戏引擎/Unity/UGUI/事件监听.md",
     "source/_posts/数据存储/PlayerPrefs/基本方法.md",
-    "tags/数据存储/index.html",
-    "tags/数据存储",
-    "tags/Unity/page/2/index.html",
-    "tags/Unity/page/2",
-    "tags/Unity/page",
-    "tags/Unity/index.html",
-    "tags/Unity",
-    "page/6/index.html",
-    "page/6",
-    "page/5/index.html",
     "img/beishang20250120235024808.png",
     "img/beishang20250120230931623.png",
     "img/beishang20250120230856052.png",
@@ -226,13 +232,6 @@
     "source/_posts/丧尸围城（上）.md",
     "source/_posts/第三人称控制器.md",
     "source/_posts/CSharp/CSharp进阶/优化代码.md",
-    "source/_posts/CSharp/CSharp进阶/事件和委托.md",
-    "source/_posts/CSharp/CSharp进阶/25.值类型和引用类型.md",
-    "source/_posts/CSharp/CSharp进阶/20.反射.md",
-    "source/_posts/CSharp/CSharp进阶/1.ArrayList.md",
-    "source/_posts/CSharp/CSharp基础/枚举.md",
-    "source/_posts/CSharp/CSharp基础/27.冒泡排序.md",
-    "source/_posts/CSharp/CSharp基础/2.ref和out.md",
-    "未命名.canvas"
+    "source/_posts/CSharp/CSharp进阶/事件和委托.md"
   ]
 }
