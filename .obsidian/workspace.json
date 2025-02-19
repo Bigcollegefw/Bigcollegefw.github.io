@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "10.反序列化"
             }
+          },
+          {
+            "id": "290564f4e0cc3360",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.4"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -182,11 +195,10 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "obsidian-git:Open Git source control": false,
-      "file-tree-alternative:File Tree Alternative Plugin": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false
+      "file-tree-alternative:File Tree Alternative Plugin": false
     }
   },
-  "active": "a96c6a0d9a2cdba6",
+  "active": "290564f4e0cc3360",
   "lastOpenFiles": [
     "source/_posts/网络开发基础/9.序列化.md",
     "source/_posts/网络开发基础/10.反序列化.md",
