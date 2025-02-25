@@ -35,8 +35,7 @@
               "title": "21.服务器端分包黏包处理"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -103,8 +102,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "3d6c464a1f506d07",
@@ -201,10 +199,10 @@
       "file-tree-alternative:File Tree Alternative Plugin": false
     }
   },
-  "active": "46b905560d6aba17",
+  "active": "a96c6a0d9a2cdba6",
   "lastOpenFiles": [
-    "source/_posts/网络开发基础/19.区分消息类型练习.md",
     "source/_posts/网络开发基础/21.服务器端分包黏包处理.md",
+    "source/_posts/网络开发基础/19.区分消息类型练习.md",
     "source/_posts/网络开发基础/20.分包，黏包.md",
     "source/img/beishang20250224210309791.png",
     "source/_posts/网络开发基础/1.网络基本概念.md",
