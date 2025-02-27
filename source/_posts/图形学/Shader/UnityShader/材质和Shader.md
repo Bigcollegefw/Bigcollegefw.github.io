@@ -1,3 +1,14 @@
+---
+title: 材质和Shader
+date:
+  "{ date }": 
+categories:
+  - 图形学
+  - Shader
+  - Unity Shader
+tags:
+  - 图形学
+---
 ### UnityShader
 shader是一个通用的概念，用于描述图形渲染程序的着色器程序
 UnityShader是特指在Unity中使用的着色器

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/CSharp/CSharp进阶/18.多线程.md",
+                "file": "source/_posts/图形学/Shader/UnityShader/ShaderLab基本结构.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "18.多线程"
+              "title": "ShaderLab基本结构"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "事件监听",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -186,34 +186,34 @@
       "file-tree-alternative:File Tree Alternative Plugin": false
     }
   },
-  "active": "a96c6a0d9a2cdba6",
+  "active": "8339d8a327f0fafa",
   "lastOpenFiles": [
-    "source/_posts/CSharp/CSharp进阶/15.lambda表达式.md",
-    "source/_posts/CSharp/CSharp进阶/6.泛型约束.md",
-    "source/_posts/CSharp/CSharp进阶/3.Queue.md",
-    "source/_posts/CSharp/CSharp进阶/1.ArrayList.md",
-    "source/_posts/CSharp/CSharp基础/枚举.md",
-    "source/_posts/CSharp/CSharp基础/1.属性和字段.md",
-    "source/_posts/CSharp/CSharp基础/2.ref和out.md",
-    "source/_posts/CSharp/CSharp基础/27.冒泡排序.md",
-    "source/_posts/CSharp/CSharp核心/23.Object中的方法.md",
-    "source/_posts/CSharp/CSharp核心/8.静态类和静态构造函数.md",
-    "source/_posts/CSharp/CSharp核心/7.静态成员.md",
     "source/_posts/图形学/Shader/UnityShader/ShaderLab语法规则.md",
+    "source/_posts/图形学/Shader/UnityShader/材质和Shader.md",
     "source/_posts/图形学/Shader/UnityShader/ShaderLab基本结构.md",
-    "source/_posts/数据存储/PlayerPrefs/基本方法.md",
-    "source/_posts/游戏引擎/U3DOL悠游/13.协程.md",
-    "source/_posts/游戏引擎/U3DOL悠游/14.委托.md",
-    "source/_posts/游戏引擎/U3DOL悠游/12.单例.md",
-    "source/_posts/游戏引擎/U3DOL悠游/11.Mono脚本简介.md",
-    "source/_posts/游戏引擎/U3DOL悠游/10_1 Csharp语言基础.md",
-    "source/_posts/游戏引擎/Unity/Unity基础框架/观察者模式.md",
-    "source/_posts/游戏引擎/Unity/Unity入门到核心/Vector3和Transform.md",
-    "source/_posts/游戏引擎/Unity/Unity入门到核心/URP Camera使用及动态设置.md",
-    "source/_posts/游戏引擎/Unity/UGUI/Slider滑动条.md",
-    "source/_posts/游戏引擎/Unity/UGUI/Toggle开关控件.md",
-    "source/_posts/游戏引擎/Unity/UGUI/事件监听.md",
-    "source/_posts/游戏引擎/Unity/UGUI/GraphicRaycater.md",
+    "2025-02-27.md",
+    "source/_posts/网络开发/10.反序列化.md",
+    "source/_posts/网络开发/7.IP地址和端口类.md",
+    "source/_posts/网络开发/2.IP，端口，Mac地址.md",
+    "source/_posts/网络开发/3.客户端和服务端.md",
+    "source/_posts/网络开发/23.实现心跳消息.md",
+    "source/_posts/网络开发/22.心跳消息-客户端主动断开连接.md",
+    "source/_posts/网络开发/21.服务器端分包黏包处理并测试.md",
+    "source/_posts/网络开发/20.分包，黏包.md",
+    "source/_posts/网络开发/19.区分消息类型练习.md",
+    "source/_posts/网络开发/18.区分消息类型.md",
+    "source/_posts/网络开发/17.反序列化练习.md",
+    "source/_posts/网络开发/16.序列化练习.md",
+    "source/_posts/网络开发/15.客户端综合.md",
+    "source/_posts/网络开发/14.服务端综合.md",
+    "source/_posts/网络开发/13.TCP通信_同步_客户端.md",
+    "source/_posts/网络开发/12.TCP通信_同步_服务端.md",
+    "source/_posts/网络开发/11.Socket重要API.md",
+    "source/_posts/网络开发/9.序列化.md",
+    "source/_posts/网络开发/8.域名解析.md",
+    "source/_posts/网络开发/6.TCP与UDP.md",
+    "source/_posts/网络开发/5.OSI模型和TCP杠IP模型.md",
+    "source/_posts/网络开发/4.数据通信模型.md",
     "source/_posts/图形学/Shader/UnityShader",
     "source/_posts/图形学/Shader",
     "source/_posts/图形学",

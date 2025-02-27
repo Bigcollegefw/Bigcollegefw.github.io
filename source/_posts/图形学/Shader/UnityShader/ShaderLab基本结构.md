@@ -1,3 +1,14 @@
+---
+title: ShaderLab基本结构
+date:
+  "{ date }": 
+categories:
+  - 图形学
+  - Shader
+  - Unity Shader
+tags:
+  - 图形学
+---
 ### ShaderLab是Unity自定义的一种语法规则
 无论去编写哪种类型的Shader，或者选择哪种语言去编写Shader,Unity中总会通过ShaderLab语言进行包装和组织
 
