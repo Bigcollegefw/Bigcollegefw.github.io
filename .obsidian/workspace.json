@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/图形学/Shader/UnityShader/ShaderLab基本结构.md",
+                "file": "source/_posts/图形学/Shader/UnityShader/4.Tags渲染标签.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ShaderLab基本结构"
+              "title": "4.Tags渲染标签"
             }
           }
         ]
@@ -186,11 +186,32 @@
       "file-tree-alternative:File Tree Alternative Plugin": false
     }
   },
-  "active": "8339d8a327f0fafa",
+  "active": "a96c6a0d9a2cdba6",
   "lastOpenFiles": [
-    "source/_posts/图形学/Shader/UnityShader/ShaderLab语法规则.md",
-    "source/_posts/图形学/Shader/UnityShader/材质和Shader.md",
-    "source/_posts/图形学/Shader/UnityShader/ShaderLab基本结构.md",
+    "source/_posts/图形学/Shader/UnityShader/3.ShaderLab语法规则.md",
+    "source/_posts/图形学/Shader/UnityShader/4.Tags渲染标签.md",
+    "source/_posts/图形学/Shader/UnityShader/2.ShaderLab基本结构.md",
+    "source/_posts/图形学/Shader/UnityShader/1.材质和Shader.md",
+    "categories/图形学/Shader/Unity-Shader/index.html",
+    "categories/图形学/Shader/index.html",
+    "categories/图形学/Shader/Unity-Shader",
+    "categories/图形学/index.html",
+    "categories/图形学/Shader",
+    "categories/图形学",
+    "archives/page/9/index.html",
+    "archives/page/9",
+    "archives/page/8/index.html",
+    "archives/page/8",
+    "img/beishang20250224210309791.png",
+    "img/beishang20250223205641426.png",
+    "img/beishang20250223205548688.png",
+    "img/beishang20250223111705611.png",
+    "img/beishang20250222103846643.png",
+    "img/beishang20250218101311290.png",
+    "img/beishang20250218101259410.png",
+    "img/beishang20250218094529761.png",
+    "img/beishang20250218094137353.png",
+    "img/beishang20250218093737099.png",
     "2025-02-27.md",
     "source/_posts/网络开发/10.反序列化.md",
     "source/_posts/网络开发/7.IP地址和端口类.md",
@@ -213,27 +234,6 @@
     "source/_posts/网络开发/8.域名解析.md",
     "source/_posts/网络开发/6.TCP与UDP.md",
     "source/_posts/网络开发/5.OSI模型和TCP杠IP模型.md",
-    "source/_posts/网络开发/4.数据通信模型.md",
-    "source/_posts/图形学/Shader/UnityShader",
-    "source/_posts/图形学/Shader",
-    "source/_posts/图形学",
-    "source/img/beishang20250224210309791.png",
-    "source/img/beishang20250223205641426.png",
-    "source/img/beishang20250223205548688.png",
-    "source/img/beishang20250223111705611.png",
-    "source/img/beishang20250222103846643.png",
-    "source/img/beishang20250218101311290.png",
-    "source/img/beishang20250218101259410.png",
-    "source/img/beishang20250218094529761.png",
-    "source/img/beishang20250218094137353.png",
-    "source/img/beishang20250218093737099.png",
-    "public/tags/excalidraw/index.html",
-    "public/tags/excalidraw",
-    "public/2025/02/5291a6a657e4.html",
-    "public/categories/游戏引擎/page/2/index.html",
-    "public/categories/游戏引擎/page/2",
-    "public/categories/游戏引擎/page",
-    "public/categories/游戏引擎/Unity/Unity基础框架/index.html",
     "未命名.canvas"
   ]
 }
