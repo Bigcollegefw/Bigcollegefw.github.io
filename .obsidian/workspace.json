@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/CSharp/CSharp基础/2.ref和out.md",
+                "file": "source/_posts/图形学/Shader/UnityShader/ShaderLab语法规则.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.ref和out"
+              "title": "ShaderLab语法规则"
             }
           }
         ]
@@ -40,7 +40,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -187,6 +188,13 @@
   },
   "active": "a96c6a0d9a2cdba6",
   "lastOpenFiles": [
+    "source/_posts/图形学/Shader/UnityShader/材质和Shader.md",
+    "source/_posts/图形学/Shader/UnityShader/ShaderLab语法规则.md",
+    "source/_posts/图形学/Shader/UnityShader/ShaderLab基本结构.md",
+    "source/_posts/CSharp/CSharp基础/2.ref和out.md",
+    "source/_posts/图形学/Shader/UnityShader",
+    "source/_posts/图形学/Shader",
+    "source/_posts/图形学",
     "source/_posts/网络开发基础/23.实现心跳消息.md",
     "source/_posts/网络开发基础/20.分包，黏包.md",
     "source/_posts/网络开发基础/21.服务器端分包黏包处理并测试.md",
@@ -214,10 +222,6 @@
     "source/img/beishang20250222103846643.png",
     "source/_posts/网络开发基础/7.IP地址和端口类.md",
     "source/_posts/网络开发基础/6.TCP与UDP.md",
-    "source/_posts/网络开发基础/3.客户端和服务端.md",
-    "source/_posts/网络开发基础/5.OSI模型和TCP杠IP模型.md",
-    "source/_posts/数据存储/PlayerPrefs/基本方法.md",
-    "source/_posts/项目/微信小游戏/zgdsg/计时器动画.md",
     "source/img/beishang20250218101311290.png",
     "source/img/beishang20250218101259410.png",
     "source/img/beishang20250218094529761.png",
@@ -230,9 +234,6 @@
     "public/categories/游戏引擎/page/2",
     "public/categories/游戏引擎/page",
     "public/categories/游戏引擎/Unity/Unity基础框架/index.html",
-    "public/categories/游戏引擎/Unity/Unity基础框架",
-    "public/categories/游戏引擎/Unity/Unity入门到精通/index.html",
-    "public/categories/游戏引擎/Unity/Unity入门到精通",
     "未命名.canvas"
   ]
 }

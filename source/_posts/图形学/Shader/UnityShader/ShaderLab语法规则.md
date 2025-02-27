@@ -1,0 +1,3 @@
+### Shader名字
+直接修改Shader文件中Shader后的名字即可
+Shader名字决定了在材质面板的选择路径

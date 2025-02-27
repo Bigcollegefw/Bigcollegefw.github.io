@@ -1,0 +1,31 @@
+### ShaderLab是Unity自定义的一种语法规则
+无论去编写哪种类型的Shader，或者选择哪种语言去编写Shader,Unity中总会通过ShaderLab语言进行包装和组织
+
+### 基本结构
+ShaderLab
+```shader
+Shader "着色器名字"
+{
+	// 第二部分
+	Properties
+	{
+		// 材质面板上可以看到的属性
+	}
+
+	// 第三部分
+	SubShader
+	{
+		// 顶点-片段着色器或者表面着色器或固定函数着色器
+	}
+	SubShader
+	{
+		// 更加精简的版本
+		// 目的是适配旧设备
+	}
+	// ...可以有n个SubShader代码块
+	
+	// 第四部分 （可选）
+	Fallback "备用Shader"  //设备不支持上面各子着色器会使用该备用着色器进行渲染
+}
+
+```
