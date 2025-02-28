@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/图形学/Shader/UnityShader/8.Swizzle操作符.md",
+                "file": "source/_posts/图形学/Shader/UnityShader/兰伯特光照模型.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "8.Swizzle操作符"
+              "title": "兰伯特光照模型"
             }
           }
         ]
@@ -89,7 +89,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 241.5
+    "width": 241.5,
+    "collapsed": true
   },
   "right": {
     "id": "3d6c464a1f506d07",
@@ -188,14 +189,19 @@
   },
   "active": "a96c6a0d9a2cdba6",
   "lastOpenFiles": [
-    "source/_posts/图形学/Shader/UnityShader/5.States渲染状态.md",
-    "source/_posts/图形学/Shader/UnityShader/3.ShaderLab语法规则.md",
+    "source/img/beishang20250228161631912.png",
+    "source/img/beishang20250228155431490.png",
+    "source/_posts/图形学/Shader/UnityShader/逐顶点光照和逐片元光照.md",
+    "source/_posts/图形学/Shader/UnityShader/兰伯特光照模型.md",
+    "source/_posts/图形学/Shader/UnityShader/光照模型概述.md",
     "source/_posts/图形学/Shader/UnityShader/1.材质和Shader.md",
-    "source/_posts/图形学/Shader/UnityShader/8.Swizzle操作符.md",
-    "source/_posts/图形学/Shader/UnityShader/7.CG语句数据类型.md",
-    "source/_posts/图形学/Shader/UnityShader/6.Shader的编写形式.md",
-    "source/_posts/图形学/Shader/UnityShader/4.Tags渲染标签.md",
     "source/_posts/图形学/Shader/UnityShader/2.ShaderLab基本结构.md",
+    "source/_posts/图形学/Shader/UnityShader/3.ShaderLab语法规则.md",
+    "source/_posts/图形学/Shader/UnityShader/4.Tags渲染标签.md",
+    "source/_posts/图形学/Shader/UnityShader/5.States渲染状态.md",
+    "source/_posts/图形学/Shader/UnityShader/6.Shader的编写形式.md",
+    "source/_posts/图形学/Shader/UnityShader/7.CG语句数据类型.md",
+    "source/_posts/图形学/Shader/UnityShader/8.Swizzle操作符.md",
     "source/_posts/第三人称控制器.md",
     "source/_posts/CSharp/CSharp进阶/优化代码.md",
     "source/_posts/CSharp/CSharp进阶/事件和委托.md",
@@ -222,7 +228,6 @@
     "img/beishang20250222103846643.png",
     "img/beishang20250218101311290.png",
     "img/beishang20250218101259410.png",
-    "img/beishang20250218094529761.png",
     "2025-02-27.md",
     "source/_posts/网络开发/10.反序列化.md",
     "source/_posts/网络开发/7.IP地址和端口类.md",
@@ -230,10 +235,6 @@
     "source/_posts/网络开发/3.客户端和服务端.md",
     "source/_posts/网络开发/23.实现心跳消息.md",
     "source/_posts/网络开发/22.心跳消息-客户端主动断开连接.md",
-    "source/_posts/网络开发/21.服务器端分包黏包处理并测试.md",
-    "source/_posts/网络开发/20.分包，黏包.md",
-    "source/_posts/网络开发/19.区分消息类型练习.md",
-    "source/_posts/网络开发/18.区分消息类型.md",
     "未命名.canvas"
   ]
 }
