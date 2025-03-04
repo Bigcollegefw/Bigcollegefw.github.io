@@ -1,8 +1,8 @@
 {
   "baseFontSizeAction": true,
-  "baseFontSize": 23,
+  "baseFontSize": 20,
   "interfaceFontFamily": "LXGW ZhenKai GB",
   "textFontFamily": "LXGW WenKai",
   "accentColor": "#a7de82",
-  "monospaceFontFamily": "DejaVu Sans,LXGW WenKai"
+  "monospaceFontFamily": "LXGW ZhenKai GB,LXGW WenKai"
 }
