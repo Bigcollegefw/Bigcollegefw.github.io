@@ -100,7 +100,7 @@
     2. 如果lua侧的实现的部分都以delegate和interface的方式提供，使用方可以完全和xLua解耦：由一个专门的模块负责xlua的初始化以及delegate、interface的映射，然后把这些delegate和interface设置到要用到它们的地方。
         
 
-### Lua 调用 C#
+### Lua 调用 C\#
 > 本章节涉及到的实例均在XLua\Tutorial\LuaCallCSharp下
 
 #### new C#对象
