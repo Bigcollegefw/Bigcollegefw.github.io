@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/热更新/xLua/xLua教程.md",
+                "file": "source/_posts/热更新/AssetBundle/3.AB包资源加载.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "xLua教程"
+              "title": "3.AB包资源加载"
             }
           }
         ]
@@ -150,13 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/热更新/xLua/xLua教程.md",
+                "file": "source/_posts/热更新/AssetBundle/3.AB包资源加载.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "xLua教程 的大纲"
+              "title": "3.AB包资源加载 的大纲"
             }
           },
           {
@@ -188,37 +188,38 @@
       "file-tree-alternative:File Tree Alternative Plugin": false
     }
   },
-  "active": "8339d8a327f0fafa",
+  "active": "a96c6a0d9a2cdba6",
   "lastOpenFiles": [
-    "source/_posts/CSharp/CSharp进阶/17.协变逆变.md",
+    "source/_posts/热更新/AssetBundle/4.AB包依赖.md",
+    "source/_posts/热更新/AssetBundle/3.AB包资源加载.md",
+    "source/_posts/游戏引擎/Unity/Unity入门到核心/URP Camera使用及动态设置.md",
+    "source/_posts/热更新/AssetBundle/2.AB包资源打包.md",
+    "source/_posts/热更新/AssetBundle/1.AB包理论基础.md",
+    "source/_posts/热更新/Lua/12.多脚本执行.md",
+    "source/_posts/热更新/Lua/11.表的公共操作.md",
+    "source/_posts/热更新/Lua/8.迭代器遍历.md",
+    "source/_posts/热更新/Lua/10.table实现类.md",
+    "source/_posts/热更新/Lua/13.特殊用法.md",
+    "source/_posts/热更新/Lua/14.协同程序.md",
+    "source/_posts/热更新/Lua/15.元表.md",
+    "source/_posts/热更新/Lua/16.面向对象思想.md",
+    "source/_posts/热更新/Lua/17.面向对象实现.md",
+    "source/_posts/热更新/Lua/18.自带库.md",
+    "source/_posts/热更新/Lua/19.lua垃圾回收.md",
+    "source/_posts/热更新/Lua/9.table实现字典.md",
+    "source/_posts/热更新/Lua/7.table表实现数组.md",
+    "source/_posts/热更新/Lua/5.循环语句.md",
+    "source/_posts/热更新/Lua/6.函数.md",
+    "source/_posts/热更新/Lua/3.运算符.md",
+    "source/_posts/热更新/AssetBundle",
     "source/_posts/热更新/xLua/xLua教程.md",
+    "source/_posts/CSharp/CSharp进阶/17.协变逆变.md",
     "source/_posts/热更新/xLua",
     "source/_posts/项目/未命名.canvas",
     "source/_posts/CSharp/CSharp进阶/5.泛型.md",
     "source/_posts/CSharp/CSharp进阶/2.Stack.md",
     "source/_posts/CSharp/CSharp进阶/19.预处理器指令.md",
-    "source/_posts/CSharp/CSharp进阶/6.泛型约束.md",
-    "source/_posts/LeetCode/Hot100/滑动窗口/找到字符串中所有字母异位词.md",
-    "source/_posts/LeetCode/Hot100/滑动窗口/无重复字符的最长字符串.md",
-    "source/_posts/CSharp/CSharp进阶/3.Queue.md",
-    "source/_posts/CSharp/CSharp进阶/16.List.md",
-    "source/_posts/CSharp/CSharp基础/枚举.md",
-    "source/_posts/CSharp/CSharp基础/2.ref和out.md",
-    "source/_posts/CSharp/CSharp进阶/事件和委托.md",
-    "source/_posts/CSharp/CSharp进阶/优化代码.md",
-    "source/_posts/热更新/Lua/13.特殊用法.md",
     "source/_posts/游戏引擎/Unity/UI框架",
-    "source/_posts/热更新/Lua/12.多脚本执行.md",
-    "source/_posts/热更新/Lua/19.lua垃圾回收.md",
-    "source/_posts/热更新/Lua/18.自带库.md",
-    "source/_posts/热更新/Lua/17.面向对象实现.md",
-    "source/_posts/热更新/Lua/16.面向对象思想.md",
-    "source/_posts/热更新/Lua/15.元表.md",
-    "source/_posts/热更新/Lua/14.协同程序.md",
-    "source/_posts/热更新/Lua/11.表的公共操作.md",
-    "source/_posts/热更新/Lua/8.迭代器遍历.md",
-    "source/_posts/热更新/Lua/10.table实现类.md",
-    "source/_posts/热更新/Lua/9.table实现字典.md",
     "source/img/beishang20250305110856267.png",
     "source/_posts/LeetCode/Hot100/滑动窗口",
     "source/_posts/LeetCode/Hot100",
@@ -235,7 +236,6 @@
     "source/img/beishang20250228155431490.png",
     "categories/图形学/Shader/Unity-Shader/index.html",
     "categories/图形学/Shader/index.html",
-    "categories/图形学/Shader/Unity-Shader",
-    "categories/图形学/index.html"
+    "categories/图形学/Shader/Unity-Shader"
   ]
 }
