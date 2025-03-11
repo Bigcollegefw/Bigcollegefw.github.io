@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/热更新/xLua/5.全局函数的获取.md",
+                "file": "source/_posts/热更新/xLua/6.表映射到List和Dictionary.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "5.全局函数的获取"
+              "title": "6.表映射到List和Dictionary"
             }
           }
         ]
@@ -89,7 +89,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 241.5
+    "width": 241.5,
+    "collapsed": true
   },
   "right": {
     "id": "3d6c464a1f506d07",
@@ -191,12 +192,25 @@
   },
   "active": "a96c6a0d9a2cdba6",
   "lastOpenFiles": [
-    "source/_posts/热更新/xLua/4.全局变量的获取.md",
-    "source/_posts/热更新/xLua/3.Lua解析管理器.md",
     "source/_posts/热更新/xLua/5.全局函数的获取.md",
+    "source/_posts/热更新/xLua/6.表映射到List和Dictionary.md",
+    "source/_posts/热更新/xLua/7.表映射到类.md",
+    "source/_posts/热更新/xLua/9.表映射到LuaTable.md",
+    "source/_posts/热更新/xLua/xLua教程.md",
+    "source/_posts/热更新/xLua/8.表映射到接口.md",
+    "source/_posts/热更新/Lua/8.迭代器遍历.md",
+    "source/_posts/热更新/Lua/7.table表实现数组.md",
+    "source/_posts/热更新/Lua/10.table实现类.md",
+    "source/_posts/热更新/Lua/9.table实现字典.md",
+    "source/_posts/热更新/xLua/4.全局变量的获取.md",
+    "source/_posts/CSharp/CSharp核心/8.静态类和静态构造函数.md",
+    "source/_posts/CSharp/CSharp核心/23.Object中的方法.md",
+    "source/_posts/CSharp/CSharp进阶/16.List.md",
+    "source/_posts/CSharp/CSharp进阶/17.协变逆变.md",
+    "source/_posts/CSharp/CSharp进阶/18.多线程.md",
+    "source/_posts/热更新/xLua/3.Lua解析管理器.md",
     "source/_posts/热更新/xLua/1.Lua解析器.md",
     "source/_posts/热更新/xLua/2.文件加载重定向.md",
-    "source/_posts/热更新/xLua/xLua教程.md",
     "source/_posts/图形学/Shader/UnityShader/1.材质和Shader.md",
     "source/_posts/图形学/Shader/UnityShader/2.ShaderLab基本结构.md",
     "source/_posts/图形学/Shader/UnityShader/5.States渲染状态.md",
@@ -204,19 +218,6 @@
     "source/_posts/图形学/Shader/UnityShader/逐顶点光照和逐片元光照.md",
     "source/_posts/图形学/Shader/UnityShader/兰伯特光照模型.md",
     "source/_posts/图形学/Shader/UnityShader/光照模型概述.md",
-    "source/_posts/图形学/Shader/UnityShader/11.顶点片元着色器基本结构.md",
-    "source/_posts/图形学/Shader/UnityShader/8.Swizzle操作符.md",
-    "source/_posts/热更新/AssetBundle/4.AB包依赖.md",
-    "source/_posts/热更新/AssetBundle/5.AB包资源加载管理器.md",
-    "source/_posts/热更新/AssetBundle/3.AB包资源加载.md",
-    "source/_posts/热更新/AssetBundle/2.AB包资源打包.md",
-    "source/_posts/热更新/AssetBundle/1.AB包理论基础.md",
-    "source/_posts/热更新/Lua/12.多脚本执行.md",
-    "source/_posts/热更新/Lua/11.表的公共操作.md",
-    "source/_posts/热更新/Lua/9.table实现字典.md",
-    "source/_posts/热更新/Lua/7.table表实现数组.md",
-    "source/_posts/热更新/Lua/6.函数.md",
-    "source/_posts/热更新/Lua/8.迭代器遍历.md",
     "source/_posts/热更新/AssetBundle",
     "source/_posts/热更新/xLua",
     "source/_posts/项目/未命名.canvas",
