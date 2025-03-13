@@ -89,7 +89,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 241.5
+    "width": 241.5,
+    "collapsed": true
   },
   "right": {
     "id": "3d6c464a1f506d07",
@@ -191,8 +192,8 @@
   },
   "active": "a96c6a0d9a2cdba6",
   "lastOpenFiles": [
-    "source/_posts/热更新/xLua/Lua调C#/8.特殊问题之二维数组遍历.md",
     "source/_posts/热更新/xLua/Lua调C#/12.调用泛型函数.md",
+    "source/_posts/热更新/xLua/Lua调C#/8.特殊问题之二维数组遍历.md",
     "source/_posts/热更新/xLua/Lua调C#/11.lua使用CSharp协程.md",
     "source/_posts/热更新/xLua/Lua调C#/10.特殊问题之Lua访问系统类型.md",
     "source/_posts/热更新/Lua/14.协同程序.md",
