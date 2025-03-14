@@ -60,7 +60,7 @@ theme: 3-hexo
     - **用户体验方面**：对于不熟悉 Git 命令行操作或者更喜欢可视化操作的用户来说，Git GUI 提供了更友好的体验。它将复杂的 Git 操作转化为直观的图形界面操作，减少了记忆命令和语法的负担。例如，在合并分支时，通过 Git GUI 可以清晰地看到两个分支的差异，选择要合并的内容，而在命令行中则需要准确地输入`git merge`命令及相关参数。不过，Git GUI 可能在某些复杂场景下灵活性不如命令行，并且可能占用更多的系统资源。
 ## 完成部署
 这里在github需要设置什么密钥，我之前就搞定过了，但是记得不是很清楚，而这个搭建过程中我都没有相关的操作，所以不多写了。
-登录 GitHub，新建一个 Repository，`Repository name`一定要是`你的用户名`.github.io![](../img/beishang20241207113547501.png)
+登录 GitHub，新建一个 Repository，`Repository name`一定要是`你的用户名`.github.io![](../../img/beishang20241207113547501.png)
 dexo支持一键部署，（hugo你看看你）。
 
 一键部署 | Hexo
@@ -89,9 +89,9 @@ deploy:
 ## 让照片直接能够显示
 这里我的目的是我在Obsidian编辑过程中能够直接复制出来的图片，不需要任何别的操作就能够被网页中正确显示，很幸运，我成功了。
 hexo根目录的img文件夹需要和主题的img文件夹一致图片才能读取到
-![](../img/beishang20241206160308125.png)
+![](../../img/beishang20241206160308125.png)
 刚复制出来的图片是不会直接显示的，必须等hexo g之后才可以
-![](../img/beishang20241206160500289.png)
+![](../../img/beishang20241206160500289.png)
 
 ## 设置ObsidianGit进行管理控制
 这里不用设置都可以，但是推送后可以进行一个备份不会丢。换电脑了可以直接pull回来。
@@ -99,7 +99,7 @@ hexo根目录的img文件夹需要和主题的img文件夹一致图片才能读�
 ```
 git init#初始化一个git仓库
 ```
-![](../img/beishang20241207095904010.png)
+![](../../img/beishang20241207095904010.png)
 这图并不准确
 1. **`git pull`拉回文件的存放位置**
 	当你执行`git pull`操作时，拉取回来的文件会先更新到本地仓库，然后 Git 会自动将本地仓库中的更改合并到工作区。也就是说，最终你在本地工作区看到的文件是经过合并后的结果。
@@ -127,16 +127,16 @@ git remote add origin https://github.com/Bigcollegefw/blog.git
 ```
 
 出现如下提示则关联上了
-![](../img/beishang20241207104637882.png)
+![](../../img/beishang20241207104637882.png)
 
 使用这个的前提是在博客根目录下初始化了仓库有.git文件
 
 接着这个的使用步骤就是
 第一个是pull。
 第二个是commit and sync，就是commit和push
-![](../img/beishang20241207112633087.png)
+![](../../img/beishang20241207112633087.png)
 不想手动就自动
-![](../img/beishang20241207112547502.png)
+![](../../img/beishang20241207112547502.png)
 在你的 hexo 项目的 .gitignore 文件中加入如下内容：
 ```
 .obsidian/workspace
@@ -144,7 +144,7 @@ git remote add origin https://github.com/Bigcollegefw/blog.git
 > .obsidian 文件本身是可以同步的，当前存储库的插件以及相关的配置都会下载在这个文件夹中，因此将其同步到 git 记录中也是非常有用的，假如你切换设备就不需要重新为当前的存储库重新配置 Obsidian 了。
 
 针对冲突文件
-![](../img/beishang20241208002131397.png)
+![](../../img/beishang20241208002131397.png)
 
 冲突后会在根目录中产生 `conflict-files` 开头的文件这个文件不用编辑，也不用删除。 点击进去然后找到冲突文件，解决冲突问题。 解决冲突的方式和 `Git` 相同。
 git生成的文件中提示你对于每个出现冲突标记的地方，查看`<<<<<<< HEAD`后面显示的本地仓库修改内
@@ -160,7 +160,7 @@ diff <<<<<<< HEAD
 
 比如这里我换了两张图片，替换掉原来的同名图片。
 但这里我就一张图片，不是文本，现在我就想保留本地的图片
-![](../img/beishang20241208001958088.png)
+![](../../img/beishang20241208001958088.png)
 ## 设置代码高亮
 主题内置了主题高亮，hexo自带的配置文件中原来为：syntax_highlighter: highlight.js；禁用即可，同时关闭hexo根目录下`_config.yml`中的高亮设置：
 ```yaml

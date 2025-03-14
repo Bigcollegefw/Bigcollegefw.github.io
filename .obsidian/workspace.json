@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/热更新/xLua/C#调Lua/2.文件加载重定向.md",
+                "file": "source/_posts/工具/Unity+VSCode+Lua调试环境搭建.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.文件加载重定向"
+              "title": "Unity+VSCode+Lua调试环境搭建"
             }
           }
         ]
@@ -191,8 +191,20 @@
   },
   "active": "a96c6a0d9a2cdba6",
   "lastOpenFiles": [
-    "source/_posts/热更新/xLua/C#调Lua/1.Lua解析器.md",
+    "source/img/beishang20250314112758294.png",
+    "source/img/beishang20250314112616981.png",
+    "source/img/beishang20250314112508016.png",
+    "source/img/beishang20250314112252135.png",
+    "source/_posts/工具/Unity+VSCode+Lua调试环境搭建.md",
+    "source/img/dotnet-sdk-8.0.407-win-x64.exe",
+    "source/_posts/工具/Hexo+Github+Obsidian这里是建站记录.md",
+    "source/_posts/第三人称控制器.md",
+    "source/_posts/工具",
+    "source/_posts/丧尸围城（上）.md",
+    "source/_posts/丧尸围城（下）.md",
+    "source/_posts/UGUI抽卡系统.md",
     "source/_posts/热更新/xLua/C#调Lua/2.文件加载重定向.md",
+    "source/_posts/热更新/xLua/C#调Lua/1.Lua解析器.md",
     "source/_posts/热更新/AssetBundle/5.AB包资源加载管理器.md",
     "source/_posts/热更新/AssetBundle/4.AB包依赖.md",
     "source/_posts/热更新/AssetBundle/3.AB包资源加载.md",
@@ -211,13 +223,6 @@
     "source/_posts/热更新/xLua/C#调Lua/9.表映射到LuaTable.md",
     "source/_posts/热更新/xLua/C#调Lua/8.表映射到接口.md",
     "source/_posts/热更新/xLua/C#调Lua/6.表映射到List和Dictionary.md",
-    "source/_posts/热更新/xLua/C#调Lua/5.全局函数的获取.md",
-    "source/_posts/热更新/xLua/Lua调C#/6.函数重载.md",
-    "source/_posts/热更新/xLua/Lua调C#/3.数组，List和字典.md",
-    "source/_posts/热更新/xLua/Lua调C#/5.ref和out函数.md",
-    "source/_posts/热更新/xLua/Lua调C#/2.调CSharp枚举.md",
-    "source/_posts/热更新/xLua/C#调Lua/7.表映射到类.md",
-    "source/_posts/热更新/xLua/C#调Lua/4.全局变量的获取.md",
     "source/img/beishang20250313150229401.png",
     "source/img/beishang20250312221256243.png",
     "source/img/beishang20250312145819184.png",
@@ -232,11 +237,6 @@
     "source/_posts/LeetCode/Hot100",
     "source/_posts/LeetCode",
     "source/img/beishang20250304232736391.png",
-    "source/img/beishang20250304232617048.png",
-    "source/img/beishang20250304140059765.png",
-    "source/img/beishang20250304105521676.png",
-    "source/img/beishang20250303225907101.png",
-    "source/_posts/图形学/Shader/渲染管线",
-    "categories/图形学/Shader/Unity-Shader/index.html"
+    "source/img/beishang20250304232617048.png"
   ]
 }
