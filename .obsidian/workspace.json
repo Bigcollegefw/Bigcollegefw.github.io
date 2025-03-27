@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/LeetCode/Hot100/滑动窗口/无重复字符的最长字符串.md",
+                "file": "source/_posts/热更新/xLua/C#调Lua/5.全局函数的获取.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "无重复字符的最长字符串"
+              "title": "5.全局函数的获取"
             }
           }
         ]
@@ -189,10 +189,34 @@
       "file-tree-alternative:File Tree Alternative Plugin": false
     }
   },
-  "active": "a96c6a0d9a2cdba6",
+  "active": "8339d8a327f0fafa",
   "lastOpenFiles": [
-    "source/_posts/LeetCode/Hot100/滑动窗口/找到字符串中所有字母异位词.md",
+    "categories/热更新/xLua/Lua调C/page/2/index.html",
+    "categories/热更新/xLua/page/3/index.html",
+    "categories/热更新/xLua/page/2/index.html",
+    "categories/热更新/xLua/Lua调C/page/2",
+    "categories/热更新/xLua/page/3",
+    "categories/热更新/xLua/page/2",
+    "categories/热更新/xLua/Lua调C/index.html",
+    "categories/热更新/xLua/Lua调C/page",
+    "categories/热更新/xLua/C-调Lua/index.html",
+    "categories/热更新/xLua/index.html",
+    "categories/热更新/xLua/page",
+    "img/beishang20250314112758294.png",
+    "img/beishang20250314112616981.png",
+    "img/beishang20250314112508016.png",
+    "img/beishang20250314112252135.png",
+    "img/beishang20250313160015845.png",
+    "img/beishang20250313150229401.png",
+    "img/beishang20250312221256243.png",
+    "img/beishang20250312145819184.png",
+    "img/beishang20250305110856267.png",
+    "img/beishang20250304232736391.png",
+    "source/_posts/热更新/xLua/C#调Lua/3.Lua解析管理器.md",
+    "source/_posts/热更新/xLua/C#调Lua/2.文件加载重定向.md",
+    "source/_posts/热更新/xLua/C#调Lua/4.全局变量的获取.md",
     "source/_posts/LeetCode/Hot100/滑动窗口/无重复字符的最长字符串.md",
+    "source/_posts/LeetCode/Hot100/滑动窗口/找到字符串中所有字母异位词.md",
     "source/_posts/热更新/xLua/Lua调C#/12.调用泛型函数.md",
     "source/_posts/热更新/xLua/Lua调C#/11.lua使用CSharp协程.md",
     "source/_posts/热更新/xLua/Lua调C#/10.特殊问题之Lua访问系统类型.md",
@@ -212,31 +236,7 @@
     "source/_posts/热更新/xLua/C#调Lua/7.表映射到类.md",
     "source/_posts/热更新/xLua/C#调Lua/6.表映射到List和Dictionary.md",
     "source/_posts/热更新/xLua/C#调Lua/5.全局函数的获取.md",
-    "source/_posts/热更新/xLua/C#调Lua/4.全局变量的获取.md",
-    "source/_posts/热更新/xLua/C#调Lua/3.Lua解析管理器.md",
-    "source/_posts/热更新/xLua/C#调Lua/2.文件加载重定向.md",
     "source/_posts/热更新/xLua/C#调Lua/1.Lua解析器.md",
-    "source/_posts/热更新/Lua/19.lua垃圾回收.md",
-    "source/img/beishang20250314112758294.png",
-    "source/img/beishang20250314112616981.png",
-    "source/img/beishang20250314112508016.png",
-    "source/img/beishang20250314112252135.png",
-    "source/img/dotnet-sdk-8.0.407-win-x64.exe",
-    "source/_posts/工具",
-    "source/img/beishang20250313160015845.png",
-    "source/img/beishang20250313150229401.png",
-    "source/img/beishang20250312221256243.png",
-    "source/img/beishang20250312145819184.png",
-    "source/_posts/热更新/xLua/Lua调C#",
-    "source/_posts/热更新/xLua/C#调Lua",
-    "source/_posts/热更新/AssetBundle",
-    "source/_posts/热更新/xLua",
-    "source/_posts/项目/未命名.canvas",
-    "source/_posts/游戏引擎/Unity/UI框架",
-    "source/img/beishang20250305110856267.png",
-    "source/_posts/LeetCode/Hot100/滑动窗口",
-    "source/_posts/LeetCode/Hot100",
-    "source/_posts/LeetCode",
-    "source/img/beishang20250304232736391.png"
+    "source/_posts/项目/未命名.canvas"
   ]
 }
