@@ -6,18 +6,23 @@
   <meta name="keywords" content="">
   <meta name="description" content="beishangzhajitui">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="Shader名字直接修改Shader文件中Shader后的名字即可Shader名字决定了在材质面板的选择路径 注意不要使用中文。Shader文件名和在文件中的命名最好保持一致。 Shader属性在Shader编写会使用到不同类型变量或贴图资源为了增加Shader可调节性，将变量作为开放属性来在材质面板上定义特点：可以在材质面板编辑，可以在后续当作输入变量提供给所有子着色器使用 Shader属性的基">
+<meta name="description" content="需要先下载dotnet-sdk-8.0.407-win-x64并重启电脑版本Unity2022，先用了2019不行，也行，但是麻烦需要有下面两个，默认是有的，如果不行有新版本就升级新版本下载VSCode装如下插件在运行和调试中添加配置，在launch.json中会添加配置代码然后点击调试的时候附加到自己的工程上面，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ShaderLab语法规则">
-<meta property="og:url" content="http://example.com/2025/02/937a79cd9d2f.html">
+<meta property="og:title" content="Unity+VSCode+Lua调试环境搭建">
+<meta property="og:url" content="http://example.com/2025/03/40405fdfbdd3.html">
 <meta property="og:site_name" content="beishangzhajitui">
-<meta property="og:description" content="Shader名字直接修改Shader文件中Shader后的名字即可Shader名字决定了在材质面板的选择路径 注意不要使用中文。Shader文件名和在文件中的命名最好保持一致。 Shader属性在Shader编写会使用到不同类型变量或贴图资源为了增加Shader可调节性，将变量作为开放属性来在材质面板上定义特点：可以在材质面板编辑，可以在后续当作输入变量提供给所有子着色器使用 Shader属性的基">
+<meta property="og:description" content="需要先下载dotnet-sdk-8.0.407-win-x64并重启电脑版本Unity2022，先用了2019不行，也行，但是麻烦需要有下面两个，默认是有的，如果不行有新版本就升级新版本下载VSCode装如下插件在运行和调试中添加配置，在launch.json中会添加配置代码然后点击调试的时候附加到自己的工程上面，">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-02-27T05:51:24.627Z">
-<meta property="article:modified_time" content="2025-02-27T08:19:33.016Z">
+<meta property="og:image" content="http://example.com/img/beishang20250314112616981.png">
+<meta property="og:image" content="http://example.com/img/beishang20250314112252135.png">
+<meta property="og:image" content="http://example.com/img/beishang20250314112508016.png">
+<meta property="og:image" content="http://example.com/img/beishang20250314112758294.png">
+<meta property="article:published_time" content="2025-03-14T03:18:02.645Z">
+<meta property="article:modified_time" content="2025-03-14T03:28:43.925Z">
 <meta property="article:author" content="beishangzhajitui">
-<meta property="article:tag" content="图形学">
+<meta property="article:tag" content="工具">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/beishang20250314112616981.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -154,7 +159,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(81)</small>
+                <small>(135)</small>
             
         </div>
     </li>
@@ -166,7 +171,7 @@
         <div data-rel="工具">
             
             工具
-            <small>(1)</small>
+            <small>(2)</small>
         </div>
         
     </li>
@@ -196,7 +201,7 @@
         <div data-rel="热更新">
             <i class="fold iconfont icon-right"></i>
             热更新
-            <small>(7)</small>
+            <small>(40)</small>
         </div>
         
             <ul class="sub hide">
@@ -206,8 +211,45 @@
         <div data-rel="热更新&lt;---&gt;Lua">
             
             Lua
-            <small>(7)</small>
+            <small>(19)</small>
         </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="热更新&lt;---&gt;xLua">
+            <i class="fold iconfont icon-right"></i>
+            xLua
+            <small>(21)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="热更新&lt;---&gt;xLua&lt;---&gt;C#调Lua">
+            
+            C#调Lua
+            <small>(9)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="热更新&lt;---&gt;xLua&lt;---&gt;Lua调C#">
+            
+            Lua调C#
+            <small>(12)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
         
     </li>
 
@@ -256,7 +298,7 @@
         <div data-rel="图形学">
             <i class="fold iconfont icon-right"></i>
             图形学
-            <small>(3)</small>
+            <small>(15)</small>
         </div>
         
             <ul class="sub hide">
@@ -266,17 +308,28 @@
         <div data-rel="图形学&lt;---&gt;Shader">
             <i class="fold iconfont icon-right"></i>
             Shader
-            <small>(3)</small>
+            <small>(15)</small>
         </div>
         
             <ul class="sub hide">
                 
                     
     <li>
+        <div data-rel="图形学&lt;---&gt;Shader&lt;---&gt;渲染管线">
+            
+            渲染管线
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
         <div data-rel="图形学&lt;---&gt;Shader&lt;---&gt;Unity Shader">
             
             Unity Shader
-            <small>(3)</small>
+            <small>(14)</small>
         </div>
         
     </li>
@@ -321,6 +374,10 @@
         
     </li>
 
+            
+        
+    
+        
             
         
     
@@ -502,6 +559,18 @@
             
         
     
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
 </ul>
 <div class="left-bottom">
     <div class="menus">
@@ -517,7 +586,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="81">
+<input type="hidden" id="yelog_site_posts_number" value="135">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -613,8 +682,494 @@
     <nav id="title-list-nav">
         
         
+        <a  class="全部文章 工具 "
+           href="/2025/03/40405fdfbdd3.html"
+           data-tag="工具"
+           data-author="" >
+            <span class="post-title" title="Unity+VSCode+Lua调试环境搭建">Unity+VSCode+Lua调试环境搭建</span>
+            <span class="post-date" title="2025-03-14 11:18:02">2025/03/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua Lua调C# "
+           href="/2025/03/f714f486f051.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="12.调用泛型函数">12.调用泛型函数</span>
+            <span class="post-date" title="2025-03-12 20:29:30">2025/03/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua Lua调C# "
+           href="/2025/03/85200439fc64.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="11.lua使用CSharp协程">11.lua使用CSharp协程</span>
+            <span class="post-date" title="2025-03-12 20:29:23">2025/03/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua Lua调C# "
+           href="/2025/03/e3e571eb5a8d.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="10.特殊问题之Lua访问系统类型">10.特殊问题之Lua访问系统类型</span>
+            <span class="post-date" title="2025-03-12 20:29:17">2025/03/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua Lua调C# "
+           href="/2025/03/6aa386902a29.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="9.特殊问题之null和nil比较">9.特殊问题之null和nil比较</span>
+            <span class="post-date" title="2025-03-12 20:28:56">2025/03/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua Lua调C# "
+           href="/2025/03/10951fe8e071.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="8.特殊问题之二维数组遍历">8.特殊问题之二维数组遍历</span>
+            <span class="post-date" title="2025-03-12 20:28:38">2025/03/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua Lua调C# "
+           href="/2025/03/5ba6fe4299f7.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="7.委托和事件">7.委托和事件</span>
+            <span class="post-date" title="2025-03-12 20:28:20">2025/03/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua Lua调C# "
+           href="/2025/03/33091bfedf6b.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="6.函数重载">6.函数重载</span>
+            <span class="post-date" title="2025-03-12 20:28:08">2025/03/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua Lua调C# "
+           href="/2025/03/1f7e2d2b3267.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="5.ref和out函数">5.ref和out函数</span>
+            <span class="post-date" title="2025-03-12 13:56:50">2025/03/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua Lua调C# "
+           href="/2025/03/7efcf4bca085.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="4.拓展方法">4.拓展方法</span>
+            <span class="post-date" title="2025-03-12 13:56:41">2025/03/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua Lua调C# "
+           href="/2025/03/de4226f31827.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="3.数组，List和字典">3.数组，List和字典</span>
+            <span class="post-date" title="2025-03-12 13:56:35">2025/03/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua Lua调C# "
+           href="/2025/03/7d4cfa5204e0.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="2.调CSharp枚举">2.调CSharp枚举</span>
+            <span class="post-date" title="2025-03-12 13:56:21">2025/03/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua Lua调C# "
+           href="/2025/03/2f5077959b8c.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="1.Lua调CSharp类">1.Lua调CSharp类</span>
+            <span class="post-date" title="2025-03-12 13:56:12">2025/03/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua C#调Lua "
+           href="/2025/03/002bcf982dd0.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="9.表映射到LuaTable">9.表映射到LuaTable</span>
+            <span class="post-date" title="2025-03-11 23:17:24">2025/03/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua C#调Lua "
+           href="/2025/03/62f7337b04bc.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="8.表映射到接口">8.表映射到接口</span>
+            <span class="post-date" title="2025-03-11 23:17:06">2025/03/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua C#调Lua "
+           href="/2025/03/c5e1ece223fd.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="7.表映射到类">7.表映射到类</span>
+            <span class="post-date" title="2025-03-11 23:16:52">2025/03/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua C#调Lua "
+           href="/2025/03/c54974f1b6d3.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="6.表映射到List和Dictionary">6.表映射到List和Dictionary</span>
+            <span class="post-date" title="2025-03-11 23:16:16">2025/03/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua C#调Lua "
+           href="/2025/03/4a7a3d937539.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="5.全局函数的获取">5.全局函数的获取</span>
+            <span class="post-date" title="2025-03-10 22:28:00">2025/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua C#调Lua "
+           href="/2025/03/d66f9556abd2.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="4.全局变量的获取">4.全局变量的获取</span>
+            <span class="post-date" title="2025-03-10 22:27:52">2025/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua C#调Lua "
+           href="/2025/03/78f61b35e6b0.html"
+           data-tag="热更新"
+           data-author="" >
+            <span class="post-title" title="3.Lua解析管理器">3.Lua解析管理器</span>
+            <span class="post-date" title="2025-03-10 22:27:38">2025/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua C#调Lua "
+           href="/2025/03/f3eae9927244.html"
+           data-tag="热更新"
+           data-author="" >
+            <span class="post-title" title="2.文件加载重定向">2.文件加载重定向</span>
+            <span class="post-date" title="2025-03-10 22:27:16">2025/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua C#调Lua "
+           href="/2025/03/507bb8315983.html"
+           data-tag="热更新"
+           data-author="" >
+            <span class="post-title" title="1.Lua解析器">1.Lua解析器</span>
+            <span class="post-date" title="2025-03-10 22:27:05">2025/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2025/03/17a2e8bd7a81.html"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2025-03-10 18:30:54">2025/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2025/03/b12087000dc9.html"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2025-03-10 15:52:09">2025/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2025/03/7be2a2f2ab6a.html"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2025-03-10 15:52:00">2025/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2025/03/ffebe3eb0c77.html"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2025-03-10 15:51:47">2025/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2025/03/f135807c909a.html"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2025-03-10 15:51:35">2025/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2025/03/c7c70400b6fd.html"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2025-03-09 11:24:16">2025/03/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2025/03/c6c4b2e9a6d1.html"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2025-03-05 14:21:59">2025/03/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2025/03/a6c7c32be963.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="19.lua垃圾回收">19.lua垃圾回收</span>
+            <span class="post-date" title="2025-03-05 10:59:32">2025/03/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2025/03/d4b5139dae37.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="18.自带库">18.自带库</span>
+            <span class="post-date" title="2025-03-05 10:35:02">2025/03/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2025/03/3c5aa15f6ed5.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="17.面向对象实现">17.面向对象实现</span>
+            <span class="post-date" title="2025-03-05 10:01:27">2025/03/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2025/03/58b72d4d5788.html"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2025-03-04 23:47:44">2025/03/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2025/03/6589185db759.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="16.面向对象思想">16.面向对象思想</span>
+            <span class="post-date" title="2025-03-04 20:43:33">2025/03/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2025/03/4c4ac4700e50.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="15.元表">15.元表</span>
+            <span class="post-date" title="2025-03-04 17:55:14">2025/03/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2025/03/98046ae79859.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="14.协同程序">14.协同程序</span>
+            <span class="post-date" title="2025-03-04 13:17:00">2025/03/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2025/03/da7c5fda8647.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="13.特殊用法">13.特殊用法</span>
+            <span class="post-date" title="2025-03-04 13:15:56">2025/03/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2025/03/6f076c697bdc.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="12.多脚本执行">12.多脚本执行</span>
+            <span class="post-date" title="2025-03-04 12:29:51">2025/03/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2025/03/ee8fac7a971c.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="11.表的公共操作">11.表的公共操作</span>
+            <span class="post-date" title="2025-03-04 10:56:41">2025/03/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2025/03/19533e9d1d7e.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="10.table实现类">10.table实现类</span>
+            <span class="post-date" title="2025-03-04 10:15:00">2025/03/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2025/03/ead036e54f5e.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="9.table实现字典">9.table实现字典</span>
+            <span class="post-date" title="2025-03-03 23:06:24">2025/03/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2025/03/72144ee12633.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="8.迭代器遍历">8.迭代器遍历</span>
+            <span class="post-date" title="2025-03-03 21:10:06">2025/03/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 图形学 Shader 渲染管线 "
+           href="/2025/03/67fd24b4e2cf.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="渲染管线概述">渲染管线概述</span>
+            <span class="post-date" title="2025-03-03 10:05:36">2025/03/03</span>
+        </a>
+        
+        
         <a  class="全部文章 图形学 Shader Unity Shader "
-           href="/2025/02/937a79cd9d2f.html"
+           href="/2025/03/041add6a4741.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="11.顶点片元着色器基本结构">11.顶点片元着色器基本结构</span>
+            <span class="post-date" title="2025-03-02 10:59:27">2025/03/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 图形学 Shader Unity Shader "
+           href="/2025/03/4a7cca750fb0.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="10.函数">10.函数</span>
+            <span class="post-date" title="2025-03-02 10:40:14">2025/03/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 图形学 Shader Unity Shader "
+           href="/2025/02/2e9839bfc273.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="9.运算符和流程控制语句">9.运算符和流程控制语句</span>
+            <span class="post-date" title="2025-02-28 23:12:06">2025/02/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 图形学 Shader Unity Shader "
+           href="/2025/02/afbe85b2d3d7.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="兰伯特光照模型">兰伯特光照模型</span>
+            <span class="post-date" title="2025-02-28 15:44:18">2025/02/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 图形学 Shader Unity Shader "
+           href="/2025/02/777335c9ae6a.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="逐顶点光照和逐片元光照">逐顶点光照和逐片元光照</span>
+            <span class="post-date" title="2025-02-28 15:19:04">2025/02/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 图形学 Shader Unity Shader "
+           href="/2025/02/60937205fa22.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="光照模型概述">光照模型概述</span>
+            <span class="post-date" title="2025-02-28 14:50:22">2025/02/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 图形学 Shader Unity Shader "
+           href="/2025/02/d58e3c479eb9.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="8.Swizzle操作符">8.Swizzle操作符</span>
+            <span class="post-date" title="2025-02-28 12:47:03">2025/02/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 图形学 Shader Unity Shader "
+           href="/2025/02/bb7af1876c0b.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="7.CG语句数据类型">7.CG语句数据类型</span>
+            <span class="post-date" title="2025-02-28 11:17:22">2025/02/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 图形学 Shader Unity Shader "
+           href="/2025/02/ffc3e77c0cc6.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="6.Shader的编写形式">6.Shader的编写形式</span>
+            <span class="post-date" title="2025-02-28 10:13:32">2025/02/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 图形学 Shader Unity Shader "
+           href="/2025/02/1b0d86cbe799.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="5.States渲染状态">5.States渲染状态</span>
+            <span class="post-date" title="2025-02-27 21:00:52">2025/02/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 图形学 Shader Unity Shader "
+           href="/2025/02/49e58a0175f5.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="4.Tags渲染标签">4.Tags渲染标签</span>
+            <span class="post-date" title="2025-02-27 18:39:30">2025/02/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 图形学 Shader Unity Shader "
+           href="/2025/02/083c2e79064b.html"
            data-tag="图形学"
            data-author="" >
             <span class="post-title" title="ShaderLab语法规则">ShaderLab语法规则</span>
@@ -623,7 +1178,7 @@
         
         
         <a  class="全部文章 图形学 Shader Unity Shader "
-           href="/2025/02/02b0ef547013.html"
+           href="/2025/02/1c13a665f1c1.html"
            data-tag="图形学"
            data-author="" >
             <span class="post-title" title="ShaderLab基本结构">ShaderLab基本结构</span>
@@ -632,7 +1187,7 @@
         
         
         <a  class="全部文章 图形学 Shader Unity Shader "
-           href="/2025/02/365f787ab5d6.html"
+           href="/2025/02/968280469e6f.html"
            data-tag="图形学"
            data-author="" >
             <span class="post-title" title="材质和Shader">材质和Shader</span>
@@ -1334,7 +1889,7 @@
         
         
         <a  class="全部文章 工具 "
-           href="/2024/12/98a55959539d.html"
+           href="/2024/12/0a9723b6d16f.html"
            data-tag="工具"
            data-author="" >
             <span class="post-title" title="这里是建站记录">这里是建站记录</span>
@@ -1385,7 +1940,7 @@
 <p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
 <p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
 <h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 生成，部署在 <a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a>主题 <a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a> 已经在github上开源</p>
-<p>有什么事情可以找我，大事帮不了，小事不一定帮，但肯定回复:<br>qq:2154838055<br>邮箱:<a href="mailto:&#50;&#49;&#53;&#52;&#x38;&#x33;&#x38;&#x30;&#53;&#x35;&#64;&#x71;&#x71;&#46;&#99;&#x6f;&#109;">&#50;&#49;&#53;&#52;&#x38;&#x33;&#x38;&#x30;&#53;&#x35;&#64;&#x71;&#x71;&#46;&#99;&#x6f;&#109;</a></p>
+<p>有什么事情可以找我，大事帮不了，小事不一定帮，但肯定回复:<br>qq:2154838055<br>邮箱:<a href="mailto:&#x32;&#x31;&#x35;&#x34;&#56;&#51;&#x38;&#x30;&#53;&#53;&#64;&#x71;&#113;&#46;&#99;&#111;&#109;">&#x32;&#x31;&#x35;&#x34;&#56;&#51;&#x38;&#x30;&#53;&#53;&#64;&#x71;&#113;&#46;&#99;&#111;&#109;</a></p>
 <p>主要功能：</p>
 <ul>
 <li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
