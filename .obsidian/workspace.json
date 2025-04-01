@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "ec62610b70b85585",
+        "id": "93454e44f08a0430",
         "type": "tabs",
         "children": [
           {
-            "id": "785d125165e8d494",
+            "id": "c920d23594e59a0b",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -186,6 +186,8 @@
   },
   "active": "8339d8a327f0fafa",
   "lastOpenFiles": [
+    "未命名.canvas",
+    "source/_posts/图形学/Shader/渲染管线/渲染管线概述.md",
     "source/_posts/工具/Hexo+Github+Obsidian这里是建站记录.md",
     "source/_posts/工具/Unity+VSCode+Lua调试环境搭建.md",
     "source/_posts/热更新/xLua/C#调Lua/5.全局函数的获取.md",
@@ -230,8 +232,6 @@
     "source/_obsidian/Post Template.md",
     "source/_posts/热更新/xLua/C#调Lua/9.表映射到LuaTable.md",
     "source/_posts/热更新/xLua/C#调Lua/8.表映射到接口.md",
-    "source/_posts/热更新/xLua/C#调Lua/7.表映射到类.md",
-    "source/_posts/热更新/xLua/C#调Lua/6.表映射到List和Dictionary.md",
     "source/_posts/项目/未命名.canvas"
   ]
 }
