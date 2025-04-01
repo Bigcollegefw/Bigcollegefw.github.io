@@ -11,10 +11,14 @@
             "id": "c920d23594e59a0b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "source/_posts/工具/Hexo+Github+Obsidian这里是建站记录.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "Hexo+Github+Obsidian这里是建站记录"
             }
           }
         ]
@@ -170,7 +174,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -184,13 +189,35 @@
       "file-tree-alternative:File Tree Alternative Plugin": false
     }
   },
-  "active": "8339d8a327f0fafa",
+  "active": "c920d23594e59a0b",
   "lastOpenFiles": [
-    "未命名.canvas",
-    "source/_posts/图形学/Shader/渲染管线/渲染管线概述.md",
-    "source/_posts/工具/Hexo+Github+Obsidian这里是建站记录.md",
-    "source/_posts/工具/Unity+VSCode+Lua调试环境搭建.md",
+    "source/_posts/热更新/AssetBundle/1.AB包理论基础.md",
+    "source/_posts/热更新/AssetBundle/3.AB包资源加载.md",
+    "source/_posts/热更新/AssetBundle/4.AB包依赖.md",
+    "source/_posts/热更新/AssetBundle/5.AB包资源加载管理器.md",
+    "source/_posts/热更新/AssetBundle/2.AB包资源打包.md",
+    "source/_posts/热更新/Lua/3.运算符.md",
+    "source/_posts/热更新/Lua/1.变量.md",
+    "source/_posts/热更新/Lua/15.元表.md",
+    "source/_posts/热更新/Lua/18.自带库.md",
+    "source/_posts/热更新/Lua/19.lua垃圾回收.md",
+    "source/_posts/热更新/Lua/17.面向对象实现.md",
+    "source/_posts/热更新/Lua/16.面向对象思想.md",
+    "source/_posts/热更新/Lua/11.表的公共操作.md",
+    "source/_posts/热更新/Lua/9.table实现字典.md",
+    "source/_posts/热更新/Lua/7.table表实现数组.md",
+    "source/_posts/热更新/Lua/5.循环语句.md",
+    "source/_posts/热更新/Lua/2.字符串操作.md",
+    "source/_posts/热更新/xLua/Lua调C#/12.调用泛型函数.md",
+    "source/_posts/热更新/xLua/Lua调C#/10.特殊问题之Lua访问系统类型.md",
+    "source/_posts/热更新/xLua/Lua调C#/7.委托和事件.md",
+    "source/_posts/热更新/xLua/Lua调C#/9.特殊问题之null和nil比较.md",
+    "source/_posts/热更新/xLua/Lua调C#/2.调CSharp枚举.md",
+    "source/_posts/热更新/xLua/C#调Lua/8.表映射到接口.md",
+    "source/_posts/热更新/xLua/C#调Lua/7.表映射到类.md",
     "source/_posts/热更新/xLua/C#调Lua/5.全局函数的获取.md",
+    "source/_posts/热更新/xLua/C#调Lua/4.全局变量的获取.md",
+    "未命名.canvas",
     "categories/热更新/xLua/Lua调C/page/2/index.html",
     "categories/热更新/xLua/page/3/index.html",
     "categories/热更新/xLua/page/2/index.html",
@@ -211,27 +238,6 @@
     "img/beishang20250312145819184.png",
     "img/beishang20250305110856267.png",
     "img/beishang20250304232736391.png",
-    "source/_posts/热更新/xLua/C#调Lua/3.Lua解析管理器.md",
-    "source/_posts/热更新/xLua/C#调Lua/2.文件加载重定向.md",
-    "source/_posts/热更新/xLua/C#调Lua/4.全局变量的获取.md",
-    "source/_posts/LeetCode/Hot100/滑动窗口/无重复字符的最长字符串.md",
-    "source/_posts/LeetCode/Hot100/滑动窗口/找到字符串中所有字母异位词.md",
-    "source/_posts/热更新/xLua/Lua调C#/12.调用泛型函数.md",
-    "source/_posts/热更新/xLua/Lua调C#/11.lua使用CSharp协程.md",
-    "source/_posts/热更新/xLua/Lua调C#/10.特殊问题之Lua访问系统类型.md",
-    "source/_posts/热更新/xLua/Lua调C#/9.特殊问题之null和nil比较.md",
-    "source/_posts/热更新/xLua/Lua调C#/8.特殊问题之二维数组遍历.md",
-    "source/_posts/热更新/xLua/Lua调C#/7.委托和事件.md",
-    "source/_posts/热更新/xLua/Lua调C#/6.函数重载.md",
-    "source/_posts/热更新/xLua/Lua调C#/5.ref和out函数.md",
-    "source/_posts/热更新/xLua/Lua调C#/4.拓展方法.md",
-    "source/_posts/热更新/xLua/Lua调C#/3.数组，List和字典.md",
-    "source/_posts/热更新/xLua/Lua调C#/2.调CSharp枚举.md",
-    "source/_posts/热更新/xLua/Lua调C#/1.Lua调CSharp类.md",
-    "source/_posts/热更新/xLua/xLua教程.md",
-    "source/_obsidian/Post Template.md",
-    "source/_posts/热更新/xLua/C#调Lua/9.表映射到LuaTable.md",
-    "source/_posts/热更新/xLua/C#调Lua/8.表映射到接口.md",
     "source/_posts/项目/未命名.canvas"
   ]
 }
