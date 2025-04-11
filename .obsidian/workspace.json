@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/工具/Hexo+Github+Obsidian这里是建站记录.md",
+                "file": "source/_posts/CSharp/CSharp进阶/事件和委托.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Hexo+Github+Obsidian这里是建站记录"
+              "title": "事件和委托"
             }
           }
         ]
@@ -191,6 +191,9 @@
   },
   "active": "c920d23594e59a0b",
   "lastOpenFiles": [
+    "source/img/beishang20250411110708717.png",
+    "source/_posts/CSharp/CSharp进阶/25.值类型和引用类型.md",
+    "source/_posts/工具/Hexo+Github+Obsidian这里是建站记录.md",
     "source/_posts/热更新/AssetBundle/1.AB包理论基础.md",
     "source/_posts/热更新/AssetBundle/3.AB包资源加载.md",
     "source/_posts/热更新/AssetBundle/4.AB包依赖.md",
@@ -214,9 +217,6 @@
     "source/_posts/热更新/xLua/Lua调C#/9.特殊问题之null和nil比较.md",
     "source/_posts/热更新/xLua/Lua调C#/2.调CSharp枚举.md",
     "source/_posts/热更新/xLua/C#调Lua/8.表映射到接口.md",
-    "source/_posts/热更新/xLua/C#调Lua/7.表映射到类.md",
-    "source/_posts/热更新/xLua/C#调Lua/5.全局函数的获取.md",
-    "source/_posts/热更新/xLua/C#调Lua/4.全局变量的获取.md",
     "未命名.canvas",
     "categories/热更新/xLua/Lua调C/page/2/index.html",
     "categories/热更新/xLua/page/3/index.html",
