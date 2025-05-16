@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/CSharp/CSharp进阶/16.List.md",
+                "file": "source/_posts/CSharp/CSharp进阶/20.反射.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "16.List"
+              "title": "20.反射"
             }
           }
         ]
@@ -174,8 +174,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -191,7 +190,11 @@
   },
   "active": "c920d23594e59a0b",
   "lastOpenFiles": [
+    "source/_posts/CSharp/CSharp进阶/18.多线程.md",
     "source/_posts/CSharp/CSharp进阶/1.ArrayList.md",
+    "source/_posts/CSharp/CSharp进阶/2.Stack.md",
+    "source/_posts/CSharp/CSharp基础/2.ref和out.md",
+    "source/_posts/CSharp/CSharp进阶/16.List.md",
     "source/_posts/简历暂时没搞完的项目.md",
     "source/_posts/第三人称控制器.md",
     "source/_posts/游戏引擎/Unity/Unity入门到核心/添加天空盒.md",
@@ -216,10 +219,6 @@
     "source/_posts/热更新/Lua/11.表的公共操作.md",
     "source/_posts/热更新/Lua/9.table实现字典.md",
     "source/_posts/热更新/Lua/7.table表实现数组.md",
-    "source/_posts/热更新/Lua/5.循环语句.md",
-    "source/_posts/热更新/Lua/2.字符串操作.md",
-    "source/_posts/热更新/xLua/Lua调C#/12.调用泛型函数.md",
-    "source/_posts/热更新/xLua/Lua调C#/10.特殊问题之Lua访问系统类型.md",
     "未命名.canvas",
     "categories/热更新/xLua/Lua调C/page/2/index.html",
     "categories/热更新/xLua/page/3/index.html",
