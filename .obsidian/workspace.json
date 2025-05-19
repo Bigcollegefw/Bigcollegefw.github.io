@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/热更新/Lua/15.元表.md",
+                "file": "source/_posts/工具/Unity+VSCode+Lua调试环境搭建.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "15.元表"
+              "title": "Unity+VSCode+Lua调试环境搭建"
             }
           }
         ]
@@ -190,6 +190,13 @@
   },
   "active": "c920d23594e59a0b",
   "lastOpenFiles": [
+    "source/_posts/工具/Hexo+Github+Obsidian这里是建站记录.md",
+    "source/_posts/简历暂时没搞完的项目.md",
+    "source/_posts/第三人称控制器.md",
+    "source/_posts/丧尸围城（下）.md",
+    "source/_posts/丧尸围城（上）.md",
+    "source/_posts/UGUI抽卡系统.md",
+    "source/_posts/热更新/Lua/15.元表.md",
     "source/_posts/热更新/Lua/10.table实现类.md",
     "source/_posts/热更新/Lua/11.表的公共操作.md",
     "source/_posts/热更新/Lua/12.多脚本执行.md",
@@ -209,13 +216,6 @@
     "source/_posts/CSharp/CSharp进阶/1.ArrayList.md",
     "source/_posts/CSharp/CSharp进阶/6.泛型约束.md",
     "source/_posts/CSharp/CSharp进阶/3.Queue.md",
-    "source/_posts/CSharp/CSharp进阶/5.泛型.md",
-    "source/_posts/热更新/xLua/C#调Lua/2.文件加载重定向.md",
-    "source/_posts/热更新/xLua/C#调Lua/1.Lua解析器.md",
-    "source/_posts/热更新/xLua/C#调Lua/4.全局变量的获取.md",
-    "source/_posts/热更新/Lua/15.元表.md",
-    "source/_posts/热更新/Lua/9.table实现字典.md",
-    "source/_posts/热更新/Lua/2.字符串操作.md",
     "source/img/beishang20250510140543453.png",
     "source/img/beishang20250510140507830.png",
     "source/img/beishang20250411110708717.png",
