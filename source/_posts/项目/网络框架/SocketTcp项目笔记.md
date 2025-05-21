@@ -5,3 +5,5 @@ Server服务器端脚本思路
 - 如果你在`CustomServer`里重写了[ServerLog](vscode-file://vscode-app/d:/DevTool/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html)，并且场景中挂载的是`CustomServer`组件，那么即使是在基类[Server](vscode-file://vscode-app/d:/DevTool/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html)的方法（如[StartServer](vscode-file://vscode-app/d:/DevTool/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html)）里调用[ServerLog(...)](vscode-file://vscode-app/d:/DevTool/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html)，也会执行子类重写后的方法（这就是C#的多态特性）。
 - 如果是[Server](vscode-file://vscode-app/d:/DevTool/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html)实例，调用的是基类方法。
 - 如果是`CustomServer`实例，调用的是子类重写的方法。
+
+客户端Client的协程是监听服务端的消息，但是客户端的协程只用在点击启动客户端按钮的时候开启？而Server的协程也只是在m_ListenClientMsgsCoroutine不为空的时候进去一次。

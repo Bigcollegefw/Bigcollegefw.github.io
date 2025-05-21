@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/项目/网络框架/SocketTcp项目笔记.md",
+                "file": "source/_posts/网络开发/11.Socket重要API.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SocketTcp项目笔记"
+              "title": "11.Socket重要API"
             }
           }
         ]
@@ -89,8 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 241.5,
-    "collapsed": true
+    "width": 241.5
   },
   "right": {
     "id": "3d6c464a1f506d07",
@@ -192,8 +191,14 @@
   },
   "active": "c920d23594e59a0b",
   "lastOpenFiles": [
-    "source/_posts/网络开发/20.分包，黏包.md",
+    "source/_posts/网络开发/10.反序列化.md",
+    "source/_posts/网络开发/9.序列化.md",
+    "source/_posts/网络开发/7.IP地址和端口类.md",
+    "source/_posts/网络开发/5.OSI模型和TCP杠IP模型.md",
+    "source/_posts/网络开发/4.数据通信模型.md",
+    "source/_posts/网络开发/3.客户端和服务端.md",
     "source/_posts/项目/网络框架/SocketTcp项目笔记.md",
+    "source/_posts/网络开发/20.分包，黏包.md",
     "source/_posts/项目/网络框架",
     "source/_posts/UGUI抽卡系统.md",
     "source/_posts/工具/Unity+VSCode+Lua调试环境搭建.md",
@@ -213,12 +218,6 @@
     "source/_posts/热更新/Lua/18.自带库.md",
     "source/_posts/热更新/Lua/19.lua垃圾回收.md",
     "source/_posts/热更新/AssetBundle/3.AB包资源加载.md",
-    "source/_posts/热更新/AssetBundle/2.AB包资源打包.md",
-    "source/_posts/热更新/AssetBundle/1.AB包理论基础.md",
-    "source/_posts/热更新/AssetBundle/4.AB包依赖.md",
-    "source/_posts/热更新/AssetBundle/5.AB包资源加载管理器.md",
-    "source/_posts/热更新/Lua/8.迭代器遍历.md",
-    "source/_posts/热更新/Lua/7.table表实现数组.md",
     "source/img/beishang20250510140543453.png",
     "source/img/beishang20250510140507830.png",
     "source/img/beishang20250411110708717.png",
