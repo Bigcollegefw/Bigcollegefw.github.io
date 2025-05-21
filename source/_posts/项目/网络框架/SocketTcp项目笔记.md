@@ -7,3 +7,12 @@ Server服务器端脚本思路
 - 如果是`CustomServer`实例，调用的是子类重写的方法。
 
 客户端Client的协程是监听服务端的消息，但是客户端的协程只用在点击启动客户端按钮的时候开启？而Server的协程也只是在m_ListenClientMsgsCoroutine不为空的时候进去一次。
+
+一般Unity或C#服务器开发，推荐用TcpListener+SetSocketOption，除非你有特殊需求才用Socket全自定义。
+```C#
+m_Server.Server.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, 1);
+```
+这是**直接创建一个Socket对象**，你需要自己管理Socket的绑定、监听、接收、发送等所有细节。
+```C#
+Socket socketTcp = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+```

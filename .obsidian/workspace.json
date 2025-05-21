@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/网络开发/11.Socket重要API.md",
+                "file": "source/_posts/项目/网络框架/SocketTcp项目笔记.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "11.Socket重要API"
+              "title": "SocketTcp项目笔记"
             }
           }
         ]
@@ -191,6 +191,8 @@
   },
   "active": "c920d23594e59a0b",
   "lastOpenFiles": [
+    "source/_posts/网络开发/12.TCP通信_同步_服务端.md",
+    "source/_posts/网络开发/11.Socket重要API.md",
     "source/_posts/网络开发/10.反序列化.md",
     "source/_posts/网络开发/9.序列化.md",
     "source/_posts/网络开发/7.IP地址和端口类.md",
@@ -216,8 +218,6 @@
     "source/_posts/热更新/Lua/16.面向对象思想.md",
     "source/_posts/热更新/Lua/17.面向对象实现.md",
     "source/_posts/热更新/Lua/18.自带库.md",
-    "source/_posts/热更新/Lua/19.lua垃圾回收.md",
-    "source/_posts/热更新/AssetBundle/3.AB包资源加载.md",
     "source/img/beishang20250510140543453.png",
     "source/img/beishang20250510140507830.png",
     "source/img/beishang20250411110708717.png",
