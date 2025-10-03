@@ -1,0 +1,259 @@
+{
+  "main": {
+    "id": "7028b6faa9820ebd",
+    "type": "split",
+    "children": [
+      {
+        "id": "93454e44f08a0430",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c920d23594e59a0b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "source/_posts/工具/Hexo+Github+Obsidian这里是建站记录.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Hexo+Github+Obsidian这里是建站记录"
+            }
+          },
+          {
+            "id": "bde4018580699057",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "source/_posts/热更新/Lua/8.迭代器遍历.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "8.迭代器遍历"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5bbe48a3bf0310ac",
+    "type": "split",
+    "children": [
+      {
+        "id": "29145a5b966b8129",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f76fa23c5dc956f5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "a5da9817c5acfdc2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "事件监听",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "4548fe6873dec8b9",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          },
+          {
+            "id": "8339d8a327f0fafa",
+            "type": "leaf",
+            "state": {
+              "type": "file-tree-view",
+              "state": {},
+              "icon": "sheets-in-box",
+              "title": "File Tree"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 321.50418853759766
+  },
+  "right": {
+    "id": "3d6c464a1f506d07",
+    "type": "split",
+    "children": [
+      {
+        "id": "f9cd076bbae9f569",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dd1745ec76a87d15",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "source/_posts/丧尸围城（上）.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "丧尸围城（上） 的反向链接列表"
+            }
+          },
+          {
+            "id": "f0365f125a82eb0d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "c0445c9f399e1a0f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "4f2fafb191d40e64",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "source/_posts/热更新/xLua/3.Lua解析管理器.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "3.Lua解析管理器 的大纲"
+            }
+          },
+          {
+            "id": "fbf7f07aee65e5ab",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:创建新数据库": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "obsidian-git:Open Git source control": false,
+      "file-tree-alternative:File Tree Alternative Plugin": false
+    }
+  },
+  "active": "bde4018580699057",
+  "lastOpenFiles": [
+    "source/_posts/热更新/Lua/7.table表实现数组.md",
+    "source/_posts/热更新/Lua/6.函数.md",
+    "source/_posts/热更新/Lua/5.循环语句.md",
+    "source/_posts/热更新/Lua/4.条件分支语句.md",
+    "source/_posts/热更新/Lua/3.运算符.md",
+    "source/_posts/热更新/Lua/2.字符串操作.md",
+    "source/_posts/热更新/Lua/1.变量.md",
+    "source/_posts/热更新/xLua/C#调Lua/4.全局变量的获取.md",
+    "source/_posts/热更新/xLua/C#调Lua/3.Lua解析管理器.md",
+    "source/_posts/热更新/xLua/C#调Lua/2.文件加载重定向.md",
+    "source/_posts/热更新/xLua/C#调Lua/1.Lua解析器.md",
+    "source/_posts/热更新/xLua/C#调Lua/8.表映射到接口.md",
+    "source/_posts/CSharp/CSharp基础/1.属性和字段.md",
+    "source/_posts/CSharp/CSharp基础/2.ref和out.md",
+    "source/_posts/热更新/xLua/xLua教程.md",
+    "source/_posts/简历暂时没搞完的项目.md",
+    "source/_posts/第三人称控制器.md",
+    "source/_posts/丧尸围城（下）.md",
+    "source/_posts/UGUI抽卡系统.md",
+    "source/_posts/工具/3.VSStdio怎么重新复制一个项目后新生成一个sln文件.md",
+    "source/_posts/工具/Hexo+Github+Obsidian这里是建站记录.md",
+    "source/_posts/项目/网络框架/SocketTcp项目笔记.md",
+    "source/_posts/项目/网络框架/socket网络通信模块.md",
+    "source/_posts/游戏引擎/Unity/UGUI/GraphicRaycater.md",
+    "source/_posts/游戏引擎/Unity/UGUI/Slider滑动条.md",
+    "source/_posts/游戏引擎/Unity/UGUI/Toggle开关控件.md",
+    "source/img/beishang20250708173642753.png",
+    "source/img/beishang20250708173537799.png",
+    "source/img/beishang20250708173313964.png",
+    "source/img/beishang20250708172824801.png",
+    "source/_posts/项目/网络框架",
+    "source/img/beishang20250510140543453.png",
+    "source/img/beishang20250510140507830.png",
+    "source/img/beishang20250411110708717.png",
+    "未命名.canvas",
+    "categories/热更新/xLua/Lua调C/page/2/index.html",
+    "categories/热更新/xLua/page/3/index.html",
+    "categories/热更新/xLua/page/2/index.html",
+    "categories/热更新/xLua/Lua调C/page/2",
+    "categories/热更新/xLua/page/3",
+    "categories/热更新/xLua/page/2",
+    "categories/热更新/xLua/Lua调C/index.html",
+    "categories/热更新/xLua/Lua调C/page",
+    "categories/热更新/xLua/C-调Lua/index.html",
+    "img/beishang20250314112758294.png",
+    "img/beishang20250314112616981.png",
+    "img/beishang20250314112508016.png",
+    "source/_posts/项目/未命名.canvas"
+  ]
+}

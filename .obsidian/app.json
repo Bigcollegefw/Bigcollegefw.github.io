@@ -1,0 +1,12 @@
+{
+  "userIgnoreFilters": [
+    "themes/",
+    "public/",
+    "scaffolds/",
+    "node_modules/"
+  ],
+  "attachmentFolderPath": "source/img",
+  "useMarkdownLinks": true,
+  "newLinkFormat": "relative",
+  "readableLineLength": true
+}
