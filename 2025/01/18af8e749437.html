@@ -2,27 +2,22 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>beishangzhajitui</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="beishangzhajitui">
+  <title>26.事件和委托 | beishangzhajitui</title>
+  <meta name="keywords" content=" CSharp ">
+  <meta name="description" content="26.事件和委托 | beishangzhajitui">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="需要先下载dotnet-sdk-8.0.407-win-x64并重启电脑版本Unity2022，先用了2019不行，也行，但是麻烦需要有下面两个，默认是有的，如果不行有新版本就升级新版本下载VSCode装如下插件在运行和调试中添加配置，在launch.json中会添加配置代码然后点击调试的时候附加到自己的工程上面，">
+<meta name="description" content="在 C# 中，如果父类的方法没有使用virtual关键字声明，子类直接定义一个同名方法且不加override 不会报错，但会产生不同的行为。这种情况称为方法隐藏（Method Hiding），而非重写（Override）。 具体规则和行为： 父类方法未声明为virtual 此时子类无法通过override关键字重写该方法。若子类定义同名方法，编译器会默认使用new关键字隐式隐藏父类方法。例如：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Unity+VSCode+Lua调试环境搭建">
-<meta property="og:url" content="http://example.com/2025/03/40405fdfbdd3.html">
+<meta property="og:title" content="27.方法隐藏和override">
+<meta property="og:url" content="http://example.com/2025/07/e030bb658b4e.html">
 <meta property="og:site_name" content="beishangzhajitui">
-<meta property="og:description" content="需要先下载dotnet-sdk-8.0.407-win-x64并重启电脑版本Unity2022，先用了2019不行，也行，但是麻烦需要有下面两个，默认是有的，如果不行有新版本就升级新版本下载VSCode装如下插件在运行和调试中添加配置，在launch.json中会添加配置代码然后点击调试的时候附加到自己的工程上面，">
+<meta property="og:description" content="在 C# 中，如果父类的方法没有使用virtual关键字声明，子类直接定义一个同名方法且不加override 不会报错，但会产生不同的行为。这种情况称为方法隐藏（Method Hiding），而非重写（Override）。 具体规则和行为： 父类方法未声明为virtual 此时子类无法通过override关键字重写该方法。若子类定义同名方法，编译器会默认使用new关键字隐式隐藏父类方法。例如：">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/beishang20250314112616981.png">
-<meta property="og:image" content="http://example.com/img/beishang20250314112252135.png">
-<meta property="og:image" content="http://example.com/img/beishang20250314112508016.png">
-<meta property="og:image" content="http://example.com/img/beishang20250314112758294.png">
-<meta property="article:published_time" content="2025-03-14T03:18:02.645Z">
-<meta property="article:modified_time" content="2025-03-14T03:28:43.925Z">
+<meta property="article:published_time" content="2025-07-10T15:48:17.103Z">
+<meta property="article:modified_time" content="2025-10-03T06:14:14.677Z">
 <meta property="article:author" content="beishangzhajitui">
-<meta property="article:tag" content="工具">
+<meta property="article:tag" content="CSharp">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/img/beishang20250314112616981.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -159,7 +154,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(135)</small>
+                <small>(136)</small>
             
         </div>
     </li>
@@ -171,7 +166,7 @@
         <div data-rel="工具">
             
             工具
-            <small>(2)</small>
+            <small>(3)</small>
         </div>
         
     </li>
@@ -201,10 +196,21 @@
         <div data-rel="热更新">
             <i class="fold iconfont icon-right"></i>
             热更新
-            <small>(40)</small>
+            <small>(46)</small>
         </div>
         
             <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="热更新&lt;---&gt;AssetBundle">
+            
+            AssetBundle
+            <small>(5)</small>
+        </div>
+        
+    </li>
+
                 
                     
     <li>
@@ -222,7 +228,7 @@
         <div data-rel="热更新&lt;---&gt;xLua">
             <i class="fold iconfont icon-right"></i>
             xLua
-            <small>(21)</small>
+            <small>(22)</small>
         </div>
         
             <ul class="sub hide">
@@ -461,12 +467,16 @@
     
         
             
+        
+    
+        
+            
                 
     <li>
         <div data-rel="C#">
             <i class="fold iconfont icon-right"></i>
             C#
-            <small>(21)</small>
+            <small>(22)</small>
         </div>
         
             <ul class="sub hide">
@@ -498,7 +508,7 @@
         <div data-rel="C#&lt;---&gt;C#进阶">
             
             C#进阶
-            <small>(13)</small>
+            <small>(14)</small>
         </div>
         
     </li>
@@ -557,6 +567,40 @@
     
         
             
+                
+    <li>
+        <div data-rel="Unity">
+            <i class="fold iconfont icon-right"></i>
+            Unity
+            <small>(1)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="Unity&lt;---&gt;Unity入门到精通">
+            
+            Unity入门到精通
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
         
     
         
@@ -586,7 +630,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="135">
+<input type="hidden" id="yelog_site_posts_number" value="136">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -659,6 +703,10 @@
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>资源加载</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>CSharp</a>
             </li>
         
@@ -680,6 +728,33 @@
 
     
     <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2025/07/e030bb658b4e.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="27.方法隐藏和override">27.方法隐藏和override</span>
+            <span class="post-date" title="2025-07-10 23:48:17">2025/07/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 "
+           href="/2025/07/9276c927e449.html"
+           data-tag="工具"
+           data-author="" >
+            <span class="post-title" title="VSStdio怎么重新复制一个有sln文件的项目">VSStdio怎么重新复制一个有sln文件的项目</span>
+            <span class="post-date" title="2025-07-08 17:27:32">2025/07/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 Unity Unity入门到精通 "
+           href="/2025/05/746cabe8e173.html"
+           data-tag="Unity"
+           data-author="" >
+            <span class="post-title" title="更改天空盒">更改天空盒</span>
+            <span class="post-date" title="2025-05-10 14:04:50">2025/05/10</span>
+        </a>
         
         
         <a  class="全部文章 工具 "
@@ -880,66 +955,57 @@
         </a>
         
         
-        <a  class="全部文章 "
+        <a  class="全部文章 热更新 AssetBundle "
            href="/2025/03/17a2e8bd7a81.html"
-           data-tag=""
+           data-tag="资源加载"
            data-author="" >
-            <span class="post-title" title=""></span>
+            <span class="post-title" title="5.AB包资源加载管理器">5.AB包资源加载管理器</span>
             <span class="post-date" title="2025-03-10 18:30:54">2025/03/10</span>
         </a>
         
         
-        <a  class="全部文章 "
+        <a  class="全部文章 热更新 AssetBundle "
            href="/2025/03/b12087000dc9.html"
-           data-tag=""
+           data-tag="资源加载"
            data-author="" >
-            <span class="post-title" title=""></span>
+            <span class="post-title" title="4.AB包依赖">4.AB包依赖</span>
             <span class="post-date" title="2025-03-10 15:52:09">2025/03/10</span>
         </a>
         
         
-        <a  class="全部文章 "
+        <a  class="全部文章 热更新 AssetBundle "
            href="/2025/03/7be2a2f2ab6a.html"
-           data-tag=""
+           data-tag="资源加载"
            data-author="" >
-            <span class="post-title" title=""></span>
+            <span class="post-title" title="3.AB包资源加载">3.AB包资源加载</span>
             <span class="post-date" title="2025-03-10 15:52:00">2025/03/10</span>
         </a>
         
         
-        <a  class="全部文章 "
+        <a  class="全部文章 热更新 AssetBundle "
            href="/2025/03/ffebe3eb0c77.html"
-           data-tag=""
+           data-tag="资源加载"
            data-author="" >
-            <span class="post-title" title=""></span>
+            <span class="post-title" title="2.AB包资源打包">2.AB包资源打包</span>
             <span class="post-date" title="2025-03-10 15:51:47">2025/03/10</span>
         </a>
         
         
-        <a  class="全部文章 "
+        <a  class="全部文章 热更新 AssetBundle "
            href="/2025/03/f135807c909a.html"
-           data-tag=""
+           data-tag="资源加载"
            data-author="" >
-            <span class="post-title" title=""></span>
+            <span class="post-title" title="1.AB包理论基础">1.AB包理论基础</span>
             <span class="post-date" title="2025-03-10 15:51:35">2025/03/10</span>
         </a>
         
         
-        <a  class="全部文章 "
+        <a  class="全部文章 热更新 xLua "
            href="/2025/03/c7c70400b6fd.html"
-           data-tag=""
+           data-tag="热更新"
            data-author="" >
-            <span class="post-title" title=""></span>
+            <span class="post-title" title="xLua官方教程">xLua官方教程</span>
             <span class="post-date" title="2025-03-09 11:24:16">2025/03/09</span>
-        </a>
-        
-        
-        <a  class="全部文章 "
-           href="/2025/03/c6c4b2e9a6d1.html"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title=""></span>
-            <span class="post-date" title="2025-03-05 14:21:59">2025/03/05</span>
         </a>
         
         
@@ -967,15 +1033,6 @@
            data-author="" >
             <span class="post-title" title="17.面向对象实现">17.面向对象实现</span>
             <span class="post-date" title="2025-03-05 10:01:27">2025/03/05</span>
-        </a>
-        
-        
-        <a  class="全部文章 "
-           href="/2025/03/58b72d4d5788.html"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title=""></span>
-            <span class="post-date" title="2025-03-04 23:47:44">2025/03/04</span>
         </a>
         
         
@@ -1484,7 +1541,7 @@
         
         
         <a  class="全部文章 C# C#进阶 "
-           href="/2025/01/64231d14934e.html"
+           href="/2025/01/5620bacb4f1d.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="优化代码">优化代码</span>
@@ -1493,19 +1550,19 @@
         
         
         <a  class="全部文章 C# C#进阶 "
-           href="/2025/01/1e01d989526d.html"
+           href="/2025/01/18af8e749437.html"
            data-tag="CSharp"
            data-author="" >
-            <span class="post-title" title="事件和委托">事件和委托</span>
+            <span class="post-title" title="26.事件和委托">26.事件和委托</span>
             <span class="post-date" title="2025-01-15 09:49:08">2025/01/15</span>
         </a>
         
         
         <a  class="全部文章 C# C#基础 "
-           href="/2025/01/3045a0d986bb.html"
+           href="/2025/01/d47b29cfaf54.html"
            data-tag="CSharp"
            data-author="" >
-            <span class="post-title" title="枚举">枚举</span>
+            <span class="post-title" title="28.枚举">28.枚举</span>
             <span class="post-date" title="2025-01-14 21:53:45">2025/01/14</span>
         </a>
         
@@ -1914,17 +1971,36 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-LeetCode/Hot100/滑动窗口/无重复字符的最长字符串" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-CSharp/CSharp进阶/26.事件和委托" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">26.事件和委托</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="C#">C#</a> > 
+            
+            <a  data-rel="C#&lt;---&gt;C#进阶">C#进阶</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">CSharp</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2025-03-05 11:08:57'>2025-03-04 23:47</time>
+            发布时间 : <time class="date" title='最后更新: 2025-10-03 14:11:54'>2025-01-15 09:49</time>
         
     </div>
     <div class="article-meta">
@@ -1946,7 +2022,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9F%B3%E6%95%88%E6%A8%A1%E5%9D%97%E5%A7%94%E6%89%98%E4%BD%BF%E7%94%A8%E6%A1%88%E4%BE%8B"><span class="toc-text">音效模块委托使用案例</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1962,63 +2038,169 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>给定一个字符串 <code>s</code> ，请你找出其中不含有重复字符的 <strong>最长 子串</strong> 的长度。<br><strong>示例 1:</strong><br><strong>输入:</strong> s &#x3D; “abcabcbb”<br><strong>输出:</strong> 3<br><strong>解释:</strong> 因为无重复字符的最长子串是 <code>&quot;abc&quot;</code>，所以其长度为 3。<br><strong>示例 2:</strong><br><strong>输入:</strong> s &#x3D; “bbbbb”<br><strong>输出:</strong> 1<br><strong>解释:</strong> 因为无重复字符的最长子串是 <code>&quot;b&quot;</code>，所以其长度为 1。<br><strong>示例 3:</strong><br><strong>输入:</strong> s &#x3D; “pwwkew”<br><strong>输出:</strong> 3<br><strong>解释:</strong> 因为无重复字符的最长子串是 <code>&quot;wke&quot;</code>，所以其长度为 3。<br>     请注意，你的答案必须是 <strong>子串</strong> 的长度，<code>&quot;pwke&quot;</code> 是一个_子序列，_不是子串。</p>
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>0 &lt;= s.length &lt;= 5 * 104</code></li>
-<li><code>s</code> 由英文字母、数字、符号和空格组成</li>
-</ul>
-<pre><code class="C++">#include &lt;unordered_map&gt;
-#include &lt;string&gt;
-#include &lt;algorithm&gt;
-
-class Solution &#123;
-public:
-    int lengthOfLongestSubstring(std::string s) &#123;
-        std::unordered_map&lt;char, int&gt; char_map; // 存储字符及其最后出现的位置
-        int max_len = 0;
-        int left = 0; // 窗口左边界
-        
-        for (int right = 0; right &lt; s.size(); ++right) &#123;
-            // 如果字符已存在且在当前窗口内，更新左边界
-            if (char_map.find(s[right]) != char_map.end() &amp;&amp; char_map[s[right]] &gt;= left) &#123;
-                left = char_map[s[right]] + 1;
-            &#125;
-            // 更新字符的最后出现位置
-            char_map[s[right]] = right;
-            // 计算当前窗口长度并更新最大值
-            max_len = std::max(max_len, right - left + 1);
-        &#125;
-        
-        return max_len;
-    &#125;
-&#125;;
+        <p>子物体传参数到父物体在SetLock方法里，</p>
+<pre><code class="C#">private void SetLock(int index,string name,int level)
 </code></pre>
-<pre><code class="C#">using System;
-using System.Collections.Generic;
-
-public class Solution &#123;
-    public int LengthOfLongestSubstring(string s) &#123;
-        Dictionary&lt;char, int&gt; charMap = new Dictionary&lt;char, int&gt;(); // 存储字符及其最后出现的位置
-        int maxLen = 0;
-        int left = 0; // 窗口左边界
-        
-        for (int right = 0; right &lt; s.Length; right++) &#123;
-            // 如果字符已存在且在当前窗口内，更新左边界
-            if (charMap.ContainsKey(s[right]) &amp;&amp; charMap[s[right]] &gt;= left) &#123;
-                left = charMap[s[right]] + 1;
-            &#125;
-            // 更新字符的最后出现位置
-            charMap[s[right]] = right;
-            // 计算当前窗口长度并更新最大值
-            maxLen = Math.Max(maxLen, right - left + 1);
-        &#125;
-        
-        return maxLen;
+<p>父物体传参数在子物体的SetUIData方法中</p>
+<pre><code class="C#">Go.GetComponent&lt;ArrayItem&gt;().SetArrayItemUIData(SetLock, i, arrayList[i], arraySprites[i]);
+</code></pre>
+<p>如果要设置父子间按钮的绑定效果<br>可以给每个子物体加一个同样的效果</p>
+<pre><code class="C#">// 动态加载
+private void InitWuShuPanelCallBack()
+&#123;
+    for (int i = 0; i &lt; TestWuShuList.Count; i++)
+    &#123;
+        // 动态加载
+        GameObject Go = Instantiate(m_Items);
+        // 设置初始比例
+        Go.transform.localScale = Vector3.one;
+        // 父对象
+        Go.transform.SetParent(Content);
+        // 给每个加载出来的组件绑定按钮效果
+        EventTriggerListener.Get(Content.GetChild(i).GetChild(0).GetComponent&lt;Button&gt;().gameObject).onClick = BtnDoubleCtrl;
     &#125;
 &#125;
 </code></pre>
-<p><img src="/../../../../img/beishang20250305110856267.png"></p>
+<p>给法宝添加升级功能。<br><img src="/../../../img/beishang20250115140855219.png"></p>
+<h2 id="音效模块委托使用案例"><a href="#音效模块委托使用案例" class="headerlink" title="音效模块委托使用案例"></a>音效模块委托使用案例</h2><p>s是加载出来的音效片段，通过委托传给source，在停止播放哪里再传过去停止。<br><img src="/../../../img/beishang20250411110708717.png"></p>
+<pre><code class="C#">using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Events;
+
+public class MusicMgr : BaseManager&lt;MusicMgr&gt;
+&#123;
+    //唯一的背景音乐组件
+    private AudioSource bkMusic = null;
+    //音乐大小
+    private float bkValue = 1;
+    //音效依附对象
+    private GameObject soundObj = null;
+    //音效列表
+    private List&lt;AudioSource&gt; soundList = new List&lt;AudioSource&gt;();
+    //音效大小
+    private float soundValue = 1;
+
+    public MusicMgr()
+
+    &#123;
+
+        MonoMgr.GetInstance().AddUpdateListener(Update);
+
+    &#125;
+    private void Update()
+    &#123;
+        // 倒着循环删除音效列表中的音效对象
+        for( int i = soundList.Count - 1; i &gt;=0; --i )
+        &#123;
+            if(!soundList[i].isPlaying)
+            &#123;
+                GameObject.Destroy(soundList[i]);
+                soundList.RemoveAt(i);
+            &#125;
+        &#125;
+    &#125;
+    /// &lt;summary&gt;
+    /// 播放背景音乐
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;name&quot;&gt;&lt;/param&gt;
+    public void PlayBkMusic(string name)
+    &#123;
+        if(bkMusic == null)
+        &#123;
+            GameObject obj = new GameObject();
+            obj.name = &quot;BkMusic&quot;;
+            bkMusic = obj.AddComponent&lt;AudioSource&gt;();
+        &#125;
+        //异步加载背景音乐 加载完成后 播放
+        ResMgr.GetInstance().LoadAsync&lt;AudioClip&gt;(&quot;Music/BK/&quot; + name, (clip) =&gt;
+        &#123;
+            bkMusic.clip = clip;
+            bkMusic.loop = true;
+            bkMusic.volume = bkValue;
+            bkMusic.Play();
+        &#125;);
+    &#125;
+
+    /// &lt;summary&gt;
+    /// 暂停背景音乐
+    /// &lt;/summary&gt;
+    public void PauseBKMusic()
+    &#123;
+        if (bkMusic == null)
+            return;
+        bkMusic.Pause();
+    &#125;
+
+    /// &lt;summary&gt;
+    /// 停止背景音乐
+    /// &lt;/summary&gt;
+    public void StopBKMusic()
+    &#123;
+        if (bkMusic == null)
+            return;
+        bkMusic.Stop();
+    &#125;
+
+    /// &lt;summary&gt;
+    /// 改变背景音乐 音量大小
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;v&quot;&gt;&lt;/param&gt;
+    public void ChangeBKValue(float v)
+    &#123;
+        bkValue = v;
+        if (bkMusic == null)
+            return;
+        bkMusic.volume = bkValue;
+    &#125;
+    /// &lt;summary&gt;
+    /// 播放音效
+    /// &lt;/summary&gt;
+    public void PlaySound(string name, bool isLoop, UnityAction&lt;AudioSource&gt; callBack = null)
+    &#123;
+        if(soundObj == null)
+        &#123;
+            soundObj = new GameObject();
+            soundObj.name = &quot;Sound&quot;;
+        &#125;
+        //当音效资源异步加载结束后 再添加一个音效
+        ResMgr.GetInstance().LoadAsync&lt;AudioClip&gt;(&quot;Music/Sound/&quot; + name, (clip) =&gt;
+        &#123;
+            AudioSource source = soundObj.AddComponent&lt;AudioSource&gt;();
+            source.clip = clip;
+            source.loop = isLoop;
+            source.volume = soundValue;
+            source.Play();
+            soundList.Add(source);
+            if(callBack != null)
+                callBack(source);
+        &#125;);
+    &#125;
+   /// &lt;summary&gt;
+    /// 改变音效声音大小
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;value&quot;&gt;&lt;/param&gt;
+    public void ChangeSoundValue( float value )
+    &#123;
+        soundValue = value;
+        for (int i = 0; i &lt; soundList.Count; ++i)
+            soundList[i].volume = value;
+    &#125;
+
+    /// &lt;summary&gt;
+    /// 停止音效
+    /// &lt;/summary&gt;
+    public void StopSound(AudioSource source)
+    &#123;
+        if( soundList.Contains(source) )
+        &#123;
+            soundList.Remove(source);
+            source.Stop();
+            GameObject.Destroy(source);
+        &#125;
+    &#125;
+&#125;
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 2154838055@qq.com </span>

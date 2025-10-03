@@ -2,27 +2,22 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>优化代码 | beishangzhajitui</title>
-  <meta name="keywords" content=" CSharp ">
-  <meta name="description" content="优化代码 | beishangzhajitui">
+  <title>VSStdio怎么重新复制一个有sln文件的项目 | beishangzhajitui</title>
+  <meta name="keywords" content=" 工具 ">
+  <meta name="description" content="VSStdio怎么重新复制一个有sln文件的项目 | beishangzhajitui">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="需要先下载dotnet-sdk-8.0.407-win-x64并重启电脑版本Unity2022，先用了2019不行，也行，但是麻烦需要有下面两个，默认是有的，如果不行有新版本就升级新版本下载VSCode装如下插件在运行和调试中添加配置，在launch.json中会添加配置代码然后点击调试的时候附加到自己的工程上面，">
+<meta name="description" content="在 C# 中，如果父类的方法没有使用virtual关键字声明，子类直接定义一个同名方法且不加override 不会报错，但会产生不同的行为。这种情况称为方法隐藏（Method Hiding），而非重写（Override）。 具体规则和行为： 父类方法未声明为virtual 此时子类无法通过override关键字重写该方法。若子类定义同名方法，编译器会默认使用new关键字隐式隐藏父类方法。例如：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Unity+VSCode+Lua调试环境搭建">
-<meta property="og:url" content="http://example.com/2025/03/40405fdfbdd3.html">
+<meta property="og:title" content="27.方法隐藏和override">
+<meta property="og:url" content="http://example.com/2025/07/e030bb658b4e.html">
 <meta property="og:site_name" content="beishangzhajitui">
-<meta property="og:description" content="需要先下载dotnet-sdk-8.0.407-win-x64并重启电脑版本Unity2022，先用了2019不行，也行，但是麻烦需要有下面两个，默认是有的，如果不行有新版本就升级新版本下载VSCode装如下插件在运行和调试中添加配置，在launch.json中会添加配置代码然后点击调试的时候附加到自己的工程上面，">
+<meta property="og:description" content="在 C# 中，如果父类的方法没有使用virtual关键字声明，子类直接定义一个同名方法且不加override 不会报错，但会产生不同的行为。这种情况称为方法隐藏（Method Hiding），而非重写（Override）。 具体规则和行为： 父类方法未声明为virtual 此时子类无法通过override关键字重写该方法。若子类定义同名方法，编译器会默认使用new关键字隐式隐藏父类方法。例如：">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/beishang20250314112616981.png">
-<meta property="og:image" content="http://example.com/img/beishang20250314112252135.png">
-<meta property="og:image" content="http://example.com/img/beishang20250314112508016.png">
-<meta property="og:image" content="http://example.com/img/beishang20250314112758294.png">
-<meta property="article:published_time" content="2025-03-14T03:18:02.645Z">
-<meta property="article:modified_time" content="2025-03-14T03:28:43.925Z">
+<meta property="article:published_time" content="2025-07-10T15:48:17.103Z">
+<meta property="article:modified_time" content="2025-10-03T06:14:14.677Z">
 <meta property="article:author" content="beishangzhajitui">
-<meta property="article:tag" content="工具">
+<meta property="article:tag" content="CSharp">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/img/beishang20250314112616981.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -159,7 +154,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(135)</small>
+                <small>(136)</small>
             
         </div>
     </li>
@@ -171,7 +166,7 @@
         <div data-rel="工具">
             
             工具
-            <small>(2)</small>
+            <small>(3)</small>
         </div>
         
     </li>
@@ -201,10 +196,21 @@
         <div data-rel="热更新">
             <i class="fold iconfont icon-right"></i>
             热更新
-            <small>(40)</small>
+            <small>(46)</small>
         </div>
         
             <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="热更新&lt;---&gt;AssetBundle">
+            
+            AssetBundle
+            <small>(5)</small>
+        </div>
+        
+    </li>
+
                 
                     
     <li>
@@ -222,7 +228,7 @@
         <div data-rel="热更新&lt;---&gt;xLua">
             <i class="fold iconfont icon-right"></i>
             xLua
-            <small>(21)</small>
+            <small>(22)</small>
         </div>
         
             <ul class="sub hide">
@@ -461,12 +467,16 @@
     
         
             
+        
+    
+        
+            
                 
     <li>
         <div data-rel="C#">
             <i class="fold iconfont icon-right"></i>
             C#
-            <small>(21)</small>
+            <small>(22)</small>
         </div>
         
             <ul class="sub hide">
@@ -498,7 +508,7 @@
         <div data-rel="C#&lt;---&gt;C#进阶">
             
             C#进阶
-            <small>(13)</small>
+            <small>(14)</small>
         </div>
         
     </li>
@@ -557,6 +567,40 @@
     
         
             
+                
+    <li>
+        <div data-rel="Unity">
+            <i class="fold iconfont icon-right"></i>
+            Unity
+            <small>(1)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="Unity&lt;---&gt;Unity入门到精通">
+            
+            Unity入门到精通
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
         
     
         
@@ -586,7 +630,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="135">
+<input type="hidden" id="yelog_site_posts_number" value="136">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -659,6 +703,10 @@
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>资源加载</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>CSharp</a>
             </li>
         
@@ -680,6 +728,33 @@
 
     
     <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2025/07/e030bb658b4e.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="27.方法隐藏和override">27.方法隐藏和override</span>
+            <span class="post-date" title="2025-07-10 23:48:17">2025/07/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 "
+           href="/2025/07/9276c927e449.html"
+           data-tag="工具"
+           data-author="" >
+            <span class="post-title" title="VSStdio怎么重新复制一个有sln文件的项目">VSStdio怎么重新复制一个有sln文件的项目</span>
+            <span class="post-date" title="2025-07-08 17:27:32">2025/07/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 Unity Unity入门到精通 "
+           href="/2025/05/746cabe8e173.html"
+           data-tag="Unity"
+           data-author="" >
+            <span class="post-title" title="更改天空盒">更改天空盒</span>
+            <span class="post-date" title="2025-05-10 14:04:50">2025/05/10</span>
+        </a>
         
         
         <a  class="全部文章 工具 "
@@ -880,66 +955,57 @@
         </a>
         
         
-        <a  class="全部文章 "
+        <a  class="全部文章 热更新 AssetBundle "
            href="/2025/03/17a2e8bd7a81.html"
-           data-tag=""
+           data-tag="资源加载"
            data-author="" >
-            <span class="post-title" title=""></span>
+            <span class="post-title" title="5.AB包资源加载管理器">5.AB包资源加载管理器</span>
             <span class="post-date" title="2025-03-10 18:30:54">2025/03/10</span>
         </a>
         
         
-        <a  class="全部文章 "
+        <a  class="全部文章 热更新 AssetBundle "
            href="/2025/03/b12087000dc9.html"
-           data-tag=""
+           data-tag="资源加载"
            data-author="" >
-            <span class="post-title" title=""></span>
+            <span class="post-title" title="4.AB包依赖">4.AB包依赖</span>
             <span class="post-date" title="2025-03-10 15:52:09">2025/03/10</span>
         </a>
         
         
-        <a  class="全部文章 "
+        <a  class="全部文章 热更新 AssetBundle "
            href="/2025/03/7be2a2f2ab6a.html"
-           data-tag=""
+           data-tag="资源加载"
            data-author="" >
-            <span class="post-title" title=""></span>
+            <span class="post-title" title="3.AB包资源加载">3.AB包资源加载</span>
             <span class="post-date" title="2025-03-10 15:52:00">2025/03/10</span>
         </a>
         
         
-        <a  class="全部文章 "
+        <a  class="全部文章 热更新 AssetBundle "
            href="/2025/03/ffebe3eb0c77.html"
-           data-tag=""
+           data-tag="资源加载"
            data-author="" >
-            <span class="post-title" title=""></span>
+            <span class="post-title" title="2.AB包资源打包">2.AB包资源打包</span>
             <span class="post-date" title="2025-03-10 15:51:47">2025/03/10</span>
         </a>
         
         
-        <a  class="全部文章 "
+        <a  class="全部文章 热更新 AssetBundle "
            href="/2025/03/f135807c909a.html"
-           data-tag=""
+           data-tag="资源加载"
            data-author="" >
-            <span class="post-title" title=""></span>
+            <span class="post-title" title="1.AB包理论基础">1.AB包理论基础</span>
             <span class="post-date" title="2025-03-10 15:51:35">2025/03/10</span>
         </a>
         
         
-        <a  class="全部文章 "
+        <a  class="全部文章 热更新 xLua "
            href="/2025/03/c7c70400b6fd.html"
-           data-tag=""
+           data-tag="热更新"
            data-author="" >
-            <span class="post-title" title=""></span>
+            <span class="post-title" title="xLua官方教程">xLua官方教程</span>
             <span class="post-date" title="2025-03-09 11:24:16">2025/03/09</span>
-        </a>
-        
-        
-        <a  class="全部文章 "
-           href="/2025/03/c6c4b2e9a6d1.html"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title=""></span>
-            <span class="post-date" title="2025-03-05 14:21:59">2025/03/05</span>
         </a>
         
         
@@ -967,15 +1033,6 @@
            data-author="" >
             <span class="post-title" title="17.面向对象实现">17.面向对象实现</span>
             <span class="post-date" title="2025-03-05 10:01:27">2025/03/05</span>
-        </a>
-        
-        
-        <a  class="全部文章 "
-           href="/2025/03/58b72d4d5788.html"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title=""></span>
-            <span class="post-date" title="2025-03-04 23:47:44">2025/03/04</span>
         </a>
         
         
@@ -1484,7 +1541,7 @@
         
         
         <a  class="全部文章 C# C#进阶 "
-           href="/2025/01/64231d14934e.html"
+           href="/2025/01/5620bacb4f1d.html"
            data-tag="CSharp"
            data-author="" >
             <span class="post-title" title="优化代码">优化代码</span>
@@ -1493,19 +1550,19 @@
         
         
         <a  class="全部文章 C# C#进阶 "
-           href="/2025/01/1e01d989526d.html"
+           href="/2025/01/18af8e749437.html"
            data-tag="CSharp"
            data-author="" >
-            <span class="post-title" title="事件和委托">事件和委托</span>
+            <span class="post-title" title="26.事件和委托">26.事件和委托</span>
             <span class="post-date" title="2025-01-15 09:49:08">2025/01/15</span>
         </a>
         
         
         <a  class="全部文章 C# C#基础 "
-           href="/2025/01/3045a0d986bb.html"
+           href="/2025/01/d47b29cfaf54.html"
            data-tag="CSharp"
            data-author="" >
-            <span class="post-title" title="枚举">枚举</span>
+            <span class="post-title" title="28.枚举">28.枚举</span>
             <span class="post-date" title="2025-01-14 21:53:45">2025/01/14</span>
         </a>
         
@@ -1914,9 +1971,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-CSharp/CSharp进阶/优化代码" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-工具/3.VSStdio怎么重新复制一个项目后新生成一个sln文件" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">优化代码</h1>
+        <h1 class="article-title">VSStdio怎么重新复制一个有sln文件的项目</h1>
     
     <div class="article-meta">
         
@@ -1926,9 +1983,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="C#">C#</a> > 
-            
-            <a  data-rel="C#&lt;---&gt;C#进阶">C#进阶</a>
+            <a  data-rel="工具">工具</a>
             
         </span>
         
@@ -1936,14 +1991,14 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color2">CSharp</a>
+            <a class="color3">工具</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2025-01-25 12:25:25'>2025-01-17 15:00</time>
+            发布时间 : <time class="date" title='最后更新: 2025-10-03 14:06:27'>2025-07-08 17:27</time>
         
     </div>
     <div class="article-meta">
@@ -1981,398 +2036,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>优化后</p>
-<pre><code class="C#">using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using static UnityEditor.Progress;
-
-
-
-public class GainPanel : MonoBehaviour
-&#123;
-    [Header(&quot;动态加载出来的父节点&quot;)]
-    [SerializeField]
-    private Transform Content;
-
-    [Header(&quot;物品框预制体&quot;)]
-    [SerializeField]
-    public GameObject gainItem;
-
-    [Header(&quot;选情缘亮&quot;)]
-    [SerializeField]
-    private GameObject LoveSelect;
-
-    [Header(&quot;选结交亮&quot;)]
-    [SerializeField]
-    private GameObject FriendSelect;
-
-    [Header(&quot;选坐骑亮&quot;)]
-    [SerializeField]
-    private GameObject HourseSelect;
-
-    [Header(&quot;最上面的背景图片&quot;)]
-    [SerializeField]
-    private Sprite[] myImageSprite;
-
-    [Header(&quot;顶部图片&quot;)]
-    [SerializeField]
-    private GameObject imgTop;
-
-    [Header(&quot;装所有按钮&quot;)]
-    [SerializeField]
-    private Button[] PanelAr;
-
-    [Header(&quot;看广告框预制体&quot;)]
-    [SerializeField]
-    private GameObject g_Items;
-
-    [Header(&quot;还未开放预制体&quot;)]
-    [SerializeField]
-    private GameObject null_Items;
-
-    // 临时变量用小驼峰
-    // 私有变量用m_命名
-
-    public enum ButtonType
-    &#123;
-        LovePanel = 8,
-        FriendPanel = 1,
-        HoursePanel = 3
-    &#125;
-    // 生成的元素类型和按钮类型合为一个
-    //public enum GainElementType
-    //&#123;
-    //    LovePanel = 8,
-    //    FriendPanel = 1,
-    //    HoursePanel = 3
-    //&#125;
-
-    private List&lt;GainEntity&gt; GainList = new List&lt;GainEntity&gt;(); //读取数据的列表
-    Dictionary&lt;string, bool&gt; itemViewDic = new Dictionary&lt;string, bool&gt;();    // 生成的物体是否被解锁的信息
-    Dictionary&lt;ButtonType, List&lt;GainEntity&gt;&gt; m_GainEntityDic = new Dictionary&lt;ButtonType, List&lt;GainEntity&gt;&gt;();    // 存每个界面对应的未解锁的列表
-
-    private void Awake()
-    &#123;
-        SetupButtonClickEvents();
-
-
-        GainList = GameEntry.DataTable.DataTableManager.GainDBModel.GetList();
-
-
-        InitGainPanelCallBack(ButtonType.LovePanel);
-
-
-    &#125;
-
-    private void SetupButtonClickEvents()
-    &#123;
-
-        int Btnlength = PanelAr.Length;
-        for (int j = 0; j &lt; Btnlength; j++)
-        &#123;
-            EventTriggerListener.Get(PanelAr[j].gameObject).onClick = BtnCtrl;
-        &#125;
-    &#125;
-    /// &lt;summary&gt;
-    /// 当前点击的页面
-    /// &lt;/summary&gt;
-    ButtonType m_CurrType = ButtonType.LovePanel;
-    // 三个界面的切换
-    public void BtnCtrl(GameObject go)
-    &#123;
-
-        m_CurrType = (ButtonType)Enum.Parse(typeof(ButtonType), go.name);
-        ChangeBg(m_CurrType);
-        deleteContent();
-
-        switch (m_CurrType)
-        &#123;
-            case ButtonType.LovePanel:
-
-                InitGainPanelCallBack(ButtonType.LovePanel);
-                break;
-            case ButtonType.FriendPanel:
-
-                InitGainPanelCallBack(ButtonType.FriendPanel);
-                break;
-            case ButtonType.HoursePanel:
-
-                InitGainPanelCallBack(ButtonType.HoursePanel);
-                break;
-            default:
-                break;
-        &#125;
-    &#125;
-
-    // 每个人物的临时索引,记录每次生成时候开始的第一个
-    int t_index;
-
-    //动态加载物品
-    private void InitGainPanelCallBack(ButtonType Btn)
-    &#123;
-        GainEntity entity = null;
-
-        for (int i = 0; i &lt; GainList.Count; i++)
-        &#123;
-
-            if (GainList[i].IsExisit == 1 &amp;&amp; GainList[i].GainElementType == (int)m_CurrType)
-            &#123;
-                // 把第一个传进来
-                if (t_index == 1)
-                &#123;
-                    entity = GainList[i];
-
-                &#125;
-                // 传一个临时索引
-                ItemCreate(GainList[i], t_index, Btn);
-                t_index++;
-            &#125;
-
-        &#125;
-        t_index = 0;
-        if (m_GainEntityDic.ContainsKey(m_CurrType))
-        &#123;
-            if (m_GainEntityDic[m_CurrType].Count &gt; 0 &amp;&amp; m_GainEntityDic[m_CurrType][0].GainElementType == (int)m_CurrType)
-            &#123;
-                entity = m_GainEntityDic[m_CurrType][0];
-            &#125;
-            
-        &#125;
-        InstanceFinalObject(entity.GainElement_Pic, (ButtonType)entity.GainElementType, m_GainEntityDic[m_CurrType].Count == 0);
-    &#125;
-
-    // 生成一个物体
-    void ItemCreate(GainEntity gainEntity, int index, ButtonType Btn)
-    &#123;
-
-        // 字典里有的时候
-        if (itemViewDic.ContainsKey(gainEntity.GainElement_Pic))
-        &#123;
-            GameObject go = Instantiate(gainItem);
-            go.transform.localScale = Vector3.one;
-
-            go.transform.SetParent(Content);
-
-            go.name = gainEntity.GainElement_Pic;
-
-            go.GetComponent&lt;GainItem&gt;().SetGainItemUIData(SetLock, index, gainEntity.GainElementName, GameEntry.LoadImg.Img(Btn, gainEntity.GainElement_Pic), false);
-
-            if (itemViewDic[go.name] || index == 0)
-            &#123;
-                go.SetActive(true);
-            &#125;
-            else
-            &#123;
-                go.SetActive(false);
-                if (m_GainEntityDic.ContainsKey(Btn))
-                &#123;
-                    m_GainEntityDic[Btn].Add(gainEntity);
-                &#125;
-                else
-                &#123;
-                    List&lt;GainEntity&gt; entityList = new List&lt;GainEntity&gt;();
-                    entityList.Add(gainEntity);
-
-                    m_GainEntityDic.Add(Btn, entityList);
-
-                &#125;
-            &#125;
-
-            return;
-        &#125;
-
-        // 字典里没有的时候
-        GameObject Go = Instantiate(gainItem);
-        Go.transform.localScale = Vector3.one;
-        Go.transform.SetParent(Content);
-        Go.name = gainEntity.GainElement_Pic;
-        Go.GetComponent&lt;GainItem&gt;().SetGainItemUIData(SetLock, index, gainEntity.GainElementName, GameEntry.LoadImg.Img(Btn, gainEntity.GainElement_Pic), false);
-
-        if (index == 0)
-        &#123;
-            Go.SetActive(true);
-        &#125;
-        else
-        &#123;
-            Go.SetActive(false);
-
-            if (m_GainEntityDic.ContainsKey(Btn))
-            &#123;
-                m_GainEntityDic[Btn].Add(gainEntity);
-            &#125;
-            else
-            &#123;
-                List&lt;GainEntity&gt; entityList = new List&lt;GainEntity&gt;();
-                entityList.Add(gainEntity);
-
-                m_GainEntityDic.Add(Btn, entityList);
-
-            &#125;
-        &#125;
-        // 给生成的加上字典
-        itemViewDic.Add(gainEntity.GainElement_Pic, false);
-    &#125;
-
-    private void SetLock(Dictionary&lt;string, GainItem&gt; myDict)
-    &#123;
-        int trueCount = 0;
-        foreach (var item in myDict)
-        &#123;
-            if (item.Value == true)
-            &#123;
-                trueCount++;
-            &#125;
-        &#125;
-    &#125;
-
-    // 解锁对应方法
-    private void LockObj(string name)
-    &#123;
-
-        GainEntity gainEntity = null;
-        string picName = &quot;&quot;;
-        ButtonType type = ButtonType.LovePanel;
-        // 检查字典中是否包含该键
-        if (itemViewDic.ContainsKey(name))
-        &#123;
-            itemViewDic[name] = true;
-            //Content.GetChild(ShowNum).gameObject.SetActive(true);
-            List&lt;GainEntity&gt; currEntityList = m_GainEntityDic[m_CurrType];
-            for (int i = 0; i &lt; currEntityList.Count; i++)
-            &#123;
-                if (currEntityList[i].GainElement_Pic == name)
-                &#123;
-                    if (i + 1 &lt;= currEntityList.Count)
-                    &#123;
-                        if (i+1==currEntityList.Count)
-                        &#123;
-                            Content.transform.Find(currEntityList[i].GainElement_Pic).gameObject.SetActive(true);
-                            currEntityList.Remove(currEntityList[i]); 
-                            m_GainEntityDic[m_CurrType] = currEntityList;
-                            u_item.gameObject.SetActive(false);
-                            NN.SetActive(true);
-                        &#125;
-                        else
-                        &#123;
-                            picName = currEntityList[i + 1].GainElement_Pic;
-                            type = (ButtonType)currEntityList[i + 1].GainElementType;
-
-                            Content.transform.Find(currEntityList[i].GainElement_Pic).gameObject.SetActive(true);
-                            currEntityList.Remove(currEntityList[i]);
-                            m_GainEntityDic[m_CurrType] = currEntityList;
-                        &#125;
-                    &#125;
-                    else
-                    &#123;
-                       
-                    &#125;
-                &#125;
-            &#125;
-
-            if (!string.IsNullOrEmpty(picName))
-            &#123;
-                // 传图片,
-                u_item.SetImg(GameEntry.LoadImg.Img(type, picName));
-            &#125;
-
-        &#125;
-    &#125;
-
-    // 删除内容的方法
-    private void deleteContent()
-    &#123;
-        // 获取当前 Content 的所有子节点
-        Transform[] childTransforms = Content.GetComponentsInChildren&lt;Transform&gt;(true);
-        // 遍历所有子节点并删除
-        foreach (Transform child in childTransforms)
-        &#123;
-            // 只销毁子节点，而不是父节点本身
-            if (child != Content)
-            &#123;
-                Destroy(child.gameObject);
-            &#125;
-        &#125;
-    &#125;
-
-    UnLockItem u_item;
-    GameObject NN;
-    // 加载最后两个物体
-    private void InstanceFinalObject(string name, ButtonType type,bool isLast=false)
-    &#123;
-        GameObject GG = Instantiate(g_Items);
-
-        GG.transform.SetParent(Content);
-        GG.transform.localScale = Vector3.one;
-        GG.GetComponent&lt;UnLockItem&gt;().SetUnLockItemUIData(LockObj, GameEntry.LoadImg.Img(type, name));
-
-        u_item = GG.GetComponent&lt;UnLockItem&gt;();
-        
-        NN = Instantiate(null_Items);
-        NN.transform.SetParent(Content);
-        NN.transform.localScale = Vector3.one;
-        NN.SetActive(isLast);
-        if (isLast)
-        &#123;
-            u_item.gameObject.SetActive(!isLast);
-        &#125;
-    &#125;
-
-
-    // Start is called before the first frame update
-    void Start()
-    &#123;
-
-    &#125;
-
-    // Update is called once per frame
-    void Update()
-    &#123;
-
-    &#125;
-
-    // 切换背景
-    private void ChangeBg(ButtonType bt)
-    &#123;
-
-        switch (bt)
-        &#123;
-            case ButtonType.LovePanel:
-
-                HourseSelect.gameObject.SetActive(false);
-                FriendSelect.gameObject.SetActive(false);
-                LoveSelect.gameObject.SetActive(true);
-
-                imgTop.GetComponent&lt;Image&gt;().sprite = myImageSprite[0];
-
-                break;
-            case ButtonType.FriendPanel:
-                HourseSelect.gameObject.SetActive(false);
-                FriendSelect.gameObject.SetActive(true);
-                LoveSelect.gameObject.SetActive(false);
-
-                imgTop.GetComponent&lt;Image&gt;().sprite = myImageSprite[1];
-
-                break;
-            case ButtonType.HoursePanel:
-
-                HourseSelect.gameObject.SetActive(true);
-                FriendSelect.gameObject.SetActive(false);
-                LoveSelect.gameObject.SetActive(false);
-
-                imgTop.GetComponent&lt;Image&gt;().sprite = myImageSprite[2];
-
-                break;
-            default:
-                break;
-        &#125;
-
-    &#125;
-&#125;
-
-</code></pre>
+        <p>真的是让人欲哭无泪。两个星期前莫名其秒就搞成功过一次，当时没记录下来，现在需要的时候就又忘记了，回想了我好几个小时，网上找这个也是大海捞针。<br><img src="/../../img/beishang20250708172824801.png"><br>首先把上面这个文件copy一份，现在我要在3DRaceCar里面重新生成一个专门属于3DRaceCar的解决方案<br><img src="/../../img/beishang20250708173313964.png"></p>
+<p>进来后重命名在重新生成就ok了<br><img src="/../../img/beishang20250708173537799.png"><br><img src="/../../img/beishang20250708173642753.png"></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 2154838055@qq.com </span>
