@@ -1,3 +1,14 @@
+---
+title: xLua官方教程
+date:
+  "{ date }":
+categories:
+  - 热更新
+  - xLua
+tags:
+  - 热更新
+---
+
 ### Lua文件加载
 1. 执行字符串
     

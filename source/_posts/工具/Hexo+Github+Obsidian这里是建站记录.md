@@ -190,6 +190,25 @@ menu:
 ## 关于有时候点击啥都没有反应的原因
 可能是网络原因，我用校园网的时候就会出现什么负责处理图标点击事件的 JavaScript 文件没有正确加载。换成流量就好了。
 
+## 如何使用
+由于我太长的时间没有维护过这个博客了，所以我需要记录下这个博客应该怎么使用hhh
+
+进入到项目目录里面，然后
+```bash
+# 生成静态页面（输出到 public 目录）
+hexo generate  # 缩写：hexo g
+
+#清理缓存文件
+hexo clean
+
+#部署到本地
+hexo server  #缩写：hexo s
+
+# 部署到远程仓库（需先配置 _config.yml 中的 deploy 信息）
+hexo deploy    # 缩写：hexo d
+```
+
+
 参考：
 [关于我使用obsidian加hexo部署个人博客的过程 - SagiRastar's Blog](https://sagi-rastar.github.io/2023/11/10/%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/)
 [Hexo + Obsidian + Git 完美的博客部署与编辑方案 - 个人文章 - SegmentFault 思否](https://segmentfault.com/a/1190000042111566)

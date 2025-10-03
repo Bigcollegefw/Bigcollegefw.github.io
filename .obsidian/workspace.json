@@ -13,30 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/工具/Hexo+Github+Obsidian这里是建站记录.md",
+                "file": "source/_posts/工具/Unity+VSCode+Lua调试环境搭建.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Hexo+Github+Obsidian这里是建站记录"
-            }
-          },
-          {
-            "id": "bde4018580699057",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "source/_posts/工具/3.VSStdio怎么重新复制一个项目后新生成一个sln文件.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "3.VSStdio怎么重新复制一个项目后新生成一个sln文件"
+              "title": "Unity+VSCode+Lua调试环境搭建"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -68,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "事件监听",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -205,55 +190,55 @@
       "file-tree-alternative:File Tree Alternative Plugin": false
     }
   },
-  "active": "bde4018580699057",
+  "active": "8339d8a327f0fafa",
   "lastOpenFiles": [
-    "source/_posts/工具/Unity+VSCode+Lua调试环境搭建.md",
+    "categories/热更新/page/5/index.html",
+    "categories/热更新/page/5",
+    "categories/Unity/Unity入门到精通/index.html",
+    "categories/Unity/Unity入门到精通",
+    "categories/Unity/index.html",
+    "categories/Unity",
+    "archives/2025/07/index.html",
+    "archives/2025/07",
+    "archives/2025/05/index.html",
+    "archives/2025/05",
+    "tags/资源加载/index.html",
+    "img/beishang20250708173642753.png",
+    "img/beishang20250708173537799.png",
+    "img/beishang20250708173313964.png",
+    "img/beishang20250708172824801.png",
+    "img/beishang20250510140543453.png",
+    "img/beishang20250510140507830.png",
+    "img/beishang20250411110708717.png",
     "source/_posts/工具/Hexo+Github+Obsidian这里是建站记录.md",
-    "source/_posts/热更新/Lua/8.迭代器遍历.md",
-    "source/_posts/热更新/Lua/7.table表实现数组.md",
-    "source/_posts/热更新/Lua/6.函数.md",
-    "source/_posts/热更新/Lua/5.循环语句.md",
-    "source/_posts/热更新/Lua/4.条件分支语句.md",
-    "source/_posts/热更新/Lua/3.运算符.md",
-    "source/_posts/热更新/Lua/2.字符串操作.md",
-    "source/_posts/热更新/Lua/1.变量.md",
-    "source/_posts/热更新/xLua/C#调Lua/4.全局变量的获取.md",
-    "source/_posts/热更新/xLua/C#调Lua/3.Lua解析管理器.md",
-    "source/_posts/热更新/xLua/C#调Lua/2.文件加载重定向.md",
-    "source/_posts/热更新/xLua/C#调Lua/1.Lua解析器.md",
-    "source/_posts/热更新/xLua/C#调Lua/8.表映射到接口.md",
-    "source/_posts/CSharp/CSharp基础/1.属性和字段.md",
-    "source/_posts/CSharp/CSharp基础/2.ref和out.md",
-    "source/_posts/热更新/xLua/xLua教程.md",
-    "source/_posts/简历暂时没搞完的项目.md",
-    "source/_posts/第三人称控制器.md",
-    "source/_posts/丧尸围城（下）.md",
-    "source/_posts/UGUI抽卡系统.md",
     "source/_posts/工具/3.VSStdio怎么重新复制一个项目后新生成一个sln文件.md",
-    "source/_posts/项目/网络框架/SocketTcp项目笔记.md",
-    "source/_posts/项目/网络框架/socket网络通信模块.md",
-    "source/_posts/游戏引擎/Unity/UGUI/GraphicRaycater.md",
-    "source/img/beishang20250708173642753.png",
-    "source/img/beishang20250708173537799.png",
-    "source/img/beishang20250708173313964.png",
-    "source/img/beishang20250708172824801.png",
-    "source/_posts/项目/网络框架",
-    "source/img/beishang20250510140543453.png",
-    "source/img/beishang20250510140507830.png",
-    "source/img/beishang20250411110708717.png",
+    "source/_posts/热更新/AssetBundle/5.AB包资源加载管理器.md",
+    "source/_posts/热更新/AssetBundle/4.AB包依赖.md",
+    "source/_posts/热更新/AssetBundle/3.AB包资源加载.md",
+    "source/_posts/热更新/AssetBundle/2.AB包资源打包.md",
+    "source/_posts/热更新/AssetBundle/1.AB包理论基础.md",
+    "public/img/beishang20250223205548688.png",
+    "public/img/alipay.png",
+    "public/css/fonts/iconfont.svg",
+    "source/_posts/游戏引擎/Unity/Unity入门到核心/添加天空盒.md",
+    "source/_posts/游戏引擎/Unity/Unity入门到核心/Vector3和Transform.md",
+    "source/_posts/游戏引擎/Unity/Unity入门到核心/1.Scene和Hierarchy窗口.md",
+    "source/_posts/游戏引擎/Unity/Unity入门到核心/URP Camera使用及动态设置.md",
+    "source/_posts/数据存储/PlayerPrefs/基本方法.md",
+    "source/_posts/图形学/Shader/渲染管线/渲染管线概述.md",
+    "source/_posts/图形学/Shader/UnityShader/兰伯特光照模型.md",
+    "source/_posts/图形学/Shader/UnityShader/逐顶点光照和逐片元光照.md",
+    "source/_posts/图形学/Shader/UnityShader/光照模型概述.md",
+    "source/_posts/CSharp/CSharp进阶/29.优化代码.md",
+    "source/_posts/CSharp/CSharp进阶/27.方法隐藏和override.md",
+    "source/_posts/CSharp/CSharp进阶/26.事件和委托.md",
+    "source/_posts/CSharp/CSharp进阶/20.反射.md",
+    "source/_posts/CSharp/CSharp进阶/25.值类型和引用类型.md",
+    "source/_posts/CSharp/CSharp进阶/1.ArrayList.md",
+    "source/_posts/CSharp/CSharp进阶/2.Stack.md",
+    "source/_posts/CSharp/CSharp进阶/3.Queue.md",
+    "source/_posts/CSharp/CSharp进阶/5.泛型.md",
     "未命名.canvas",
-    "categories/热更新/xLua/Lua调C/page/2/index.html",
-    "categories/热更新/xLua/page/3/index.html",
-    "categories/热更新/xLua/page/2/index.html",
-    "categories/热更新/xLua/Lua调C/page/2",
-    "categories/热更新/xLua/page/3",
-    "categories/热更新/xLua/page/2",
-    "categories/热更新/xLua/Lua调C/index.html",
-    "categories/热更新/xLua/Lua调C/page",
-    "categories/热更新/xLua/C-调Lua/index.html",
-    "img/beishang20250314112758294.png",
-    "img/beishang20250314112616981.png",
-    "img/beishang20250314112508016.png",
     "source/_posts/项目/未命名.canvas"
   ]
 }
