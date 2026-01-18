@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "SVN使用教程"
             }
+          },
+          {
+            "id": "0633a74572949d00",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.10.6"
+              },
+              "icon": "lucide-book-up",
+              "title": "版本说明 1.10.6"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -89,8 +102,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 321.50418853759766,
-    "collapsed": true
+    "width": 321.50418853759766
   },
   "right": {
     "id": "3d6c464a1f506d07",
@@ -191,7 +203,7 @@
       "file-tree-alternative:File Tree Alternative Plugin": false
     }
   },
-  "active": "7569cfce9a3150e0",
+  "active": "0633a74572949d00",
   "lastOpenFiles": [
     "source/img/PixPin_2026-01-10_15-21-08.gif",
     "source/_posts/工具/SVN使用教程.md",
