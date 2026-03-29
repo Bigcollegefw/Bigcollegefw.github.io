@@ -1,7 +1,6 @@
 ---
 title: Toggle开关控件
-date:
-  "{ date }": 
+date: 2025-01-25
 categories:
   - 游戏引擎
   - Unity

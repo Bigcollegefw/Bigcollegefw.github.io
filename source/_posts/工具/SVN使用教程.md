@@ -1,7 +1,6 @@
 ---
 title: SVN使用
-date:
-  "{ date }":
+date: 2026-01-10
 categories:
   - 工具
 tags:

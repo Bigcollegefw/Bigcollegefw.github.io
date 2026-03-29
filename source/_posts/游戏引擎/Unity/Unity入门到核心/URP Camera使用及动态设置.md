@@ -1,7 +1,6 @@
 ---
 title: URP Camera使用及动态设置
-date:
-  "{ date }": 
+date: 2025-02-01
 categories:
   - 游戏引擎
   - Unity
