@@ -1,0 +1,2594 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>实现九宫格地图动态加载 | beishangzhajitui</title>
+  <meta name="keywords" content=" demo ">
+  <meta name="description" content="实现九宫格地图动态加载 | beishangzhajitui">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="前言换到 Mac（或其他电脑）后，从零开始配置 Hexo 博客环境的完整步骤。按照以下顺序执行即可。 第一步：克隆仓库git clone https:&#x2F;&#x2F;github.com&#x2F;Bigcollegefw&#x2F;Bigcollegefw.github.io.git cd Bigcollegefw.github.io  第二步：安装 Hexo CLInpm install -g hexo-cli  第三步：安">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac 配置 Hexo 博客部署记录">
+<meta property="og:url" content="http://example.com/2026/03/9a181cf079d9.html">
+<meta property="og:site_name" content="beishangzhajitui">
+<meta property="og:description" content="前言换到 Mac（或其他电脑）后，从零开始配置 Hexo 博客环境的完整步骤。按照以下顺序执行即可。 第一步：克隆仓库git clone https:&#x2F;&#x2F;github.com&#x2F;Bigcollegefw&#x2F;Bigcollegefw.github.io.git cd Bigcollegefw.github.io  第二步：安装 Hexo CLInpm install -g hexo-cli  第三步：安">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-03-29T13:20:00.000Z">
+<meta property="article:modified_time" content="2026-03-29T13:27:19.105Z">
+<meta property="article:author" content="beishangzhajitui">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Mac">
+<meta property="article:tag" content="博客">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>beishangzhajitui</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="github"
+               href="https://github.com/yelog"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="facebook"
+               href="https://www.facebook.com/faker.tops"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-facebook"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+            <a title="instagram"
+               href="https://www.facebook.com/faker.tops"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-instagram"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="reddit"
+               href="https://www.reddit.com/user/yelog/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-reddit"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="weibo"
+               href="http://weibo.com/u/2307534817"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="jianshu"
+               href="https://www.jianshu.com/u/ff56736de7cf"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-jianshu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/people/jaytp/activities"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+            <a title="oschina"
+               href="https://my.oschina.net/yelog"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-oschina"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+            <a title="email"
+               href="mailto:jaytp@qq.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=872336115&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="kugou"
+               href="https://www.kugou.com/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-kugou"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="neteasemusic"
+               href="https://music.163.com/#/user/home?id=88151013"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-neteasemusic"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(139)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="工具">
+            
+            工具
+            <small>(5)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="面试">
+            
+            面试
+            <small>(6)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="热更新">
+            <i class="fold iconfont icon-right"></i>
+            热更新
+            <small>(46)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="热更新&lt;---&gt;AssetBundle">
+            
+            AssetBundle
+            <small>(5)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="热更新&lt;---&gt;Lua">
+            
+            Lua
+            <small>(19)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="热更新&lt;---&gt;xLua">
+            <i class="fold iconfont icon-right"></i>
+            xLua
+            <small>(22)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="热更新&lt;---&gt;xLua&lt;---&gt;C#调Lua">
+            
+            C#调Lua
+            <small>(9)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="热更新&lt;---&gt;xLua&lt;---&gt;Lua调C#">
+            
+            Lua调C#
+            <small>(12)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="数据存储">
+            <i class="fold iconfont icon-right"></i>
+            数据存储
+            <small>(1)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="数据存储&lt;---&gt;PlayerPrefs">
+            
+            PlayerPrefs
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="图形学">
+            <i class="fold iconfont icon-right"></i>
+            图形学
+            <small>(15)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="图形学&lt;---&gt;Shader">
+            <i class="fold iconfont icon-right"></i>
+            Shader
+            <small>(15)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="图形学&lt;---&gt;Shader&lt;---&gt;渲染管线">
+            
+            渲染管线
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="图形学&lt;---&gt;Shader&lt;---&gt;Unity Shader">
+            
+            Unity Shader
+            <small>(14)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="网络开发">
+            
+            网络开发
+            <small>(23)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="项目">
+            
+            项目
+            <small>(6)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="游戏引擎">
+            <i class="fold iconfont icon-right"></i>
+            游戏引擎
+            <small>(13)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="游戏引擎&lt;---&gt;U3DOL悠游">
+            
+            U3DOL悠游
+            <small>(5)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="游戏引擎&lt;---&gt;Unity">
+            <i class="fold iconfont icon-right"></i>
+            Unity
+            <small>(8)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="游戏引擎&lt;---&gt;Unity&lt;---&gt;UGUI">
+            
+            UGUI
+            <small>(4)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="游戏引擎&lt;---&gt;Unity&lt;---&gt;Unity基础框架">
+            
+            Unity基础框架
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="游戏引擎&lt;---&gt;Unity&lt;---&gt;Unity入门到精通">
+            
+            Unity入门到精通
+            <small>(3)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="C#">
+            <i class="fold iconfont icon-right"></i>
+            C#
+            <small>(22)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="C#&lt;---&gt;C#核心">
+            
+            C#核心
+            <small>(4)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="C#&lt;---&gt;C#基础">
+            
+            C#基础
+            <small>(4)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="C#&lt;---&gt;C#进阶">
+            
+            C#进阶
+            <small>(14)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Unity">
+            <i class="fold iconfont icon-right"></i>
+            Unity
+            <small>(1)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="Unity&lt;---&gt;Unity入门到精通">
+            
+            Unity入门到精通
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="139">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>博客</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>工具</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>面试</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>热更新</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>数据存储</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>图形学</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>网络</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>资源加载</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>CSharp</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>demo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Hexo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>lua</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Mac</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Unity</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 工具 "
+           href="/2026/03/9a181cf079d9.html"
+           data-tag="Hexo,Mac,博客"
+           data-author="" >
+            <span class="post-title" title="Mac 配置 Hexo 博客部署记录">Mac 配置 Hexo 博客部署记录</span>
+            <span class="post-date" title="2026-03-29 21:20:00">2026/03/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2026/03/4d98c65e4a60.html"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2026-03-29 20:38:55">2026/03/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 "
+           href="/2026/01/d0589572edab.html"
+           data-tag="工具"
+           data-author="" >
+            <span class="post-title" title="SVN使用">SVN使用</span>
+            <span class="post-date" title="2026-01-10 00:00:00">2026/01/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 图形学 Shader Unity Shader "
+           href="/2025/10/dd3fb420d085.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="7.CG语句数据类型">7.CG语句数据类型</span>
+            <span class="post-date" title="2025-10-08 00:00:00">2025/10/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 "
+           href="/2025/10/0a749511fc5b.html"
+           data-tag="工具"
+           data-author="" >
+            <span class="post-title" title="VSStdio怎么重新复制一个有sln文件的项目">VSStdio怎么重新复制一个有sln文件的项目</span>
+            <span class="post-date" title="2025-10-04 00:00:00">2025/10/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#基础 "
+           href="/2025/10/7b380d75fcf4.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="28.枚举">28.枚举</span>
+            <span class="post-date" title="2025-10-04 00:00:00">2025/10/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2025/10/5b7a0695752b.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="优化代码">优化代码</span>
+            <span class="post-date" title="2025-10-04 00:00:00">2025/10/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2025/10/6754fe44f425.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="27.方法隐藏和override">27.方法隐藏和override</span>
+            <span class="post-date" title="2025-10-04 00:00:00">2025/10/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2025/10/d67c8947089f.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="26.事件和委托">26.事件和委托</span>
+            <span class="post-date" title="2025-10-04 00:00:00">2025/10/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 AssetBundle "
+           href="/2025/10/b91fbf984d8e.html"
+           data-tag="资源加载"
+           data-author="" >
+            <span class="post-title" title="1.AB包理论基础">1.AB包理论基础</span>
+            <span class="post-date" title="2025-10-04 00:00:00">2025/10/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 AssetBundle "
+           href="/2025/10/ddc5d31d505c.html"
+           data-tag="资源加载"
+           data-author="" >
+            <span class="post-title" title="3.AB包资源加载">3.AB包资源加载</span>
+            <span class="post-date" title="2025-10-04 00:00:00">2025/10/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 AssetBundle "
+           href="/2025/10/a08505cd9a63.html"
+           data-tag="资源加载"
+           data-author="" >
+            <span class="post-title" title="5.AB包资源加载管理器">5.AB包资源加载管理器</span>
+            <span class="post-date" title="2025-10-04 00:00:00">2025/10/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 AssetBundle "
+           href="/2025/10/89b370c74ec2.html"
+           data-tag="资源加载"
+           data-author="" >
+            <span class="post-title" title="4.AB包依赖">4.AB包依赖</span>
+            <span class="post-date" title="2025-10-04 00:00:00">2025/10/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 AssetBundle "
+           href="/2025/10/940f04af862b.html"
+           data-tag="资源加载"
+           data-author="" >
+            <span class="post-title" title="2.AB包资源打包">2.AB包资源打包</span>
+            <span class="post-date" title="2025-10-04 00:00:00">2025/10/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua "
+           href="/2025/10/edc06cae1133.html"
+           data-tag="热更新"
+           data-author="" >
+            <span class="post-title" title="xLua官方教程">xLua官方教程</span>
+            <span class="post-date" title="2025-10-04 00:00:00">2025/10/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 Unity Unity入门到精通 "
+           href="/2025/10/08f641c3c8d5.html"
+           data-tag="Unity"
+           data-author="" >
+            <span class="post-title" title="更改天空盒">更改天空盒</span>
+            <span class="post-date" title="2025-10-04 00:00:00">2025/10/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#基础 "
+           href="/2025/08/a3cfaee7d2d8.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="1.属性和字段">1.属性和字段</span>
+            <span class="post-date" title="2025-08-26 00:00:00">2025/08/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua C#调Lua "
+           href="/2025/08/799bac37c066.html"
+           data-tag="热更新"
+           data-author="" >
+            <span class="post-title" title="2.文件加载重定向">2.文件加载重定向</span>
+            <span class="post-date" title="2025-08-26 00:00:00">2025/08/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 图形学 Shader 渲染管线 "
+           href="/2025/04/0343aa77541e.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="渲染管线概述">渲染管线概述</span>
+            <span class="post-date" title="2025-04-02 00:00:00">2025/04/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 图形学 Shader Unity Shader "
+           href="/2025/04/73dc399b8d79.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="材质和Shader">材质和Shader</span>
+            <span class="post-date" title="2025-04-02 00:00:00">2025/04/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 图形学 Shader Unity Shader "
+           href="/2025/04/4e6eba32235e.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="11.顶点片元着色器基本结构">11.顶点片元着色器基本结构</span>
+            <span class="post-date" title="2025-04-02 00:00:00">2025/04/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 图形学 Shader Unity Shader "
+           href="/2025/04/bda6f064168c.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="ShaderLab基本结构">ShaderLab基本结构</span>
+            <span class="post-date" title="2025-04-02 00:00:00">2025/04/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 图形学 Shader Unity Shader "
+           href="/2025/04/590077df2c81.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="10.函数">10.函数</span>
+            <span class="post-date" title="2025-04-02 00:00:00">2025/04/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 图形学 Shader Unity Shader "
+           href="/2025/04/7578b85686e3.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="5.States渲染状态">5.States渲染状态</span>
+            <span class="post-date" title="2025-04-02 00:00:00">2025/04/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 图形学 Shader Unity Shader "
+           href="/2025/04/483694d89c4e.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="ShaderLab语法规则">ShaderLab语法规则</span>
+            <span class="post-date" title="2025-04-02 00:00:00">2025/04/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 图形学 Shader Unity Shader "
+           href="/2025/04/f06709ba24d0.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="4.Tags渲染标签">4.Tags渲染标签</span>
+            <span class="post-date" title="2025-04-02 00:00:00">2025/04/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 图形学 Shader Unity Shader "
+           href="/2025/04/e43cfb6b7843.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="6.Shader的编写形式">6.Shader的编写形式</span>
+            <span class="post-date" title="2025-04-02 00:00:00">2025/04/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 图形学 Shader Unity Shader "
+           href="/2025/04/103d54717976.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="8.Swizzle操作符">8.Swizzle操作符</span>
+            <span class="post-date" title="2025-04-02 00:00:00">2025/04/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 图形学 Shader Unity Shader "
+           href="/2025/04/c7544b2a3fe2.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="9.运算符和流程控制语句">9.运算符和流程控制语句</span>
+            <span class="post-date" title="2025-04-02 00:00:00">2025/04/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 图形学 Shader Unity Shader "
+           href="/2025/04/d613d801b844.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="兰伯特光照模型">兰伯特光照模型</span>
+            <span class="post-date" title="2025-04-02 00:00:00">2025/04/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 图形学 Shader Unity Shader "
+           href="/2025/04/15388ce73c67.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="光照模型概述">光照模型概述</span>
+            <span class="post-date" title="2025-04-02 00:00:00">2025/04/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 图形学 Shader Unity Shader "
+           href="/2025/04/642f7b9206d5.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="逐顶点光照和逐片元光照">逐顶点光照和逐片元光照</span>
+            <span class="post-date" title="2025-04-02 00:00:00">2025/04/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua C#调Lua "
+           href="/2025/03/b361194809bf.html"
+           data-tag="热更新"
+           data-author="" >
+            <span class="post-title" title="1.Lua解析器">1.Lua解析器</span>
+            <span class="post-date" title="2025-03-27 00:00:00">2025/03/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua C#调Lua "
+           href="/2025/03/402769387d28.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="4.全局变量的获取">4.全局变量的获取</span>
+            <span class="post-date" title="2025-03-27 00:00:00">2025/03/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua C#调Lua "
+           href="/2025/03/9e8f445b15c1.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="5.全局函数的获取">5.全局函数的获取</span>
+            <span class="post-date" title="2025-03-27 00:00:00">2025/03/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua C#调Lua "
+           href="/2025/03/b583a85f34cc.html"
+           data-tag="热更新"
+           data-author="" >
+            <span class="post-title" title="3.Lua解析管理器">3.Lua解析管理器</span>
+            <span class="post-date" title="2025-03-27 00:00:00">2025/03/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua C#调Lua "
+           href="/2025/03/1d476006c533.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="7.表映射到类">7.表映射到类</span>
+            <span class="post-date" title="2025-03-27 00:00:00">2025/03/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua Lua调C# "
+           href="/2025/03/043ea7cfac60.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="1.Lua调CSharp类">1.Lua调CSharp类</span>
+            <span class="post-date" title="2025-03-27 00:00:00">2025/03/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua C#调Lua "
+           href="/2025/03/938109e67699.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="8.表映射到接口">8.表映射到接口</span>
+            <span class="post-date" title="2025-03-27 00:00:00">2025/03/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua Lua调C# "
+           href="/2025/03/338a884bee2f.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="10.特殊问题之Lua访问系统类型">10.特殊问题之Lua访问系统类型</span>
+            <span class="post-date" title="2025-03-27 00:00:00">2025/03/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua C#调Lua "
+           href="/2025/03/1032ea02b176.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="6.表映射到List和Dictionary">6.表映射到List和Dictionary</span>
+            <span class="post-date" title="2025-03-27 00:00:00">2025/03/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua Lua调C# "
+           href="/2025/03/cbdab3a2e3a0.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="11.lua使用CSharp协程">11.lua使用CSharp协程</span>
+            <span class="post-date" title="2025-03-27 00:00:00">2025/03/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua Lua调C# "
+           href="/2025/03/f530df027b61.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="2.调CSharp枚举">2.调CSharp枚举</span>
+            <span class="post-date" title="2025-03-27 00:00:00">2025/03/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua C#调Lua "
+           href="/2025/03/6656f197cd31.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="9.表映射到LuaTable">9.表映射到LuaTable</span>
+            <span class="post-date" title="2025-03-27 00:00:00">2025/03/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua Lua调C# "
+           href="/2025/03/3fbb5c9b0aec.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="12.调用泛型函数">12.调用泛型函数</span>
+            <span class="post-date" title="2025-03-27 00:00:00">2025/03/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua Lua调C# "
+           href="/2025/03/33763b969378.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="3.数组，List和字典">3.数组，List和字典</span>
+            <span class="post-date" title="2025-03-27 00:00:00">2025/03/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua Lua调C# "
+           href="/2025/03/f14ae2e878c8.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="6.函数重载">6.函数重载</span>
+            <span class="post-date" title="2025-03-27 00:00:00">2025/03/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua Lua调C# "
+           href="/2025/03/c8d86d187e68.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="5.ref和out函数">5.ref和out函数</span>
+            <span class="post-date" title="2025-03-27 00:00:00">2025/03/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua Lua调C# "
+           href="/2025/03/f4467f8379cd.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="7.委托和事件">7.委托和事件</span>
+            <span class="post-date" title="2025-03-27 00:00:00">2025/03/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua Lua调C# "
+           href="/2025/03/d4c64f1cc919.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="9.特殊问题之null和nil比较">9.特殊问题之null和nil比较</span>
+            <span class="post-date" title="2025-03-27 00:00:00">2025/03/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua Lua调C# "
+           href="/2025/03/ca8bf7328262.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="4.拓展方法">4.拓展方法</span>
+            <span class="post-date" title="2025-03-27 00:00:00">2025/03/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 xLua Lua调C# "
+           href="/2025/03/e236d6153f72.html"
+           data-tag="图形学"
+           data-author="" >
+            <span class="post-title" title="8.特殊问题之二维数组遍历">8.特殊问题之二维数组遍历</span>
+            <span class="post-date" title="2025-03-27 00:00:00">2025/03/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 "
+           href="/2025/03/6b8424b94bf5.html"
+           data-tag="工具"
+           data-author="" >
+            <span class="post-title" title="Unity+VSCode+Lua调试环境搭建">Unity+VSCode+Lua调试环境搭建</span>
+            <span class="post-date" title="2025-03-14 00:00:00">2025/03/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2025/03/c07b63a40c83.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="11.表的公共操作">11.表的公共操作</span>
+            <span class="post-date" title="2025-03-10 00:00:00">2025/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2025/03/f6ef1a4516ac.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="10.table实现类">10.table实现类</span>
+            <span class="post-date" title="2025-03-10 00:00:00">2025/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2025/03/d7f8a33ffa1a.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="12.多脚本执行">12.多脚本执行</span>
+            <span class="post-date" title="2025-03-10 00:00:00">2025/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2025/03/1fb3e7ced22e.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="13.特殊用法">13.特殊用法</span>
+            <span class="post-date" title="2025-03-10 00:00:00">2025/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2025/03/547c8749a880.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="14.协同程序">14.协同程序</span>
+            <span class="post-date" title="2025-03-10 00:00:00">2025/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2025/03/bc26492ea239.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="17.面向对象实现">17.面向对象实现</span>
+            <span class="post-date" title="2025-03-10 00:00:00">2025/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2025/03/1397a87f0524.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="16.面向对象思想">16.面向对象思想</span>
+            <span class="post-date" title="2025-03-10 00:00:00">2025/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2025/03/55e882a6e4b7.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="19.lua垃圾回收">19.lua垃圾回收</span>
+            <span class="post-date" title="2025-03-10 00:00:00">2025/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2025/03/be32a3d480de.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="18.自带库">18.自带库</span>
+            <span class="post-date" title="2025-03-10 00:00:00">2025/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2025/03/765c40f9330a.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="15.元表">15.元表</span>
+            <span class="post-date" title="2025-03-10 00:00:00">2025/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2025/03/1f603fcab22e.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="8.迭代器遍历">8.迭代器遍历</span>
+            <span class="post-date" title="2025-03-10 00:00:00">2025/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2025/03/144abc8ce905.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="9.table实现字典">9.table实现字典</span>
+            <span class="post-date" title="2025-03-10 00:00:00">2025/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2025/03/dbdb2d98bc7d.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="1.变量">1.变量</span>
+            <span class="post-date" title="2025-03-05 00:00:00">2025/03/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2025/03/d6b75f27d4dd.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="7.table表实现数组">7.table表实现数组</span>
+            <span class="post-date" title="2025-03-05 00:00:00">2025/03/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2025/03/bcf8e88a081a.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="6.函数">6.函数</span>
+            <span class="post-date" title="2025-03-05 00:00:00">2025/03/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络开发 "
+           href="/2025/03/6124ae6941df.html"
+           data-tag="网络"
+           data-author="" >
+            <span class="post-title" title="22.心跳消息-客户端主动断开连接">22.心跳消息-客户端主动断开连接</span>
+            <span class="post-date" title="2025-03-01 00:00:00">2025/03/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络开发 "
+           href="/2025/02/1fc270e192f8.html"
+           data-tag="网络"
+           data-author="" >
+            <span class="post-title" title="1.网络基本概念">1.网络基本概念</span>
+            <span class="post-date" title="2025-02-27 00:00:00">2025/02/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络开发 "
+           href="/2025/02/d516050681df.html"
+           data-tag="网络"
+           data-author="" >
+            <span class="post-title" title="10.反序列化">10.反序列化</span>
+            <span class="post-date" title="2025-02-27 00:00:00">2025/02/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络开发 "
+           href="/2025/02/6e7b72561b8a.html"
+           data-tag="网络"
+           data-author="" >
+            <span class="post-title" title="11.Socket重要API">11.Socket重要API</span>
+            <span class="post-date" title="2025-02-27 00:00:00">2025/02/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络开发 "
+           href="/2025/02/c0153dd20b56.html"
+           data-tag="网络"
+           data-author="" >
+            <span class="post-title" title="12.TCP通信_同步_服务端">12.TCP通信_同步_服务端</span>
+            <span class="post-date" title="2025-02-27 00:00:00">2025/02/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络开发 "
+           href="/2025/02/d0581e7f4c7c.html"
+           data-tag="网络"
+           data-author="" >
+            <span class="post-title" title="13.TCP通信_同步_客户端">13.TCP通信_同步_客户端</span>
+            <span class="post-date" title="2025-02-27 00:00:00">2025/02/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络开发 "
+           href="/2025/02/1c09bd0904d2.html"
+           data-tag="网络"
+           data-author="" >
+            <span class="post-title" title="14.服务端综合">14.服务端综合</span>
+            <span class="post-date" title="2025-02-27 00:00:00">2025/02/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络开发 "
+           href="/2025/02/b0003af758d9.html"
+           data-tag="网络"
+           data-author="" >
+            <span class="post-title" title="15.客户端综合">15.客户端综合</span>
+            <span class="post-date" title="2025-02-27 00:00:00">2025/02/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络开发 "
+           href="/2025/02/9fc27357abaa.html"
+           data-tag="网络"
+           data-author="" >
+            <span class="post-title" title="16.序列化练习">16.序列化练习</span>
+            <span class="post-date" title="2025-02-27 00:00:00">2025/02/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络开发 "
+           href="/2025/02/164b6e9d4c42.html"
+           data-tag="网络"
+           data-author="" >
+            <span class="post-title" title="17.反序列化练习">17.反序列化练习</span>
+            <span class="post-date" title="2025-02-27 00:00:00">2025/02/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络开发 "
+           href="/2025/02/571892a2a59e.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="18.区分消息类型">18.区分消息类型</span>
+            <span class="post-date" title="2025-02-27 00:00:00">2025/02/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络开发 "
+           href="/2025/02/6f33ed7cdac8.html"
+           data-tag="网络"
+           data-author="" >
+            <span class="post-title" title="19.区分消息类型练习">19.区分消息类型练习</span>
+            <span class="post-date" title="2025-02-27 00:00:00">2025/02/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络开发 "
+           href="/2025/02/cab9fe8c6c21.html"
+           data-tag="网络"
+           data-author="" >
+            <span class="post-title" title="2.IP，端口，Mac地址">2.IP，端口，Mac地址</span>
+            <span class="post-date" title="2025-02-27 00:00:00">2025/02/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络开发 "
+           href="/2025/02/d02a102566c2.html"
+           data-tag="网络"
+           data-author="" >
+            <span class="post-title" title="20.分包，黏包">20.分包，黏包</span>
+            <span class="post-date" title="2025-02-27 00:00:00">2025/02/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络开发 "
+           href="/2025/02/1a299cb0e719.html"
+           data-tag="网络"
+           data-author="" >
+            <span class="post-title" title="21.服务器端分包黏包处理并测试">21.服务器端分包黏包处理并测试</span>
+            <span class="post-date" title="2025-02-27 00:00:00">2025/02/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络开发 "
+           href="/2025/02/afc3e810c0d7.html"
+           data-tag="网络"
+           data-author="" >
+            <span class="post-title" title="3.客户端和服务端">3.客户端和服务端</span>
+            <span class="post-date" title="2025-02-27 00:00:00">2025/02/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络开发 "
+           href="/2025/02/b214ca0cf39e.html"
+           data-tag="网络"
+           data-author="" >
+            <span class="post-title" title="23.实现心跳消息">23.实现心跳消息</span>
+            <span class="post-date" title="2025-02-27 00:00:00">2025/02/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络开发 "
+           href="/2025/02/786201fa8f90.html"
+           data-tag="网络"
+           data-author="" >
+            <span class="post-title" title="4.数据通信模型">4.数据通信模型</span>
+            <span class="post-date" title="2025-02-27 00:00:00">2025/02/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络开发 "
+           href="/2025/02/66f4850908f6.html"
+           data-tag="网络"
+           data-author="" >
+            <span class="post-title" title="5.OSI模型和TCP杠IP模型">5.OSI模型和TCP杠IP模型</span>
+            <span class="post-date" title="2025-02-27 00:00:00">2025/02/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络开发 "
+           href="/2025/02/d14deb029a8e.html"
+           data-tag="网络"
+           data-author="" >
+            <span class="post-title" title="6.TCP与UDP">6.TCP与UDP</span>
+            <span class="post-date" title="2025-02-27 00:00:00">2025/02/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络开发 "
+           href="/2025/02/81f7d0970c6d.html"
+           data-tag="网络"
+           data-author="" >
+            <span class="post-title" title="7.IP地址和端口类">7.IP地址和端口类</span>
+            <span class="post-date" title="2025-02-27 00:00:00">2025/02/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络开发 "
+           href="/2025/02/783e89492709.html"
+           data-tag="网络"
+           data-author="" >
+            <span class="post-title" title="8.域名解析">8.域名解析</span>
+            <span class="post-date" title="2025-02-27 00:00:00">2025/02/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络开发 "
+           href="/2025/02/51c22cd90556.html"
+           data-tag="网络"
+           data-author="" >
+            <span class="post-title" title="9.序列化">9.序列化</span>
+            <span class="post-date" title="2025-02-27 00:00:00">2025/02/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 游戏引擎 Unity UGUI "
+           href="/2025/02/347d0b9ce1a9.html"
+           data-tag="Unity"
+           data-author="" >
+            <span class="post-title" title="事件监听">事件监听</span>
+            <span class="post-date" title="2025-02-27 00:00:00">2025/02/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#基础 "
+           href="/2025/02/94319e13c71c.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="2.ref和out">2.ref和out</span>
+            <span class="post-date" title="2025-02-26 00:00:00">2025/02/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2025/02/be80df9bac34.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="18.多线程">18.多线程</span>
+            <span class="post-date" title="2025-02-26 00:00:00">2025/02/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 游戏引擎 Unity UGUI "
+           href="/2025/02/3daf2754ea33.html"
+           data-tag="Unity"
+           data-author="" >
+            <span class="post-title" title="Slider滑动条">Slider滑动条</span>
+            <span class="post-date" title="2025-02-01 00:00:00">2025/02/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 游戏引擎 Unity Unity基础框架 "
+           href="/2025/02/aa3726a76429.html"
+           data-tag="Unity"
+           data-author="" >
+            <span class="post-title" title="观察者模式">观察者模式</span>
+            <span class="post-date" title="2025-02-01 00:00:00">2025/02/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 游戏引擎 Unity Unity入门到精通 "
+           href="/2025/02/304fe5cccbb1.html"
+           data-tag="Unity"
+           data-author="" >
+            <span class="post-title" title="Vector3和Transform">Vector3和Transform</span>
+            <span class="post-date" title="2025-02-01 00:00:00">2025/02/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 游戏引擎 Unity Unity入门到精通 "
+           href="/2025/02/95c36185a72b.html"
+           data-tag="Unity"
+           data-author="" >
+            <span class="post-title" title="URP Camera使用及动态设置">URP Camera使用及动态设置</span>
+            <span class="post-date" title="2025-02-01 00:00:00">2025/02/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 游戏引擎 Unity Unity入门到精通 "
+           href="/2025/02/d1f37aeb4ec8.html"
+           data-tag="Unity"
+           data-author="" >
+            <span class="post-title" title="1.Scene和Hierarchy窗口">1.Scene和Hierarchy窗口</span>
+            <span class="post-date" title="2025-02-01 00:00:00">2025/02/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据存储 PlayerPrefs "
+           href="/2025/01/6e9c65777ecc.html"
+           data-tag="数据存储"
+           data-author="" >
+            <span class="post-title" title="基本方法">基本方法</span>
+            <span class="post-date" title="2025-01-27 00:00:00">2025/01/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 面试 "
+           href="/2025/01/f88e06536296.html"
+           data-tag="面试"
+           data-author="" >
+            <span class="post-title" title="11.21面试">11.21面试</span>
+            <span class="post-date" title="2025-01-25 00:00:00">2025/01/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 游戏引擎 U3DOL悠游 "
+           href="/2025/01/e1255429d3c2.html"
+           data-tag="Unity"
+           data-author="" >
+            <span class="post-title" title="10_1 Csharp语言基础">10_1 Csharp语言基础</span>
+            <span class="post-date" title="2025-01-25 00:00:00">2025/01/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 游戏引擎 U3DOL悠游 "
+           href="/2025/01/3bca5f7c87f2.html"
+           data-tag="Unity"
+           data-author="" >
+            <span class="post-title" title="11.Mono脚本简介">11.Mono脚本简介</span>
+            <span class="post-date" title="2025-01-25 00:00:00">2025/01/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 游戏引擎 U3DOL悠游 "
+           href="/2025/01/55b3b53f665b.html"
+           data-tag="Unity"
+           data-author="" >
+            <span class="post-title" title="12.单例">12.单例</span>
+            <span class="post-date" title="2025-01-25 00:00:00">2025/01/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 游戏引擎 U3DOL悠游 "
+           href="/2025/01/78c0d7fab0a7.html"
+           data-tag="Unity"
+           data-author="" >
+            <span class="post-title" title="14.委托">14.委托</span>
+            <span class="post-date" title="2025-01-25 00:00:00">2025/01/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 游戏引擎 U3DOL悠游 "
+           href="/2025/01/918a81476b1a.html"
+           data-tag="Unity"
+           data-author="" >
+            <span class="post-title" title="13.协程">13.协程</span>
+            <span class="post-date" title="2025-01-25 00:00:00">2025/01/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 项目 "
+           href="/2025/01/1ccfc100c767.html"
+           data-tag="demo"
+           data-author="" >
+            <span class="post-title" title="实现九宫格地图动态加载">实现九宫格地图动态加载</span>
+            <span class="post-date" title="2025-01-25 00:00:00">2025/01/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 游戏引擎 Unity UGUI "
+           href="/2025/01/80dc08f773c1.html"
+           data-tag="Unity"
+           data-author="" >
+            <span class="post-title" title="GraphicRaycater">GraphicRaycater</span>
+            <span class="post-date" title="2025-01-25 00:00:00">2025/01/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 游戏引擎 Unity UGUI "
+           href="/2025/01/d6a7d804f285.html"
+           data-tag="Unity"
+           data-author="" >
+            <span class="post-title" title="Toggle开关控件">Toggle开关控件</span>
+            <span class="post-date" title="2025-01-25 00:00:00">2025/01/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 项目 "
+           href="/2025/01/3126789ccd2a.html"
+           data-tag="demo"
+           data-author="" >
+            <span class="post-title" title="计时器动画">计时器动画</span>
+            <span class="post-date" title="2025-01-25 00:00:00">2025/01/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 面试 "
+           href="/2024/12/f8c59ca4801b.html"
+           data-tag="面试"
+           data-author="" >
+            <span class="post-title" title="面试题1">面试题1</span>
+            <span class="post-date" title="2024-12-28 00:00:00">2024/12/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 面试 "
+           href="/2024/12/b9ef611c6480.html"
+           data-tag="面试"
+           data-author="" >
+            <span class="post-title" title="面试题2">面试题2</span>
+            <span class="post-date" title="2024-12-28 00:00:00">2024/12/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 面试 "
+           href="/2024/12/c2a8b943f457.html"
+           data-tag="面试"
+           data-author="" >
+            <span class="post-title" title="面试题5">面试题5</span>
+            <span class="post-date" title="2024-12-28 00:00:00">2024/12/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2024/12/c4539e27355f.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="3.运算符">3.运算符</span>
+            <span class="post-date" title="2024-12-28 00:00:00">2024/12/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2024/12/0b65275f8fbc.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="2.字符串操作">2.字符串操作</span>
+            <span class="post-date" title="2024-12-28 00:00:00">2024/12/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2024/12/6d057b55ba96.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="4.条件分支语句">4.条件分支语句</span>
+            <span class="post-date" title="2024-12-28 00:00:00">2024/12/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 热更新 Lua "
+           href="/2024/12/5a441861079e.html"
+           data-tag="lua,热更新"
+           data-author="" >
+            <span class="post-title" title="5.循环语句">5.循环语句</span>
+            <span class="post-date" title="2024-12-28 00:00:00">2024/12/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#核心 "
+           href="/2024/12/ba0acd0f0ffc.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="7.静态成员">7.静态成员</span>
+            <span class="post-date" title="2024-12-24 00:00:00">2024/12/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#核心 "
+           href="/2024/12/56358ff4a222.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="8.静态类和静态构造函数">8.静态类和静态构造函数</span>
+            <span class="post-date" title="2024-12-24 00:00:00">2024/12/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2024/12/9de0a09cb582.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="20.反射">20.反射</span>
+            <span class="post-date" title="2024-12-23 00:00:00">2024/12/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#核心 "
+           href="/2024/12/b956c55a2497.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="19.预处理器指令">19.预处理器指令</span>
+            <span class="post-date" title="2024-12-22 00:00:00">2024/12/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2024/12/7ca62fada5b0.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="25.值类型和引用类型">25.值类型和引用类型</span>
+            <span class="post-date" title="2024-12-22 00:00:00">2024/12/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 面试 "
+           href="/2024/12/bc0b25c214f1.html"
+           data-tag="面试"
+           data-author="" >
+            <span class="post-title" title="面试题4">面试题4</span>
+            <span class="post-date" title="2024-12-21 00:00:00">2024/12/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 面试 "
+           href="/2024/12/e08378101a2e.html"
+           data-tag="面试"
+           data-author="" >
+            <span class="post-title" title="面试题6">面试题6</span>
+            <span class="post-date" title="2024-12-21 00:00:00">2024/12/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#核心 "
+           href="/2024/12/568161a407f1.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="23.Object中的方法">23.Object中的方法</span>
+            <span class="post-date" title="2024-12-21 00:00:00">2024/12/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 项目 "
+           href="/2024/12/034f390331a8.html"
+           data-tag="demo"
+           data-author="" >
+            <span class="post-title" title="第三人称控制器">第三人称控制器</span>
+            <span class="post-date" title="2024-12-20 00:00:00">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#基础 "
+           href="/2024/12/4d4c6b4650f7.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="27.冒泡排序">27.冒泡排序</span>
+            <span class="post-date" title="2024-12-20 00:00:00">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2024/12/bbd40af5b37d.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="1.ArrayList">1.ArrayList</span>
+            <span class="post-date" title="2024-12-20 00:00:00">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2024/12/f42b0b9b9a03.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="17.协变逆变">17.协变逆变</span>
+            <span class="post-date" title="2024-12-20 00:00:00">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2024/12/e0466f04724e.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="16.List">16.List</span>
+            <span class="post-date" title="2024-12-20 00:00:00">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2024/12/bb6e26dbef89.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="15.lambad表达式">15.lambad表达式</span>
+            <span class="post-date" title="2024-12-20 00:00:00">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2024/12/1c48eff49634.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="2.Stack">2.Stack</span>
+            <span class="post-date" title="2024-12-20 00:00:00">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2024/12/b8daf44015b0.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="3.Queue">3.Queue</span>
+            <span class="post-date" title="2024-12-20 00:00:00">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2024/12/3867d57b7dea.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="5.泛型">5.泛型</span>
+            <span class="post-date" title="2024-12-20 00:00:00">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 C# C#进阶 "
+           href="/2024/12/e0a804c8a8e6.html"
+           data-tag="CSharp"
+           data-author="" >
+            <span class="post-title" title="6.泛型约束">6.泛型约束</span>
+            <span class="post-date" title="2024-12-20 00:00:00">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 项目 "
+           href="/2024/12/3fb5d88c88d5.html"
+           data-tag="demo"
+           data-author="" >
+            <span class="post-title" title="UGUI抽卡系统">UGUI抽卡系统</span>
+            <span class="post-date" title="2024-12-18 00:00:00">2024/12/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 项目 "
+           href="/2024/12/3e42fc647081.html"
+           data-tag="demo"
+           data-author="" >
+            <span class="post-title" title="丧尸围城 (上)">丧尸围城 (上)</span>
+            <span class="post-date" title="2024-12-10 00:00:00">2024/12/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 项目 "
+           href="/2024/12/448e1f151285.html"
+           data-tag="demo"
+           data-author="" >
+            <span class="post-title" title="丧尸围城 (下)">丧尸围城 (下)</span>
+            <span class="post-date" title="2024-12-10 00:00:00">2024/12/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 "
+           href="/2024/12/0a9723b6d16f.html"
+           data-tag="工具"
+           data-author="" >
+            <span class="post-title" title="这里是建站记录">这里是建站记录</span>
+            <span class="post-date" title="2024-12-06 15:13:47">2024/12/06</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-项目/微信小游戏/完全胜利/实现九宫格地图动态加载" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">实现九宫格地图动态加载</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="项目">项目</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color5">demo</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2026-03-29 21:26:49'>2025-01-25 00:00</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在场景上新建两个空物体，挂载在TerrainManager上面<br><img src="/../../../../img/beishang20250107083203791.png"><br><img src="/../../../../img/beishang20250107083319229.png"></p>
+<pre><code class="c#">using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TerrainSlicing : MonoBehaviour
+&#123;
+    // 用于指定生成地形的父对象，后续生成的地形预制体实例将会挂载在此对象下，方便管理场景层次结构
+    public Transform _terrParent;
+    // 代表地块预制体，即实际要在场景中生成的地形块的预制资源，需要在Unity编辑器中提前设置好关联的预制体
+    public GameObject _terrainObj;
+    // 代表玩家对象，脚本会根据玩家的位置来动态加载和管理周围的地形，同样需在编辑器中指定对应的玩家游戏对象
+    public GameObject _player;
+
+    // 用于记录已经加载过的地形，键是地形在二维平面（x, y坐标）中的位置，值是对应的地形游戏对象
+    private Dictionary&lt;(int x, int y), GameObject&gt; _terrainLoaded;
+    // 临时记录地形的字典，在一些处理过程中暂存地形相关信息，键也是地形的二维坐标位置，值为对应的地形游戏对象
+    private Dictionary&lt;(int x, int y), GameObject&gt; _dictTemp;
+    // 用于记录即将进行隐藏或显示操作的地形相关信息，键为地形二维坐标位置，值是一个包含游戏对象和协程的结构体
+    private Dictionary&lt;(int x, int y), GameobjAndCoroutine&gt; _unloadTerrCountDown;
+    // 地形对象池，采用栈结构，用于存放暂时不用的地形对象，实现对象复用，减少创建和销毁的开销
+    private Stack&lt;GameObject&gt; _terrainPool;
+    // 记录玩家上一次所在的位置，初始化为(0, 0)，用于对比玩家位置变化来决定是否更新地形加载情况等
+    private (int x, int y) _lastPos = (0, 0);
+
+    // 自定义结构体，用于同时保存游戏对象和与之相关的协程，方便管理一些需要协程操作的地形相关逻辑
+    struct GameobjAndCoroutine
+    &#123;
+        public GameObject Go;
+        public Coroutine Cor;
+    &#125;
+
+    // 在脚本初始化时调用，用于初始化各个字典和栈等数据结构
+    private void Awake()
+    &#123;
+        // 创建一个新的字典，用于存储已经加载过的地形，初始为空
+        _terrainLoaded = new Dictionary&lt;(int x, int y), GameObject&gt;();
+        // 创建一个新的字典，用于临时存储地形相关信息，初始为空
+        _dictTemp = new Dictionary&lt;(int x, int y), GameObject&gt;();
+        // 创建一个新的字典，用于记录即将进行隐藏显示操作的地形相关情况，初始为空
+        _unloadTerrCountDown = new Dictionary&lt;(int x, int y), GameobjAndCoroutine&gt;();
+        // 创建一个新的栈，用于存放地形对象池中的地形对象，初始为空
+        _terrainPool = new Stack&lt;GameObject&gt;();
+    &#125;
+
+    // 在游戏开始时调用一次，主要进行以玩家为中心的九宫格地形加载和相关处理逻辑
+    private void Start()
+    &#123;
+        // 循环遍历九宫格的横坐标范围（从 -1 到 1），用于检查玩家周围九宫格位置的地形情况
+        for (int i = -1; i &lt; 2; i++)
+        &#123;
+            // 循环遍历九宫格的纵坐标范围（从 -1 到 1），与横坐标一起确定九宫格内每个位置
+            for (int j = -1; j &lt; 2; j++)
+            &#123;
+                // 尝试从已加载地形的字典中获取对应坐标（i, j）位置的地形对象
+                if (_terrainLoaded.TryGetValue((i, j), out GameObject terr))
+                &#123;
+                    // 如果获取成功，将该地形对象添加到临时字典中
+                    _dictTemp.Add((i, j), terr);
+                    // 从已加载地形字典中移除该地形对象，因为后续要在临时字典中统一处理
+                    _terrainLoaded.Remove((i, j));
+                    // 设置该地形对象的位置，根据坐标（i, j）以及地块大小（这里假设每个地块大小为100单位）来确定其在三维空间中的位置
+                    terr.transform.position = new Vector3(i * 100f, 0f, j * 100f);
+                    // 将该地形对象设置为激活状态，使其在场景中可见并参与渲染等
+                    terr.SetActive(true);
+                &#125;
+                else
+                &#123;
+                    // 如果在已加载地形字典中没找到对应坐标的地形对象，则尝试从即将隐藏显示的地形记录字典中查找
+                    if (_unloadTerrCountDown.TryGetValue((i, j), out GameobjAndCoroutine val))
+                    &#123;
+                        // 如果找到了，停止与之相关的协程（可能之前正在进行一些等待隐藏或其他定时操作的协程）
+                        StopCoroutine(val.Cor);
+                        // 将该地形对象添加到临时字典中
+                        _dictTemp.Add((i, j), val.Go);
+                        // 从即将隐藏显示的地形记录字典中移除该记录
+                        _unloadTerrCountDown.Remove((i, j));
+                        // 设置该地形对象的位置，原理同前面从已加载地形字典中获取到的地形对象设置位置的方式一样
+                        val.Go.transform.position = new Vector3(i * 100f, 0f, j * 100f);
+                        // 将该地形对象设置为激活状态
+                        val.Go.SetActive(true);
+                    &#125;
+                    else
+                    &#123;
+                        // 如果在前面两个字典中都没找到对应地形对象，说明需要新生成一个地形对象
+                        var newTerr = GetTerrain();
+                        // 将新生成的地形对象添加到临时字典中
+                        _dictTemp.Add((i, j), newTerr);
+                        // 设置新地形对象的位置
+                        newTerr.transform.position = new Vector3(i * 100f, 0f, j * 100f);
+                        // 将新地形对象设置为激活状态
+                        newTerr.SetActive(true);
+                    &#125;
+                &#125;
+            &#125;
+        &#125;
+        // 交换两个字典的引用，即将临时字典中的内容整体转移到已加载地形字典中，方便后续的处理逻辑基于新的已加载地形情况进行操作
+        (_terrainLoaded, _dictTemp) = (_dictTemp, _terrainLoaded);
+    &#125;
+
+    // 在固定更新帧调用（每固定时间间隔调用一次，常用于物理相关或需要稳定频率更新的逻辑），用于实时根据玩家位置变化来管理地形的加载、卸载和显示隐藏等操作
+    private void FixedUpdate()
+    &#123;
+        // 先确保玩家对象已被正确赋值（不为null），避免后续操作出现空引用异常
+        if (_player != null)
+        &#123;
+            // 记录角色在地图上的位置，通过将玩家在世界坐标中的x和z坐标除以地块大小（100f）并四舍五入取整，得到对应的地形坐标位置
+            (int x, int y) pos = (Mathf.RoundToInt(_player.transform.position.x / 100f), Mathf.RoundToInt(_player.transform.position.z / 100f));
+            // 当玩家位置发生改变时（与上一次记录的位置不同），进行以下地形管理相关操作，即玩家进入了新的区域
+            if (!(pos == _lastPos))
+            &#123;
+                // 更新记录玩家的上一次位置为当前新位置
+                _lastPos = pos;
+                // 清空临时字典，准备重新记录新区域相关的地形信息
+                _dictTemp.Clear();
+
+                // 围绕玩家当前进入的新地形的周围九宫格一圈进行检查，确定需要加载显示或处理的地形情况
+                for (int i = pos.x - 1; i &lt; pos.x + 2; i++)
+                &#123;
+                    for (int j = pos.y - 1; j &lt; pos.y + 2; j++)
+                    &#123;
+                        // 如果_terrainLoaded已经存储有该地形的游戏对象（即之前加载过且现在仍在范围内的地形）
+                        if (_terrainLoaded.TryGetValue((i, j), out GameObject terr))
+                        &#123;
+                            // 将该地形对象添加到临时字典中
+                            _dictTemp.Add((i, j), terr);
+                            // 从已加载地形字典中移除该地形对象，后续统一在临时字典基础上处理
+                            _terrainLoaded.Remove((i, j));
+                            // 设置该地形对象的位置，根据当前九宫格坐标（i, j）和地块大小确定其准确位置
+                            terr.transform.position = new Vector3(i * 100f, 0f, j * 100f);
+                            // 将该地形对象设置为激活状态，使其在场景中可见
+                            terr.SetActive(true);
+                        &#125;
+                        else
+                        &#123;
+                            // 如果在已加载地形字典中没找到，再尝试从即将隐藏显示的地形记录字典中查找该地形对象
+                            if (_unloadTerrCountDown.TryGetValue((i, j), out GameobjAndCoroutine val))
+                            &#123;
+                                // 如果找到了，停止隐藏地块的协程（比如玩家短暂离开又快速返回该地块的情况，就停止隐藏它的协程）
+                                StopCoroutine(val.Cor);
+                                // 将该地形对象添加到临时字典中
+                                _dictTemp.Add((i, j), val.Go);
+                                // 从即将隐藏显示的地形记录字典中移除该记录
+                                _unloadTerrCountDown.Remove((i, j));
+                                // 设置该地形对象的位置
+                                val.Go.transform.position = new Vector3(i * 100f, 0f, j * 100f);
+                                // 将该地形对象设置为激活状态
+                                val.Go.SetActive(true);
+                            &#125;
+                            else
+                            &#123;
+                                // 如果前面两个字典都没找到，说明需要新生成一个地形对象来填充该位置
+                                var newTerr = GetTerrain();
+                                // 将新生成的地形对象添加到临时字典中
+                                _dictTemp.Add((i, j), newTerr);
+                                // 设置新地形对象的位置
+                                newTerr.transform.position = new Vector3(i * 100f, 0f, j * 100f);
+                                // 将新地形对象设置为激活状态
+                                newTerr.SetActive(true);
+                            &#125;
+                        &#125;
+                    &#125;
+                &#125;
+
+                // 遍历已加载地形字典，此时字典内的对象都不在角色当前九宫格一圈范围内，需要对它们进行隐藏显示相关的准备操作
+                foreach (var item in _terrainLoaded)
+                &#123;
+                    // 对于每个不在当前九宫格范围内的地形对象，添加到即将隐藏显示的地形记录字典中，并开启一个协程来处理延迟隐藏地块的操作
+                    _unloadTerrCountDown.Add(item.Key, new GameobjAndCoroutine
+                    &#123;
+                        Cor = StartCoroutine(RemoveTerrDelay(item.Key)), // 开启取消地块显示的协程，协程会在一定延迟后隐藏地块
+                        Go = item.Value,
+                    &#125;);
+                &#125;
+                // 清空已加载地形字典，因为前面已经对其中需要处理的对象都做了相应安排（放入了即将隐藏显示的字典或者临时字典等）
+                _terrainLoaded.Clear();
+                // 再次交换两个字典的引用，将临时字典中的内容整体转移到已加载地形字典中，完成本次位置变化后的地形管理操作更新
+                (_terrainLoaded, _dictTemp) = (_dictTemp, _terrainLoaded);
+            &#125;
+        &#125;
+    &#125;
+
+    /// &lt;summary&gt;
+    /// 取消地块显示的协程方法，用于在等待一定时间（这里是3秒）后隐藏地块显示
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;pos&quot;&gt;地块对应的坐标位置，用于在协程中准确找到要隐藏的地块对象&lt;/param&gt;
+    /// &lt;returns&gt;返回一个IEnumerator类型，用于在协程中控制执行流程和等待时间等&lt;/returns&gt;
+    private IEnumerator RemoveTerrDelay((int x, int y) pos)
+    &#123;
+        // 等待3秒，在这3秒内地块依然保持显示状态，给玩家可能返回该地块的机会（例如短暂离开又回来的情况）
+        yield return new WaitForSeconds(3f);
+        // 在等待3秒后，尝试从即将隐藏显示的地形记录字典中获取对应坐标位置的地块相关信息（游戏对象和协程等）
+        if (_unloadTerrCountDown.TryGetValue(pos, out var v))
+        &#123;
+            // 如果获取成功，调用回收地块的方法，将地块对象放入对象池并设置为隐藏状态
+            RecycleTerrain(v.Go);
+            // 从即将隐藏显示的地形记录字典中移除该地块的记录，因为已经完成了隐藏操作
+            _unloadTerrCountDown.Remove(pos);
+        &#125;
+    &#125;
+
+    /// &lt;summary&gt;
+    /// 获取一个地块的方法，如果地形对象池中有可用的地形对象，则从池中取出一个返回，否则就实例化一个新的地形预制体并返回
+    /// &lt;/summary&gt;
+    /// &lt;returns&gt;返回一个地形游戏对象，可能是从对象池获取的，也可能是新实例化的&lt;/returns&gt;
+    private GameObject GetTerrain()
+    &#123;
+        // 检查地形对象池中的对象数量，如果大于0，表示有可用的地形对象
+        if (_terrainPool.Count &gt; 0)
+        &#123;
+            // 从地形对象池中弹出一个地形对象并返回，实现对象复用
+            return _terrainPool.Pop();
+        &#125;
+        // 如果对象池中没有可用地形对象，则实例化一个新的地形预制体，以_terrParent为父对象进行挂载，并返回这个新实例化的地形对象
+        return Instantiate(_terrainObj, _terrParent);
+    &#125;
+
+    /// &lt;summary&gt;
+    /// 回收地块的方法，将地块对象设置为隐藏状态后放入地形对象池，实现对象的复用，节省资源
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;t&quot;&gt;要回收的地形游戏对象&lt;/param&gt;
+    private void RecycleTerrain(GameObject t)
+    &#123;
+        // 将地块对象设置为非激活状态，使其在场景中不可见，相当于隐藏起来
+        t.SetActive(false);
+        // 将该地块对象放入地形对象池，以便后续需要时可以再次取出使用
+        _terrainPool.Push(t);
+    &#125;
+&#125;
+</code></pre>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
