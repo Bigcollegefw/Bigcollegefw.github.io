@@ -25,12 +25,14 @@
             "id": "16d8b62972f5538d",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.13.7"
+                "file": "source/_posts/摄影/姿势.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-book-up",
-              "title": "版本说明 1.13.7"
+              "icon": "lucide-file",
+              "title": "姿势"
             }
           }
         ],
@@ -205,6 +207,11 @@
   },
   "active": "16d8b62972f5538d",
   "lastOpenFiles": [
+    "source/_posts/摄影/人像五步法.md",
+    "source/_posts/摄影/姿势.md",
+    "source/img/beishang20260927161640168.png",
+    "source/img/beishang20260927161504620.png",
+    "source/img/beishang20260927160723204.png",
     "source/_posts/摄影/构图.md",
     "source/img/beishang20260922125808022.png",
     "source/img/beishang20260922125706042.png",
@@ -216,14 +223,11 @@
     "source/img/beishang20260920230631320.png",
     "source/img/beishang20260920230516207.png",
     "source/_posts/摄影/半画幅和全画幅.md",
-    "source/img/beishang20260920230047014.png",
     "source/_posts/摄影/存储卡应该怎么选.md",
     "source/_posts/摄影/对焦和景深.md",
     "source/_posts/摄影/测光原理和测光模式.md",
-    "source/img/beishang20260920225606622.png",
     "source/_posts/摄影/曝光模式.md",
     "source/_posts/摄影/曝光三要素.md",
-    "source/img/beishang20260919153617782.png",
     "source/_posts/视频文稿/星锐事件.md",
     "source/_posts/摄影",
     "source/_posts/视频文稿/数学家上书.md",
@@ -241,7 +245,6 @@
     "source/_posts/面试/面试题6.md",
     "source/_posts/面试/面试题4.md",
     "source/_posts/面试/面试题1.md",
-    "source/_posts/面试/11.21.md",
     "未命名.base",
     "未命名 1.base",
     "未命名 7.base",
