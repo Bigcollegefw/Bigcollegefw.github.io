@@ -8,5 +8,6 @@
   "attachmentFolderPath": "source/img",
   "useMarkdownLinks": true,
   "newLinkFormat": "relative",
-  "readableLineLength": true
+  "readableLineLength": true,
+  "promptDelete": false
 }
