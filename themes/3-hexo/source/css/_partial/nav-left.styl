@@ -129,11 +129,17 @@
       &.dynamic-menu
         display block
 
-// ===== 窄栏适配：栏宽可拖拽调窄后，防止分类文字与折叠箭头重叠 =====
-// 仅当分类栏宽度 <=190px 时启用：文字左对齐、给箭头让位、超长省略号截断
+// ===== 分类树箭头与文字的间距适配 =====
+// 带折叠箭头的行：常驻给箭头留出通道（所有宽度生效，与箭头保持约14px间距，
+// 拖拽调宽调窄都不会跳变）；无箭头的行不受影响，保持原版居中
+.nav-left li>div:has(>.fold)
+  padding-left 30px
+
+// 极窄兜底（<=190px）：文字左对齐 + 省略号截断，保证长分类名不裁字
 // （移动端 100px 分类面板同样受益）
 @container (max-width: 190px)
   .nav-left li>div
-    padding-left 16px
     text-align left
     text-overflow ellipsis
+  .nav-left li>div:has(>.fold)
+    padding-left 30px
