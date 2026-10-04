@@ -1,0 +1,9 @@
+name = "blog-counter"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+workers_dev = true
+
+# KV 命名空间绑定（已创建：blog-counter-BV）
+[[kv_namespaces]]
+binding = "BV"
+id = "dca1ac489a5842d5bccf80f138af3480"

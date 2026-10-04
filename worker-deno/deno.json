@@ -1,0 +1,9 @@
+{
+  "unstable": ["kv"],
+  "deploy": {
+    "entrypoint": "main.ts",
+    "org": "bigcollegefw",
+    "app": "blog-counter"
+  }
+}
+

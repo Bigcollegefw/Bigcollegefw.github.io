@@ -40,9 +40,9 @@
         });
         <%}%>
 
-        /*访问数量*/
+        /*访问数量（自建计数服务，兼容不蒜子占位符；原 busuanzi.ibruce.info 服务常年不可用）*/
         <%if(theme.visit_counter && theme.visit_counter.on) {%>
-        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        $.getScript("https://blog-counter.bigcollegefw.deno.net/bz.js");
         <%}%>
 
         /*代码高亮，行号对齐*/
