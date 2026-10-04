@@ -1,6 +1,5 @@
 .nav-left
   width 120px
-  container-type inline-size
   height 100%
   background #2A2935
   box-shadow inset -15px 0 15px -15px #222
@@ -129,17 +128,13 @@
       &.dynamic-menu
         display block
 
-// ===== 分类树箭头与文字的间距适配 =====
-// 带折叠箭头的行：常驻给箭头留出通道（所有宽度生效，与箭头保持约14px间距，
-// 拖拽调宽调窄都不会跳变）；无箭头的行不受影响，保持原版居中
-.nav-left li>div:has(>.fold)
-  padding-left 30px
-
-// 极窄兜底（<=190px）：文字左对齐 + 省略号截断，保证长分类名不裁字
-// （移动端 100px 分类面板同样受益）
-@container (max-width: 190px)
-  .nav-left li>div
-    text-align left
+// ===== 分类树目录式布局 =====
+// 所有条目统一左对齐、统一文字起点（26px），箭头紧贴文字（8px 处），
+// 类似右侧文章目录的形式；对任意栏宽表现一致，拖拽时零跳变
+.nav-left ul li
+  text-align left
+  &>div
+    padding-left 26px
     text-overflow ellipsis
-  .nav-left li>div:has(>.fold)
-    padding-left 30px
+  &>div>.fold
+    left 8px
