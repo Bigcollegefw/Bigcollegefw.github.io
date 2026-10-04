@@ -77,6 +77,7 @@ npx hexo s              # 本地预览 http://localhost:4000
 
 ## 七、已知规则与历史坑（改动前必读）
 
+- **阅读量统计是自建服务**：Deno Deploy 上的 `https://blog-counter.bigcollegefw.deno.net`（代码在 `worker-deno/`，Deno KV 计数，协议兼容主题的不蒜子占位符；原不蒜子 busuanzi 服务常年宕机已弃用，`worker/` 里是 Cloudflare 版备胎——workers.dev 域名国内被墙）。更新计数逻辑：进 `worker-deno/`，设 `DENO_DEPLOY_TOKEN` 环境变量后 `deno deploy --prod .`
 - 图片引用全部是 `/img/xxx.webp` **绝对路径**（网站正确；Obsidian 预览依赖根目录 `img/` 镜像实现，删了镜像预览就挂）
 - `permalink: :year/:month/:hash.html`——**文章 front-matter 的 date 决定 URL**。批量改 date 会改 URL（外链会断），动之前先拿两篇做样本验证
 - `updated_option: 'date'` 是刻意设置——改成 mtime 的话，CI 每次构建会把全站"更新时间"刷成构建当天
