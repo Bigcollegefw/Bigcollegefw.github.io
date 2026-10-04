@@ -1,0 +1,27 @@
+{
+  "data_version": 2,
+  "command_timeout": 5,
+  "templates_folder": "source/_obsidian",
+  "templates_pairs": [],
+  "trigger_on_file_creation_mode": "none",
+  "auto_jump_to_cursor": true,
+  "jump_to_cursor_after_file_name": false,
+  "shell_path": "",
+  "user_scripts_folder": null,
+  "folder_templates": [
+    {
+      "folder": "source/_posts",
+      "template": "Post Template.md"
+    }
+  ],
+  "file_templates": [],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "enabled_templates_hotkeys": [],
+  "startup_templates": [],
+  "intellisense_render": "1",
+  "ignore_folders_on_creation": [],
+  "scripts_folder": "",
+  "enabled_templates_hotkeys_folder": "",
+  "autocomplete_trigger_tokens": true
+}

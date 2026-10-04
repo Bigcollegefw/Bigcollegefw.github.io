@@ -1,7 +1,6 @@
 ---
 title: UGUI抽卡系统
-date:
-  "{ date }": 
+date: 2024-12-11 10:03:07
 categories:
   - 项目
 tags:

@@ -1,7 +1,6 @@
 ---
 title: Unity+VSCode+Lua调试环境搭建
-date:
-  "{ date }": 
+date: 2025-03-14 11:18:02
 categories:
   - 工具
 tags:

@@ -1,7 +1,6 @@
 ---
 title: xLua官方教程
-date:
-  "{ date }":
+date: 2025-03-09 11:24:16
 categories:
   - 热更新
   - xLua

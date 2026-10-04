@@ -1,7 +1,6 @@
 ---
 title: Slider滑动条
-date:
-  "{ date }": 
+date: 2025-01-18 12:37:00
 categories:
   - 游戏引擎
   - Unity
