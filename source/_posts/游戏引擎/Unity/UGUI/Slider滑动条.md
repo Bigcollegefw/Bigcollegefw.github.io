@@ -26,7 +26,7 @@ print(s.value);
 
 ### 监听事件的两种方式
 1.托脚本
-![](../../../../img/beishang20250118130318380.png)
+![](/img/beishang20250118130318380.webp)
 ```C#
 public void ChangeValue(float v)
 {
@@ -34,7 +34,7 @@ public void ChangeValue(float v)
 }
 ```
 注意这里要拖动态的方法进去才能实时打印出来
-![](../../../../img/beishang20250118130118616.png)
+![](/img/beishang20250118130118616.png)
 
 2.代码添加
 ```C#

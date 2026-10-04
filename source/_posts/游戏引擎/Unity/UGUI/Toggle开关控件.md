@@ -67,7 +67,7 @@ private
 ### 使用PlayerPrefs制作一个音量控制器
 
 GameBGMToggleButton()和BGMToggleButton()需要绑定到下面，这个都是静态方法。
-![](../../../../img/beishang20250120213333639.png)
+![](/img/beishang20250120213333639.webp)
 ```C#
 using System.Collections;
 using System.Collections.Generic;

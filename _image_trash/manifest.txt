@@ -1,0 +1,32 @@
+# _image_trash 清单 2026-10-04T10:55:13.321Z
+
+## 孤儿图片（27 张，观察确认后可整目录删除）
+orphan/article-list-background.jpeg  54KB
+orphan/beishang20241207170516960.png  29KB
+orphan/beishang20241207170540553.png  29KB
+orphan/beishang20241208102846764.png  53KB
+orphan/beishang20241208113618598.png  17KB
+orphan/beishang20241208153548407.png  9KB
+orphan/beishang20241208153616301.png  9KB
+orphan/beishang20241208202426575.png  46KB
+orphan/beishang20241208202453702.png  34KB
+orphan/beishang20241208202808302.png  31KB
+orphan/beishang20241210233532551.png  114KB
+orphan/beishang20241211104523130.png  43KB
+orphan/beishang20241211171104726.png  40KB
+orphan/beishang20241211214014780.png  3KB
+orphan/beishang20241220113506456.png  131KB
+orphan/beishang20241220203045487.png  24KB
+orphan/beishang20250107220130014.png  42KB
+orphan/beishang20250107220154530.png  28KB
+orphan/beishang20250113201631549.png  52KB
+orphan/beishang20250120230856052.png  65KB
+orphan/beishang20250121233125267.png  12KB
+orphan/beishang20250217211616610.png  784KB
+orphan/beishang20250223205548688.png  3394KB
+orphan/beishang20250303225905341.png  64KB
+orphan/beishang20250305110856267.png  85KB
+orphan/beishang20260913204853344.png  1281KB
+orphan/beishang20260918225627219.png  308KB
+
+## 重复图片（保留被引用的那份，其余移入 dup/，文章引用已改指向保留文件）

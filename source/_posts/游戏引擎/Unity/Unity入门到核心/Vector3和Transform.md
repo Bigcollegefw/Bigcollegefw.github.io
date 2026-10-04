@@ -26,7 +26,7 @@ Vector2 v12 = new Vector3(2,2,2);
 print(v1 + v12);
 print(v1 - v12);
 ```
-![](../../../../img/beishang20250113201720528.png)
+![](/img/beishang20250113201720528.webp)
 ```C#
 // 计算两点之间的距离
 print(Vector3.Distance(v1,v12));
