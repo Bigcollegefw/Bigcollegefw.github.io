@@ -193,6 +193,7 @@
   },
   "active": "8339d8a327f0fafa",
   "lastOpenFiles": [
+    "themes/3-hexo/source/js/resizable.js",
     "worker-deno/deno.json",
     "worker-deno/main.ts",
     "worker-deno",
@@ -203,7 +204,6 @@
     "worker/node_modules/@esbuild-plugins/node-modules-polyfill/dist/polyfills.d.ts",
     "worker/node_modules/@esbuild-plugins/node-modules-polyfill/dist/index.test.js.map",
     "worker/node_modules/@esbuild-plugins/node-modules-polyfill/dist/index.test.js",
-    "worker/node_modules/@esbuild-plugins/node-modules-polyfill/dist/index.test.d.ts",
     "worker/node_modules/data-uri-to-buffer/README.md",
     "worker/node_modules/data-uri-to-buffer/History.md",
     "worker/node_modules/exsolve/README.md",

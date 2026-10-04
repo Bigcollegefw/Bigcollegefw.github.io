@@ -4,6 +4,7 @@
 <script src="<%=theme.CDN.photoswipe_ui_js%>"></script>
 <% } %>
 <script src="<%=theme.blog_path?theme.blog_path.lastIndexOf("/") === theme.blog_path.length-1?theme.blog_path.slice(0, theme.blog_path.length-1):theme.blog_path:'' %>/js/script.js?v=<%=theme.version%>" ></script>
+<script src="<%=theme.blog_path?theme.blog_path.lastIndexOf("/") === theme.blog_path.length-1?theme.blog_path.slice(0, theme.blog_path.length-1):theme.blog_path:'' %>/js/resizable.js?v=<%=theme.version%>" ></script>
 <script>
     var img_resize = '<%=theme.img_resize %>';
     function initArticle() {
