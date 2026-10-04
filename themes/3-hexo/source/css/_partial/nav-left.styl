@@ -1,5 +1,6 @@
 .nav-left
   width 120px
+  container-type inline-size
   height 100%
   background #2A2935
   box-shadow inset -15px 0 15px -15px #222
@@ -127,3 +128,12 @@
         display: inline-block
       &.dynamic-menu
         display block
+
+// ===== 窄栏适配：栏宽可拖拽调窄后，防止分类文字与折叠箭头重叠 =====
+// 仅当分类栏宽度 <=190px 时启用：文字左对齐、给箭头让位、超长省略号截断
+// （移动端 100px 分类面板同样受益）
+@container (max-width: 190px)
+  .nav-left li>div
+    padding-left 16px
+    text-align left
+    text-overflow ellipsis
