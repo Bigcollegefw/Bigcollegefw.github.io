@@ -10,3 +10,4 @@ _multiconfig.yml
 /img/
 # 自媒体选题简报（本地用，不入库）
 news/
+transcripts/
