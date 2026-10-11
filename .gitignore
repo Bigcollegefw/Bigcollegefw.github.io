@@ -8,3 +8,5 @@ public/
 _multiconfig.yml
 .obsidian/workspace
 /img/
+# 自媒体选题简报（本地用，不入库）
+news/
