@@ -60,7 +60,20 @@ npm run img:clean       # 清理孤儿与重复图进 _image_trash（含镜像�
 npm run img:compress    # 压缩新图 + 引用统一 + 同步镜像
 npm run img:sync        # 只同步 img/ 镜像
 npx hexo s              # 本地预览 http://localhost:4000
+node tools/news-fetch.mjs            # 手动抓游戏圈新闻简报（当天已抓则跳过，--force 强制）
+node tools/bili-digest.mjs --count 6 # 抓B站UP主视频文稿（对标分析用）
 ```
+
+## 五点五、自媒体选题流水线（2026-10 新增）
+
+- **新闻简报**：`tools/news-fetch.mjs`，launchd 每天 20:00/20:40/21:20 三次兜底（`~/Library/LaunchAgents/com.bigcollegefw.news-fetch.plist`，plist 里 node 路径是 `/opt/homebrew/bin/node`）。产出 `news/最新简报.md`（gitignore）。⭐=热度词加权，🔥=标题含"抵制/回怼/backlash"等阵营吵架信号，🔥优先做选题
+- **B站对标文稿**：`tools/bili-digest.mjs`，抓指定 UP 主最近视频的 AI 字幕存到 `transcripts/`（gitignore，第三方内容勿外传勿入库）。**B站风控经验（2026-10 实测）**：
+  - 匿名爬基本死：网页/API/yt-dlp 全 412，RSSHub 公共实例的 bilibili 路由也挂
+  - 可用的 UA 组合：`x/web-interface/view` 用 **App UA（`okhttp/3.4.1`）**能匿名过；**列表接口必须 wbi 签名 + 登录 cookie**（wbi 密钥从 `x/web-interface/nav` 取，固定置换表混淆后 md5）；风控有随机性，失败时换 UA 重试即可
+  - **AI 字幕必须登录态**才在 `x/player/v2` 下发（匿名返回 0 轨），所以需要浏览器里复制 `SESSDATA` 存 `~/.bili-cookie`（权限 600，半年过期，复制一次即可）
+  - 老 视频（约2024前）没有 AI 字幕，抓不到文稿属正常
+  - UP主 mid 找法：搜索接口 `search/type?search_type=bili_user`（需登录态），或看主页地址栏
+- 简报选题 → 套 `transcripts/_对标分析报告.md` 的模板写口播稿，成稿放 `transcripts/口播稿/`
 
 ## 六、换电脑迁移清单
 
