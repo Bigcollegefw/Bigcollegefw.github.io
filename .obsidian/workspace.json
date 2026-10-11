@@ -1,24 +1,23 @@
 {
   "main": {
-    "id": "7028b6faa9820ebd",
+    "id": "143a8e6ffa77ec49",
     "type": "split",
     "children": [
       {
-        "id": "8181fdc8ca197631",
+        "id": "6a4d8d4adb3bd3dd",
         "type": "tabs",
         "children": [
           {
-            "id": "7569cfce9a3150e0",
+            "id": "63d16bfa566a5e4e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "source/_posts/杂谈/数学家上书.md",
-                "mode": "source",
-                "source": false
+                "file": "未命名.base",
+                "viewName": "表格"
               },
-              "icon": "lucide-file",
-              "title": "数学家上书"
+              "icon": "lucide-table",
+              "title": "未命名"
             }
           }
         ]
@@ -27,15 +26,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "5bbe48a3bf0310ac",
+    "id": "3f9bed71b926cb36",
     "type": "split",
     "children": [
       {
-        "id": "29145a5b966b8129",
+        "id": "47680e6d4cf70271",
         "type": "tabs",
         "children": [
           {
-            "id": "f76fa23c5dc956f5",
+            "id": "0419071c15ce3fe3",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +47,7 @@
             }
           },
           {
-            "id": "a5da9817c5acfdc2",
+            "id": "770e35e8b22ceec5",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +64,7 @@
             }
           },
           {
-            "id": "4548fe6873dec8b9",
+            "id": "4066608533cf41c9",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -75,7 +74,7 @@
             }
           },
           {
-            "id": "8339d8a327f0fafa",
+            "id": "f08bd0788e315d91",
             "type": "leaf",
             "state": {
               "type": "file-tree-view",
@@ -84,28 +83,27 @@
               "title": "File Tree"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 321.50418853759766
+    "width": 300
   },
   "right": {
-    "id": "3d6c464a1f506d07",
+    "id": "80ffbe3db538732b",
     "type": "split",
     "children": [
       {
-        "id": "f9cd076bbae9f569",
+        "id": "c08e28fd06201e9c",
         "type": "tabs",
         "children": [
           {
-            "id": "dd1745ec76a87d15",
+            "id": "e317ea21c30f5434",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_posts/丧尸围城（上）.md",
+                "file": "未命名.base",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,131 +113,135 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "丧尸围城（上） 的反向链接列表"
+              "title": "未命名 的反向链接列表"
             }
           },
           {
-            "id": "f0365f125a82eb0d",
+            "id": "1426ac91a9cf1cd6",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "未命名.base",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "出链"
+              "title": "未命名 的出链列表"
             }
           },
           {
-            "id": "c0445c9f399e1a0f",
+            "id": "4d2a71db9a635fff",
             "type": "leaf",
             "state": {
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "标签"
             }
           },
           {
-            "id": "4f2fafb191d40e64",
+            "id": "aa44c1ffa65ee325",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-ghost",
+              "title": "all-properties"
+            }
+          },
+          {
+            "id": "fd253a74304c27e7",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/热更新/xLua/3.Lua解析管理器.md",
+                "file": "未命名.base",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "3.Lua解析管理器 的大纲"
-            }
-          },
-          {
-            "id": "fbf7f07aee65e5ab",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "title": "未命名 的大纲"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200,
+    "width": 300,
     "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "templater-obsidian:Templater": false,
-      "bases:新建数据库": false,
+      "obsidian-git:Open Git source control": false,
+      "file-tree-alternative:File Tree Alternative Plugin": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "obsidian-git:Open Git source control": false,
-      "file-tree-alternative:File Tree Alternative Plugin": false
+      "bases:新建数据库": false
     }
   },
-  "active": "8339d8a327f0fafa",
+  "active": "63d16bfa566a5e4e",
   "lastOpenFiles": [
-    "public/js/titleTip.js",
-    "public/js/search.js",
-    "public/js/script.js",
-    "public/js/resizable.js",
-    "public/js/jquery.pjax.js",
-    "public/js/iconfont.js",
-    "public/js/gitment.js",
-    "public/js/gitalk.js",
-    "public/js",
-    "public/css/fonts/selection.json",
-    "public/css/fonts/iconfont.woff2",
-    "public/css/fonts/iconfont.svg",
-    "public/css/fonts/icomoon.svg",
-    "public/img/weixin.png",
-    "public/img/weixin.jpg",
-    "public/img/school-book.png",
-    "public/img/gov.png",
-    "public/img/brown-papersq.png",
-    "public/img/beishang20261004190213823.png",
-    "public/img/beishang20261004190214393.png",
-    "public/img/beishang20261004190213189.png",
-    "worker/node_modules/data-uri-to-buffer/README.md",
-    "worker/node_modules/data-uri-to-buffer/History.md",
-    "worker/node_modules/exsolve/README.md",
-    "worker/node_modules/color-name/README.md",
-    "worker/node_modules/simple-swizzle/README.md",
-    "worker/node_modules/sourcemap-codec/README.md",
-    "worker/node_modules/sourcemap-codec/CHANGELOG.md",
-    "worker/node_modules/rollup-pluginutils/README.md",
-    "worker/node_modules/rollup-pluginutils/CHANGELOG.md",
-    "worker/node_modules/estree-walker/README.md",
-    "worker/node_modules/estree-walker/CHANGELOG.md",
-    "worker/node_modules/rollup-plugin-inject/README.md",
-    "worker/node_modules/rollup-plugin-inject/CHANGELOG.md",
-    "worker/node_modules/acorn/README.md",
-    "worker/node_modules/acorn/CHANGELOG.md",
-    "worker/node_modules/escape-string-regexp/readme.md",
-    "worker/node_modules/mime/README.md",
-    "worker/node_modules/mime/CHANGELOG.md",
-    "worker/node_modules/rollup-plugin-node-polyfills/readme.md",
-    "worker/node_modules/rollup-plugin-node-polyfills/LICENSE.md",
-    "worker/node_modules/undici/docs/best-practices/writing-tests.md",
-    "worker/node_modules/undici/docs/best-practices/mocking-request.md",
-    "worker/node_modules/undici/docs/best-practices/proxy.md",
-    "worker/node_modules/undici/docs/best-practices/client-certificate.md",
-    "worker/node_modules/undici/docs/api/ProxyAgent.md",
+    "CLAUDE.md",
+    "未命名.base",
+    "source/img/beishang20241207171124816.webp",
+    "_image_trash/md_backup/source/_posts/热更新/xLua/C.md",
+    "source/_posts/热更新/Lua/8.迭代器遍历.md",
+    "幸福健康还是.md",
+    "README.md",
+    "source/_posts/杂谈/数学家上书.md",
+    "source/_posts/杂谈/星锐事件.md",
     "未命名.canvas",
-    "source/_posts/项目/未命名.canvas"
+    "worker/src/index.js",
+    "worker/wrangler.toml",
+    "worker/src",
+    "worker/package.json",
+    "worker/package-lock.json",
+    "worker",
+    "worker-deno/main.ts",
+    "worker-deno/deno.json",
+    "worker-deno",
+    "themes/3-hexo/source/img/weixin.png",
+    "themes/3-hexo/source/img/school-book.png",
+    "themes/3-hexo/source/img/gov.png",
+    "themes/3-hexo/source/img/brown-papersq.png",
+    "themes/3-hexo/source/img/avatar.jpg",
+    "themes/3-hexo/source/img/article-list-background.jpeg",
+    "themes/3-hexo/source/img/alipay.png",
+    "themes/3-hexo/source/img/2.jpg",
+    "themes/3-hexo/source/img/1.jpg",
+    "themes/3-hexo/layout/indexs.md",
+    "source/_posts/项目/微信小游戏/完全胜利/实现九宫格地图动态加载.md",
+    "source/_posts/项目/微信小游戏/zgdsg/计时器动画.md",
+    "source/_posts/面试/面试题6.md",
+    "source/_posts/面试/面试题5.md",
+    "source/_posts/面试/面试题4.md",
+    "source/_posts/面试/面试题2.md",
+    "source/_posts/面试/面试题1.md",
+    "source/_posts/面试/11.21.md",
+    "source/_posts/网络开发/9.序列化.md",
+    "source/_posts/网络开发/7.IP地址和端口类.md",
+    "source/_posts/网络开发/8.域名解析.md",
+    "source/_posts/网络开发/6.TCP与UDP.md",
+    "source/_posts/网络开发/5.OSI模型和TCP杠IP模型.md",
+    "source/_posts/网络开发/4.数据通信模型.md",
+    "source/_posts/网络开发/3.客户端和服务端.md",
+    "source/_posts/网络开发/23.实现心跳消息.md",
+    "source/_posts/网络开发/22.心跳消息-客户端主动断开连接.md",
+    "未命名 1.canvas"
   ]
 }
