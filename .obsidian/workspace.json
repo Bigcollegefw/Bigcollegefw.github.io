@@ -11,13 +11,14 @@
             "id": "63d16bfa566a5e4e",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "未命名.base",
-                "viewName": "表格"
+                "file": "CLAUDE.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-table",
-              "title": "未命名"
+              "icon": "lucide-file",
+              "title": "CLAUDE"
             }
           }
         ]
@@ -194,7 +195,7 @@
       "bases:新建数据库": false
     }
   },
-  "active": "63d16bfa566a5e4e",
+  "active": "0419071c15ce3fe3",
   "lastOpenFiles": [
     "CLAUDE.md",
     "未命名.base",
