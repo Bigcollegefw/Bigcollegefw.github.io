@@ -10,10 +10,18 @@ const DAYS = (() => {
   const i = process.argv.indexOf("--days");
   return i > -1 ? Number(process.argv[i + 1]) || 2 : 2;
 })();
+const FORCE = process.argv.includes("--force");
 const OUT_DIR = (() => {
   const i = process.argv.indexOf("--out");
   return i > -1 ? process.argv[i + 1] : "news";
 })();
+
+const today0 = new Date().toISOString().slice(0, 10);
+const finalFile = path.join(OUT_DIR, `简报-${today0}.md`);
+if (!FORCE && fs.existsSync(finalFile)) {
+  console.log(`${today0} 的简报已存在，跳过（--force 可强制刷新）`);
+  process.exit(0);
+}
 
 // Google News RSS：按关键词聚合，覆盖面广且天然按时间排
 const CN_QUERIES = [
@@ -64,13 +72,22 @@ function parseRss(xml) {
   return items;
 }
 
-async function fetchText(url) {
-  const res = await fetch(url, {
-    headers: { "User-Agent": "Mozilla/5.0 (Macintosh) news-digest/1.0" },
-    signal: AbortSignal.timeout(20000),
-  });
-  if (!res.ok) throw new Error(`${res.status} ${url}`);
-  return res.text();
+async function fetchText(url, tries = 3) {
+  // 断网容错：单源失败重试 3 次，间隔 20s
+  for (let i = 1; i <= tries; i++) {
+    try {
+      const res = await fetch(url, {
+        headers: { "User-Agent": "Mozilla/5.0 (Macintosh) news-digest/1.0" },
+        signal: AbortSignal.timeout(20000),
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.text();
+    } catch (e) {
+      if (i === tries) throw new Error(`${e.message} ${url}`);
+      console.error(`  [retry ${i}/3] ${e.message}`);
+      await new Promise((r) => setTimeout(r, 20000));
+    }
+  }
 }
 
 async function gather() {
@@ -121,6 +138,10 @@ function group(items) {
 
 const items = await gather();
 console.log(`共抓取 ${items.length} 条（近 ${DAYS} 天）`);
+if (items.length === 0) {
+  console.error("全部来源失败（可能断网），本次不写入文件，等下一个兜底时点重试");
+  process.exit(1);
+}
 const grouped = group(items);
 
 const today = new Date().toISOString().slice(0, 10);
