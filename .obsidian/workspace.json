@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "news/简报-2026-10-11.md",
+                "file": "transcripts/口播稿/03_第一期_不需要再刷LeetCode去找工作了.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "简报-2026-10-11"
+              "title": "03_第一期_不需要再刷LeetCode去找工作了"
             }
           }
         ]
@@ -198,15 +198,21 @@
   "active": "63d16bfa566a5e4e",
   "lastOpenFiles": [
     "transcripts/口播稿/02_字节19块的AI游戏可能卖得越多亏得越狠.md",
+    "transcripts/口播稿/03_第一期_不需要再刷LeetCode去找工作了.md",
+    "transcripts/_对标分析报告.md",
+    "transcripts/CG快报/01_2026-10-10_Unity联手Google搞AI游戏？以后真靠嘴做游戏了？.md",
+    "scaffolds/draft.md",
+    "scaffolds/post.md",
+    "news/简报-2026-10-11.md",
+    "news/简报-2026-10-12.md",
+    "news/最新简报.md",
     "transcripts/口播稿/01_AI让做游戏变简单了为什么小厂反而更难出头.md",
     "transcripts/口播稿",
-    "transcripts/_对标分析报告.md",
     "transcripts/CG快报/06_2026-09-21_谁说GPT-6只会聊天？接上3D外挂终于会干活了.md",
     "transcripts/CG快报/05_2026-09-22_Blender 5.3版本前瞻：原生支持3DGS.md",
     "transcripts/CG快报/04_2026-09-24_NASA把整个月亮，打包成3D模型还免费分享？.md",
     "transcripts/CG快报/03_2026-09-29_Adobe急了？Pr安卓版上线，剪映最大对手？.md",
     "transcripts/CG快报/02_2026-10-08_C4D更新➡️支持接入ChatGPT，直接让AI接手？.md",
-    "transcripts/CG快报/01_2026-10-10_Unity联手Google搞AI游戏？以后真靠嘴做游戏了？.md",
     "transcripts/CG快报",
     "transcripts/分析学爱好者/05_2026-10-09_OpenAI的722篇数学论文后续：人类数学协会抵制.md",
     "transcripts/分析学爱好者/04_2026-10-09_OpenAI的722篇数学论文后续2：撤稿3篇论文.md",
@@ -216,8 +222,6 @@
     "transcripts/分析学爱好者",
     "transcripts",
     "tools/bili-digest.mjs",
-    "news/最新简报.md",
-    "news/简报-2026-10-11.md",
     "CLAUDE.md",
     "tools/未命名.base",
     "未命名.base",
@@ -230,7 +234,6 @@
     "幸福健康还是.md",
     "README.md",
     "source/_posts/杂谈/数学家上书.md",
-    "source/_posts/杂谈/星锐事件.md",
     "未命名.canvas",
     "themes/3-hexo/source/img/weixin.png",
     "themes/3-hexo/source/img/school-book.png",
@@ -241,9 +244,6 @@
     "themes/3-hexo/source/img/alipay.png",
     "themes/3-hexo/source/img/2.jpg",
     "themes/3-hexo/source/img/1.jpg",
-    "themes/3-hexo/layout/indexs.md",
-    "source/_posts/项目/微信小游戏/完全胜利/实现九宫格地图动态加载.md",
-    "source/_posts/项目/微信小游戏/zgdsg/计时器动画.md",
     "未命名 1.canvas"
   ]
 }
