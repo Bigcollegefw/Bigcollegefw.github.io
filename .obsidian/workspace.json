@@ -198,6 +198,7 @@
   },
   "active": "63d16bfa566a5e4e",
   "lastOpenFiles": [
+    "news/简报-2026-10-14.md",
     "Handy_0.9.8_aarch64.dmg",
     "news/简报-2026-10-13.md",
     "transcripts/口播稿/02_字节19块的AI游戏可能卖得越多亏得越狠.md",
@@ -230,7 +231,6 @@
     "未命名.base",
     "news/fetch.log",
     "news",
-    "tools/news-fetch.mjs",
     "source/img/beishang20241207171124816.webp",
     "_image_trash/md_backup/source/_posts/热更新/xLua/C.md",
     "source/_posts/热更新/Lua/8.迭代器遍历.md",
